@@ -33,7 +33,7 @@ def create_list_of_tables(conn, args):
     wanted_mgt_level = args.wanted_mgt_level
 
     # create a list of tables for each MGT scheme
-    table_numbers_search_string = """ SELECT table_name FROM "Vibrio_tables_ap" """
+    table_numbers_search_string = """ SELECT table_name FROM """ + '"' + args.app_name + """_tables_ap" """
     table_numbers_return = sqlquery_to_outls(conn, table_numbers_search_string)
     table_numbers_list = [x[0] for x in table_numbers_return]
 
@@ -45,7 +45,7 @@ def create_list_of_tables(conn, args):
 
     return final_table_numbers_list, wanted_mgt_level
 
-def get_column_names(conn, table_numbers_list):
+def get_column_names(conn, table_numbers_list, args):
 
     column_headers_list = []
     for table in table_numbers_list:
@@ -55,13 +55,13 @@ def get_column_names(conn, table_numbers_list):
 
         # handle the first table to remove extra columns
         if '0' in table_num[1]:
-            table_header_string = """ SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = N'Vibrio_""" + table + """' """
+            table_header_string = """ SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = N'""" + args.app_name + """_""" + table + """' """
             column_headers = sqlquery_to_outls(conn, table_header_string)
             column_headers_list.append([x[0] for x in column_headers][1:-6])
 
         # remove column.id from remaining tables
         else:
-            table_header_string = """ SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = N'Vibrio_""" + table + """' """
+            table_header_string = """ SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = N'""" + args.app_name + """_""" + table + """' """
             column_headers = sqlquery_to_outls(conn, table_header_string)
             column_headers_list.append([x[0] for x in column_headers][1:-2])
 
@@ -75,8 +75,8 @@ def get_column_names(conn, table_numbers_list):
 def get_strain_names(conn, allele_profiles_list, args):
 
     #select all the strains and their HGT ID
-    strain_hgt_string = """ SELECT T1.identifier,"Vibrio_ap9_0".st FROM (SELECT "Vibrio_isolate".identifier, "Vibrio_hgt".ap9_0_id FROM "Vibrio_isolate" LEFT JOIN "Vibrio_hgt" ON "Vibrio_isolate".hgt_id::varchar = "Vibrio_hgt".id::varchar) as T1
-     LEFT JOIN "Vibrio_ap9_0" ON T1.ap9_0_id::varchar = "Vibrio_ap9_0".id::varchar WHERE "Vibrio_ap9_0".st is not null """
+    strain_hgt_string = """ SELECT T1.identifier,""" + '"' + args.app_name + """_ap9_0".st FROM (SELECT """ + '"' + args.app_name + """_isolate".identifier, """ + '"' + args.app_name + """_hgt".ap9_0_id FROM """ + '"' + args.app_name + """_isolate" LEFT JOIN """ + '"' + args.app_name + """_hgt" ON """ + '"' + args.app_name + """_isolate".hgt_id::varchar = """ + '"' + args.app_name + """_hgt".id::varchar) as T1
+     LEFT JOIN """ + '"' + args.app_name + """_ap9_0" ON T1.ap9_0_id::varchar = """ + '"' + args.app_name + """_ap9_0".id::varchar WHERE """ + '"' + args.app_name + """_ap9_0".st is not null """
     strain_hgt_result = sqlquery_to_outls(conn, strain_hgt_string)
 
     #add information to list from SQL tuples
@@ -101,7 +101,7 @@ def get_strain_names(conn, allele_profiles_list, args):
 
         return allele_profiles_dict
 
-def combine_allele_profiles(conn, table_numbers_list, column_headers_list, wanted_mgt_level):
+def combine_allele_profiles(conn, table_numbers_list, column_headers_list, wanted_mgt_level, args):
 
     #list to store all combined profiles in
     total_list = []
@@ -114,10 +114,10 @@ def combine_allele_profiles(conn, table_numbers_list, column_headers_list, wante
         alleles_dict["table_" + table_num[1]] = {}
 
         # find the number of cc_cols for table
-        cc_col_count = find_number_of_cc_columns(table, conn)
+        cc_col_count = find_number_of_cc_columns(table, conn, args)
         remove_col = cc_col_count + 2 #two is for date create and edit cols
 
-        ap_table_search = """ SELECT * FROM "Vibrio_ap""" + str(wanted_mgt_level) + """_""" + str(table_num[1]) + """" ORDER BY 1 """
+        ap_table_search = """ SELECT * FROM """ + '"' + args.app_name + """_ap""" + str(wanted_mgt_level) + """_""" + str(table_num[1]) + """" ORDER BY 1 """
         ap_table_return = sqlquery_to_outls(conn, ap_table_search)
 
         ##handle first table for extra columns
@@ -146,13 +146,13 @@ def combine_allele_profiles(conn, table_numbers_list, column_headers_list, wante
 
     return total_list
 
-def find_number_of_cc_columns(table, conn):
+def find_number_of_cc_columns(table, conn, args):
 
     #find the number of column with name = "cc_id"
     cc_col_count = 0
     table_num = table.split('_')
 
-    column_headers_str = """ SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = N'Vibrio_""" + table + """' """
+    column_headers_str = """ SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = N'""" + args.app_name + """_""" + table + """' """
     column_headers_result = sqlquery_to_outls(conn, column_headers_str)
     column_headers = [x[0] for x in column_headers_result]
 
@@ -226,6 +226,8 @@ def parseargs():
     #Database connecting
     parser.add_argument("-d", "--database_name", required=True,
                         help="sql database to search (eg. vcseventh)")
+    parser.add_argument("-a", "--app_name", required=True,
+                        help="MGT database App Name(eg. Vibrio)")
     parser.add_argument("-s", "--host",
                         help="db host address", default="0.0.0.0")
     parser.add_argument("-p", "--port",
@@ -236,7 +238,7 @@ def parseargs():
                         help="psql password", required=True)
 
     #Script running
-    parser.add_argument("-wmgtlvl","--wanted_mgt_level", default="9", type=str,
+    parser.add_argument("-m","--wanted_mgt_level", default="9", type=str,
                         help="The MGT level to extract allele profiles and compare alleles to generate phylonegy.")
     parser.add_argument("-o", "--output_folder", required=True,
                         help="Output folder to save phylogeny and alleles profiles.")
@@ -266,10 +268,10 @@ def main():
     table_numbers_list, wanted_mgt_level = create_list_of_tables(conn, args)
 
     #create a list of column headers from all tables
-    column_headers_list = get_column_names(conn, table_numbers_list)
+    column_headers_list = get_column_names(conn, table_numbers_list, args)
 
     #create a list of all allele profiles. multiple tables are combined
-    allele_profiles_list = combine_allele_profiles(conn, table_numbers_list, column_headers_list, wanted_mgt_level)
+    allele_profiles_list = combine_allele_profiles(conn, table_numbers_list, column_headers_list, wanted_mgt_level, args)
 
     #get strain names
     allele_profiles_dict = get_strain_names(conn, allele_profiles_list, args)
