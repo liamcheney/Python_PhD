@@ -74,8 +74,8 @@ def get_column_names(conn, table_numbers_list, args):
 
 def get_strain_names(conn, allele_profiles_list, args):
 
-    strain_hgt_string = (""" SELECT T1.identifier,"{app}_ap9_0".st FROM (SELECT "{app}_isolate".identifier, "{app}_hgt".ap9_0_id FROM "{app}_isolate" LEFT JOIN "{app}_hgt" ON "{app}_isolate".hgt_id::varchar = "{app}_hgt".id::varchar) as T1
-         LEFT JOIN "{app}_ap9_0" ON T1.ap9_0_id::varchar = "{app}_ap9_0".id::varchar WHERE "{app}_ap9_0".st is not null """).format(app=args.app_name)
+    strain_hgt_string = (""" SELECT T1.identifier,"{app}_ap9_0".st FROM (SELECT "{app}_isolate".identifier, "{app}_{0}".ap9_0_id FROM "{app}_isolate" LEFT JOIN "{app}_{0}" ON "{app}_isolate".{0}_id::varchar = "{app}_{0}".id::varchar) as T1
+         LEFT JOIN "{app}_ap9_0" ON T1.ap9_0_id::varchar = "{app}_ap9_0".id::varchar WHERE "{app}_ap9_0".st is not null """).format(args.mgt_database_version, app=args.app_name)
     strain_hgt_result = sqlquery_to_outls(conn, strain_hgt_string)
 
     #add information to list from SQL tuples
@@ -243,6 +243,8 @@ def parseargs():
                         help="Output folder to save phylogeny and alleles profiles.")
     parser.add_argument("-f", "--infile",
                         help="A list of strains accessions to extract from MGT database.")
+    parser.add_argument("-dv", "--mgt_database_version", required=True, default="hgt",
+                        help="MGT database version. To allow changes in table names to not cause SQL errors.")
 
     #Grapetree running
     parser.add_argument("-gp_path", "--grapetree_path", default="",
