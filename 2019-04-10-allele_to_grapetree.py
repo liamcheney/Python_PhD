@@ -33,7 +33,7 @@ def create_list_of_tables(conn, args):
     wanted_mgt_level = args.wanted_mgt_level
 
     # create a list of tables for each MGT scheme
-    table_numbers_search_string = """ SELECT table_name FROM """ + '"' + args.app_name + """_tables_ap" """
+    table_numbers_search_string = (""" SELECT table_name FROM "{app}_tables_ap" """).format(app=args.app_name)
     table_numbers_return = sqlquery_to_outls(conn, table_numbers_search_string)
     table_numbers_list = [x[0] for x in table_numbers_return]
 
@@ -55,13 +55,13 @@ def get_column_names(conn, table_numbers_list, args):
 
         # handle the first table to remove extra columns
         if '0' in table_num[1]:
-            table_header_string = """ SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = N'""" + args.app_name + """_""" + table + """' """
+            table_header_string = (""" SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = N'{app}_{table}' """ ).format(app=args.app_name, table=table)
             column_headers = sqlquery_to_outls(conn, table_header_string)
             column_headers_list.append([x[0] for x in column_headers][1:-6])
 
         # remove column.id from remaining tables
         else:
-            table_header_string = """ SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = N'""" + args.app_name + """_""" + table + """' """
+            table_header_string = (""" SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = N'{app}_{table}' """ ).format(app=args.app_name, table=table)
             column_headers = sqlquery_to_outls(conn, table_header_string)
             column_headers_list.append([x[0] for x in column_headers][1:-2])
 
@@ -74,9 +74,8 @@ def get_column_names(conn, table_numbers_list, args):
 
 def get_strain_names(conn, allele_profiles_list, args):
 
-    #select all the strains and their HGT ID
-    strain_hgt_string = """ SELECT T1.identifier,""" + '"' + args.app_name + """_ap9_0".st FROM (SELECT """ + '"' + args.app_name + """_isolate".identifier, """ + '"' + args.app_name + """_hgt".ap9_0_id FROM """ + '"' + args.app_name + """_isolate" LEFT JOIN """ + '"' + args.app_name + """_hgt" ON """ + '"' + args.app_name + """_isolate".hgt_id::varchar = """ + '"' + args.app_name + """_hgt".id::varchar) as T1
-     LEFT JOIN """ + '"' + args.app_name + """_ap9_0" ON T1.ap9_0_id::varchar = """ + '"' + args.app_name + """_ap9_0".id::varchar WHERE """ + '"' + args.app_name + """_ap9_0".st is not null """
+    strain_hgt_string = (""" SELECT T1.identifier,"{app}_ap9_0".st FROM (SELECT "{app}_isolate".identifier, "{app}_hgt".ap9_0_id FROM "{app}_isolate" LEFT JOIN "{app}_hgt" ON "{app}_isolate".hgt_id::varchar = "{app}_hgt".id::varchar) as T1
+         LEFT JOIN "{app}_ap9_0" ON T1.ap9_0_id::varchar = "{app}_ap9_0".id::varchar WHERE "{app}_ap9_0".st is not null """).format(app=args.app_name)
     strain_hgt_result = sqlquery_to_outls(conn, strain_hgt_string)
 
     #add information to list from SQL tuples
@@ -117,7 +116,7 @@ def combine_allele_profiles(conn, table_numbers_list, column_headers_list, wante
         cc_col_count = find_number_of_cc_columns(table, conn, args)
         remove_col = cc_col_count + 2 #two is for date create and edit cols
 
-        ap_table_search = """ SELECT * FROM """ + '"' + args.app_name + """_ap""" + str(wanted_mgt_level) + """_""" + str(table_num[1]) + """" ORDER BY 1 """
+        ap_table_search = (""" SELECT * FROM "{0}_ap{1}_{2}" ORDER BY 1 """).format(args.app_name, str(wanted_mgt_level), str(table_num[1]))
         ap_table_return = sqlquery_to_outls(conn, ap_table_search)
 
         ##handle first table for extra columns
@@ -152,7 +151,7 @@ def find_number_of_cc_columns(table, conn, args):
     cc_col_count = 0
     table_num = table.split('_')
 
-    column_headers_str = """ SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = N'""" + args.app_name + """_""" + table + """' """
+    column_headers_str = (""" SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = N'{app}_{table}' """).format(app=args.app_name, table=table)
     column_headers_result = sqlquery_to_outls(conn, column_headers_str)
     column_headers = [x[0] for x in column_headers_result]
 
@@ -199,7 +198,7 @@ def generate_grapetree(allele_profiles_dict, column_headers_list, args):
 
 
 
-        grapetree_cmd_string = args.penv + ' ; ' + args.grapetree_path + "grapetree -m RapidNJ -p " + args.output_folder + '/allele_profiles.tsv > ' + args.output_folder + '/grapetree.nwk'
+        grapetree_cmd_string = ("{0} ; {1} grapetree -m {2} -p {3} > {4}").format(args.penv, args.grapetree_path, args.gm, (args.output_folder + "/allele_profiles.tsv"), (args.output_folder + "/grapetree.nwk"))
         print("Using Grapetree command: " + grapetree_cmd_string)
         p = subprocess.Popen(grapetree_cmd_string, shell=True, stdout=subprocess.PIPE)
         out, err = p.communicate()
@@ -252,6 +251,8 @@ def parseargs():
                         help="Skip the grapetree analysis. Only write out alleles profile.")
     parser.add_argument("-penv", required=True,
                         help="""Command to activate python environment to run Grapetree. Enclose in double quotes. Eg "source activate python_3_env".""")
+    parser.add_argument("-gm", default="RapidNJ",
+                        help="""Method for grapetre phyloengy model" (Eg. RapidNJ).""")
 
     args = parser.parse_args()
 
