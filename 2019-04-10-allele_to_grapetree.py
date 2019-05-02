@@ -264,6 +264,8 @@ def main():
     #create and writeout a nwk phylogeny, allele profile
     generate_grapetree(allele_profiles_dict, column_headers_list, args)
 
+print('help')
+
 if __name__ == '__main__':
     main()
 
