@@ -1,10 +1,10 @@
 from time import sleep as sl
 
 #infiles
-mgt_st_path = "/Users/liamcheneyy/Desktop/vcseventh_12/isolates_STs.tsv"
+mgt_st_path = "/Users/liamcheneyy/Desktop/MGT_sts.tsv"
 metadata_path = "/Users/liamcheneyy/MGT_files/metadata/processed_metadata9.tsv"
 meta_want_list = ["Year","Country","Continent","Wave","Serogroup","Biotype","Serotype","Strain","UN Subregion","City","State"]
-outpath = "/Users/liamcheneyy/Desktop/vcseventh_12/Grapetree_metadata.txt"
+outpath = "/Users/liamcheneyy/Desktop/Grapetree_metadata.txt"
 
 def read_in_make_dicts(mgt_st_path, metadata_path):
     print("Reading in MGT STs file.")
