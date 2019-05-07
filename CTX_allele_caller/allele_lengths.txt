@@ -1,0 +1,14 @@
+ctxB1	375
+ctxB2	375
+ctxB3	375
+ctxB4	375
+ctxB5	375
+ctxB6	375
+ctxB7	375
+ctxB8	375
+ctxB9	375
+O1	555
+O139	1017
+Ogawa	865
+A266G	600
+WT	600
