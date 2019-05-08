@@ -107,7 +107,6 @@ def get_merge_cclis(connection, cc, level,args):
 
     return cclis
 
-
 def mgt_from_ids(args,ids,conn):
 
     mgtdict = {}
@@ -123,8 +122,6 @@ def mgt_from_ids(args,ids,conn):
         mgtdict[ident] = mgt
 
     return mgtdict
-
-
 
 def get_merge_odclis(connection, odc, odclev,db):
     # print(cc)
@@ -178,7 +175,6 @@ def get_merge_odclis(connection, odc, odclev,db):
     cclis = ",".join(cclis)
 
     return cclis
-
 
 def mgt_from_assignments(args,conn):
 
@@ -266,37 +262,6 @@ def get_mgt_idlist(args,conn):
 
     return ids,mgtdict
 
-# def get_lowest_mergecc(conn,args,cc,level):
-#
-#     if cc != "None":
-#         cc = [cc]
-#         ccls = get_merge_cclis(conn,cc,level,args.appname)
-#         ccls = ccls.split(",")
-#         ccls = [x for x in ccls if x != '0']
-#         # print(ccls)
-#         ccmin = min(map(int,ccls))
-#
-#     else:
-#         ccmin = "None"
-#
-#     return ccmin
-
-# def get_lowest_mergeodc(conn,args,cc,level):
-#
-#     if cc != "None":
-#         cc = [cc]
-#         ccls = get_merge_odclis(conn,cc,level,args.appname)
-#         ccls = ccls.split(",")
-#         ccls = [x for x in ccls if x != 'None']
-#         # print(ccls)
-#         ccmin = min(map(int,ccls))
-#
-#     else:
-#         ccmin = "None"
-#
-#     return ccmin
-
-
 def recursive_mergels(ccls,mergels,newmerge):
     if newmerge == 0:
         return ccls
@@ -318,7 +283,6 @@ def recursive_mergels(ccls,mergels,newmerge):
                             new += 1
         # print(len(nccls),new)
         return recursive_mergels(nccls,mergels,new)
-
 
 def get_merges(args,conn):
     # cc merges
@@ -388,8 +352,6 @@ def get_merges(args,conn):
                     odcmerges[tab][i] = odcAllMerges
 
     return ccmerges,odcmerges
-
-
 
 def get_info_writeout(args,conn,ids,mgtdict,ccmerges,odcmerges):
     loci_query = """
@@ -587,8 +549,6 @@ def get_info_writeout(args,conn,ids,mgtdict,ccmerges,odcmerges):
     # print(ccres)
     # print(odccres)
 
-
-
 def main():
     """
     1 - get mgt ids for isolates in input
@@ -597,9 +557,11 @@ def main():
     return csv
     :return:
     """
-    args = parseargs()
 
-    DbConString = "dbname='{}' host='{}' port='{}' user='{}' password='{}'".format(args.database,args.host,args.port,args.psqluser,args.password)  ## connection info for Db - assign new user that can only do what is needed for script
+    parser = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter)
+    args = parser.parse_args(argv)
+
+    DbConString = "dbname='{}' host='{}' port='{}' user='{}' password='{}'".format(args.database_name,args.host,args.port,args.psqluser,args.password)  ## connection info for Db - assign new user that can only do what is needed for script
 
     conn = psycopg2.connect(DbConString)
 
@@ -608,14 +570,6 @@ def main():
     ids, mgtdict = get_mgt_idlist(args,conn)
 
     get_info_writeout(args,conn,ids,mgtdict,ccmerges,odcmerges)
-
-    # print(ids)
-    # print(mgtdict)
-
-
-
-
-
 
 if __name__ == '__main__':
     main()
