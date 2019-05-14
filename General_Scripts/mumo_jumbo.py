@@ -131,4 +131,22 @@ import matplotlib
 #     else:
 #         print(line + '\t' + "FALSE")
 
-bio_list= list([x for x in open('/Users/liamcheneyy/Desktop/biocycle_list.txt').read().splitlines()])
+# bio_list= list([x for x in open('/Users/liamcheneyy/Desktop/biocycle_list.txt').read().splitlines()])
+
+# for i in open('/Users/liamcheneyy/Desktop/alice_roary_dict_with_cord.txt').read().splitlines():
+#     col = i.split('{')
+#     for j in col:
+#         print(j)
+
+infile = open('/Users/liamcheneyy/Desktop/temp.txt','r').read().splitlines()
+my_strains = []
+for lin in infile:
+    co = lin.split('\t')
+    my_strains.append(co[0])
+
+for line in infile:
+    col = line.split('\t')
+    if col[1] in my_strains:
+        if col[2] != '/':
+            print(col[1:])
+

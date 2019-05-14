@@ -1,7 +1,7 @@
 from time import sleep as sl
 import pandas as pd
 
-infile_path = "/Users/liamcheneyy/Desktop/select_Metadata_grapetree.txt"
+infile_path = "/Users/liamcheneyy/Desktop/vcseventh_14/grapetree/all_metadata.txt"
 list_of_levels = ['MGT2 ST', 'MGT3 ST', 'MGT4 ST']
 out_path = "/Users/liamcheneyy/Desktop/select_wave_STs.tsv"
 

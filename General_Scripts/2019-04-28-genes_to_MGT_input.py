@@ -1,6 +1,6 @@
 import glob
 
-for i in range(7,15,1):
+for i in range(14,15,1):
     print(i)
     gene_dict = {}
     for filename in glob.iglob('/Users/liamcheneyy/Desktop/vcseventh_' + str(i) + '/Mgtfi_ref/Schemes/*accessions*txt'):
