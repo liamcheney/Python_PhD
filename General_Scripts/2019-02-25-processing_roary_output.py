@@ -15,14 +15,15 @@ from io import StringIO
 import csv
 
 #reading in roary gene absence and presence
-roary_path = "/Users/liamcheneyy/Desktop/alice/test.csv"
-gff_folder_in = "/Users/liamcheneyy/Desktop/alice"
+roary_path = "/Users/liamcheneyy/Desktop/gene_presence_absence.csv"
+# gff_folder_in = "/Users/liamcheneyy/Desktop/alice"
 reference_accession = "GCA_000006745"
 info_dict_out = "/Users/liamcheneyy/Desktop/alice/alice_roary_dict_with_cord.txt"
 genome_info_dict = True
 outfile_path = "/Users/liamcheneyy/Desktop/alice"
-fix_roary_csv = True
+fix_roary_csv_val = False
 read_in_fix_roary = True
+write_out_fix_roary = False
 
 ##genome dictionary
 def reading_or_creating_genomes_dict(genome_info_dict, info_dict_out):
@@ -127,7 +128,7 @@ def fix_roary_csv(temp_file):
     # converting temp_file dataframe into list of lists for pythonic str functions etc
     temp_file = [temp_file.columns.values.tolist()] + temp_file.values.tolist()
 
-    if fix_roary_csv:
+    if fix_roary_csv_val:
         for line_num in range(1, len(temp_file), 1):
             for cell_num in range(15, len(temp_file[line_num]), 1):
                 #fix .fasta in cells
@@ -152,6 +153,17 @@ def fix_roary_csv(temp_file):
                         temp_file[line_num][cell_num] = temp_file[line_num][cell_num].replace('__', '_')
                 except:
                     pass
+
+    if write_out_fix_roary:
+        print("Writing out fixed Roary presence and absence.")
+        with open(outfile_path + '/fixed_roary.csv', 'w') as out:
+            for line in temp_file:
+                for cell in line:
+                    if 'nan' in str(cell):
+                        out.write(',')
+                    else:
+                        out.write(str(cell) + ',')
+                out.write('\n')
 
     return temp_file
 
@@ -517,25 +529,26 @@ def converting_cds_to_vc(core_gene_in, gff_folder_in, reference_accession):
 def master_handling_roary_paralog_problems(outfile_path, genome_info_dict, info_dict_out, reference_accession, roary_path):
 
     ##isolate core genes found in >=99% of the dataset genomes
-    temp_file = isolate_ortho(roary_path)
+    # temp_file = isolate_ortho(roary_path)
 
     #calculate the number of non paralogs core genes based on included genomes
-    temp_file = calculate_non_paralogous_core_genes(temp_file)
-
-    #will read in previoulsy created dictionary or create genome info dict if needed
-    info_dict = reading_or_creating_genomes_dict(genome_info_dict, info_dict_out)
+    # temp_file = calculate_non_paralogous_core_genes(temp_file)
 
     #fix roary naming
-    temp_file = fix_roary_csv(temp_file)
+    # temp_file = fix_roary_csv(temp_file)
 
-    ##gathering information core gene groups
-    temp_file = gathering_core_gene_information(temp_file, info_dict)
+    # #will read in previoulsy created dictionary or create genome info dict if needed
+    info_dict = reading_or_creating_genomes_dict(genome_info_dict, info_dict_out)
 
-    #handling Roary fasely split orthologs and fasely joined paralogs
-    core_gene_list = handling_roary_core_gene_ortholog_paralogs(temp_file, reference_accession)
-
-    #will write out a list of core genes
-    core_gene_out(core_gene_list, outfile_path, reference_accession, gff_folder_in)
+    #
+    # ##gathering information core gene groups
+    # temp_file = gathering_core_gene_information(temp_file, info_dict)
+    #
+    # #handling Roary fasely split orthologs and fasely joined paralogs
+    # core_gene_list = handling_roary_core_gene_ortholog_paralogs(temp_file, reference_accession)
+    #
+    # #will write out a list of core genes
+    # core_gene_out(core_gene_list, outfile_path, reference_accession, gff_folder_in)
 
 master_handling_roary_paralog_problems(outfile_path, genome_info_dict, info_dict_out, reference_accession, roary_path)
 
