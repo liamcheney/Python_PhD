@@ -15,14 +15,16 @@ from io import StringIO
 import csv
 
 #reading in roary gene absence and presence
-roary_path = "/Users/liamcheneyy/Desktop/gene_presence_absence.csv"
-# gff_folder_in = "/Users/liamcheneyy/Desktop/alice"
-reference_accession = "GCA_000006745"
-info_dict_out = "/Users/liamcheneyy/Desktop/alice/alice_roary_dict_with_cord.txt"
+roary_path = "/srv/scratch/lanlab/liam/alice/fixed_roary.csv"
+gff_folder_in = "/srv/scratch/lanlab/dalong/alice/gff_all/"
+reference_accession = "NC_002929"
+info_dict_out = "/srv/scratch/lanlab/liam/alice/try.txt"
 genome_info_dict = True
-outfile_path = "/Users/liamcheneyy/Desktop/alice"
-fix_roary_csv_val = False
+outfile_path = "/srv/scratch/lanlab/liam/alice/"
 read_in_fix_roary = True
+
+#dont need
+fix_roary_csv_val = False
 write_out_fix_roary = False
 
 ##genome dictionary
@@ -58,6 +60,8 @@ def creating_genome_info(gff_folder_in, reference_accesion, info_dict_out):
                     size = int(end_cord) - int(beg_cord)
                     strand = col[6]
                     gene_id = col[8].split(';')[0].split('_')[-1]
+                    if gene_id[-2] == '.':
+                        gene_id = gene_id.split('.')[0]
 
                     for q in col[8].split(';'):
                         if "locus_tag" in q:
@@ -175,12 +179,15 @@ def isolate_ortho(roary_path):
     print(str(clock()) + '\t' + 'Isolating orthologs with >99% frequency across all strains.')
     print('\n')
 
-    strains_used = df.shape[1] - 15
-    df.insert(loc = 6, column = 'Gene Count', value = df.iloc[:,14:].notnull().sum(axis=1))
-    df= df.loc[df['Gene Count'] >= math.ceil(strains_used * 0.99)]
+    strains_used = df.shape[1] - 13
+    df.insert(loc = 6, column = 'Gene Count', value = df.iloc[:,13:].notnull().sum(axis=1))
+    print(df.shape)
+    df = df.loc[df['Gene Count'] >= math.ceil(strains_used * 0.99)]
+    print(strains_used)
 
     working_df = pd.DataFrame
     working_df = df.loc[df['Gene Count'] >= math.ceil(strains_used * 0.99)]
+    print(working_df.shape)
     return working_df
 def calculate_non_paralogous_core_genes(temp_file):
     # calculate the number of paralogous core genes for each genomes
@@ -292,7 +299,6 @@ def handling_roary_single_annoations_strings(j, info_dict, reference_accession):
         strand = j[-3:]
 
         return acc, contig, gene_id, beg_cord, end_cord, size, strand
-
 def handling_roary_paralogs_annotations_strings(j, info_dict, reference_accession):
     frag_length_list = []
     frag_count = 0
@@ -302,7 +308,7 @@ def handling_roary_paralogs_annotations_strings(j, info_dict, reference_accessio
     if len(j.split('_')[0]) == 2 and j.split('_')[0].isalpha():
         fragments = j.split('\t')
         for frag in range(para_count):
-            acc = fragments[frag].split('_')[0] + '_' + j.split('_')[1]
+            acc = j.split('_')[0] + '_' + j.split('_')[1]
             gene_id = fragments[frag].rstrip('"').split('_')[-1]
 
             contig = info_dict[acc][gene_id]['contig']
@@ -333,7 +339,6 @@ def handling_roary_paralogs_annotations_strings(j, info_dict, reference_accessio
 
     frag_cell = '\t'.join(frag_list)
     return frag_cell, frag_length_list
-
 def fasely_split_ortholgs_filter(reference_accession, keep_core_gene, temp_file, line):
     reference_core_gene = ""
     cell_in_size = 0
@@ -467,35 +472,32 @@ def handling_roary_core_gene_ortholog_paralogs(temp_file, reference_accession):
         if keep_core_gene == False and split_core_gene == False:
             excluded_list.append(temp_file[line])
 
-    with open('/Users/liamcheneyy/Desktop/excluded_core_genes.csv' ,'w') as outfile:
-        for line in excluded_list:
-            for j in line:
-                outfile.write(str(j) + ',')
-            outfile.write('\n')
-
-    return core_gene_list
+    return core_gene_list, excluded_list
 
 #writing out core genes
-def core_gene_out(core_gene_list, outfile_path, reference_accession, gff_folder_in):
+def core_gene_out(core_gene_list, outfile_path, reference_accession, gff_folder_in, excluded_list):
     print('\n')
     print(str(clock()) + '\t' + 'Writing out list of core genes to: ' + outfile_path + '/core_genes.csv')
     with open(outfile_path + '/core_genes.csv','w') as outfile:
-        outfile.write(','.join(["Accession", "CDS", "Locus Tag", "Start", "End", "Length", "Strand"]))
+        outfile.write(','.join(["Accession", "CDS", "Locus Tag", "Start", "End", "Length"]))
         outfile.write('\n')
         for line in core_gene_list:
             col = line.split('_')
-            if 'GC' in line:
-                acc = col[0] + '_' + col[1]
-            else:
-                acc = col[0]
+            acc = reference_accession
             cds = col[-4]
             start = col[-3]
             end = col[-2]
             length = col[-1][:-3]
-            strand = col[-1][-2]
             vc = converting_cds_to_vc(line, gff_folder_in, reference_accession)
-            outfile.write(','.join([acc,cds,vc,start,end,length,strand]))
+            outfile.write(','.join([acc,cds,vc,start,end,length]))
             outfile.write('\n')
+
+    with open(outfile_path + '/excluded_list.csv','w') as outfile:
+        for line in excluded_list:
+            for cell in line:
+                outfile.write(str(cell) + ',')
+            outfile.write('\n')
+
 
 
 def converting_cds_to_vc(core_gene_in, gff_folder_in, reference_accession):
@@ -529,26 +531,25 @@ def converting_cds_to_vc(core_gene_in, gff_folder_in, reference_accession):
 def master_handling_roary_paralog_problems(outfile_path, genome_info_dict, info_dict_out, reference_accession, roary_path):
 
     ##isolate core genes found in >=99% of the dataset genomes
-    # temp_file = isolate_ortho(roary_path)
+    temp_file = isolate_ortho(roary_path)
 
     #calculate the number of non paralogs core genes based on included genomes
-    # temp_file = calculate_non_paralogous_core_genes(temp_file)
+    temp_file = calculate_non_paralogous_core_genes(temp_file)
 
     #fix roary naming
-    # temp_file = fix_roary_csv(temp_file)
+    temp_file = fix_roary_csv(temp_file)
 
-    # #will read in previoulsy created dictionary or create genome info dict if needed
+    # ##will read in previoulsy created dictionary or create genome info dict if needed
     info_dict = reading_or_creating_genomes_dict(genome_info_dict, info_dict_out)
 
-    #
-    # ##gathering information core gene groups
-    # temp_file = gathering_core_gene_information(temp_file, info_dict)
-    #
-    # #handling Roary fasely split orthologs and fasely joined paralogs
-    # core_gene_list = handling_roary_core_gene_ortholog_paralogs(temp_file, reference_accession)
-    #
-    # #will write out a list of core genes
-    # core_gene_out(core_gene_list, outfile_path, reference_accession, gff_folder_in)
+    ##gathering information core gene groups
+    temp_file = gathering_core_gene_information(temp_file, info_dict)
+
+    ##handling Roary fasely split orthologs and fasely joined paralogs
+    core_gene_list, excluded_list = handling_roary_core_gene_ortholog_paralogs(temp_file, reference_accession)
+
+    ##will write out a list of core genes
+    core_gene_out(core_gene_list, outfile_path, reference_accession, gff_folder_in, excluded_list)
 
 master_handling_roary_paralog_problems(outfile_path, genome_info_dict, info_dict_out, reference_accession, roary_path)
 
