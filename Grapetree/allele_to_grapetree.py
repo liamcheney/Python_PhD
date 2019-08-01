@@ -4,6 +4,7 @@ import os
 import sys
 from os import path
 import argparse
+from time import sleep as sl
 
 def sqlquery_to_outls(con, query):
     """
@@ -52,38 +53,30 @@ def get_column_names(conn, table_numbers_list, args):
         table_num = table.split('_')
 
     # for the found table_name extract the column headers
+        table_header_string = (""" SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = N'{app}_{table}' """ ).format(app=args.app_name, table=table)
+        column_headers = sqlquery_to_outls(conn, table_header_string)
+        for tup in column_headers:
+            for el in tup:
+                if '_' not in el and 'id' not in el:
+                    column_headers_list.append(el)
 
-        # handle the first table to remove extra columns
-        if '0' in table_num[1]:
-            table_header_string = (""" SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = N'{app}_{table}' """ ).format(app=args.app_name, table=table)
-            column_headers = sqlquery_to_outls(conn, table_header_string)
-            column_headers_list.append([x[0] for x in column_headers][1:-6])
-
-        # remove column.id from remaining tables
-        else:
-            table_header_string = (""" SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = N'{app}_{table}' """ ).format(app=args.app_name, table=table)
-            column_headers = sqlquery_to_outls(conn, table_header_string)
-            column_headers_list.append([x[0] for x in column_headers][1:-2])
-
-    column_headers_list = [item for x in column_headers_list for item in x]
     column_headers_list[0] = "#ST"
     column_headers_list[1] = "#DST"
-    column_headers_list.insert(0, "#Strain")
 
     return column_headers_list
 
 def get_strain_names(conn, allele_profiles_list, args):
 
-    strain_hgt_string = (""" SELECT T1.identifier,"{app}_ap9_0".st FROM (SELECT "{app}_isolate".identifier, "{app}_{0}".ap9_0_id FROM "{app}_isolate" LEFT JOIN "{app}_{0}" ON "{app}_isolate".{0}_id::varchar = "{app}_{0}".id::varchar) as T1
-         LEFT JOIN "{app}_ap9_0" ON T1.ap9_0_id::varchar = "{app}_ap9_0".id::varchar WHERE "{app}_ap9_0".st is not null """).format(args.mgt_database_version, app=args.app_name)
-    strain_hgt_result = sqlquery_to_outls(conn, strain_hgt_string)
+    strain_and_st_string = """ SELECT "{app}_isolate".identifier, "{app}_view_apcc".ap{lvl_want}_0_st FROM "{app}_isolate" LEFT JOIN "{app}_view_apcc" ON  "{app}_isolate".mgt_id::varchar  = "{app}_view_apcc".mgt_id::varchar""".format(lvl_want = args.wanted_mgt_level, app=args.app_name)
+
+    strain_and_st_string_result = sqlquery_to_outls(conn, strain_and_st_string)
 
     #add information to list from SQL tuples
     #if a select amount of strains desired
     if args.infile:
         allele_select_profiles_dict = {}
         strains_in = list([x for x in open(args.infile, 'r').read().splitlines()])
-        for key, value in strain_hgt_result:
+        for key, value in strain_and_st_string_result:
             if key in strains_in:
                 for line in range(1, len(allele_profiles_list), 1):
                     if value == allele_profiles_list[line][0]:
@@ -93,10 +86,10 @@ def get_strain_names(conn, allele_profiles_list, args):
 
     else:
         allele_profiles_dict = {}
-        for tup_num in range(0, len(strain_hgt_result), 1):
+        for tup_num in range(0, len(strain_and_st_string_result), 1):
             for line in range(1, len(allele_profiles_list), 1):
-                if strain_hgt_result[tup_num][1] == allele_profiles_list[line][0]:
-                    allele_profiles_dict[strain_hgt_result[tup_num][0]] = allele_profiles_list[line]
+                if strain_and_st_string_result[tup_num][1] == allele_profiles_list[line][0]:
+                    allele_profiles_dict[strain_and_st_string_result[tup_num][0]] = allele_profiles_list[line]
 
         return allele_profiles_dict
 
@@ -120,8 +113,8 @@ def combine_allele_profiles(conn, table_numbers_list, column_headers_list, wante
         ap_table_return = sqlquery_to_outls(conn, ap_table_search)
 
         ##handle first table for extra columns
-        if '0' in table_num[1]:
 
+        if '0' in table_num[1]:
             ap_table = [x[:-remove_col] for x in ap_table_return]
         else:
             ap_table = [x[:-remove_col] for x in ap_table_return]
@@ -171,12 +164,12 @@ def convert_to_grapetree(allele_profiles_dict):
 
             #if neg and N allele assignmnts from MGT present then fix for grapetree
             if '_' in allele_profiles_dict[key][cell_num]:
-                fix = allele_profiles_dict[key][cell_num].split('_')[0].strip('-')
-                allele_profiles_dict[key][cell_num] = fix
-
+                # fix = allele_profiles_dict[key][cell_num].split('_')[0].strip('-')
+                # allele_profiles_dict[key][cell_num] = fix
+                print('skipped')
             elif 'N' in allele_profiles_dict[key][cell_num]:
-                allele_profiles_dict[key][cell_num] = '0'
-
+                # allele_profiles_dict[key][cell_num] = '0'
+                print('skipped')
 
     return allele_profiles_dict
 
@@ -185,7 +178,7 @@ def generate_grapetree(allele_profiles_dict, column_headers_list, args):
         print("Generating phylogeny for " + str(len(allele_profiles_dict.keys())) + " using Grapetree.")
 
         ##write out temp file
-        with open(args.output_folder + '/allele_profiles.tsv','w') as out:
+        with open(args.output_folder + '/MGT' + str(args.wanted_mgt_level) + '_allele_profiles.tsv','w') as out:
             for cell in column_headers_list:
                 out.write(str(cell) + '\t')
             out.write('\n')
@@ -198,7 +191,7 @@ def generate_grapetree(allele_profiles_dict, column_headers_list, args):
 
 
 
-        grapetree_cmd_string = ("{0} ; {1} grapetree -m {2} -p {3} > {4}").format(args.penv, args.grapetree_path, args.gm, (args.output_folder + "/allele_profiles.tsv"), (args.output_folder + "/grapetree.nwk"))
+        grapetree_cmd_string = ("{0} ; {1} grapetree -m {2} -p {3} > {4}").format(args.penv, args.grapetree_path, args.gm, (args.output_folder + '/MGT' + str(args.wanted_mgt_level) + '_allele_profiles.tsv'), (args.output_folder + '/MGT' + str(args.wanted_mgt_level) + '_grapetree.nwk'))
         print("Using Grapetree command: " + grapetree_cmd_string)
         p = subprocess.Popen(grapetree_cmd_string, shell=True, stdout=subprocess.PIPE)
         out, err = p.communicate()
@@ -207,7 +200,8 @@ def generate_grapetree(allele_profiles_dict, column_headers_list, args):
         print("Skipping phylogeny generation. Writing out temp file.")
 
         ##write out temp file
-        with open(args.output_folder + '/allele_profiles.tsv','w') as out:
+        column_headers_list.insert(0,'#Strain')
+        with open(args.output_folder + '/MGT' + str(args.wanted_mgt_level) + '_allele_profiles.tsv','w') as out:
             for cell in column_headers_list:
                 out.write(str(cell) + '\t')
             out.write('\n')

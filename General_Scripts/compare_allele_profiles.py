@@ -183,7 +183,7 @@ def get_ap(args,conn,st,ap_tables):
 def main():
     args = parseargs()
 
-    DbConString = "dbname='vcseventh_11' host='0.0.0.0' port='5432' user='postgres' password='Potle2368'"  ## connection info for Db - assign new user that can only do what is needed for script
+    DbConString = "dbname='vcseventh_11' host='0.0.0.0' port='5432' user='postgres' password='XXXX'"  ## connection info for Db - assign new user that can only do what is needed for script
 
     conn = psycopg2.connect(DbConString)
 

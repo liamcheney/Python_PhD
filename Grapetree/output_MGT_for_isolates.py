@@ -107,6 +107,7 @@ def get_merge_cclis(connection, cc, level,args):
 
     return cclis
 
+
 def mgt_from_ids(args,ids,conn):
 
     mgtdict = {}
@@ -114,7 +115,7 @@ def mgt_from_ids(args,ids,conn):
     # print(ids)
 
 
-    sqlq = """ SELECT "identifier","hgt_id" FROM "{0}_isolate" WHERE "identifier" in ('{1}') """.format(args.appname,"','".join(ids))
+    sqlq = """ SELECT "identifier","mgt_id" FROM "{0}_isolate" WHERE "identifier" in ('{1}') """.format(args.appname,"','".join(ids))
     res = sqlquery_to_outls(conn,sqlq)
     for out in res:
         ident = out[0]
@@ -122,6 +123,8 @@ def mgt_from_ids(args,ids,conn):
         mgtdict[ident] = mgt
 
     return mgtdict
+
+
 
 def get_merge_odclis(connection, odc, odclev,db):
     # print(cc)
@@ -176,6 +179,7 @@ def get_merge_odclis(connection, odc, odclev,db):
 
     return cclis
 
+
 def mgt_from_assignments(args,conn):
 
     mgts = []
@@ -185,10 +189,10 @@ def mgt_from_assignments(args,conn):
         level = args.seqtype.split(",")[1]
         st = stdst[0]
         if len(stdst) == 1:
-            sqlq = """ SELECT "hgt_id" FROM "{}_view_apcc" WHERE "ap{}_0_st" = '{}'; """.format(args.appname,level,st)
+            sqlq = """ SELECT "mgt_id" FROM "{}_view_apcc" WHERE "ap{}_0_st" = '{}'; """.format(args.appname,level,st)
         else:
             dst = stdst[1]
-            sqlq = """ SELECT "hgt_id" FROM "{}_view_apcc" WHERE ("ap{}_0_st" = '{}' AND "ap{}_0_st" = '{}')""".format(args.appname,level,st,level,dst)
+            sqlq = """ SELECT "mgt_id" FROM "{}_view_apcc" WHERE ("ap{}_0_st" = '{}' AND "ap{}_0_st" = '{}')""".format(args.appname,level,st,level,dst)
 
         res = sqlquery_to_outls(conn,sqlq)
 
@@ -205,7 +209,7 @@ def mgt_from_assignments(args,conn):
 
         # print(cclis)
 
-        sqlq = """ SELECT "hgt_id" FROM "{}_view_apcc" WHERE "cc1_{}" IN ('{}'); """.format(args.appname, level, "','".join(cclis))
+        sqlq = """ SELECT "mgt_id" FROM "{}_view_apcc" WHERE "cc1_{}" IN ('{}'); """.format(args.appname, level, "','".join(cclis))
 
         res = sqlquery_to_outls(conn, sqlq)
 
@@ -223,7 +227,7 @@ def mgt_from_assignments(args,conn):
 
         # print(odclis)
 
-        sqlq = """ SELECT "hgt_id" FROM "{}_view_apcc" WHERE "cc2_{}" IN ('{}'); """.format(args.appname, odclev, "','".join(odclis))
+        sqlq = """ SELECT "mgt_id" FROM "{}_view_apcc" WHERE "cc2_{}" IN ('{}'); """.format(args.appname, odclev, "','".join(odclis))
 
         res = sqlquery_to_outls(conn, sqlq)
 
@@ -231,7 +235,7 @@ def mgt_from_assignments(args,conn):
         ## get st,cc,odcs from "Salmonella_view_apcc" and get strain names from "Salmonella_isolate" by matching mgts
 
 
-    sqlq = """ SELECT "identifier","hgt_id" FROM "{0}_isolate" WHERE "hgt_id" IN ('{1}') """.format(args.appname, "','".join(mgts))
+    sqlq = """ SELECT "identifier","mgt_id" FROM "{0}_isolate" WHERE "mgt_id" IN ('{1}') """.format(args.appname, "','".join(mgts))
     out = sqlquery_to_outls(conn, sqlq)
 
     mgtdict = {}
@@ -262,6 +266,37 @@ def get_mgt_idlist(args,conn):
 
     return ids,mgtdict
 
+# def get_lowest_mergecc(conn,args,cc,level):
+#
+#     if cc != "None":
+#         cc = [cc]
+#         ccls = get_merge_cclis(conn,cc,level,args.appname)
+#         ccls = ccls.split(",")
+#         ccls = [x for x in ccls if x != '0']
+#         # print(ccls)
+#         ccmin = min(map(int,ccls))
+#
+#     else:
+#         ccmin = "None"
+#
+#     return ccmin
+
+# def get_lowest_mergeodc(conn,args,cc,level):
+#
+#     if cc != "None":
+#         cc = [cc]
+#         ccls = get_merge_odclis(conn,cc,level,args.appname)
+#         ccls = ccls.split(",")
+#         ccls = [x for x in ccls if x != 'None']
+#         # print(ccls)
+#         ccmin = min(map(int,ccls))
+#
+#     else:
+#         ccmin = "None"
+#
+#     return ccmin
+
+
 def recursive_mergels(ccls,mergels,newmerge):
     if newmerge == 0:
         return ccls
@@ -283,6 +318,7 @@ def recursive_mergels(ccls,mergels,newmerge):
                             new += 1
         # print(len(nccls),new)
         return recursive_mergels(nccls,mergels,new)
+
 
 def get_merges(args,conn):
     # cc merges
@@ -353,6 +389,8 @@ def get_merges(args,conn):
 
     return ccmerges,odcmerges
 
+
+
 def get_info_writeout(args,conn,ids,mgtdict,ccmerges,odcmerges):
     loci_query = """
     SELECT *
@@ -380,19 +418,19 @@ def get_info_writeout(args,conn,ids,mgtdict,ccmerges,odcmerges):
 
     mgtls = mgt_to_id.keys()
 
-    sts_sqlget = """ SELECT "hgt_id","{0}" FROM "{1}_view_apcc" WHERE "hgt_id" IN ('{2}') """.format('","'.join(map(str,sts)),args.appname,"','".join(map(str,mgtls)))
+    sts_sqlget = """ SELECT "mgt_id","{0}" FROM "{1}_view_apcc" WHERE "mgt_id" IN ('{2}') """.format('","'.join(map(str,sts)),args.appname,"','".join(map(str,mgtls)))
 
     stres = sqlquery_to_outls(conn,sts_sqlget)
 
-    dsts_sqlget = """ SELECT "hgt_id","{0}" FROM "{1}_view_apcc" WHERE "hgt_id" IN ('{2}') """.format('","'.join(map(str,dsts)),args.appname,"','".join(map(str,mgtls)))
+    dsts_sqlget = """ SELECT "mgt_id","{0}" FROM "{1}_view_apcc" WHERE "mgt_id" IN ('{2}') """.format('","'.join(map(str,dsts)),args.appname,"','".join(map(str,mgtls)))
 
     dstres = sqlquery_to_outls(conn,dsts_sqlget)
 
-    ccs_sqlget = """ SELECT "hgt_id","{0}" FROM "{1}_view_apcc" WHERE "hgt_id" IN ('{2}') """.format('","'.join(map(str,ccs)),args.appname,"','".join(map(str,mgtls)))
+    ccs_sqlget = """ SELECT "mgt_id","{0}" FROM "{1}_view_apcc" WHERE "mgt_id" IN ('{2}') """.format('","'.join(map(str,ccs)),args.appname,"','".join(map(str,mgtls)))
 
     ccres = sqlquery_to_outls(conn,ccs_sqlget)
 
-    odcs_sqlget = """ SELECT "hgt_id","{0}" FROM "{1}_view_apcc" WHERE "hgt_id" IN ('{2}') """.format('","'.join(map(str,odcs)),args.appname,"','".join(map(str,mgtls)))
+    odcs_sqlget = """ SELECT "mgt_id","{0}" FROM "{1}_view_apcc" WHERE "mgt_id" IN ('{2}') """.format('","'.join(map(str,odcs)),args.appname,"','".join(map(str,mgtls)))
 
     odccres = sqlquery_to_outls(conn,odcs_sqlget)
 
@@ -549,6 +587,8 @@ def get_info_writeout(args,conn,ids,mgtdict,ccmerges,odcmerges):
     # print(ccres)
     # print(odccres)
 
+
+
 def main():
     """
     1 - get mgt ids for isolates in input
@@ -557,11 +597,9 @@ def main():
     return csv
     :return:
     """
+    args = parseargs()
 
-    parser = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter)
-    args = parser.parse_args(argv)
-
-    DbConString = "dbname='{}' host='{}' port='{}' user='{}' password='{}'".format(args.database_name,args.host,args.port,args.psqluser,args.password)  ## connection info for Db - assign new user that can only do what is needed for script
+    DbConString = "dbname='{}' host='{}' port='{}' user='{}' password='{}'".format(args.database,args.host,args.port,args.psqluser,args.password)  ## connection info for Db - assign new user that can only do what is needed for script
 
     conn = psycopg2.connect(DbConString)
 
@@ -570,6 +608,14 @@ def main():
     ids, mgtdict = get_mgt_idlist(args,conn)
 
     get_info_writeout(args,conn,ids,mgtdict,ccmerges,odcmerges)
+
+    # print(ids)
+    # print(mgtdict)
+
+
+
+
+
 
 if __name__ == '__main__':
     main()
