@@ -3,11 +3,11 @@ import glob
 from Bio import SeqIO
 
 reference_cds_in = "/Users/liamcheneyy/Desktop/ref/GCA_000006745.1_ASM674v1_cds_from_genomic.fna"
-mgt_schemes_path = "/Users/liamcheneyy/Desktop/Schemes/"
+mgt_schemes_path = "/Users/liamcheneyy/Desktop/vcseventh_15/Mgtfi_ref/Schemes/"
 out_locus_gene_sizes_path = '/Users/liamcheneyy/Desktop/mgt_schemes_genes.csv'
 
-in_locus_ds_path = '/Users/liamcheneyy/Desktop/ds_all_loci.txt'
-out_locus_ds_path = '/Users/liamcheneyy/Desktop/mgt_schemes_ds.csv'
+# in_locus_ds_path = '/Users/liamcheneyy/Desktop/ds_all_loci.txt'
+# out_locus_ds_path = '/Users/liamcheneyy/Desktop/mgt_schemes_ds.csv'
 
 in_locus_dnds_path = "/Users/liamcheneyy/Desktop/dnds_all_loci.txt"
 out_locus_dnds_path = '/Users/liamcheneyy/Desktop/mgt_schemes_dnds.csv'
@@ -76,7 +76,7 @@ def check_dnds_per_scheme(mgt_schemes_path, locus_ds_path, outfile):
             out.write('\n')
 
 
-check_ds_per_scheme(mgt_schemes_path, in_locus_ds_path, out_locus_ds_path)
+# check_ds_per_scheme(mgt_schemes_path, in_locus_ds_path, out_locus_ds_path)
 
 check_dnds_per_scheme(mgt_schemes_path, in_locus_dnds_path, out_locus_dnds_path)
 

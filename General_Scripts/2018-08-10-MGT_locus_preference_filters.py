@@ -20,7 +20,7 @@ def too_close(poslists,newpos,limit, chro):
             return True
     return False
 
-input_path = "/Users/liamcheneyy/Desktop/vcseventh_8/genes_preference_selector.txt"
+input_path = "/Users/liamcheneyy/Desktop/genes_preference_selector.txt"
 out_path = input_path.split('/')[1:-1]
 out_path = '/' + '/'.join(v for v in out_path)
 
@@ -74,11 +74,10 @@ print("pref 3")
 print(filt[filt["pref"]==3]["pref"].count())
 
 filt.loc[(filt["In Genus Core"].astype(str).str.contains("T")) & (filt["pref"]<=3), "pref"] = 2
-print("pref 2")
-print(filt[filt["pref"]==2]["pref"].count())
+# print(filt[filt["pref"]==2]["pref"].count())
 
 filt.loc[(filt["Number of Negative Counts"]==0) & (filt["Number of Zero Counts"]==0) & (filt["pref"]<=2), "pref"] = 1
-print("pref 1")
+# print("pref 1")
 print(filt[filt["pref"]==1]["pref"].count())
 
 filt.to_csv('/Users/liamcheneyy/Desktop/filt_all_genes_hgt.csv', index=False)
@@ -98,7 +97,7 @@ random.seed(21461798)
 target_sizes = {'MGT2':10329,'MGT3':51644,'MGT4':103287,'MGT5':206575,'MGT6':516437,'MGT7':1032875}
 
 #scheme lowest allowed loci preference numbers
-preflimit = {'MGT2':1,'MGT3':2,'MGT4':4,'MGT5':6,'MGT6':9,'MGT7':10}
+preflimit = {'MGT2':1,'MGT3':2,'MGT4':4,'MGT5':6,'MGT6':9,'MGT7':12}
 
 #scheme smallest distance allowed between loci
 distlimit = {'MGT2':20000,'MGT3':7000,'MGT4':6000,'MGT5':2000,'MGT6':0,'MGT7':0}

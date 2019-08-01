@@ -1,0 +1,98 @@
+##script will choose a marker gene, and find the STs for that marker gene
+import pandas as pd
+import collections
+
+mgt_want_level = 'MGT2 ST'
+marker_gene_want = 'TCPA'
+
+def marker_gene_variants(marker_gene_want,df):
+
+    marker_genes_list = df[marker_gene_want].unique()
+
+    keep_list = []
+    for x in marker_genes_list:
+        if x != ' ':
+            if marker_gene_want in str(x) and '/' not in str(x):
+                keep_list.append(x)
+
+    return keep_list
+def select_data(marker_gene_want, marker_variants_list, df):
+
+    # df = df.loc[(df[marker_gene_want].isin(marker_variants_list)) & (df['Year'].notnull()) & (df['Year'] != "NAN")]
+    #including missing years
+    df = df.loc[df[marker_gene_want].isin(marker_variants_list)]
+    df = df[[mgt_want_level, marker_gene_want, 'YEAR']]
+
+    return df
+def calc_sts_per_marker(mgt_want_level, marker_variants_list, df):
+    #the STs per marker gene
+    st_result_dict = {}
+
+    #the frequency of STs per marker gene
+    frequency_result_dict = {}
+
+    #the number of strains having the marker gene
+    strain_num_dict = {}
+
+    #find the wanted MGT level STs for that marker
+    for i in marker_variants_list:
+        sub_df = df[df[marker_gene_want].isin([i])]
+
+        strain_num_dict[i] = sub_df.shape[0]
+
+        st_list = list(map(int,sub_df[mgt_want_level]))
+        non_redun_st_list = sorted(set(st_list))
+
+        st_result_dict[i] = non_redun_st_list
+
+        freq = {x:st_list.count(x) for x in st_list}
+        frequency_result_dict[i] = freq
+
+    inter = list(set(st_result_dict['TCPA_EL_A226']) & set(st_result_dict['TCPA_EL_WT']))
+    # print(inter)
+    # print(frequency_result_dict['TCPA_EL_A226'])
+    # print(frequency_result_dict['TCPA_EL_WT'])
+
+    print('overlapping STS are : ' + str(inter))
+
+    for i in inter:
+        print('ST' + str(i) + ' is found in TCPA_EL_A226 : ' + str(frequency_result_dict['TCPA_EL_A226'][i]) + ' and TCPA_EL_WT : ' + str(frequency_result_dict['TCPA_EL_WT'][i]))
+        del frequency_result_dict['TCPA_EL_A226'][i]
+        del frequency_result_dict['TCPA_EL_WT'][i]
+
+
+    print()
+
+    for q in marker_variants_list:
+        genome_count = 0
+        st_num = 0
+        for key, value in frequency_result_dict[q].items():
+            if value >= 2:
+                st_num = st_num + 1
+                # print("ST" + str(key) + '\t' + "NUM: " + str(value))
+                genome_count = genome_count + int(value)
+
+        covered = genome_count / strain_num_dict[q] * 100
+
+        print('For ' + str(q) + ' number of STs : ' + str(st_num) + ', percentage covered : ' + str(covered) + '%')
+
+    #later ideas
+    #get the time period this covers
+
+
+def main(mgt_want_level, marker_gene_want):
+
+    input_df = pd.read_csv('/Users/liamcheneyy/Desktop/vcseventh_15/grapetree/all_metadata.txt', delimiter='\t')
+    df = input_df.apply(lambda x: x.astype(str).str.upper())
+    df.columns = [x.upper() for x in df.columns]
+
+    # get list of marker gene variants
+    marker_variants_list = marker_gene_variants(marker_gene_want,df)
+
+    #filter dataframe to get rows with year and wanted marker metadata
+    df = select_data(marker_gene_want, marker_variants_list, df)
+
+    #per marker gene variant get the STs
+    sts_per_marker_dict = calc_sts_per_marker(mgt_want_level, marker_variants_list, df)
+
+main(mgt_want_level, marker_gene_want)
