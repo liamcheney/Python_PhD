@@ -258,31 +258,47 @@
 from ete3 import Tree
 
 # t = Tree('((((H,K)D,(F,I)G)B,E)A,((L,(N,Q)O)J,(P,S)M)C);', format=1)
-t=Tree()
-t.populate(30)
+t=Tree('((((aaaaaaaaav:1,aaaaaaaaaw:1)1:1,((aaaaaaaaax:1,aaaaaaaaay:1)1:1,(aaaaaaaaaz:1,(aaaaaaaabb:1,(aaaaaaaabc:1,(aaaaaaaabd:1,aaaaaaaabe:1)1:1)1:1)1:1)1:1)1:1)1:1,(aaaaaaaaaa:1,(aaaaaaaaab:1,aaaaaaaaac:1)1:1)1:1)1:1,(((aaaaaaaaad:1,aaaaaaaaae:1)1:1,((aaaaaaaaaf:1,(aaaaaaaaag:1,(aaaaaaaaah:1,(aaaaaaaaai:1,aaaaaaaaaj:1)1:1)1:1)1:1)1:1,(aaaaaaaaak:1,aaaaaaaaal:1)1:1)1:1)1:1,((aaaaaaaaam:1,(aaaaaaaaan:1,(aaaaaaaaao:1,(aaaaaaaaap:1,(aaaaaaaaaq:1,(aaaaaaaaar:1,aaaaaaaaas:1)1:1)1:1)1:1)1:1)1:1)1:1,(aaaaaaaaat:1,aaaaaaaaau:1)1:1)1:1)1:1);', format=1)
+
+
+#creating a trees
+# t=Tree()
+# t.populate(30)
 print(t)
-# d = t.search_nodes(dist=0.5)[0]
-# node_c = t.search_nodes(name="C")[0]
-# node_b = t.search_nodes(name="B")[0]
-# leaf_d = t.get_leaves_by_name(name="D")[0]
+#moving over the trees
+# test_root = t.is_root()
+# children = t.get_children()[num] #can default is level traversal, can choose either left or right children
 
-# for node in node_b.traverse("levelorder"):
-#     print(node.name, node.dist, node.support)
-#
-# common_anc = node_b.get_common_ancestor("H","K")
-# print(node_b)
-# print(node_c.name)
-# print(node_c.support)
-# print(node_c.dist)
-
-# for node in t.traverse("inorder"):
-#     print(node.name)
-
-# for node in t.traverse("preorder"):
-#     print(node.name)
-
-# size=4
+#search for strings inside leaf name
 # for node in t.traverse():
 #         if "av" in node.name:
 #             print(node)
 
+# save children results to variables
+# ch1,ch2 = t.get_children()
+
+#iterate over leafs of a tree
+# for node in t.get_leaves():
+#     print(node.name)
+
+#searching the nodes and leaves
+# d = t.search_nodes(dist=0.5)[0]
+# node_b = t.search_nodes(name="B")[0]
+# common_anc = node_b.get_common_ancestor("H","K")
+
+#search leaf by name and get sisters
+# leaf_d = t.get_leaves_by_name(name="aaaaaaaaae")[0]
+# sisters = leaf_d.get_sisters()[0]
+
+#iterating through leaves
+# for leaf in t.iter_leaves(): #returns objects
+#     print(leaf.dist)
+#
+# for leaf in t.iter_leaf_names(): #only returns strings
+#     print(leaf)
+
+#adding features to nodes
+
+
+#writing trees
+# print(t.write()) # prints out as a string
