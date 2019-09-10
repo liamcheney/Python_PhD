@@ -37,12 +37,13 @@ def count_alleles_per_loci(mgt9_alleles_path):
     allele_count = {}
     for column in df:
         if '#' not in column:
-            unique_values = list(df[column].unique())
-            alleles_num = len(unique_values)
-            # print(column)
-            # print(unique_values)
+            #not using
+            # unique_values = list(df[column].unique())
+            # alleles_num = len(unique_values)
+            col_freqs = df[column].value_counts().to_dict()
+            allele_count[column] = col_freqs
+            # print(column, allele_count[column])
             # sl(1)
-            allele_count[column] = alleles_num
 
     return allele_count
 
@@ -65,7 +66,7 @@ def temp_write_out(alleles_dict):
 
             out.write('\n')
 
-def terminating_genes_per_clade(input_genomes, strains_close_to_clade, alleles_dict, alleles_per_loci_dict):
+def terminating_genes_per_clade(input_genomes, strains_close_to_clade, alleles_dict, calc_alleles_strains_per_loc):
 
     #MAIN: calculate the alleles specific to the input clade
 
@@ -76,7 +77,7 @@ def terminating_genes_per_clade(input_genomes, strains_close_to_clade, alleles_d
     allele_in_all_list = alleles_from_all_strains(alleles_dict, strains_close_to_clade, input_genomes)
 
     #find alleles only changing in certain clade
-    clade_specific_genes = alleles_specific_to_clade(allele_in_all_list, shared_alleles_from_input_clade, alleles_per_loci_dict)
+    clade_specific_genes = alleles_specific_to_clade(allele_in_all_list, shared_alleles_from_input_clade, calc_alleles_strains_per_loc)
 
     return clade_specific_genes
 
@@ -122,7 +123,7 @@ def alleles_from_all_strains(alleles_dict, input_genomes, strains_close_to_clade
 
     return all_alleles
 
-def alleles_specific_to_clade(allele_in_all_list, shared_alleles_from_input_clade, alleles_per_loci_dict):
+def alleles_specific_to_clade(allele_in_all_list, shared_alleles_from_input_clade, calc_alleles_strains_per_loc):
     # print('Finding Clade Specific Genes.')
 
     #find specific genes
@@ -132,11 +133,11 @@ def alleles_specific_to_clade(allele_in_all_list, shared_alleles_from_input_clad
             specific_genes.append(allele)
             # print(allele)
 
-    print(str(len(specific_genes)) + " genes Specific to input clade.")
+    # print(str(len(specific_genes)) + " genes Specific to input clade.")
     for i in specific_genes:
         locus = i.split('_')[0]
-        print(str(i) + '\t' +  str(alleles_per_loci_dict[locus]))
-        # print(str(i))
+        alleles_num = len(calc_alleles_strains_per_loc[locus].keys())
+        print(str(i) + '\t' + str(alleles_num) + '\t' + str(calc_alleles_strains_per_loc[locus]))
 
 def parseargs():
     parser = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter)
@@ -156,6 +157,8 @@ def main():
     mgt9_alleles_path = '/Users/liamcheneyy/Desktop/MGT9_allele_profiles.tsv'
     mgt9_alleles = open(mgt9_alleles_path,'r').read().splitlines()
 
+    all_mgt9_alleles_path = mgt9_alleles_path
+
     all_of_interest_path = '/Users/liamcheneyy/Desktop/remove_clade.txt'
     strains_close_to_clade = open(all_of_interest_path, 'r').read().splitlines()
 
@@ -166,14 +169,11 @@ def main():
     #dict key:strain, value:alleles
     alleles_dict = create_alleles_dict(mgt9_alleles)
 
-    #calculate
-
-    # calculate the number of alleles per loci
-    alleles_per_loci_dict = read_in_alleles_per_loci(alleles_in)
-    print(alleles_per_loci_dict)
+    #calculate alleles per loci, and percentage of strains each allele holds
+    calc_alleles_strains_per_loc = count_alleles_per_loci(all_mgt9_alleles_path)
 
     #find genes for a certain TERMINATING clade
-    input_clade_specific_genes = terminating_genes_per_clade(input_genomes, strains_close_to_clade, alleles_dict, alleles_per_loci_dict)
+    input_clade_specific_genes = terminating_genes_per_clade(input_genomes, strains_close_to_clade, alleles_dict, calc_alleles_strains_per_loc)
 
 
 if __name__ == '__main__':
