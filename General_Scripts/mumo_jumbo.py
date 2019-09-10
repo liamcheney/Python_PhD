@@ -304,7 +304,7 @@
 # print(t.write()) # prints out as a string
 
 
-infile = open('/Users/liamcheneyy/Desktop/pari/edit_ref_names.txt','r').read().splitlines()
+infile = open('/Users/liamcheneyy/Desktop/input.txt','r').read().splitlines()
 add_info = 'SRR8867848_'
 
 save_list = []
@@ -329,3 +329,20 @@ for line in infile:
 for element in save_list:
     print(element)
 
+import pandas as pd
+all_of_interest_path = '/Users/liamcheneyy/Desktop/vcseventh_15/grapetree/all_MGT9_allele_profiles.tsv'
+
+df = pd.read_csv(all_of_interest_path, sep='\t', index_col=False)
+
+allele_count = {}
+for column in df:
+    if '#' not in column:
+        unique_values = list(df[column].unique())
+        alleles_num = len(unique_values)
+        # print(column)
+        # print(unique_values)
+        # sl(1)
+        allele_count[column] = alleles_num
+
+for key, value in allele_count.items():
+    print(str(key) + '\t' + str(value))
