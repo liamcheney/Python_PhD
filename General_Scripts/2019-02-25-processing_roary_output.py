@@ -15,17 +15,17 @@ from io import StringIO
 import csv
 
 #reading in roary gene absence and presence
-roary_path = "/Users/liamcheneyy/Desktop/pari/gene_presence_absence.csv"
-gff_folder_in = "/Users/liamcheneyy/Desktop/pari/cgmlst_prokka"
+roary_path = "/Users/liamcheneyy/Desktop/gene_presence_absencei95minus_2.csv"
+gff_folder_in = "/Users/liamcheneyy/Desktop/minus_2_gff/"
 reference_accession = "SRR8867848"
 info_dict_out = "/Users/liamcheneyy/Desktop/pari/info_dict.txt"
-genome_info_dict = True
+genome_info_dict = False
 outfile_path = "/Users/liamcheneyy/Desktop/pari/"
-read_in_fix_roary = False
 
 #dont need
 fix_roary_csv_val = False
 write_out_fix_roary = False
+read_in_fix_roary = False
 
 ##genome dictionary
 def reading_or_creating_genomes_dict(genome_info_dict, info_dict_out):
@@ -581,7 +581,7 @@ def master_handling_roary_paralog_problems(outfile_path, genome_info_dict, info_
     core_gene_list, excluded_list = handling_roary_core_gene_ortholog_paralogs(temp_file, reference_accession)
 
     ##will write out a list of core genes
-    # core_gene_out(core_gene_list, outfile_path, reference_accession, gff_folder_in, excluded_list)
+    core_gene_out(core_gene_list, outfile_path, reference_accession, gff_folder_in, excluded_list)
 
 master_handling_roary_paralog_problems(outfile_path, genome_info_dict, info_dict_out, reference_accession, roary_path)
 
