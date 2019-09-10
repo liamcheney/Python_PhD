@@ -255,16 +255,16 @@
 #     print(i)
 #
 
-from ete3 import Tree
-
-# t = Tree('((((H,K)D,(F,I)G)B,E)A,((L,(N,Q)O)J,(P,S)M)C);', format=1)
-t=Tree('((((aaaaaaaaav:1,aaaaaaaaaw:1)1:1,((aaaaaaaaax:1,aaaaaaaaay:1)1:1,(aaaaaaaaaz:1,(aaaaaaaabb:1,(aaaaaaaabc:1,(aaaaaaaabd:1,aaaaaaaabe:1)1:1)1:1)1:1)1:1)1:1)1:1,(aaaaaaaaaa:1,(aaaaaaaaab:1,aaaaaaaaac:1)1:1)1:1)1:1,(((aaaaaaaaad:1,aaaaaaaaae:1)1:1,((aaaaaaaaaf:1,(aaaaaaaaag:1,(aaaaaaaaah:1,(aaaaaaaaai:1,aaaaaaaaaj:1)1:1)1:1)1:1)1:1,(aaaaaaaaak:1,aaaaaaaaal:1)1:1)1:1)1:1,((aaaaaaaaam:1,(aaaaaaaaan:1,(aaaaaaaaao:1,(aaaaaaaaap:1,(aaaaaaaaaq:1,(aaaaaaaaar:1,aaaaaaaaas:1)1:1)1:1)1:1)1:1)1:1)1:1,(aaaaaaaaat:1,aaaaaaaaau:1)1:1)1:1)1:1);', format=1)
-
-
-#creating a trees
-# t=Tree()
-# t.populate(30)
-print(t)
+# from ete3 import Tree
+#
+# # t = Tree('((((H,K)D,(F,I)G)B,E)A,((L,(N,Q)O)J,(P,S)M)C);', format=1)
+# t=Tree('((((aaaaaaaaav:1,aaaaaaaaaw:1)1:1,((aaaaaaaaax:1,aaaaaaaaay:1)1:1,(aaaaaaaaaz:1,(aaaaaaaabb:1,(aaaaaaaabc:1,(aaaaaaaabd:1,aaaaaaaabe:1)1:1)1:1)1:1)1:1)1:1)1:1,(aaaaaaaaaa:1,(aaaaaaaaab:1,aaaaaaaaac:1)1:1)1:1)1:1,(((aaaaaaaaad:1,aaaaaaaaae:1)1:1,((aaaaaaaaaf:1,(aaaaaaaaag:1,(aaaaaaaaah:1,(aaaaaaaaai:1,aaaaaaaaaj:1)1:1)1:1)1:1)1:1,(aaaaaaaaak:1,aaaaaaaaal:1)1:1)1:1)1:1,((aaaaaaaaam:1,(aaaaaaaaan:1,(aaaaaaaaao:1,(aaaaaaaaap:1,(aaaaaaaaaq:1,(aaaaaaaaar:1,aaaaaaaaas:1)1:1)1:1)1:1)1:1)1:1)1:1,(aaaaaaaaat:1,aaaaaaaaau:1)1:1)1:1)1:1);', format=1)
+#
+#
+# #creating a trees
+# # t=Tree()
+# # t.populate(30)
+# print(t)
 #moving over the trees
 # test_root = t.is_root()
 # children = t.get_children()[num] #can default is level traversal, can choose either left or right children
@@ -302,3 +302,30 @@ print(t)
 
 #writing trees
 # print(t.write()) # prints out as a string
+
+
+infile = open('/Users/liamcheneyy/Desktop/pari/edit_ref_names.txt','r').read().splitlines()
+add_info = 'SRR8867848_'
+
+save_list = []
+for line in infile:
+    if 'cds' in line:
+        if '\t' not in line:
+            locus = line.split('\t')[0]
+            edit = add_info + locus
+            save_list.append(edit)
+        if '\t' in line:
+            cols = line.split('\t')
+            temp_list = []
+            for j in cols:
+                j = j.strip('"')
+                next_edit = (add_info + j)
+                temp_list.append(next_edit)
+            final = '\t'.join(temp_list)
+            save_list.append(final)
+    else:
+        save_list.append('')
+
+for element in save_list:
+    print(element)
+

@@ -19,6 +19,7 @@ def create_alleles_dict(mgt9_alleles):
             if '-' not in cell and int(cell) > 1:
                 cell_locus = locus + '_' + str(cell)
                 alleles_list.append(cell_locus)
+
             elif '-' in cell:
                 cell_locus = locus + '_' + str(cell)
                 alleles_list.append(cell_locus)
@@ -37,18 +38,15 @@ def temp_write_out(alleles_dict):
 
             out.write('\n')
 
-def terminating_genes_per_clade(input_genomes, alleles_dict):
+def terminating_genes_per_clade(input_genomes, strains_close_to_clade, alleles_dict):
 
     #then which of those genes not found in another strains
 
     #get all alleles for a clade
     shared_alleles_from_input_clade = alleles_per_clade(alleles_dict, input_genomes)
 
-    print(len(shared_alleles_from_input_clade))
-    print(shared_alleles_from_input_clade)
-
     #find the alleles in non input strains
-    allele_in_all_list = alleles_from_all_strains(alleles_dict, input_genomes)
+    allele_in_all_list = alleles_from_all_strains(alleles_dict, strains_close_to_clade, input_genomes)
 
     #find alleles only changing in certain clade
     clade_specific_genes = alleles_specific_to_clade(allele_in_all_list, shared_alleles_from_input_clade)
@@ -74,21 +72,25 @@ def alleles_per_clade(alleles_dict, input_genomes):
 
     return commonly_shared_genes
 
-def alleles_from_all_strains(alleles_dict, input_genomes):
-    print("Finding Commonly Shared Genes for Input Clade.")
+def alleles_from_all_strains(alleles_dict, input_genomes, strains_close_to_clade):
+    print("Finding Shared Alleles.")
+
+    #remove input genomes and others in clade from alleles_dict
+    all_remove_list = list(set(input_genomes + strains_close_to_clade))
+    for element in all_remove_list:
+        print(element)
+        del alleles_dict[element]
+
 
     #list of all alleles for a clade
     all_alleles = []
 
     for key in alleles_dict.keys():
-        if key not in input_genomes:
-            for cell in alleles_dict[key]:
-                all_alleles.append(cell)
+        for cell in alleles_dict[key]:
+            all_alleles.append(cell)
 
     all_alleles = list(set(all_alleles))
 
-    print(len(all_alleles))
-    print(all_alleles)
     return all_alleles
 
 def alleles_specific_to_clade(allele_in_all_list, shared_alleles_from_input_clade):
@@ -104,7 +106,6 @@ def alleles_specific_to_clade(allele_in_all_list, shared_alleles_from_input_clad
     print(str(len(specific_genes)) + " genes Specific to input clade.")
     for i in specific_genes:
         print(i)
-
 
 def parseargs():
     parser = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter)
@@ -122,17 +123,20 @@ def main():
     # input_genomes_path = '/Users/liamcheneyy/Desktop/small_input.txt'
     # mgt9_alleles_path = '/Users/liamcheneyy/Desktop/small_alleles.tsv'
 
-    input_genomes_path = '/Users/liamcheneyy/Desktop/rep_input_genomes.txt'
+    input_genomes_path = '/Users/liamcheneyy/Desktop/small.txt'
     input_genomes = open(input_genomes_path,'r').read().splitlines()
 
     mgt9_alleles_path = '/Users/liamcheneyy/Desktop/MGT9_allele_profiles.tsv'
     mgt9_alleles = open(mgt9_alleles_path,'r').read().splitlines()
 
+    all_of_interest_path = '/Users/liamcheneyy/Desktop/remove_clade.txt'
+    strains_close_to_clade = open(all_of_interest_path, 'r').read().splitlines()
+
     #dict key:strain, value:alleles
     alleles_dict = create_alleles_dict(mgt9_alleles)
 
     #find genes for a certain TERMINATING clade
-    input_clade_specific_genes = terminating_genes_per_clade(input_genomes, alleles_dict)
+    input_clade_specific_genes = terminating_genes_per_clade(input_genomes, strains_close_to_clade, alleles_dict)
 
 
 if __name__ == '__main__':

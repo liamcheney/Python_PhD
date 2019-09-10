@@ -15,12 +15,12 @@ from io import StringIO
 import csv
 
 #reading in roary gene absence and presence
-roary_path = "/Users/liamcheneyy/Desktop/alice/gene_presence_absence.csv"
-gff_folder_in = "/Users/liamcheneyy/Desktop/genomes/"
-reference_accession = "BP1779"
-info_dict_out = "/Users/liamcheneyy/Desktop/alice/info_dict.txt"
+roary_path = "/Users/liamcheneyy/Desktop/pari/gene_presence_absence.csv"
+gff_folder_in = "/Users/liamcheneyy/Desktop/pari/cgmlst_prokka"
+reference_accession = "SRR8867848"
+info_dict_out = "/Users/liamcheneyy/Desktop/pari/info_dict.txt"
 genome_info_dict = True
-outfile_path = "/Users/liamcheneyy/Desktop/alice/"
+outfile_path = "/Users/liamcheneyy/Desktop/pari/"
 read_in_fix_roary = False
 
 #dont need
@@ -37,10 +37,10 @@ def reading_or_creating_genomes_dict(genome_info_dict, info_dict_out):
             return info_dict
     else:
         print(str(clock()) + '\t' + 'Creating dictionary with all gff genome information.')
+        sl(1)
         info_dict = creating_genome_info(gff_folder_in, reference_accession, info_dict_out)
         return info_dict
 def creating_genome_info(gff_folder_in, reference_accesion, info_dict_out):
-    print(str(clock()) + '\t' + 'Creating dictionary with all gff genome information.')
     number_of_genomes = len(list(glob.iglob(gff_folder_in + '/*.gff'))) + 1
     bar = progressbar.ProgressBar(maxval=number_of_genomes, widgets=[progressbar.Bar('=', '[', ']'), ' ', progressbar.Percentage()])
     bar.start()
@@ -53,15 +53,16 @@ def creating_genome_info(gff_folder_in, reference_accesion, info_dict_out):
             strain_name = filename.split('/')[-1].rstrip('.gff')
             info_dict[strain_name] = {}
             for line in file:
-                if 'CDS' in line and 'ID=' in line:
+
+                if ('CDS' in line and 'ID=' in line) or ('tRNA' in line and 'ID=' in line):
                     col = line.split('\t')
                     beg_cord = col[3]
                     end_cord = col[4]
                     size = int(end_cord) - int(beg_cord)
                     strand = col[6]
                     gene_id = col[8].split(';')[0].split('_')[-1]
-                    if gene_id[-2] == '.':
-                        gene_id = gene_id.split('.')[0]
+                    # if gene_id[-2] == '.':
+                    #     gene_id = gene_id.split('.')[0]
 
                     for q in col[8].split(';'):
                         if "locus_tag" in q:
@@ -76,13 +77,14 @@ def creating_genome_info(gff_folder_in, reference_accesion, info_dict_out):
                         else:
                             contig = col[0]
 
+                    gene_id = gene_id.strip('=ID')
+
                     info_dict[strain_name][gene_id] = {'size': size, 'start': beg_cord, 'end': end_cord, 'contig': contig, 'strand': strand, 'locus_tag':genbank}
                     # print('size', size, 'start', beg_cord, 'end', end_cord, 'contig', contig, 'strand', strand, 'locus_tag',genbank)
     bar.finish()
 
     #writing out the genome dictionary to file to save time
     print('\n')
-    print(str(clock()) + '\t' + 'Creating dictionary with all gff genome information.')
     with open(info_dict_out, 'w') as dict_file:
         dict_file.write(json.dumps(info_dict))
 
@@ -245,14 +247,14 @@ def calculate_non_paralogous_core_genes(temp_file):
     # plt.show()
 
     # #asking user input to choose the number of genomes to remain after removing genomes high in paralogs
-    plt.close("all")
-    print('\n')
-    # roary_to_keep_input = int(input("Enter percentage of strains to remain in analysis:"))
-    roary_to_keep_input = 100
-    temp_file = temp_file[temp_file.columns.intersection(paralogous_genomes_dict[roary_to_keep_input])]
-    with open('/Users/liamcheneyy/Desktop/alice/out.txt', 'w') as out:
-        for i in paralogous_genomes_dict[roary_to_keep_input]:
-            out.write(i + '\n')
+    # plt.close("all")
+    # print('\n')
+    # # roary_to_keep_input = int(input("Enter percentage of strains to remain in analysis:"))
+    # roary_to_keep_input = 100
+    # temp_file = temp_file[temp_file.columns.intersection(paralogous_genomes_dict[roary_to_keep_input])]
+    # with open('/Users/liamcheneyy/Desktop/pari/qc_paralogs_out.txt', 'w') as out:
+    #     for i in paralogous_genomes_dict[roary_to_keep_input]:
+    #         out.write(i + '\n')
 
     return temp_file
 def merge(intervals):
@@ -348,6 +350,8 @@ def handling_roary_paralogs_annotations_strings(j, info_dict, reference_accessio
 def fasely_split_ortholgs_filter(reference_accession, keep_core_gene, temp_file, line, fail_reason):
     reference_core_gene = ""
     cell_in_size = 0
+    true_para = 0
+    false_para = 0
     for j in range(15, len(temp_file[line]), 1):
         j = str(temp_file[line][j])
 
@@ -370,6 +374,12 @@ def fasely_split_ortholgs_filter(reference_accession, keep_core_gene, temp_file,
                     if ref_lower_range <= other_size <= ref_upper_range:
                         cell_in_size = cell_in_size + 1
 
+                    # para_ref_lower_range = int(1.8 * reference_size)
+                    # para_ref_upper_range = int(2.2 * reference_size)
+                    # if para_ref_lower_range <= other_size <= para_ref_upper_range:
+                    #     true_para = true_para + 1
+
+
                 # if other cells are fragmented
                 if '\t' in l and 'nan' not in l:
                     frag_sizes_list = []
@@ -384,6 +394,11 @@ def fasely_split_ortholgs_filter(reference_accession, keep_core_gene, temp_file,
                     ref_upper_range = int(1.2 * reference_size)
                     if ref_lower_range <= total_frag_size <= ref_upper_range:
                         cell_in_size = cell_in_size + 1
+
+                    # para_ref_lower_range = int(1.8 * reference_size)
+                    # para_ref_upper_range = int(2.2 * reference_size)
+                    # if para_ref_lower_range <= total_frag_size <= para_ref_upper_range:
+                    #     true_para = true_para + 1
 
         elif reference_accession in j and '\t' in j and 'nan' not in j:
             fail_reason = "No intact reference gene."
@@ -460,6 +475,7 @@ def handling_roary_core_gene_ortholog_paralogs(temp_file, reference_accession):
 
     core_gene_list = []
     excluded_list = []
+    split_count = 0
     ##for each line of the Roary input
     print(str(clock()) + '\t' + 'Identifying fasely split orthologs and fasely joined paralogs.')
     for line in range(1, len(temp_file),1):
@@ -479,12 +495,15 @@ def handling_roary_core_gene_ortholog_paralogs(temp_file, reference_accession):
 
         ##spliting fasely joined cells and appending
         if split_core_gene == True:
+            split_count = split_count + 1
+
             single_gene = reference_core_gene_fjp.split('\t')
             for j in single_gene:
                 core_gene_list.append(j)
 
         if keep_core_gene == False and split_core_gene == False:
-            excluded_list.append([fail_reason] + temp_file[line])
+            excluded_list.append(temp_file[line])
+
 
     return core_gene_list, excluded_list
 
@@ -544,8 +563,10 @@ def master_handling_roary_paralog_problems(outfile_path, genome_info_dict, info_
     # ##isolate core genes found in >=99% of the dataset genomes
     temp_file = isolate_ortho(roary_path)
 
+    print(temp_file.shape)
+
     ##calculate the number of non paralogs core genes based on included genomes
-    temp_file = calculate_non_paralogous_core_genes(temp_file)
+    # temp_file = calculate_non_paralogous_core_genes(temp_file)
 
     ##fix roary naming
     temp_file = fix_roary_csv(temp_file)
@@ -560,7 +581,7 @@ def master_handling_roary_paralog_problems(outfile_path, genome_info_dict, info_
     core_gene_list, excluded_list = handling_roary_core_gene_ortholog_paralogs(temp_file, reference_accession)
 
     ##will write out a list of core genes
-    core_gene_out(core_gene_list, outfile_path, reference_accession, gff_folder_in, excluded_list)
+    # core_gene_out(core_gene_list, outfile_path, reference_accession, gff_folder_in, excluded_list)
 
 master_handling_roary_paralog_problems(outfile_path, genome_info_dict, info_dict_out, reference_accession, roary_path)
 
