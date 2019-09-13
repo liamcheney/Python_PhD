@@ -1,9 +1,9 @@
 import argparse
 import pandas as pd
-import glob
+
 from time import sleep as sl
 
-def create_alleles_dict(mgt9_alleles):
+def create_alleles_dict(mgt9_alleles, input_genomes):
     # print('Reading in alleles for ' + str(len(mgt9_alleles)-1) + ' strains.')
 
     alleles_dict = {}
@@ -28,22 +28,51 @@ def create_alleles_dict(mgt9_alleles):
 
             alleles_dict[strain] = alleles_list
 
+    # #check if any input strains are not in represntative MGT9 alleles
+    # input_all_mgt9_path = '/Users/liamcheneyy/Desktop/vcseventh_15/grapetree/all_MGT9_allele_profiles.tsv'
+    # all_mgt9_alleles = open(input_all_mgt9_path,'r').read().splitlines()
+    # for el in input_genomes:
+    #     if el not in alleles_dict.keys():
+    #         print(el)
+    #         locus_line = mgt9_alleles[0].split('\t')
+    #         for line in mgt9_alleles[1:]:
+    #             col = line.split('\t')
+    #             print(col)
+    #             sl(1)
+    #             if col[0] == el:
+    #                 print(col)
+    #                 col_count = 3
+    #                 beggining_col = 3
+    #                 strain = col[0]
+    #                 alleles_list = []
+    #
+    #                 for cell in col[beggining_col:]:
+    #                     locus = locus_line[col_count]
+    #                     col_count = col_count + 1
+    #                     if '-' not in cell:
+    #                         cell_locus = locus + '_' + str(cell)
+    #                         alleles_list.append(cell_locus)
+    #
+    #                     alleles_dict[strain] = alleles_list
+    #                     print(strain, alleles_list)
+
     return alleles_dict
 
-def count_alleles_per_loci(mgt9_alleles_path):
+def count_alleles_per_loci(mgt9_alleles_path, input_clade_size):
 
     df = pd.read_csv(mgt9_alleles_path, sep='\t', index_col=False)
 
     allele_count = {}
+    strains_num = df.shape[0]
     for column in df:
         if '#' not in column:
             #not using
             # unique_values = list(df[column].unique())
             # alleles_num = len(unique_values)
+            # print(column, unique_values, alleles_num)
+
             col_freqs = df[column].value_counts().to_dict()
             allele_count[column] = col_freqs
-            # print(column, allele_count[column])
-            # sl(1)
 
     return allele_count
 
@@ -66,7 +95,7 @@ def temp_write_out(alleles_dict):
 
             out.write('\n')
 
-def terminating_genes_per_clade(input_genomes, strains_close_to_clade, alleles_dict, calc_alleles_strains_per_loc):
+def terminating_genes_per_clade(input_genomes, strains_close_to_clade, alleles_dict, calc_alleles_strains_per_loc, vibrio_chol_genes):
 
     #MAIN: calculate the alleles specific to the input clade
 
@@ -77,7 +106,7 @@ def terminating_genes_per_clade(input_genomes, strains_close_to_clade, alleles_d
     allele_in_all_list = alleles_from_all_strains(alleles_dict, strains_close_to_clade, input_genomes)
 
     #find alleles only changing in certain clade
-    clade_specific_genes = alleles_specific_to_clade(allele_in_all_list, shared_alleles_from_input_clade, calc_alleles_strains_per_loc)
+    clade_specific_genes = alleles_specific_to_clade(allele_in_all_list, shared_alleles_from_input_clade, calc_alleles_strains_per_loc, vibrio_chol_genes)
 
     return clade_specific_genes
 
@@ -123,7 +152,7 @@ def alleles_from_all_strains(alleles_dict, input_genomes, strains_close_to_clade
 
     return all_alleles
 
-def alleles_specific_to_clade(allele_in_all_list, shared_alleles_from_input_clade, calc_alleles_strains_per_loc):
+def alleles_specific_to_clade(allele_in_all_list, shared_alleles_from_input_clade, calc_alleles_strains_per_loc, vibrio_chol_genes):
     # print('Finding Clade Specific Genes.')
 
     #find specific genes
@@ -133,11 +162,24 @@ def alleles_specific_to_clade(allele_in_all_list, shared_alleles_from_input_clad
             specific_genes.append(allele)
             # print(allele)
 
-    # print(str(len(specific_genes)) + " genes Specific to input clade.")
+    print(str(len(specific_genes)) + " genes Specific to input clade.")
+    out_list = []
     for i in specific_genes:
         locus = i.split('_')[0]
         alleles_num = len(calc_alleles_strains_per_loc[locus].keys())
-        print(str(i) + '\t' + str(alleles_num) + '\t' + str(calc_alleles_strains_per_loc[locus]))
+
+        check_list = False
+        if locus in vibrio_chol_genes:
+            check_list = True
+
+        out_list.append([str(i), str(alleles_num), str(calc_alleles_strains_per_loc[locus]), str(check_list)])
+        # print(str(i) + '\t' + str(alleles_num) + '\t' + str(calc_alleles_strains_per_loc[locus]))
+
+    #sort list by number of alleles
+    out_list.sort(key=lambda x:(int(x[1]), x[-1]), reverse=False)
+    for el in out_list:
+        out_str = '\t'.join(el)
+        print(out_str)
 
 def parseargs():
     parser = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter)
@@ -157,7 +199,7 @@ def main():
     mgt9_alleles_path = '/Users/liamcheneyy/Desktop/MGT9_allele_profiles.tsv'
     mgt9_alleles = open(mgt9_alleles_path,'r').read().splitlines()
 
-    all_mgt9_alleles_path = mgt9_alleles_path
+    all_mgt9_alleles_path = '/Users/liamcheneyy/Desktop/vcseventh_15/grapetree/all_MGT9_allele_profiles.tsv'
 
     all_of_interest_path = '/Users/liamcheneyy/Desktop/remove_clade.txt'
     strains_close_to_clade = open(all_of_interest_path, 'r').read().splitlines()
@@ -165,15 +207,19 @@ def main():
     alleles_nums_in = '/Users/liamcheneyy/Desktop/alleles_per_loci.txt'
     alleles_in = open(alleles_nums_in, 'r').read().splitlines()
 
+    vibrio_core_list_path = '/Users/liamcheneyy/Desktop/MGT8_gene_accessions.txt'
+    vibrio_chol_genes = open(vibrio_core_list_path,'r').read().splitlines()
+
     #turn input into alleles dictionary
     #dict key:strain, value:alleles
-    alleles_dict = create_alleles_dict(mgt9_alleles)
+    alleles_dict = create_alleles_dict(mgt9_alleles, input_genomes)
 
     #calculate alleles per loci, and percentage of strains each allele holds
-    calc_alleles_strains_per_loc = count_alleles_per_loci(all_mgt9_alleles_path)
+    input_clade_size = len(input_genomes)
+    calc_alleles_strains_per_loc = count_alleles_per_loci(all_mgt9_alleles_path, input_clade_size)
 
     #find genes for a certain TERMINATING clade
-    input_clade_specific_genes = terminating_genes_per_clade(input_genomes, strains_close_to_clade, alleles_dict, calc_alleles_strains_per_loc)
+    input_clade_specific_genes = terminating_genes_per_clade(input_genomes, strains_close_to_clade, alleles_dict, calc_alleles_strains_per_loc, vibrio_chol_genes)
 
 
 if __name__ == '__main__':

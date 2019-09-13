@@ -6,6 +6,9 @@ mgt_path = sys.argv[2]
 settings_in = []
 settings_in = open(settings_in_path).read().splitlines()
 
+print(settings_in_path)
+print(mgt_path)
+
 for num in range(0, len(settings_in),1):
     if "    'Salmonella'," in settings_in[num]:
         settings_in[num] = ''
