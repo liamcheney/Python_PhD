@@ -15,12 +15,12 @@ from io import StringIO
 import csv
 
 #reading in roary gene absence and presence
-roary_path = "/Users/liamcheneyy/Desktop/gene_presence_absencei95minus_2.csv"
-gff_folder_in = "/Users/liamcheneyy/Desktop/minus_2_gff/"
+roary_path = "/Users/liamcheneyy/Desktop/gene_presence_absence_i95.csv"
+gff_folder_in = "/Users/liamcheneyy/Desktop/new_cgmlst_gff/"
 reference_accession = "SRR8867848"
-info_dict_out = "/Users/liamcheneyy/Desktop/pari/info_dict.txt"
+info_dict_out = "/Users/liamcheneyy/Desktop/Paris/info_dict.txt"
 genome_info_dict = False
-outfile_path = "/Users/liamcheneyy/Desktop/pari/"
+outfile_path = "/Users/liamcheneyy/Desktop/Paris/"
 
 #dont need
 fix_roary_csv_val = False
@@ -59,7 +59,6 @@ def creating_genome_info(gff_folder_in, reference_accesion, info_dict_out):
                     beg_cord = col[3]
                     end_cord = col[4]
                     size = int(end_cord) - int(beg_cord)
-                    strand = col[6]
                     gene_id = col[8].split(';')[0].split('_')[-1]
                     # if gene_id[-2] == '.':
                     #     gene_id = gene_id.split('.')[0]
@@ -79,8 +78,7 @@ def creating_genome_info(gff_folder_in, reference_accesion, info_dict_out):
 
                     gene_id = gene_id.strip('=ID')
 
-                    info_dict[strain_name][gene_id] = {'size': size, 'start': beg_cord, 'end': end_cord, 'contig': contig, 'strand': strand, 'locus_tag':genbank}
-                    # print('size', size, 'start', beg_cord, 'end', end_cord, 'contig', contig, 'strand', strand, 'locus_tag',genbank)
+                    info_dict[strain_name][gene_id] = {'size': size, 'start': beg_cord, 'end': end_cord, 'contig': contig, 'locus_tag':genbank}
     bar.finish()
 
     #writing out the genome dictionary to file to save time
@@ -104,6 +102,8 @@ def gathering_core_gene_information(temp_file, info_dict):
     group_count = 1
 
     for line in range(1, len(temp_file)):
+    # for line in range(1, 6):
+
         ##creating progress var
         bar.update(group_count)
         group_count = group_count + 1
@@ -117,10 +117,10 @@ def gathering_core_gene_information(temp_file, info_dict):
 
             # handling cells which DONT have orthologs
             elif '\t' not in str(info):
-                acc, contig, gene_id, beg_cord, end_cord, size, strand = handling_roary_single_annoations_strings(str(info), info_dict,reference_accession)
+                acc, contig, gene_id, beg_cord, end_cord, size = handling_roary_single_annoations_strings(str(info), info_dict,reference_accession)
 
                 temp_file[line][j] = (acc + '_' + str(contig) + '_' + str(gene_id) + '_' + str(beg_cord) + '_' + str(
-                    end_cord) + '_' + str(size) + strand)
+                    end_cord) + '_' + str(size))
 
             # handling cells which have paralogs
             elif '\t' in str(info):
@@ -292,9 +292,8 @@ def handling_roary_single_annoations_strings(j, info_dict, reference_accession):
         beg_cord = info_dict[acc][gene_id]['start']
         end_cord = info_dict[acc][gene_id]['end']
         size = info_dict[acc][gene_id]['size']
-        strand = j[-3:]
 
-        return acc, contig, gene_id, beg_cord, end_cord, size, strand
+        return acc, contig, gene_id, beg_cord, end_cord, size
 
     else:
         acc = j.split('_')[0]
@@ -304,9 +303,8 @@ def handling_roary_single_annoations_strings(j, info_dict, reference_accession):
         beg_cord = info_dict[acc][gene_id]['start']
         end_cord = info_dict[acc][gene_id]['end']
         size = info_dict[acc][gene_id]['size']
-        strand = j[-3:]
 
-        return acc, contig, gene_id, beg_cord, end_cord, size, strand
+        return acc, contig, gene_id, beg_cord, end_cord, size
 def handling_roary_paralogs_annotations_strings(j, info_dict, reference_accession):
     frag_length_list = []
     frag_count = 0
@@ -323,10 +321,9 @@ def handling_roary_paralogs_annotations_strings(j, info_dict, reference_accessio
             beg_cord = int(info_dict[acc][gene_id]['start'])
             end_cord = int(info_dict[acc][gene_id]['end'])
             size = info_dict[acc][gene_id]['size']
-            strand = j[-3:]
 
             frag_list.append(
-                acc + '_' + contig + '_' + gene_id + '_' + str(beg_cord) + '_' + str(end_cord) + '_' + str(size) + strand)
+                acc + '_' + contig + '_' + gene_id + '_' + str(beg_cord) + '_' + str(end_cord) + '_' + str(size))
             frag_length_list.append((beg_cord, end_cord))
 
     else:
@@ -334,15 +331,15 @@ def handling_roary_paralogs_annotations_strings(j, info_dict, reference_accessio
         for frag in range(para_count):
             acc = fragments[frag].split('_')[0]
             gene_id = fragments[frag].rstrip('"').split('_')[-1]
+            # print(fragments[frag])
 
             contig = info_dict[acc][gene_id]['contig']
             beg_cord = int(info_dict[acc][gene_id]['start'])
             end_cord = int(info_dict[acc][gene_id]['end'])
             size = info_dict[acc][gene_id]['size']
-            strand = j[-3:]
 
             frag_list.append(
-                acc + '_' + contig + '_' + gene_id + '_' + str(beg_cord) + '_' + str(end_cord) + '_' + str(size) + strand)
+                acc + '_' + contig + '_' + gene_id + '_' + str(beg_cord) + '_' + str(end_cord) + '_' + str(size))
             frag_length_list.append((beg_cord, end_cord))
 
     frag_cell = '\t'.join(frag_list)
@@ -356,9 +353,9 @@ def fasely_split_ortholgs_filter(reference_accession, keep_core_gene, temp_file,
         j = str(temp_file[line][j])
 
         #find reference gene size if not fragmented
-        if reference_accession in j and '\t' not in j and 'nan' not in j:
+        if (reference_accession in j) and ('\t' not in j) and ('nan' not in j):
             reference_core_gene = j
-            reference_size = int(j.split('_')[-1][:-3])
+            reference_size = int(j.split('_')[-1])
 
             # find size of other cells in the same core group
             for l in temp_file[line][15:]:
@@ -366,7 +363,7 @@ def fasely_split_ortholgs_filter(reference_accession, keep_core_gene, temp_file,
 
                 # if other cells are a single fragment
                 if '\t' not in l and 'nan' not in l and l != '':
-                    other_size = int(l.split('_')[-1][:-3])
+                    other_size = int(l.split('_')[-1])
 
                     # compare size of reference cell against other cells
                     ref_lower_range = int(0.8 * reference_size)
@@ -385,7 +382,7 @@ def fasely_split_ortholgs_filter(reference_accession, keep_core_gene, temp_file,
                     frag_sizes_list = []
                     fragments = l.split('\t')
                     for frag in fragments:
-                        frag_size = int(frag.split('_')[-1][:-3])
+                        frag_size = int(frag.split('_')[-1])
                         frag_sizes_list.append(frag_size)
                     total_frag_size = sum(frag_sizes_list)
 
@@ -421,7 +418,7 @@ def fasely_joined_orthologs_filter(reference_accession, split_core_gene, temp_fi
             frag_sizes_list = []
             fragments = j.split('\t')
             for frag in fragments:
-                frag_size = int(frag.split('_')[-1][:-3])
+                frag_size = int(frag.split('_')[-1])
                 frag_sizes_list.append(frag_size)
             total_frag_size = sum(frag_sizes_list)
 
@@ -430,7 +427,7 @@ def fasely_joined_orthologs_filter(reference_accession, split_core_gene, temp_fi
             for q in temp_file[line][15:]:
                 q = str(q)
                 if '\t' not in q and 'nan' not in q and q != '':
-                    single_gene_size = int(q.split('_')[-1][:-3])
+                    single_gene_size = int(q.split('_')[-1])
                     lower_limit_ref = int(0.8 * total_frag_size)
                     upper_limit_ref = int(1.2 * total_frag_size)
                     if lower_limit_ref <= single_gene_size <= upper_limit_ref:
@@ -444,14 +441,14 @@ def fasely_joined_orthologs_filter(reference_accession, split_core_gene, temp_fi
                 both_frags_in_size = 0
                 for frag in fragments:
                     frag_in_size = 0
-                    frag_size = int(frag.split('_')[-1][:-3])
+                    frag_size = int(frag.split('_')[-1])
                     # taking other cells fragment size
                     for other_cells in temp_file[line][15:]:
                         other_cells = str(other_cells)
                         other_cells_fragments = other_cells.split('\t')
                         for other_cells_frags in other_cells_fragments:
                             if 'nan' not in other_cells_frags and other_cells_frags != '':
-                                other_cell_size = int(other_cells_frags.split('_')[-1][:-3])
+                                other_cell_size = int(other_cells_frags.split('_')[-1])
 
                                 # creating upper and lower limits for variation in size between ref and other cell fragments
                                 lower_limit_ref = int(0.8 * frag_size)
@@ -483,6 +480,7 @@ def handling_roary_core_gene_ortholog_paralogs(temp_file, reference_accession):
         split_core_gene = False
         fail_reason = ""
 
+        # print(temp_file[line])
         ##handle fasely split orthologs
         keep_core_gene, reference_core_gene_fso, fail_reason = fasely_split_ortholgs_filter(reference_accession, keep_core_gene, temp_file, line, fail_reason)
 
@@ -520,7 +518,7 @@ def core_gene_out(core_gene_list, outfile_path, reference_accession, gff_folder_
             cds = col[-4]
             start = col[-3]
             end = col[-2]
-            length = col[-1][:-3]
+            length = col[-1]
             vc = converting_cds_to_vc(line, gff_folder_in, reference_accession)
             outfile.write(','.join([acc,cds,vc,start,end,length]))
             outfile.write('\n')

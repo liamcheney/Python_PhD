@@ -58,6 +58,26 @@ def create_alleles_dict(mgt9_alleles, input_genomes):
 
     return alleles_dict
 
+def add_extra_alleles_profiles(mgt9_alleles, input_genomes, all_mgt9_alleles):
+
+    strains_from_allels_in = []
+    for line in mgt9_alleles[1:]:
+        col = line.split('\t')
+        strains_from_allels_in.append(col[0])
+
+    #need to get list
+    get_list = []
+    for line in input_genomes:
+        if line not in strains_from_allels_in:
+            get_list.append(line)
+
+    for line in all_mgt9_alleles[1:]:
+        col = line.split('\t')
+        if col[0] in get_list:
+            mgt9_alleles.append(line)
+
+    return mgt9_alleles
+
 def count_alleles_per_loci(mgt9_alleles_path, input_clade_size):
 
     df = pd.read_csv(mgt9_alleles_path, sep='\t', index_col=False)
@@ -200,15 +220,16 @@ def main():
     mgt9_alleles = open(mgt9_alleles_path,'r').read().splitlines()
 
     all_mgt9_alleles_path = '/Users/liamcheneyy/Desktop/vcseventh_15/grapetree/all_MGT9_allele_profiles.tsv'
+    all_mgt9_alleles = open(all_mgt9_alleles_path,'r').read().splitlines()
 
     all_of_interest_path = '/Users/liamcheneyy/Desktop/remove_clade.txt'
     strains_close_to_clade = open(all_of_interest_path, 'r').read().splitlines()
 
-    alleles_nums_in = '/Users/liamcheneyy/Desktop/alleles_per_loci.txt'
-    alleles_in = open(alleles_nums_in, 'r').read().splitlines()
-
     vibrio_core_list_path = '/Users/liamcheneyy/Desktop/MGT8_gene_accessions.txt'
     vibrio_chol_genes = open(vibrio_core_list_path,'r').read().splitlines()
+
+    #if comparing strains not in original allele alignment
+    mgt9_alleles = add_extra_alleles_profiles(mgt9_alleles, input_genomes, all_mgt9_alleles)
 
     #turn input into alleles dictionary
     #dict key:strain, value:alleles
