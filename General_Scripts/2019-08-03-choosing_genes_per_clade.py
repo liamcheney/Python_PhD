@@ -115,7 +115,7 @@ def temp_write_out(alleles_dict):
 
             out.write('\n')
 
-def terminating_genes_per_clade(input_genomes, strains_close_to_clade, alleles_dict, calc_alleles_strains_per_loc, vibrio_chol_genes):
+def terminating_genes_per_clade(input_genomes, alleles_dict, calc_alleles_strains_per_loc, vibrio_chol_genes):
 
     #MAIN: calculate the alleles specific to the input clade
 
@@ -123,7 +123,7 @@ def terminating_genes_per_clade(input_genomes, strains_close_to_clade, alleles_d
     shared_alleles_from_input_clade = alleles_per_clade(alleles_dict, input_genomes)
 
     #find the alleles in non input strains
-    allele_in_all_list = alleles_from_all_strains(alleles_dict, strains_close_to_clade, input_genomes)
+    allele_in_all_list = alleles_from_all_strains(alleles_dict, input_genomes)
 
     #find alleles only changing in certain clade
     clade_specific_genes = alleles_specific_to_clade(allele_in_all_list, shared_alleles_from_input_clade, calc_alleles_strains_per_loc, vibrio_chol_genes)
@@ -149,13 +149,13 @@ def alleles_per_clade(alleles_dict, input_genomes):
 
     return commonly_shared_genes
 
-def alleles_from_all_strains(alleles_dict, input_genomes, strains_close_to_clade):
+def alleles_from_all_strains(alleles_dict, input_genomes):
     # print("Finding Shared Alleles.")
 
     # print(len(alleles_dict.keys()))
 
     #remove input genomes and others in clade from alleles_dict
-    all_remove_list = list(set(input_genomes + strains_close_to_clade))
+    all_remove_list = list(set(input_genomes))
     for element in all_remove_list:
         del alleles_dict[element]
 
@@ -222,9 +222,6 @@ def main():
     all_mgt9_alleles_path = '/Users/liamcheneyy/Desktop/vcseventh_15/grapetree/all_MGT9_allele_profiles.tsv'
     all_mgt9_alleles = open(all_mgt9_alleles_path,'r').read().splitlines()
 
-    all_of_interest_path = '/Users/liamcheneyy/Desktop/remove_clade.txt'
-    strains_close_to_clade = open(all_of_interest_path, 'r').read().splitlines()
-
     vibrio_core_list_path = '/Users/liamcheneyy/Desktop/MGT8_gene_accessions.txt'
     vibrio_chol_genes = open(vibrio_core_list_path,'r').read().splitlines()
 
@@ -240,7 +237,7 @@ def main():
     calc_alleles_strains_per_loc = count_alleles_per_loci(all_mgt9_alleles_path, input_clade_size)
 
     #find genes for a certain TERMINATING clade
-    input_clade_specific_genes = terminating_genes_per_clade(input_genomes, strains_close_to_clade, alleles_dict, calc_alleles_strains_per_loc, vibrio_chol_genes)
+    input_clade_specific_genes = terminating_genes_per_clade(input_genomes, alleles_dict, calc_alleles_strains_per_loc, vibrio_chol_genes)
 
 
 if __name__ == '__main__':

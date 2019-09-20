@@ -304,45 +304,51 @@
 # print(t.write()) # prints out as a string
 
 
-infile = open('/Users/liamcheneyy/Desktop/input.txt','r').read().splitlines()
-add_info = 'SRR8867848_'
+# infile = open('/Users/liamcheneyy/Desktop/input.txt','r').read().splitlines()
+# add_info = 'SRR8867848_'
+#
+# save_list = []
+# for line in infile:
+#     if 'cds' in line:
+#         if '\t' not in line:
+#             locus = line.split('\t')[0]
+#             edit = add_info + locus
+#             save_list.append(edit)
+#         if '\t' in line:
+#             cols = line.split('\t')
+#             temp_list = []
+#             for j in cols:
+#                 j = j.strip('"')
+#                 next_edit = (add_info + j)
+#                 temp_list.append(next_edit)
+#             final = '\t'.join(temp_list)
+#             save_list.append(final)
+#     else:
+#         save_list.append('')
+#
+# for element in save_list:
+#     print(element)
 
-save_list = []
-for line in infile:
-    if 'cds' in line:
-        if '\t' not in line:
-            locus = line.split('\t')[0]
-            edit = add_info + locus
-            save_list.append(edit)
-        if '\t' in line:
-            cols = line.split('\t')
-            temp_list = []
-            for j in cols:
-                j = j.strip('"')
-                next_edit = (add_info + j)
-                temp_list.append(next_edit)
-            final = '\t'.join(temp_list)
-            save_list.append(final)
-    else:
-        save_list.append('')
+# import pandas as pd
+# all_of_interest_path = '/Users/liamcheneyy/Desktop/vcseventh_15/grapetree/all_MGT9_allele_profiles.tsv'
+#
+# df = pd.read_csv(all_of_interest_path, sep='\t', index_col=False)
+#
+# allele_count = {}
+# for column in df:
+#     if '#' not in column:
+#         unique_values = list(df[column].unique())
+#         alleles_num = len(unique_values)
+#         # print(column)
+#         # print(unique_values)
+#         # sl(1)
+#         allele_count[column] = alleles_num
+#
+# for key, value in allele_count.items():
+#     print(str(key) + '\t' + str(value))
 
-for element in save_list:
-    print(element)
+all = open('/Users/liamcheneyy/Desktop/all.txt','r').read().splitlines()
+inp = list(open('/Users/liamcheneyy/Desktop/genes.txt','r').read().splitlines())
 
-import pandas as pd
-all_of_interest_path = '/Users/liamcheneyy/Desktop/vcseventh_15/grapetree/all_MGT9_allele_profiles.tsv'
-
-df = pd.read_csv(all_of_interest_path, sep='\t', index_col=False)
-
-allele_count = {}
-for column in df:
-    if '#' not in column:
-        unique_values = list(df[column].unique())
-        alleles_num = len(unique_values)
-        # print(column)
-        # print(unique_values)
-        # sl(1)
-        allele_count[column] = alleles_num
-
-for key, value in allele_count.items():
-    print(str(key) + '\t' + str(value))
+for line in all:
+    print(line in inp)
