@@ -27,92 +27,94 @@ out_path = '/' + '/'.join(v for v in out_path)
 info = pd.read_csv(input_path, sep="\t").fillna("none")
 
 filt = pd.DataFrame(info)
+
 ##assign preferences starting at 13 and overwriting for each more resticted level
-##assign preferences starting at 13 and overwriting for each more resticted level
-filt["pref"] = 13
-# print("pref 13")
-# print(filt[filt["pref"]==13]["pref"].count())
+filt["pref"] = 12
+print("pref 12")
+print(filt[filt["pref"]==12]["pref"].count())
 
-# filt.loc[(filt["In Species Core"].astype(str).str.contains("T")) & (filt["pref"]<=15), "pref"] = 14
-# # print("pref 11")
-# # print(filt[filt["pref"]==11]["pref"].count())
-#
-# filt.loc[(filt["Number of Zero Counts"]<=5) & (filt["Number of Negative Counts"]<=5) & (filt["pref"]<=14), "pref"] = 13
-# # print("pref 12")
-# # print(filt[filt["pref"]==12]["pref"].count())
-#
-# filt.loc[(filt["In Species Core"].astype(str).str.contains("T")) & (filt["In dS Ninety Percen"].astype(str).str.contains("T")) & (filt["pref"]<=13), "pref"] = 12
-# # print("pref 11")
-# # print(filt[filt["pref"]==11]["pref"].count())
-#
-# filt.loc[(filt["In Gene Size Ninety Percen"].astype(str).str.contains("T")) & (filt["In dNdS Ninety Percen"].astype(str).str.contains("T")) & (filt["pref"]<=12), "pref"] = 11
-# # print("pref 10")
-# # print(filt[filt["pref"]==10]["pref"].count())
-#
-# filt.loc[(filt["In Both PubMLST and Roary"].astype(str).str.contains("T")) & (filt["pref"]<=11), "pref"] = 10
-# # print("pref 9")
-# # print(filt[filt["pref"]==9]["pref"].count())
-#
-# filt.loc[(filt["In Bio Cycle Excluded"].astype(str).str.contains("F")) & (filt["In Patric Excluded"].astype(str).str.contains("F")) & (filt["pref"]<=10), "pref"] = 9
-# # print("pref 8")
-# # print(filt[filt["pref"]==8]["pref"].count())
-#
-# filt.loc[(filt["Number of Zero Counts"]<=2) & (filt["Number of Negative Counts"]<=2) & (filt["pref"]<=9), "pref"] = 8
-# # print("pref 7")
-# # print(filt[filt["pref"]==7]["pref"].count())
-#
-# filt.loc[(filt["Has tandem repeats"].astype(str).str.contains("F")) & (filt["Has homopolymers"].astype(str).str.contains("F")) & (filt["pref"]<=8), "pref"] = 7
-# # print("pref 6")
-# # print(filt[filt["pref"]==6]["pref"].count())
-#
-# filt.loc[(filt["Has TMH"].astype(str).str.contains("F")) & (filt["Has Signal Peptides"].astype(str).str.contains("F")) & (filt["Has pred-TAT"].astype(str).str.contains("F")) & (filt["pref"]<=7), "pref"] = 6
-# # print("pref 5")
-# # print(filt[filt["pref"]==5]["pref"].count())
-#
-# filt.loc[(filt["In Phasta"].astype(str).str.contains("F")) & (filt["In T3SS"].astype(str).str.contains("F")) & (filt["pref"]<=6), "pref"] = 5
-# # print("pref 4")
-# # print(filt[filt["pref"]==4]["pref"].count())
-#
-# filt.loc[(filt["In dS Fifty Percen"].astype(str).str.contains("T")) & (filt["In dNdS Fifty Percen"].astype(str).str.contains("T")) & (filt["pref"]<=5), "pref"] = 4
-# print("pref 4")
-# print(filt[filt["pref"]==4]["pref"].count())
+filt.loc[(filt["In Species Core"].astype(str).str.contains("T")) & (filt["pref"]<=12), "pref"] = 11
+print("pref 11")
+print(filt[filt["pref"]==11]["pref"].count())
+
+filt.loc[(filt["Number of Zero Counts"]<=5) & (filt["Number of Negative Counts"]<=5) & (filt["pref"]<=11), "pref"] = 10
+print("pref 10")
+print(filt[filt["pref"]==10]["pref"].count())
+
+filt.loc[(filt["In Species Core"].astype(str).str.contains("T")) & (filt["In dS Ninety Percen"].astype(str).str.contains("T")) & (filt["pref"]<=10), "pref"] = 9
+print("pref 9")
+print(filt[filt["pref"]==9]["pref"].count())
+
+filt.loc[(filt["In Gene Size Ninety Percen"].astype(str).str.contains("T")) & (filt["In dNdS Ninety Percen"].astype(str).str.contains("T")) & (filt["In Both PubMLST and Roary"].astype(str).str.contains("T")) & (filt["pref"]<=9), "pref"] = 8
+print("pref 8")
+print(filt[filt["pref"]==8]["pref"].count())
+
+filt.loc[(filt["In Bio Cycle Excluded"].astype(str).str.contains("F")) & (filt["In Patric Excluded"].astype(str).str.contains("F")) & (filt["pref"]<=8), "pref"] = 7
+print("pref 7")
+print(filt[filt["pref"]==7]["pref"].count())
+
+filt.loc[(filt["Number of Zero Counts"]<=2) & (filt["Number of Negative Counts"]<=2) & (filt["Has tandem repeats"].astype(str).str.contains("F")) & (filt["Has homopolymers"].astype(str).str.contains("F")) & (filt["pref"]<=7), "pref"] = 6
+print("pref 6")
+print(filt[filt["pref"]==6]["pref"].count())
+
+filt.loc[(filt["Has TMH"].astype(str).str.contains("F")) & (filt["Has Signal Peptides"].astype(str).str.contains("F")) & (filt["Has pred-TAT"].astype(str).str.contains("F")) & (filt["pref"]<=6), "pref"] = 5
+print("pref 5")
+print(filt[filt["pref"]==5]["pref"].count())
+
+filt.loc[(filt["In Phasta"].astype(str).str.contains("F")) & (filt["In T3SS"].astype(str).str.contains("F")) & (filt["pref"]<=5), "pref"] = 4
+print("pref 4")
+print(filt[filt["pref"]==4]["pref"].count())
+
+filt.loc[(filt["In dS Fifty Percen"].astype(str).str.contains("T")) & (filt["In dNdS Fifty Percen"].astype(str).str.contains("T")) & (filt["pref"]<=4), "pref"] = 3
+print("pref 3")
+print(filt[filt["pref"]==3]["pref"].count())
+
+filt.loc[(filt["In Genus Core"].astype(str).str.contains("T")) & (filt["pref"]<=3), "pref"] = 2
+print("pref 2")
+print(filt[filt["pref"]==2]["pref"].count())
+
+filt.loc[(filt["Number of Negative Counts"]==0) & (filt["Number of Zero Counts"]==0)  & (filt["pref"]<=2), "pref"] = 1
+print("pref 1")
+print(filt[filt["pref"]==1]["pref"].count())
 
 
-#choosing genes in MGT2 and MGT3
-filt["pref"] = 2
-# print("pref 2")
-# print(filt[filt["pref"]==2]["pref"].count())
+##choosing genes in MGT2 and MGT3
 
-filt.loc[(filt["Number of Negative Counts"]==0) & (filt["Number of Zero Counts"]==0) & (filt["In Spc Alle Fifty Percen"].astype(str).str.contains("T")) & (filt["In Species Core"].astype(str).str.contains("T")) & (filt["In Phasta"].astype(str).str.contains("F")) & (filt["In T3SS"].astype(str).str.contains("F")) & (filt["Has tandem repeats"].astype(str).str.contains("F")) & (filt["Has homopolymers"].astype(str).str.contains("F")) & (filt["pref"]<=2), "pref"] = 1
-# print("pref 1")
-# print(filt[filt["pref"]==1]["pref"].count())
-# print(filt[filt["pref"]==1])
+# filt["pref"] = 2
+# # print("pref 2")
+# # print(filt[filt["pref"]==2]["pref"].count())
+#
+# filt.loc[(filt["Number of Negative Counts"]==0) & (filt["Number of Zero Counts"]==0) & (filt["In Spc Alle Fifty Percen"].astype(str).str.contains("T")) & (filt["In Species Core"].astype(str).str.contains("T")) & (filt["In Phasta"].astype(str).str.contains("F")) & (filt["In T3SS"].astype(str).str.contains("F")) & (filt["Has tandem repeats"].astype(str).str.contains("F")) & (filt["Has homopolymers"].astype(str).str.contains("F")) & (filt["pref"]<=2), "pref"] = 1
+# # print("pref 1")
+# # print(filt[filt["pref"]==1]["pref"].count())
+# # print(filt[filt["pref"]==1])
 
 
 
 filt.to_csv('/Users/liamcheneyy/Desktop/filt_all_genes_hgt.csv', index=False)
-
-random.seed(21461798)
+random.seed(54322)
 
 #for MGT2 and MGT3
-##scheme target sizes
-target_sizes = {'MGT2':10329,'MGT3':51644}
-
-#scheme lowest allowed loci preference numbers
-preflimit = {'MGT2':1,'MGT3':1}
-
-#scheme smallest distance allowed between loci
-distlimit = {'MGT2':20000,'MGT3':10000}
-
-# #For MGT4 onwards
-# target_sizes = {'MGT4':103287,'MGT5':206575,'MGT6':516437,'MGT7':1032875}
+# random.seed(12345564)
+# #scheme target sizes
+# target_sizes = {'MGT2':10329,'MGT3':51644}
 #
 # #scheme lowest allowed loci preference numbers
-# preflimit = {'MGT4':4,'MGT5':6,'MGT6':9,'MGT7':12}
+# preflimit = {'MGT2':1,'MGT3':1}
 #
 # #scheme smallest distance allowed between loci
-# distlimit = {'MGT4':6000,'MGT5':2000,'MGT6':0,'MGT7':0}
-# #initialise outputs dict
+# distlimit = {'MGT2':20000,'MGT3':10000}
+
+#For MGT4 onwards
+target_sizes = {'MGT2':10329,'MGT3':51644, 'MGT4':103287,'MGT5':206575,'MGT6':516437,'MGT7':1032875}
+
+#scheme lowest allowed loci preference numbers
+preflimit = {'MGT2':1,'MGT3':1,'MGT4':4,'MGT5':6,'MGT6':8,'MGT7':10}
+
+#scheme smallest distance allowed between loci
+distlimit = {'MGT2':20000,'MGT3':10000,'MGT4':10000,'MGT5':3000,'MGT6':0,'MGT7':0}
+
+#initialise outputs dict
 #creating output
 outputs = {}
 
@@ -140,7 +142,7 @@ for key, value in assigned_genes.items():
     input_length[key] = length
 
 #list of gene start pos
-startposs = {1:[],2:[]}
+startposs = {2:[], 1:[]}
 for key, value in assigned_genes.items():
     for el in value:
         if 'VCA' not in el:
@@ -152,6 +154,8 @@ for key, value in assigned_genes.items():
 
 #dict of genes to preferences
 prefassigns = {}
+for el in donegenes:
+    prefassigns[el] = 1
 
 #dict of distance to list of loci that are less that that distance
 toclose_genes = {x:[] for x in range(0,20001,1000)}
@@ -170,9 +174,13 @@ pref_df = pd.DataFrame(filt[filt["pref"]==prefno])
 # print(pref_loci)
 #for each MGT scheme
 for i in sorted(target_sizes.keys()):
+    print(i)
     outputs[i] = assigned_genes[i]
     totlen = input_length[i]
     locino = len(assigned_genes[i])
+    # outputs[i] = []
+    # totlen = 0
+    # locino = 0
 
     #while current running total of scheme genes is less than the target size
     while totlen < target_sizes[i]:
@@ -190,8 +198,8 @@ for i in sorted(target_sizes.keys()):
             pos = int(gene["Start"])
             length = int(gene["Length"])
             chro = gene["Chromosome"].values[0]
-            if chro not in startposs:
-                startposs[chro] = []
+            # if chro not in startposs:
+            #     startposs[chro] = []
             #check if new gene is too close to existing picks given current limit (limno) using start position of new gene
             to_close_filt = too_close(startposs,pos,limno, chro)
             ##if the new gene is not already picked and is not already noted as too close fr current limit
@@ -206,8 +214,6 @@ for i in sorted(target_sizes.keys()):
                     totlen += length
                     locino+=1
                     pref_loci.remove(ids)
-                    print(locino, outputs)
-                    sl(1)
                 else:
                     ## if gene is too close add to to_close_genes dictionary for current limit
                     toclose_genes[limno].append(ids)
@@ -224,7 +230,7 @@ for i in sorted(target_sizes.keys()):
             # get loci for this preference
             pref_loci = list(filt[filt["pref"]==prefno]["Locus Tag"].get_values())
             pref_df = pd.DataFrame(filt[filt["pref"] == prefno])
-            print("preference_no: "+str(prefno))
+            # print("preference_no: "+str(prefno))
         # if length limit is  is more than cutoff for min distance
         elif limno > distlimit[i]:
             # reset preference to 1 and reset pref_loci to preference 1
@@ -246,31 +252,20 @@ for i in sorted(target_sizes.keys()):
         print("NOT ENOUGH SEQ!!\nNeed: "+str(target_sizes[i]))
         print(i,totlen,locino)
         sl(100000)
-    print(i, totlen,locino)
     #reset distance limit for each scheme
     limno = 20000
 
-    # print(i)
-    # print(startposs)
-    # sl(1)
 
-## output writing
+# output writing
 # print(len(toclose_genes))
 # print(len(donegenes))
-# outfolder = '/Users/liamcheneyy/Desktop/'
-# outsummary = open("/Users/liamcheneyy/Desktop/all_schemes_loci.txt","w")
-# for i in outputs:
-#     outf = open(outfolder +"/"+i+"_gene_accessions.txt","w")
-#     print(i,len(outputs[i]))
-#     for gene in outputs[i]:
-#         outsummary.write("{}\t{}\t{}\n".format(i,gene,prefassigns[gene]))
-#     outf.write("\n".join(outputs[i]))
-#     outf.close()
-# outsummary.close()
-
-
-count = 0
-for i in outputs['MGT2']:
-    gene_length = int(filt[filt['Locus Tag'] == el]['Length'].values)
-    count = count + gene_length
-print(count)
+outfolder = '/Users/liamcheneyy/Desktop/loci/'
+outsummary = open(outfolder + "/all_schemes_loci.txt","w")
+for i in outputs:
+    outf = open(outfolder +"/"+i+"_gene_accessions.txt","w")
+    print(i,len(outputs[i]))
+    for gene in outputs[i]:
+        outsummary.write("{}\t{}\t{}\n".format(i,gene,prefassigns[gene]))
+    outf.write("\n".join(outputs[i]))
+    outf.close()
+outsummary.close()
