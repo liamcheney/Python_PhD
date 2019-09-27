@@ -254,6 +254,13 @@
 # for i in keep:
 #     print(i)
 #
+from ete3 import Tree
+all = open('/Users/liamcheneyy/Desktop/strains.txt','r').read().splitlines()
+t = Tree('/Users/liamcheneyy/Desktop/ms_tree.nwk',format=1)
+alls = ["ERR025381", "SRR4039815", "ERR976480"]
+t.prune(all)
+t.write(format=2,outfile='/Users/liamcheneyy/Desktop/pruned_ms_tree.nwk')
+print(t)
 
 # from ete3 import Tree
 #
@@ -347,8 +354,51 @@
 # for key, value in allele_count.items():
 #     print(str(key) + '\t' + str(value))
 
-all = open('/Users/liamcheneyy/Desktop/all.txt','r').read().splitlines()
-inp = list(open('/Users/liamcheneyy/Desktop/genes.txt','r').read().splitlines())
+# all = open('/Users/liamcheneyy/Desktop/vcseventh_16/Mgtfi_ref/Schemes/MGT9_gene_accessions.txt','r').read().splitlines()
+# # inp = list(open('/Users/liamcheneyy/Desktop/genes.txt','r').read().splitlines())
+# #
+# # for line in all:
+# #     print
+# count = 0
+# for line in all:
+#     if count == 1000 or count == 2000:
+#         print('xx')
+#         print('\t' + line + " = " + "models.CharField(max_length=50)")
+#         count = count + 1
+#     else:
+#         print('\t' + line + " = " + "models.CharField(max_length=50)")
+#         count = count + 1
 
-for line in all:
-    print(line in inp)
+# mgtref_dict = {}
+# import glob
+# from time import sleep as sl
+# from Bio import SeqIO
+#
+# for filename in glob.iglob('/Users/liamcheneyy/Desktop/vcseventh_16/Mgtfi_ref/ref_Vibrio_alleles/*fasta'):
+#     infile = SeqIO.parse(filename,'fasta')
+#     for record in infile:
+#         mgtref_dict[str(record.id)] = len(str(record.seq))
+#     infile.close()
+#
+# db_dict = {}
+#
+# for filename in glob.iglob('/Users/liamcheneyy/MGT_16/Mgt/Mgt/Alleles/Vibrio/*fasta'):
+#     infile = SeqIO.parse(filename,'fasta')
+#     for record in infile:
+#         db_dict[str(record.id)] = len(str(record.seq))
+#     infile.close()
+#
+# for key, value in mgtref_dict.items():
+#     if key in db_dict.keys():
+#         if value != db_dict[key]:
+#             print(key, value, db_dict[key])
+
+# inii = open('/Users/liamcheneyy/Desktop/in.txt','r').read().splitlines()
+#
+# all = open('/Users/liamcheneyy/Desktop/all.txt','r').read().splitlines()
+#
+# for i in all:
+#     if i in inii:
+#         print(i, True)
+#     else:
+#         print(i, False)
