@@ -1,8 +1,3 @@
-[13: 18] Paris
-Thompson
-
-Text
-
 from time import sleep as sl
 from Bio import SeqIO
 
