@@ -225,6 +225,8 @@ def main():
     vibrio_core_list_path = '/Users/liamcheneyy/Desktop/MGT8_gene_accessions.txt'
     vibrio_chol_genes = open(vibrio_core_list_path,'r').read().splitlines()
 
+    check_genomes = False
+
     #if comparing strains not in original allele alignment
     mgt9_alleles = add_extra_alleles_profiles(mgt9_alleles, input_genomes, all_mgt9_alleles)
 
