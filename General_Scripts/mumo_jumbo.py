@@ -347,8 +347,19 @@
 # for key, value in allele_count.items():
 #     print(str(key) + '\t' + str(value))
 
-all = open('/Users/liamcheneyy/Desktop/all.txt','r').read().splitlines()
-inp = list(open('/Users/liamcheneyy/Desktop/genes.txt','r').read().splitlines())
+# all = open('/Users/liamcheneyy/Desktop/all.txt','r').read().splitlines()
+# inp = list(open('/Users/liamcheneyy/Desktop/genes.txt','r').read().splitlines())
+#
+# for line in all:
+#     print(line in inp)
+import pandas as pd
 
-for line in all:
-    print(line in inp)
+all = pd.read_csv('/Users/liamcheneyy/Desktop/Untitled.txt', sep='\t')
+
+count_dict = all['ST'].value_counts().to_dict()
+
+for key, value in count_dict.items():
+
+# count.to_csv('/Users/liamcheneyy/Desktop/Untitledoo.csv')
+print(count_dict)
+
