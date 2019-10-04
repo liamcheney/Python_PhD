@@ -15,12 +15,12 @@ from io import StringIO
 import csv
 
 #reading in roary gene absence and presence
-roary_path = "/Users/liamcheneyy/Desktop/gene_presence_absence_i95.csv"
-gff_folder_in = "/Users/liamcheneyy/Desktop/new_cgmlst_gff/"
-reference_accession = "SRR8867848"
-info_dict_out = "/Users/liamcheneyy/Desktop/Paris/info_dict.txt"
+roary_path = "/Users/liamcheneyy/Desktop/roary/gene_presence_absence.csv"
+gff_folder_in = "/Users/liamcheneyy/Desktop/roary/prokka_gffs/"
+reference_accession = "GCA000006745"
+info_dict_out = "/Users/liamcheneyy/Desktop/roary/info_dict.txt"
 genome_info_dict = False
-outfile_path = "/Users/liamcheneyy/Desktop/Paris/"
+outfile_path = "/Users/liamcheneyy/Desktop/roary/"
 
 #dont need
 fix_roary_csv_val = False
