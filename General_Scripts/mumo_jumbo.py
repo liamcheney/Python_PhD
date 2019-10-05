@@ -388,14 +388,14 @@ from time import sleep as sl
 #     else:
 #         print("FALSE")
 
-from Bio import SeqIO
-all = open('/Users/liamcheneyy/Desktop/all.txt', 'r').read().splitlines()
-
-save_list = []
-input = SeqIO.parse('/Users/liamcheneyy/Desktop/seventh_ref_alleles.fna','fasta')
-for record in input:
-    name = record.id.split(':')[0]
-    if name in all:
-        save_list.append(record)
-
-SeqIO.write(save_list,"/Users/liamcheneyy/Desktop/species_ref_alleles.fna","fasta")
+# from Bio import SeqIO
+# all = open('/Users/liamcheneyy/Desktop/all.txt', 'r').read().splitlines()
+#
+# save_list = []
+# input = SeqIO.parse('/Users/liamcheneyy/Desktop/seventh_ref_alleles.fna','fasta')
+# for record in input:
+#     name = record.id.split(':')[0]
+#     if name in all:
+#         save_list.append(record)
+#
+# SeqIO.write(save_list,"/Users/liamcheneyy/Desktop/species_ref_alleles.fna","fasta")
