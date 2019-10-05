@@ -21,6 +21,7 @@ reference_accession = "GCA000006745"
 info_dict_out = "/Users/liamcheneyy/Desktop/roary/info_dict.txt"
 genome_info_dict = True
 outfile_path = "/Users/liamcheneyy/Desktop/roary/"
+isolate_percentage = 0.90
 
 #dont need
 fix_roary_csv_val = False
@@ -54,7 +55,7 @@ def creating_genome_info(gff_folder_in, reference_accesion, info_dict_out):
             info_dict[strain_name] = {}
             for line in file:
 
-                if ('CDS' in line and 'ID=' in line) or ('tRNA' in line and 'ID=' in line):
+                if ('CDS' in line and 'ID=' in line) or ('RNA' in line and 'ID=' in line):
                     col = line.split('\t')
                     beg_cord = col[3]
                     end_cord = col[4]
@@ -175,7 +176,7 @@ def fix_roary_csv(temp_file):
     return temp_file
 
 #removing fragmented genomes with high paralogs
-def isolate_ortho(roary_path):
+def isolate_ortho(roary_path, outfile_path, isolate_percentage):
     # function will isolate genes found in 99% of strains for each ortholog group
     print(str(clock()) + '\t' + 'Reading in ' + roary_path)
     df = pd.read_csv(roary_path, low_memory=False, index_col=False)
@@ -184,10 +185,12 @@ def isolate_ortho(roary_path):
 
     strains_used = df.shape[1] - 13
     df.insert(loc = 6, column = 'Gene Count', value = df.iloc[:,13:].notnull().sum(axis=1))
-    df = df.loc[df['Gene Count'] >= math.ceil(strains_used * 0.99)]
+    df = df.loc[df['Gene Count'] >= math.ceil(strains_used * isolate_percentage)]
 
     working_df = pd.DataFrame
-    working_df = df.loc[df['Gene Count'] >= math.ceil(strains_used * 0.99)]
+    working_df = df.loc[df['Gene Count'] >= math.ceil(strains_used * isolate_percentage)]
+    working_df.to_csv(outfile_path + '/filtered_gap.csv',sep=',')
+
     return working_df
 def calculate_non_paralogous_core_genes(temp_file):
     # calculate the number of paralogous core genes for each genomes
@@ -556,10 +559,10 @@ def converting_cds_to_vc(core_gene_in, gff_folder_in, reference_accession):
     return vc
 
 #master function
-def master_handling_roary_paralog_problems(outfile_path, genome_info_dict, info_dict_out, reference_accession, roary_path):
+def master_handling_roary_paralog_problems(outfile_path, genome_info_dict, info_dict_out, reference_accession, roary_path, isolate_percentage):
 
     # ##isolate core genes found in >=99% of the dataset genomes
-    temp_file = isolate_ortho(roary_path)
+    temp_file = isolate_ortho(roary_path, outfile_path, isolate_percentage)
 
     print(temp_file.shape)
 
@@ -581,7 +584,7 @@ def master_handling_roary_paralog_problems(outfile_path, genome_info_dict, info_
     ##will write out a list of core genes
     core_gene_out(core_gene_list, outfile_path, reference_accession, gff_folder_in, excluded_list)
 
-master_handling_roary_paralog_problems(outfile_path, genome_info_dict, info_dict_out, reference_accession, roary_path)
+master_handling_roary_paralog_problems(outfile_path, genome_info_dict, info_dict_out, reference_accession, roary_path, isolate_percentage)
 
 #TODO must change to do all analysis from 5,15 currently
 # with open('/Users/liamcheneyy/Desktop/temp_file_in.csv','w') as outfile:

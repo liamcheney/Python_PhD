@@ -352,65 +352,50 @@
 #
 # for line in all:
 #     print(line in inp)
-# import pandas as pd
-# from time import sleep as sl
-# import numpy as np
-#
+import pandas as pd
+from time import sleep as sl
+
 # all = pd.read_csv('/Users/liamcheneyy/Desktop/Untitled.txt', sep='\t')
 #
 # count_dict = all['ST'].value_counts().to_dict()
 #
-# st_for_genome = {}
-# total_list = []
+# save_dict = {}
 # for key, value in count_dict.items():
 #     sub_df = all[all['ST'] == key]
-#     strains_num = sub_df.shape[0]
-#     if strains_num > 50:
-#         random = sub_df.sample(50)
-#         st_for_genome["ST" + str(key)] = list(random['Genome'])
-#         total_list.append(list(random['Genome'].values))
+#     strain_num = sub_df.shape[0]
+#     if strain_num > 50:
+#         sample = sub_df.sample(20)
+#         genomes = list(sample['Genome'])
+#         save_dict['ST' + str(key)] = genomes
 #     else:
-#         st_for_genome["ST" + str(key)] = list(sub_df['Genome'])
-#         total_list.append(list(sub_df['Genome'].values))
+#         save_dict['ST' + str(key)] = list(sub_df['Genome'])
 #
 #
-# with open('/Users/liamcheneyy/Desktop/Untitledoo.csv','w') as out:
-#     for key, value in st_for_genome.items():
-#         print(key)
-#         for i in value:
-#             print(i)
-#         print()
-# for i in total_list:
-#     for k in i:
-#         print(k)
+# for key, value in save_dict.items():
+#     # print(key)
+#     for i in value:
+#         print(i)
+#     # print()
+#     # count.to_csv('/Users/liamcheneyy/Desktop/Untitledoo.csv')
+# print(count_dict)
+
+# all = open('/Users/liamcheneyy/Desktop/all.txt', 'r').read().splitlines()
+# test = open('/Users/liamcheneyy/Desktop/test.txt', 'r').read().splitlines()
+#
+# for el in all:
+#     if el in test:
+#         print("TRUE")
+#     else:
+#         print("FALSE")
 
 # from Bio import SeqIO
-# all = SeqIO.parse('/Users/liamcheneyy/Desktop/seventh/all_seventh_ref_alleles.fna', 'fasta')
-# keeping = open('/Users/liamcheneyy/Desktop/in.txt','r').read().splitlines()
+# all = open('/Users/liamcheneyy/Desktop/all.txt', 'r').read().splitlines()
 #
-# save_dict = {}
-# for record in all:
-#     locus = record.id.split(':')[0]
-#     if locus in keeping:
-#         save_dict[record.id] = str(str(record.seq))
+# save_list = []
+# input = SeqIO.parse('/Users/liamcheneyy/Desktop/seventh_ref_alleles.fna','fasta')
+# for record in input:
+#     name = record.id.split(':')[0]
+#     if name in all:
+#         save_list.append(record)
 #
-# with open('/Users/liamcheneyy/Desktop/seventh/all_species_ref_alleles.fna','w') as out:
-#     for key, value in save_dict.items():
-#         out.write('>' + key + '\n')
-#         out.write(value + '\n')
-
-all = open('/Users/liamcheneyy/Desktop/lociLocationsInRef.txt', 'r').read().splitlines()
-keeping = open('/Users/liamcheneyy/Desktop/in.txt','r').read().splitlines()
-
-keep = []
-for line in all:
-    col = line.split('\t')
-    if col[0] in keeping:
-        keep.append(line)
-
-with open('/Users/liamcheneyy/Desktop/species_lociLocationsInRef.txt','w') as out:
-    for element in keep:
-        out.write(element + '\n')
-        # for i in element:
-        #     out.write(i + '\t')
-        # out.write('\n')
+# SeqIO.write(save_list,"/Users/liamcheneyy/Desktop/species_ref_alleles.fna","fasta")
