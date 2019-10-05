@@ -3,7 +3,7 @@ import glob
 from Bio import SeqIO
 import progressbar
 
-allele_call_input_path = "/Users/liamcheneyy/Desktop/allele_profiles/*/*fasta"
+allele_call_input_path = "/Users/liamcheneyy/Desktop/x/*/*_alleles.fasta"
 outfile_path = "/Users/liamcheneyy/Desktop/"
 
 ##count the number of zero alleles for each genome
@@ -32,7 +32,7 @@ def locus_tag_zero_count(allele_call_input_path):
     print('\n')
     print("Caculating number of zero calls per loci.")
     sl(1)
-    bar = progressbar.ProgressBar(maxval=1400,
+    bar = progressbar.ProgressBar(maxval=10000,
                                   widgets=[progressbar.Bar('=', '[', ']'), ' ', progressbar.Percentage()])
     bar.start()
     genome_count = 0
@@ -43,16 +43,19 @@ def locus_tag_zero_count(allele_call_input_path):
         accession = filename.split('/')[-1].strip('_allele.fasta')
         for record in SeqIO.parse(filename,"fasta"):
             locus_tag = record.id.split(':')[0]
+
+
             if locus_tag not in zero_per_locus_dict.keys():
                 zero_per_locus_dict[locus_tag] = 0
             if ":0" in str(record.id):
                 zero_per_locus_dict[locus_tag] = zero_per_locus_dict[locus_tag] + 1
+
     return zero_per_locus_dict
 
 ##count number of negs per locus
 def locus_tag_negative(allele_call_input_path):
     print('\n')
-    print("Caculating number of zero calls per loci.")
+    print("Caculating number of negative calls per loci.")
     sl(1)
     bar = progressbar.ProgressBar(maxval=1400,
                                   widgets=[progressbar.Bar('=', '[', ']'), ' ', progressbar.Percentage()])
@@ -74,10 +77,10 @@ def locus_tag_negative(allele_call_input_path):
 ## writing out to files
 def print_out_main(allele_call_input_path, outfile_path):
 
-    genome_zero_count_dict = genome_zero_count(allele_call_input_path)
-    with open(outfile_path + 'genomes_zeros_count.csv', 'w') as outfile:
-        for key, value in genome_zero_count_dict.items():
-            outfile.write(key + ',' + str(value) + '\n')
+    # genome_zero_count_dict = genome_zero_count(allele_call_input_path)
+    # with open(outfile_path + 'genomes_zeros_count.csv', 'w') as outfile:
+    #     for key, value in genome_zero_count_dict.items():
+    #         outfile.write(key + ',' + str(value) + '\n')
 
     zero_per_locus_dict = locus_tag_zero_count(allele_call_input_path)
     with open(outfile_path + 'locus_zero_counts.csv', 'w') as outfile:
