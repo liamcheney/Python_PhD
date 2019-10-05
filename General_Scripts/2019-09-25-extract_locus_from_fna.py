@@ -1,15 +1,16 @@
 from time import sleep as sl
 from Bio import SeqIO
+from Bio.Seq import Seq
 
 input_list = list(open(
-    '/Users/paris/OneDrive/Desktop/Paris/Honours/cgMLST_typability/second_attpt_correct_ref_seq/list_core_intergenic_regions_ECnames',
+    '/Users/liamcheneyy/Desktop/strains.txt',
     'r').read().splitlines())
 reference_in = open(
-    '/Users/paris/OneDrive/Desktop/Paris/Honours/cgMLST_typability/second_attpt_correct_ref_seq/GCF_000008865.2_ASM886v2_feature_table.txt',
+    '/Users/liamcheneyy/Desktop/ref/GCF_000006745.1_ASM674v1_feature_table.txt',
     'r').read().splitlines()
-reference_fasta = SeqIO.parse('/Users/paris/OneDrive/Desktop/Paris/Honours/cgMLST_typability/SakaiBS000007.3.fasta',
+reference_fasta = SeqIO.parse('/Users/liamcheneyy/Desktop/ref/GCA_000006745.1_chrII.fasta',
                               'fasta')
-output_dir = '/Users/paris/OneDrive/Desktop/Paris/Honours/cgMLST_typability/second_attpt_correct_ref_seq/'
+output_dir = '/Users/liamcheneyy/Desktop/'
 
 
 def reference_information_dict_creator(reference_in):
@@ -52,25 +53,38 @@ def input_positions(positions_dict, input_save):
             igr_end = int(positions_dict[end_igr]['start'])
             igr_name = beggining_igr + '_' + end_igr
             igr_length = igr_end - igr_start
-            save_dict[igr_name] = {'start': igr_start, 'end': igr_end, 'length': igr_length}
+            strand = positions_dict[beggining_igr]['strand']
+            save_dict[igr_name] = {'start': igr_start, 'end': igr_end, 'length': igr_length, 'strand':strand}
         if len(element) == 1:
             locus = element[0]
             start = int(positions_dict[locus]['start'])
             end = int(positions_dict[locus]['end'])
             length = end - start
-            save_dict[locus] = {'start': start, 'end': end, 'length': length}
+            strand = positions_dict[locus]['strand']
+            save_dict[locus] = {'start': start, 'end': end, 'length': length, 'strand':strand}
     return save_dict
 
 
 def extracting_sequences(input_positions_dict, reference_fasta):
     save_dict = {}
     for record in reference_fasta:
-        chromosome = str(record.seq)
+        chromosome = record.seq
         for key, value in input_positions_dict.items():
             locus = key
             start = int(value['start']) - 1
             end = int(value['end']) - 1
+            strand = input_positions_dict[locus]['strand']
+
             target_sequence = chromosome[start:end]
+            #fix to get reverse compx
+            # if strand == '-':
+            #     target_sequence = Seq(target_sequence)
+            #     print(target_sequence)
+            #     print(value)
+            #     sl(1)
+            #     print(value)
+            #     sl(1)
+            #     # target_sequence = target_sequence.rever
             save_dict[key] = target_sequence
     return save_dict
 

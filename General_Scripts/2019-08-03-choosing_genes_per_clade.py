@@ -2,6 +2,7 @@ import argparse
 import pandas as pd
 
 from time import sleep as sl
+import glob
 
 def create_alleles_dict(mgt9_alleles, input_genomes):
     # print('Reading in alleles for ' + str(len(mgt9_alleles)-1) + ' strains.')
@@ -201,6 +202,34 @@ def alleles_specific_to_clade(allele_in_all_list, shared_alleles_from_input_clad
         out_str = '\t'.join(el)
         print(out_str)
 
+    print()
+
+def work_flow(input_genomes_path, mgt9_alleles_path, all_mgt9_alleles_path, vibrio_core_list_path):
+
+    input_genomes = open(input_genomes_path, 'r').read().splitlines()
+
+    mgt9_alleles = open(mgt9_alleles_path, 'r').read().splitlines()
+
+    all_mgt9_alleles = open(all_mgt9_alleles_path, 'r').read().splitlines()
+
+    vibrio_chol_genes = open(vibrio_core_list_path, 'r').read().splitlines()
+
+    # if comparing strains not in original allele alignment
+    mgt9_alleles = add_extra_alleles_profiles(mgt9_alleles, input_genomes, all_mgt9_alleles)
+
+    # turn input into alleles dictionary
+    # dict key:strain, value:alleles
+    alleles_dict = create_alleles_dict(mgt9_alleles, input_genomes)
+
+    # calculate alleles per loci, and percentage of strains each allele holds
+    input_clade_size = len(input_genomes)
+    calc_alleles_strains_per_loc = count_alleles_per_loci(all_mgt9_alleles_path, input_clade_size)
+
+    # find genes for a certain TERMINATING clade
+    input_clade_specific_genes = terminating_genes_per_clade(input_genomes, alleles_dict, calc_alleles_strains_per_loc,
+                                                             vibrio_chol_genes)
+
+
 def parseargs():
     parser = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter)
 
@@ -213,33 +242,20 @@ def parseargs():
 
 def main():
     args = parseargs()
-    input_genomes_path = '/Users/liamcheneyy/Desktop/input_clade.txt'
-    input_genomes = open(input_genomes_path, 'r').read().splitlines()
 
+    input_genomes_path = '/Users/liamcheneyy/Desktop/input_clades/'
     mgt9_alleles_path = '/Users/liamcheneyy/Desktop/MGT9_allele_profiles.tsv'
-    mgt9_alleles = open(mgt9_alleles_path,'r').read().splitlines()
-
-    all_mgt9_alleles_path = '/Users/liamcheneyy/Desktop/vcseventh_15/grapetree/all_MGT9_allele_profiles.tsv'
-    all_mgt9_alleles = open(all_mgt9_alleles_path,'r').read().splitlines()
-
+    all_mgt9_alleles_path = '/Users/liamcheneyy/Desktop/vcseventh_20/grapetree/all_MGT9_allele_profiles.tsv'
     vibrio_core_list_path = '/Users/liamcheneyy/Desktop/MGT8_gene_accessions.txt'
-    vibrio_chol_genes = open(vibrio_core_list_path,'r').read().splitlines()
 
-    check_genomes = False
-
-    #if comparing strains not in original allele alignment
-    mgt9_alleles = add_extra_alleles_profiles(mgt9_alleles, input_genomes, all_mgt9_alleles)
-
-    #turn input into alleles dictionary
-    #dict key:strain, value:alleles
-    alleles_dict = create_alleles_dict(mgt9_alleles, input_genomes)
-
-    #calculate alleles per loci, and percentage of strains each allele holds
-    input_clade_size = len(input_genomes)
-    calc_alleles_strains_per_loc = count_alleles_per_loci(all_mgt9_alleles_path, input_clade_size)
-
-    #find genes for a certain TERMINATING clade
-    input_clade_specific_genes = terminating_genes_per_clade(input_genomes, alleles_dict, calc_alleles_strains_per_loc, vibrio_chol_genes)
+    loop = True
+    if loop:
+        for filename in glob.iglob(input_genomes_path + '/*'):
+            file_name = filename.split('/')[-1].split('.')[0]
+            print(file_name)
+            work_flow(filename, mgt9_alleles_path, all_mgt9_alleles_path, vibrio_core_list_path)
+    else:
+        work_flow(input_genomes_path, mgt9_alleles_path, all_mgt9_alleles_path, vibrio_core_list_path)
 
 
 if __name__ == '__main__':

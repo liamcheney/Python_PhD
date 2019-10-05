@@ -353,13 +353,49 @@
 # for line in all:
 #     print(line in inp)
 import pandas as pd
+from time import sleep as sl
 
-all = pd.read_csv('/Users/liamcheneyy/Desktop/Untitled.txt', sep='\t')
+# all = pd.read_csv('/Users/liamcheneyy/Desktop/Untitled.txt', sep='\t')
+#
+# count_dict = all['ST'].value_counts().to_dict()
+#
+# save_dict = {}
+# for key, value in count_dict.items():
+#     sub_df = all[all['ST'] == key]
+#     strain_num = sub_df.shape[0]
+#     if strain_num > 50:
+#         sample = sub_df.sample(20)
+#         genomes = list(sample['Genome'])
+#         save_dict['ST' + str(key)] = genomes
+#     else:
+#         save_dict['ST' + str(key)] = list(sub_df['Genome'])
+#
+#
+# for key, value in save_dict.items():
+#     # print(key)
+#     for i in value:
+#         print(i)
+#     # print()
+#     # count.to_csv('/Users/liamcheneyy/Desktop/Untitledoo.csv')
+# print(count_dict)
 
-count_dict = all['ST'].value_counts().to_dict()
+# all = open('/Users/liamcheneyy/Desktop/all.txt', 'r').read().splitlines()
+# test = open('/Users/liamcheneyy/Desktop/test.txt', 'r').read().splitlines()
+#
+# for el in all:
+#     if el in test:
+#         print("TRUE")
+#     else:
+#         print("FALSE")
 
-for key, value in count_dict.items():
+from Bio import SeqIO
+all = open('/Users/liamcheneyy/Desktop/all.txt', 'r').read().splitlines()
 
-# count.to_csv('/Users/liamcheneyy/Desktop/Untitledoo.csv')
-print(count_dict)
+save_list = []
+input = SeqIO.parse('/Users/liamcheneyy/Desktop/seventh_ref_alleles.fna','fasta')
+for record in input:
+    name = record.id.split(':')[0]
+    if name in all:
+        save_list.append(record)
 
+SeqIO.write(save_list,"/Users/liamcheneyy/Desktop/species_ref_alleles.fna","fasta")
