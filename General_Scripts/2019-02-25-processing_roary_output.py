@@ -19,7 +19,7 @@ roary_path = "/Users/liamcheneyy/Desktop/roary/gene_presence_absence.csv"
 gff_folder_in = "/Users/liamcheneyy/Desktop/roary/prokka_gffs/"
 reference_accession = "GCA000006745"
 info_dict_out = "/Users/liamcheneyy/Desktop/roary/info_dict.txt"
-genome_info_dict = False
+genome_info_dict = True
 outfile_path = "/Users/liamcheneyy/Desktop/roary/"
 
 #dont need

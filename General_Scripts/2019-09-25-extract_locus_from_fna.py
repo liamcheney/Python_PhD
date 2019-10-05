@@ -1,31 +1,51 @@
 from time import sleep as sl
 from Bio import SeqIO
+import sys
 
 input_list = list(open(
-    '/Users/paris/OneDrive/Desktop/Paris/Honours/cgMLST_typability/second_attpt_correct_ref_seq/list_core_intergenic_regions_ECnames',
+    '/Users/liamcheneyy/Desktop/roary/core_genes_list.txt',
     'r').read().splitlines())
 reference_in = open(
-    '/Users/paris/OneDrive/Desktop/Paris/Honours/cgMLST_typability/second_attpt_correct_ref_seq/GCF_000008865.2_ASM886v2_feature_table.txt',
+    '/Users/liamcheneyy/Desktop/roary/prokka_gffs/GCA000006745.gff',
     'r').read().splitlines()
-reference_fasta = SeqIO.parse('/Users/paris/OneDrive/Desktop/Paris/Honours/cgMLST_typability/SakaiBS000007.3.fasta',
+reference_fasta = SeqIO.parse('/Users/liamcheneyy/Desktop/ref/GCA_000006745.fna',
                               'fasta')
-output_dir = '/Users/paris/OneDrive/Desktop/Paris/Honours/cgMLST_typability/second_attpt_correct_ref_seq/'
+output_dir = '/Users/liamcheneyy/Desktop/'
 
 
-def reference_information_dict_creator(reference_in):
+def reference_information_dict_creator(reference_in, table_or_gff):
     info_dict = {}
-    chromosome_list = []
-    cds_lines = []
-    for i in reference_in:
-        col = i.split('\t')
-        if 'gene' in col[0]:
-            locus_tag = col[16]
-            start = col[7]
-            end = col[8]
-            chr = col[5]
-            strand = col[9]
-            length = int(end) - int(start)
-            info_dict[locus_tag] = {'start': start, 'end': end, 'strand': strand, 'chromosome': chr, 'length': length}
+
+    if table_or_gff == "table":
+        for i in reference_in:
+            col = i.split('\t')
+            if 'gene' in col[0]:
+                locus_tag = col[16]
+                start = col[7]
+                end = col[8]
+                chr = col[5]
+                strand = col[9]
+                length = int(end) - int(start)
+                info_dict[locus_tag] = {'start': start, 'end': end, 'strand': strand, 'chromosome': chr, 'length': length}
+    elif table_or_gff == "gff":
+        for line in reference_in:
+            if 'ID=' in line:
+                col = line.split('\t')
+                start = col[3]
+                end = col[4]
+                chr = col[0]
+                strand = col[6]
+                length = int(end) - int(start)
+                locus_tag = int(col[8].split(';')[0].split('_')[-1])
+                info_dict[locus_tag] = {'start': start, 'end': end, 'strand': strand, 'chromosome': chr, 'length': length}
+
+    else:
+        print('Error: Input annotation requires: "gff" or "table"')
+        sys.exit()
+
+
+    print(info_dict.keys())
+    sl(1)
     return info_dict
 
 
@@ -93,8 +113,11 @@ def write_out(input_positions_dict, sequences_dict, output_dir):
 
 
 def main(reference_in, input_list, reference_fasta, output_dir):
+    table_or_gff = "gff" #"table"
+
     # reading in gff information from FEATURE_TABLE
-    positions_dict = reference_information_dict_creator(reference_in)
+    positions_dict = reference_information_dict_creator(reference_in, table_or_gff)
+
     # read in input_list
     input_save = reading_input(input_list)
     # create positions from input dict
