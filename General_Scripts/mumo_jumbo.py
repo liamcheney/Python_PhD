@@ -355,10 +355,12 @@
 import pandas as pd
 from time import sleep as sl
 
-# all = pd.read_csv('/Users/liamcheneyy/Desktop/Untitled.txt', sep='\t')
+# all = pd.read_csv('/Users/liamcheneyy/Desktop/locus.txt', sep='\t', index_col=False)
+# count_dict = all['Locus'].value_counts().to_dict()
 #
-# count_dict = all['ST'].value_counts().to_dict()
-#
+# for key, value in count_dict.items():
+#     print(key, value)
+
 # save_dict = {}
 # for key, value in count_dict.items():
 #     sub_df = all[all['ST'] == key]
@@ -380,7 +382,7 @@ from time import sleep as sl
 # print(count_dict)
 
 # all = open('/Users/liamcheneyy/Desktop/all.txt', 'r').read().splitlines()
-# test = open('/Users/liamcheneyy/Desktop/test.txt', 'r').read().splitlines()
+# test = open('/Users/liamcheneyy/Desktop/in.txt', 'r').read().splitlines()
 #
 # for el in all:
 #     if el in test:
@@ -388,14 +390,14 @@ from time import sleep as sl
 #     else:
 #         print("FALSE")
 
-# from Bio import SeqIO
-# all = open('/Users/liamcheneyy/Desktop/all.txt', 'r').read().splitlines()
-#
-# save_list = []
-# input = SeqIO.parse('/Users/liamcheneyy/Desktop/seventh_ref_alleles.fna','fasta')
-# for record in input:
-#     name = record.id.split(':')[0]
-#     if name in all:
-#         save_list.append(record)
-#
-# SeqIO.write(save_list,"/Users/liamcheneyy/Desktop/species_ref_alleles.fna","fasta")
+from Bio import SeqIO
+all = open('/Users/liamcheneyy/Desktop/all.txt', 'r').read().splitlines()
+
+save_list = []
+input = SeqIO.parse('/Users/liamcheneyy/Desktop/species_ref_alleles.fna','fasta')
+for record in input:
+    name = record.id.split(':')[0]
+    if name in all:
+        save_list.append(record)
+
+SeqIO.write(save_list,"/Users/liamcheneyy/Desktop/mgt234_ref_alleles.fna","fasta")

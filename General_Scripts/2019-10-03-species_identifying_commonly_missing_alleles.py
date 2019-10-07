@@ -156,10 +156,10 @@ def main():
     args = parseargs()
 
 #write out as percentage or ints
-    percen_out = True
+    percen_out = False
 
     #reading in paths
-    input_folder = "/Users/liamcheneyy/Desktop/90_alleles/"
+    input_folder = "/Users/liamcheneyy/Desktop/alleles/"
 
     #get alleles per genome
     genome_alleles_dict,loci_list = extracting_alleles(input_folder)
