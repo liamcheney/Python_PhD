@@ -2,10 +2,11 @@ import glob
 from time import sleep as sl
 import sys
 
-# glob_sum_in = sys.argv[1]
-glob_sum_in = "/Users/liamcheneyy/Desktop/8_Snap_extra/*"
+glob_sum_in = sys.argv[1]
+# glob_sum_in = "/Users/liamcheneyy/Desktop/8_Snap_extra/*"
 
 for filename in glob.iglob(glob_sum_in):
+
     name = filename.split('/')[-1].strip('summary.')
     with open(filename, 'r') as file:
         for line in file:
