@@ -16,10 +16,11 @@ import  glob
 from Bio import SeqIO
 import pandas as pd
 from Bio.Seq import Seq
+import numpy
 
-fnas_input_folder = "/Volumes/Liam's HDD/PhD/2_HGT_seventh_pandemic/2019-01-30-core_genes_DNDS/fnas"
-roary_csv_input = open("/Users/liamcheneyy/Desktop/D2C_i96_99_edited_names_percen_para_ana.csv", 'r').read().splitlines()
-MSA_out_folder = "/Users/liamcheneyy/Desktop/untitled/"
+fnas_input_folder = "/Users/liamcheneyy/Desktop/DNDS/1_fnas/"
+roary_csv_input = open("/Users/liamcheneyy/Desktop/DNDS/gap_with_details.csv", 'r').read().splitlines()
+MSA_out_folder = "/Users/liamcheneyy/Desktop/DNDS/MSA/"
 
 
 def fna_data_dict(fnas_input_folder):
@@ -31,7 +32,6 @@ def fna_data_dict(fnas_input_folder):
         fna_data[genome_id] = {}
         for record in SeqIO.parse(filename, 'fasta'):
             fna_data[genome_id][record.id] = str(record.seq)
-
     return fna_data
 
 def core_gene_iterator(roary_csv_input, MSA_outfile_path):
@@ -44,10 +44,9 @@ def core_gene_iterator(roary_csv_input, MSA_outfile_path):
         genome_used_count = 0
         N_count = 0
         outfilename = col[0]
-        # print(outfilename)
         MSA_dict = {}
         ref_seq = ''
-        for ref_gene in col[15:1949]:
+        for ref_gene in col[15:302]:
             if 'GCA000006745' in ref_gene:
                 ref_genome_id = ref_gene.split('_')[0].strip('"')
                 ref_node = ref_gene.split('_')[1]
@@ -61,25 +60,19 @@ def core_gene_iterator(roary_csv_input, MSA_outfile_path):
                     strand = '+'
 
                 MSA_dict[ref_genome_id + '_' + ref_node] = ref_seq
-                # print(ref_genome_id)
-                # print(ref_strand, ref_seq)
 
-        for gene in col[15:1949]:
+        for gene in col[15:302]:
             if '\t' in gene:
                 pass
 
             elif gene != '' and 'GCA000006745' not in gene:
                 non_ref_seq = ''
                 roary_genome_id = gene.split('_')[0].strip('"')
+                roary_node = gene.split('_')[1]
+
                 start = int(gene.split('_')[3])
                 end = int(gene.split('_')[4])
                 strand = gene[-2]
-
-                #used to fix bad roary cell strings
-                if 'ERR' in roary_genome_id and 'NODE' not in gene.split('_')[1]:
-                    roary_node = 'NODE' + gene.split('_')[1]
-                else:
-                    roary_node = gene.split('_')[1]
 
                 #checking this sequence against the ref sequences
                 non_ref_seq = fna_data[roary_genome_id][roary_node][start - 1:end]
@@ -87,6 +80,7 @@ def core_gene_iterator(roary_csv_input, MSA_outfile_path):
                 #make all sequnces the same strand
                 if strand == '-':
                     non_ref_seq = Seq(non_ref_seq).reverse_complement()
+                    strand = '+'
 
                 #removing strains with Ns
                 if 'N' in non_ref_seq:
@@ -94,46 +88,34 @@ def core_gene_iterator(roary_csv_input, MSA_outfile_path):
                 else:
                     MSA_dict[roary_genome_id + '_' + roary_node] = str(non_ref_seq)
 
-                ## aligner reference sequence against other sequences
-                # align_count = 0
-                # for x, y in zip(ref_seq[:100], non_ref_seq[:100]):
-                #     if x == y:
-                #         align_count = align_count + 1
-                #
-                # if align_count <= (0.70 * 100):
-                #     non_ref_seq = Seq(non_ref_seq).reverse_complement()
 
-        #remove truncated or shorter sequence
-        # len_list = []
-        # for key, value in MSA_dict.items():
-        #     len_list.append(len(value))
-        # avg_len = round(sum(len_list) / len(len_list),0)
-        #
-        # short_count = 0
-        # remove_keys = []
-        # for key, value in MSA_dict.items():
-        #     if len(value) < (0. * avg_len):
-        #         remove_keys.append(key)
-        #         short_count =  short_count + 1
-        #
-        # for i in remove_keys:
-        #     del MSA_dict[i]
-
-        len_avg = []
-        for key, value in MSA_dict.items():
-            len_avg.append(len(value))
-        avg_len = (sum(len_avg) / len(len_avg))
-
+        #will get sizes of all, then sort, the take middle 90th percentile range
+        #average based odd
         short_count = 0
-        remove_keys = []
-        for key, value in MSA_dict.items():
-            if 'GCA_00006745'
-            if len(value) >= (avg_len + 3) or len(value) <= (avg_len - 3):
-                remove_keys.append(key)
-                short_count = short_count + 1
 
-        for i in remove_keys:
-            del MSA_dict[i]
+        if len(MSA_dict.keys()) == 1: #some core genes are all split or joined paralogs
+            pass
+        else:
+            len_avg = []
+            for key, value in MSA_dict.items():
+                len_avg.append(len(value))
+            # print(len(len_avg))
+            len_avg = sorted(len_avg)
+            lower_10 = int(0.10 * len(len_avg))
+            upper_90 = int(0.9 * len(len_avg))
+            filtered_list = len_avg[lower_10:upper_90]
+            avg_len = int((sum(filtered_list) / len(filtered_list)))
+            # median = int(numpy.percentile(len_avg,50))
+
+            remove_keys = []
+            for key, value in MSA_dict.items():
+                if len(value) >= (avg_len + 3) or len(value) <= (avg_len - 3):
+                    remove_keys.append(key)
+                    short_count = short_count + 1
+                    # print(key, len(value))
+
+            for i in remove_keys:
+                del MSA_dict[i]
 
         #writing MSA outfile
         outfile = open(MSA_outfile_path + outfilename + '.fna', 'w')
@@ -144,7 +126,7 @@ def core_gene_iterator(roary_csv_input, MSA_outfile_path):
 
         # write genomes used stats
         genome_used_count = len(MSA_dict.keys())
-        genomes_not_used = 1935 - genome_used_count
+        genomes_not_used = 302 - genome_used_count
         genomes_used_df.loc[outfilename] = [genome_used_count, genomes_not_used, N_count, short_count]
 
     genomes_used_df.to_csv(MSA_outfile_path + 'Genomes_used_stats.csv')

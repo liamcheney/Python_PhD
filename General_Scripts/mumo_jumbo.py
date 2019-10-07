@@ -399,3 +399,23 @@ from time import sleep as sl
 #         save_list.append(record)
 #
 # SeqIO.write(save_list,"/Users/liamcheneyy/Desktop/species_ref_alleles.fna","fasta")
+
+import pandas as pd
+
+# df = pd.read_csv('/Users/liamcheneyy/Desktop/Untitled.txt', sep='\t')
+# counts = df['Allele'].value_counts()
+#
+# counts.to_csv('/Users/liamcheneyy/Desktop/Untitled1.csv')
+
+import glob
+from Bio.Seq import Seq
+from Bio import SeqIO
+
+for filename in glob.iglob('/Users/liamcheneyy/Desktop/DNDS/1_MSA_species_core/*fna'):
+    locus = filename.split('/')[-1].split('.')[0]
+    print(locus)
+    with open('/Users/liamcheneyy/Desktop/DNDS/2_MSA_aln/' + locus + '.aln', 'w') as out:
+        for record in SeqIO.parse(filename,'fasta'):
+            translate = record.seq.translate()
+            out.write('>' + str(record.id) + '\n')
+            out.write(str(translate) + '\n')

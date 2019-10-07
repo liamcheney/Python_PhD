@@ -4,7 +4,7 @@ from Bio import SeqIO
 from Bio.Seq import Seq
 import progressbar
 from time import sleep
-
+import sys
 
 # #checking stats of pal2nal oputputs, based on muscle alignments
 # count_list = []
@@ -70,12 +70,15 @@ from time import sleep
 #     print(out_name)
 #             # out.write(seq.id[0:10] + '\t' + str(seq.seq) + '\n')
 
+pal2nal_fna = sys.argv[1]
+output_folder = sys.argv[2]
+
 ##writing out codon alignments in SNAP tsv format
-for filename in glob.iglob('/Users/liamcheneyy/Desktop/6_Pal2nal/*fna'):
+for filename in glob.iglob(pal2nal_fna + '/*'):
     out_name = filename.split('/')[-1][:-12]
     with open(filename) as file:
         print(out_name)
-        out = open('/Users/liamcheneyy/Desktop/7_Snap/tsv_input/' + out_name + '.fna', 'w')
+        out = open(output_folder + '/' + out_name + '.fna', 'w')
         for seq in SeqIO.parse(file, 'fasta'):
             out.write(seq.id[0:10] + '\t' + str(seq.seq) + '\n')
         out.close()

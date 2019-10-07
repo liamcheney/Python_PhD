@@ -19,11 +19,12 @@ roary_path = "/Users/liamcheneyy/Desktop/roary/gene_presence_absence.csv"
 gff_folder_in = "/Users/liamcheneyy/Desktop/roary/prokka_gffs/"
 reference_accession = "GCA000006745"
 info_dict_out = "/Users/liamcheneyy/Desktop/roary/info_dict.txt"
-genome_info_dict = True
+read_genome_info_dict = True
 outfile_path = "/Users/liamcheneyy/Desktop/roary/"
-isolate_percentage = 0.90
+isolate_percentage = 0.99
 
 #dont need
+write_out_roary_details = True
 fix_roary_csv_val = False
 write_out_fix_roary = False
 read_in_fix_roary = False
@@ -59,6 +60,7 @@ def creating_genome_info(gff_folder_in, reference_accesion, info_dict_out):
                     col = line.split('\t')
                     beg_cord = col[3]
                     end_cord = col[4]
+                    strand = col[6]
                     size = int(end_cord) - int(beg_cord)
                     gene_id = col[8].split(';')[0].split('_')[-1]
                     # if gene_id[-2] == '.':
@@ -79,7 +81,7 @@ def creating_genome_info(gff_folder_in, reference_accesion, info_dict_out):
 
                     gene_id = gene_id.strip('=ID')
 
-                    info_dict[strain_name][gene_id] = {'size': size, 'start': beg_cord, 'end': end_cord, 'contig': contig, 'locus_tag':genbank}
+                    info_dict[strain_name][gene_id] = {'size': size, 'start': beg_cord, 'end': end_cord, 'contig': contig, 'locus_tag':genbank, 'strand':strand}
     bar.finish()
 
     #writing out the genome dictionary to file to save time
@@ -118,10 +120,10 @@ def gathering_core_gene_information(temp_file, info_dict):
 
             # handling cells which DONT have orthologs
             elif '\t' not in str(info):
-                acc, contig, gene_id, beg_cord, end_cord, size = handling_roary_single_annoations_strings(str(info), info_dict,reference_accession)
+                acc, contig, gene_id, beg_cord, end_cord, size, strand = handling_roary_single_annoations_strings(str(info), info_dict,reference_accession)
 
                 temp_file[line][j] = (acc + '_' + str(contig) + '_' + str(gene_id) + '_' + str(beg_cord) + '_' + str(
-                    end_cord) + '_' + str(size))
+                    end_cord) + '_' + str(size) + '(' + str(strand) + ')')
 
             # handling cells which have paralogs
             elif '\t' in str(info):
@@ -306,8 +308,9 @@ def handling_roary_single_annoations_strings(j, info_dict, reference_accession):
         beg_cord = info_dict[acc][gene_id]['start']
         end_cord = info_dict[acc][gene_id]['end']
         size = info_dict[acc][gene_id]['size']
+        strand = info_dict[acc][gene_id]['strand']
 
-        return acc, contig, gene_id, beg_cord, end_cord, size
+        return acc, contig, gene_id, beg_cord, end_cord, size, strand
 def handling_roary_paralogs_annotations_strings(j, info_dict, reference_accession):
     frag_length_list = []
     frag_count = 0
@@ -324,9 +327,11 @@ def handling_roary_paralogs_annotations_strings(j, info_dict, reference_accessio
             beg_cord = int(info_dict[acc][gene_id]['start'])
             end_cord = int(info_dict[acc][gene_id]['end'])
             size = info_dict[acc][gene_id]['size']
+            strand = info_dict[acc][gene_id]['strand']
+
 
             frag_list.append(
-                acc + '_' + contig + '_' + gene_id + '_' + str(beg_cord) + '_' + str(end_cord) + '_' + str(size))
+                acc + '_' + contig + '_' + gene_id + '_' + str(beg_cord) + '_' + str(end_cord) + '_' + str(size) + '(' + str(strand) + ')')
             frag_length_list.append((beg_cord, end_cord))
 
     else:
@@ -340,9 +345,11 @@ def handling_roary_paralogs_annotations_strings(j, info_dict, reference_accessio
             beg_cord = int(info_dict[acc][gene_id]['start'])
             end_cord = int(info_dict[acc][gene_id]['end'])
             size = info_dict[acc][gene_id]['size']
+            strand = info_dict[acc][gene_id]['strand']
+
 
             frag_list.append(
-                acc + '_' + contig + '_' + gene_id + '_' + str(beg_cord) + '_' + str(end_cord) + '_' + str(size))
+                acc + '_' + contig + '_' + gene_id + '_' + str(beg_cord) + '_' + str(end_cord) + '_' + str(size) + '(' + str(strand) + ')')
             frag_length_list.append((beg_cord, end_cord))
 
     frag_cell = '\t'.join(frag_list)
@@ -358,7 +365,7 @@ def fasely_split_ortholgs_filter(reference_accession, keep_core_gene, temp_file,
         #find reference gene size if not fragmented
         if (reference_accession in j) and ('\t' not in j) and ('nan' not in j):
             reference_core_gene = j
-            reference_size = int(j.split('_')[-1])
+            reference_size = int(j.split('_')[-1].split('(')[0])
 
             # find size of other cells in the same core group
             for l in temp_file[line][15:]:
@@ -366,7 +373,7 @@ def fasely_split_ortholgs_filter(reference_accession, keep_core_gene, temp_file,
 
                 # if other cells are a single fragment
                 if '\t' not in l and 'nan' not in l and l != '':
-                    other_size = int(l.split('_')[-1])
+                    other_size = int(l.split('_')[-1].split('(')[0])
 
                     # compare size of reference cell against other cells
                     ref_lower_range = int(0.8 * reference_size)
@@ -385,7 +392,7 @@ def fasely_split_ortholgs_filter(reference_accession, keep_core_gene, temp_file,
                     frag_sizes_list = []
                     fragments = l.split('\t')
                     for frag in fragments:
-                        frag_size = int(frag.split('_')[-1])
+                        frag_size = int(frag.split('_')[-1].split('(')[0])
                         frag_sizes_list.append(frag_size)
                     total_frag_size = sum(frag_sizes_list)
 
@@ -421,7 +428,7 @@ def fasely_joined_orthologs_filter(reference_accession, split_core_gene, temp_fi
             frag_sizes_list = []
             fragments = j.split('\t')
             for frag in fragments:
-                frag_size = int(frag.split('_')[-1])
+                frag_size = int(frag.split('_')[-1].split('(')[0])
                 frag_sizes_list.append(frag_size)
             total_frag_size = sum(frag_sizes_list)
 
@@ -430,7 +437,7 @@ def fasely_joined_orthologs_filter(reference_accession, split_core_gene, temp_fi
             for q in temp_file[line][15:]:
                 q = str(q)
                 if '\t' not in q and 'nan' not in q and q != '':
-                    single_gene_size = int(q.split('_')[-1])
+                    single_gene_size = int(q.split('_')[-1].split('(')[0])
                     lower_limit_ref = int(0.8 * total_frag_size)
                     upper_limit_ref = int(1.2 * total_frag_size)
                     if lower_limit_ref <= single_gene_size <= upper_limit_ref:
@@ -444,14 +451,14 @@ def fasely_joined_orthologs_filter(reference_accession, split_core_gene, temp_fi
                 both_frags_in_size = 0
                 for frag in fragments:
                     frag_in_size = 0
-                    frag_size = int(frag.split('_')[-1])
+                    frag_size = int(frag.split('_')[-1].split('(')[0])
                     # taking other cells fragment size
                     for other_cells in temp_file[line][15:]:
                         other_cells = str(other_cells)
                         other_cells_fragments = other_cells.split('\t')
                         for other_cells_frags in other_cells_fragments:
                             if 'nan' not in other_cells_frags and other_cells_frags != '':
-                                other_cell_size = int(other_cells_frags.split('_')[-1])
+                                other_cell_size = int(other_cells_frags.split('_')[-1].split('(')[0])
 
                                 # creating upper and lower limits for variation in size between ref and other cell fragments
                                 lower_limit_ref = int(0.8 * frag_size)
@@ -559,12 +566,10 @@ def converting_cds_to_vc(core_gene_in, gff_folder_in, reference_accession):
     return vc
 
 #master function
-def master_handling_roary_paralog_problems(outfile_path, genome_info_dict, info_dict_out, reference_accession, roary_path, isolate_percentage):
+def master_handling_roary_paralog_problems(outfile_path, read_genome_info_dict, info_dict_out, reference_accession, roary_path, isolate_percentage, write_out_roary_details):
 
     # ##isolate core genes found in >=99% of the dataset genomes
     temp_file = isolate_ortho(roary_path, outfile_path, isolate_percentage)
-
-    print(temp_file.shape)
 
     ##calculate the number of non paralogs core genes based on included genomes
     # temp_file = calculate_non_paralogous_core_genes(temp_file)
@@ -573,10 +578,18 @@ def master_handling_roary_paralog_problems(outfile_path, genome_info_dict, info_
     temp_file = fix_roary_csv(temp_file)
 
     # ##will read in previoulsy created dictionary or create genome info dict if needed
-    info_dict = reading_or_creating_genomes_dict(genome_info_dict, info_dict_out)
+    info_dict = reading_or_creating_genomes_dict(read_genome_info_dict, info_dict_out)
 
     ##gathering information core gene groups
     temp_file = gathering_core_gene_information(temp_file, info_dict)
+    if write_out_roary_details:
+        print()
+        print("writing out roary with extra information.")
+        with open(outfile_path + '/gap_with_details.csv','w') as out:
+            for line in temp_file:
+                for j in line:
+                    out.write(str(j) + ',')
+                out.write('\n')
 
     # ##handling Roary fasely split orthologs and fasely joined paralogs
     core_gene_list, excluded_list = handling_roary_core_gene_ortholog_paralogs(temp_file, reference_accession)
@@ -584,7 +597,7 @@ def master_handling_roary_paralog_problems(outfile_path, genome_info_dict, info_
     ##will write out a list of core genes
     core_gene_out(core_gene_list, outfile_path, reference_accession, gff_folder_in, excluded_list)
 
-master_handling_roary_paralog_problems(outfile_path, genome_info_dict, info_dict_out, reference_accession, roary_path, isolate_percentage)
+master_handling_roary_paralog_problems(outfile_path, read_genome_info_dict, info_dict_out, reference_accession, roary_path, isolate_percentage, write_out_roary_details)
 
 #TODO must change to do all analysis from 5,15 currently
 # with open('/Users/liamcheneyy/Desktop/temp_file_in.csv','w') as outfile:

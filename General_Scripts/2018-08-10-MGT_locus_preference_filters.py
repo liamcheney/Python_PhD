@@ -90,9 +90,6 @@ filt.loc[(filt["Number of Negative Counts"]<=0) & (filt["Number of Zero Counts"]
 print("pref 1")
 print(filt[filt["pref"]==1]["pref"].count())
 
-#In All Spc Alle
-#In Spc Alle Ninety Percent
-
 filt.to_csv('/Users/liamcheneyy/Desktop/filt_all_genes_hgt.csv', index=False)
 # random.seed(54322)
 
@@ -101,7 +98,7 @@ random.seed(69851)
 
 #scheme target sizes
 #had to cheat an make MGT4 smaller since now enough genes. originally 'MGT4':103287, then made into smaller for genes i had available.
-target_sizes = {'MGT2':10329,'MGT3':51644, 'MGT4':87253, 103287}
+target_sizes = {'MGT2':10329,'MGT3':51644, 'MGT4':87253}
 
 #scheme lowest allowed loci preference numbers
 preflimit = {'MGT2':1,'MGT3':1, 'MGT4':1}
