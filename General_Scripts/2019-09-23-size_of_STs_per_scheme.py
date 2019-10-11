@@ -56,10 +56,10 @@ def parseargs():
 def main():
     args = parseargs()
 
-    want_list = ["MGT2", "MGT3", "MGT4", "MGT5", "MGT6", "MGT7", "MGT8", "MGT9"]
+    want_list = ["MGT2", "MGT3", "MGT4", "MGT5", "MGT6", "MGT7","MGT8", "MGT9"]
 
     # read_in_metadate_pth = '/Users/liamcheneyy/Downloads/MGT_isolate_data_6.txt'
-    read_in_metadate_pth = "/Users/liamcheneyy/Desktop/vcseventh_19/grapetree/all_MGT_isolate_data.txt"
+    read_in_metadate_pth = "/Users/liamcheneyy/Desktop/MGT_isolate_data.txt"
 
     df = pd.read_csv(read_in_metadate_pth, sep='\t')
 
