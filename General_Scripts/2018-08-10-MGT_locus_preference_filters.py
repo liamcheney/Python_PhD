@@ -2,7 +2,7 @@ from time import sleep as sl
 import glob
 import pandas as pd
 import random
-
+import sys
 
 def too_close(poslists,newpos,limit, chro):
     """
@@ -28,7 +28,7 @@ info = pd.read_csv(input_path, sep="\t").fillna("none")
 
 filt = pd.DataFrame(info)
 
-#assign preferences starting at 13 and overwriting for each more resticted level
+##assign preferences starting at 13 and overwriting for each more resticted level
 filt["pref"] = 12
 print("pref 12")
 print(filt[filt["pref"]==12]["pref"].count())
@@ -37,11 +37,11 @@ filt.loc[(filt["In Species Core"].astype(str).str.contains("T")) & (filt["pref"]
 print("pref 11")
 print(filt[filt["pref"]==11]["pref"].count())
 
-filt.loc[(filt["Number of Zero Counts"]<=5) & (filt["Number of Negative Counts"]<=5) & (filt["pref"]<=11), "pref"] = 10
+filt.loc[(filt["Seventh Negative Counts"]<=15) & (filt["Seventh Zero Counts"]<=15) & (filt["pref"]<=11), "pref"] = 10
 print("pref 10")
 print(filt[filt["pref"]==10]["pref"].count())
 
-filt.loc[(filt["In Species Core"].astype(str).str.contains("T")) & (filt["In dS Ninety Percen"].astype(str).str.contains("T")) & (filt["pref"]<=10), "pref"] = 9
+filt.loc[(filt["In dS Ninety Percen"].astype(str).str.contains("T")) & (filt["pref"]<=10), "pref"] = 9
 print("pref 9")
 print(filt[filt["pref"]==9]["pref"].count())
 
@@ -53,7 +53,7 @@ filt.loc[(filt["In Bio Cycle Excluded"].astype(str).str.contains("F")) & (filt["
 print("pref 7")
 print(filt[filt["pref"]==7]["pref"].count())
 
-filt.loc[(filt["Number of Zero Counts"]<=2) & (filt["Number of Negative Counts"]<=2) & (filt["Has tandem repeats"].astype(str).str.contains("F")) & (filt["Has homopolymers"].astype(str).str.contains("F")) & (filt["pref"]<=7), "pref"] = 6
+filt.loc[(filt["Seventh Negative Counts"]<=5) & (filt["Seventh Zero Counts"]<=5) & (filt["Has tandem repeats"].astype(str).str.contains("F")) & (filt["Has homopolymers"].astype(str).str.contains("F")) & (filt["pref"]<=7), "pref"] = 6
 print("pref 6")
 print(filt[filt["pref"]==6]["pref"].count())
 
@@ -73,7 +73,7 @@ filt.loc[(filt["In Genus Core"].astype(str).str.contains("T")) & (filt["pref"]<=
 print("pref 2")
 print(filt[filt["pref"]==2]["pref"].count())
 
-filt.loc[(filt["Number of Negative Counts"]==0) & (filt["Number of Zero Counts"]==0)  & (filt["pref"]<=2), "pref"] = 1
+filt.loc[(filt["Seventh Negative Counts"]==0) & (filt["Seventh Zero Counts"]==0) & (filt["pref"]<=2), "pref"] = 1
 print("pref 1")
 print(filt[filt["pref"]==1]["pref"].count())
 
@@ -82,35 +82,37 @@ print(filt[filt["pref"]==1]["pref"].count())
 # filt["pref"] = 2
 # print("pref 2")
 # print(filt[filt["pref"]==2]["pref"].count())
-
-# filt.loc[(filt["Number of Zero Counts"]<=5) & (filt["Number of Negative Counts"]<=35) & (filt["In Spc All Changing"].astype(str).str.contains("T")) & (filt["In Diverse Species"].astype(str).str.contains("T")) & (filt["In Phasta"].astype(str).str.contains("F")) & (filt["In T3SS"].astype(str).str.contains("F")) & (filt["Has tandem repeats"].astype(str).str.contains("F")) & (filt["Has homopolymers"].astype(str).str.contains("F")) & (filt["pref"]<=2), "pref"] = 1
-# filt.loc[(filt["Number of Negative Counts"]<=0) & (filt["Number of Zero Counts"]<=0) & (filt["In All Spc Alle"].astype(str).str.contains("T")) & (filt["In Species Core"].astype(str).str.contains("T")) & (filt["pref"]<=2), "pref"] = 1
+#
+# filt.loc[(filt["Seventh Negative Counts"]<=40) & (filt["Seventh Zero Counts"]<=40) & (filt["Species Negative Counts"]<=40) & (filt["Species Zero Counts"]<=40) & (filt["In Spc All Changing"].astype(str).str.contains("T")) & (filt["In Diverse Species"].astype(str).str.contains("T")) & (filt["In Phasta"].astype(str).str.contains("F")) & (filt["In T3SS"].astype(str).str.contains("F")) & (filt["Has tandem repeats"].astype(str).str.contains("F")) & (filt["Has homopolymers"].astype(str).str.contains("F")) & (filt["pref"]<=2), "pref"] = 1
+# # filt.loc[(filt["Number of Negative Counts"]<=0) & (filt["Number of Zero Counts"]<=0) & (filt["In All Spc Alle"].astype(str).str.contains("T")) & (filt["In Species Core"].astype(str).str.contains("T")) & (filt["pref"]<=2), "pref"] = 1
 # print("pref 1")
 # print(filt[filt["pref"]==1]["pref"].count())
+
+# sys.exit()
 
 # filt.to_csv('/Users/liamcheneyy/Desktop/filt_all_genes_hgt.csv', index=False)
 # random.seed(54322)
 
 #for MGT2 and MGT3
-random.seed(69851)
+random.seed(6951)
 
 #scheme target sizes
 # target_sizes = {'MGT2':10329,'MGT3':51644, 'MGT4':103287}
-
-#scheme lowest allowed loci preference numbers
+#
+# ##scheme lowest allowed loci preference numbers
 # preflimit = {'MGT2':1,'MGT3':1, 'MGT4':1}
-
-#scheme smallest distance allowed between loci
+#
+# ##scheme smallest distance allowed between loci
 # distlimit = {'MGT2':20000,'MGT3':10000, 'MGT4':500}
 
 #For MGT4 onwards
 target_sizes = {'MGT5':206575,'MGT6':516437,'MGT7':1032875}
 
 #scheme lowest allowed loci preference numbers
-preflimit = {'MGT5':6,'MGT6':9,'MGT7':11}
+preflimit = {'MGT5':5,'MGT6':8,'MGT7':10}
 
 #scheme smallest distance allowed between loci
-distlimit = {'MGT5':0,'MGT6':0,'MGT7':0}
+distlimit = {'MGT5':1500,'MGT6':0,'MGT7':0}
 
 #initialise outputs dict
 
