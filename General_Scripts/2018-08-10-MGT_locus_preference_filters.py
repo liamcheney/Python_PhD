@@ -29,17 +29,13 @@ info = pd.read_csv(input_path, sep="\t").fillna("none")
 filt = pd.DataFrame(info)
 
 ##assign preferences starting at 13 and overwriting for each more resticted level
-filt["pref"] = 12
-print("pref 12")
-print(filt[filt["pref"]==12]["pref"].count())
-
-filt.loc[(filt["In Species Core"].astype(str).str.contains("T")) & (filt["pref"]<=12), "pref"] = 11
+filt["pref"] = 11
 print("pref 11")
 print(filt[filt["pref"]==11]["pref"].count())
 
-filt.loc[(filt["Seventh Negative Counts"]<=15) & (filt["Seventh Zero Counts"]<=15) & (filt["pref"]<=11), "pref"] = 10
+filt.loc[(filt["In Species Core"].astype(str).str.contains("T")) & (filt["Seventh Negative Counts"]<=15) & (filt["Seventh Zero Counts"]<=15) & (filt["pref"]<=11), "pref"] = 10
 print("pref 10")
-print(filt[filt["pref"]==10]["pref"].count())
+print(filt[filt["pref"]==11]["pref"].count())
 
 filt.loc[(filt["In dS Ninety Percen"].astype(str).str.contains("T")) & (filt["pref"]<=10), "pref"] = 9
 print("pref 9")
@@ -53,7 +49,7 @@ filt.loc[(filt["In Bio Cycle Excluded"].astype(str).str.contains("F")) & (filt["
 print("pref 7")
 print(filt[filt["pref"]==7]["pref"].count())
 
-filt.loc[(filt["Seventh Negative Counts"]<=5) & (filt["Seventh Zero Counts"]<=5) & (filt["Has tandem repeats"].astype(str).str.contains("F")) & (filt["Has homopolymers"].astype(str).str.contains("F")) & (filt["pref"]<=7), "pref"] = 6
+filt.loc[(filt["Has tandem repeats"].astype(str).str.contains("F")) & (filt["Has homopolymers"].astype(str).str.contains("F")) & (filt["pref"]<=7), "pref"] = 6
 print("pref 6")
 print(filt[filt["pref"]==6]["pref"].count())
 
@@ -78,23 +74,22 @@ print("pref 1")
 print(filt[filt["pref"]==1]["pref"].count())
 
 
-##choosing genes in MGT2 and MGT3
+#choosing genes in MGT2 and MGT3
 # filt["pref"] = 2
 # print("pref 2")
 # print(filt[filt["pref"]==2]["pref"].count())
 #
-# filt.loc[(filt["Seventh Negative Counts"]<=40) & (filt["Seventh Zero Counts"]<=40) & (filt["Species Negative Counts"]<=40) & (filt["Species Zero Counts"]<=40) & (filt["In Spc All Changing"].astype(str).str.contains("T")) & (filt["In Diverse Species"].astype(str).str.contains("T")) & (filt["In Phasta"].astype(str).str.contains("F")) & (filt["In T3SS"].astype(str).str.contains("F")) & (filt["Has tandem repeats"].astype(str).str.contains("F")) & (filt["Has homopolymers"].astype(str).str.contains("F")) & (filt["pref"]<=2), "pref"] = 1
+# filt.loc[(filt["Seventh Negative Counts"]<=55) & (filt["Seventh Zero Counts"]<=55) & (filt["Species Negative Counts"]<=20) & (filt["Species Zero Counts"]<=20) & (filt["In Spc All Changing"].astype(str).str.contains("T")) & (filt["In Diverse Species"].astype(str).str.contains("T")) & (filt["In Phasta"].astype(str).str.contains("F")) & (filt["In T3SS"].astype(str).str.contains("F")) & (filt["Has tandem repeats"].astype(str).str.contains("F")) & (filt["Has homopolymers"].astype(str).str.contains("F")) & (filt["pref"]<=2), "pref"] = 1
 # # filt.loc[(filt["Number of Negative Counts"]<=0) & (filt["Number of Zero Counts"]<=0) & (filt["In All Spc Alle"].astype(str).str.contains("T")) & (filt["In Species Core"].astype(str).str.contains("T")) & (filt["pref"]<=2), "pref"] = 1
 # print("pref 1")
 # print(filt[filt["pref"]==1]["pref"].count())
 
 # sys.exit()
 
-# filt.to_csv('/Users/liamcheneyy/Desktop/filt_all_genes_hgt.csv', index=False)
-# random.seed(54322)
+filt.to_csv('/Users/liamcheneyy/Desktop/filt_all_genes_hgt.csv', index=False)
 
 #for MGT2 and MGT3
-random.seed(6951)
+random.seed(561618)
 
 #scheme target sizes
 # target_sizes = {'MGT2':10329,'MGT3':51644, 'MGT4':103287}
@@ -109,10 +104,10 @@ random.seed(6951)
 target_sizes = {'MGT5':206575,'MGT6':516437,'MGT7':1032875}
 
 #scheme lowest allowed loci preference numbers
-preflimit = {'MGT5':5,'MGT6':8,'MGT7':10}
+preflimit = {'MGT5':5,'MGT6':8,'MGT7':9}
 
 #scheme smallest distance allowed between loci
-distlimit = {'MGT5':1500,'MGT6':0,'MGT7':0}
+distlimit = {'MGT5':3000,'MGT6':1000,'MGT7':0}
 
 #initialise outputs dict
 
