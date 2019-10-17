@@ -33,9 +33,9 @@ filt["pref"] = 11
 print("pref 11")
 print(filt[filt["pref"]==11]["pref"].count())
 
-filt.loc[(filt["In Species Core"].astype(str).str.contains("T")) & (filt["Seventh Negative Counts"]<=15) & (filt["Seventh Zero Counts"]<=15) & (filt["pref"]<=11), "pref"] = 10
+filt.loc[(filt["In Species Core"].astype(str).str.contains("T")) & (filt["Seventh Negative Counts"]<=60) & (filt["Seventh Zero Counts"]<=60) & (filt["Species Negative Counts"]<=60) & (filt["Species Zero Counts"]<=60) & (filt["pref"]<=11), "pref"] = 10
 print("pref 10")
-print(filt[filt["pref"]==11]["pref"].count())
+print(filt[filt["pref"]==10]["pref"].count())
 
 filt.loc[(filt["In dS Ninety Percen"].astype(str).str.contains("T")) & (filt["pref"]<=10), "pref"] = 9
 print("pref 9")
@@ -49,7 +49,7 @@ filt.loc[(filt["In Bio Cycle Excluded"].astype(str).str.contains("F")) & (filt["
 print("pref 7")
 print(filt[filt["pref"]==7]["pref"].count())
 
-filt.loc[(filt["Has tandem repeats"].astype(str).str.contains("F")) & (filt["Has homopolymers"].astype(str).str.contains("F")) & (filt["pref"]<=7), "pref"] = 6
+filt.loc[(filt["Seventh Negative Counts"]<=15) & (filt["Seventh Zero Counts"]<=15) & (filt["Species Negative Counts"]<=15) & (filt["Species Zero Counts"]<=15) & (filt["Has tandem repeats"].astype(str).str.contains("F")) & (filt["Has homopolymers"].astype(str).str.contains("F")) & (filt["pref"]<=7), "pref"] = 6
 print("pref 6")
 print(filt[filt["pref"]==6]["pref"].count())
 
@@ -69,7 +69,7 @@ filt.loc[(filt["In Genus Core"].astype(str).str.contains("T")) & (filt["pref"]<=
 print("pref 2")
 print(filt[filt["pref"]==2]["pref"].count())
 
-filt.loc[(filt["Seventh Negative Counts"]==0) & (filt["Seventh Zero Counts"]==0) & (filt["pref"]<=2), "pref"] = 1
+filt.loc[(filt["Seventh Negative Counts"]==0) & (filt["Seventh Zero Counts"]==0) & (filt["Species Negative Counts"]==0) & (filt["Species Zero Counts"]==0) & (filt["pref"]<=2), "pref"] = 1
 print("pref 1")
 print(filt[filt["pref"]==1]["pref"].count())
 
