@@ -202,18 +202,18 @@ def main():
     simple_out = True
 
     #reading in paths
-    input_folder = "/Users/liamcheneyy/Desktop/seventh_only_alleles/"
+    input_folder = "/Users/liamcheneyy/Desktop/test/"
 
     #get alleles per genome
     print("extracting alleles")
     genome_alleles_dict,loci_list = extracting_alleles(input_folder, simple_out)
 
-    #NOT USING, just not needed
-    # print("calculating allele statistics")
-    # calc number of missing alleles per genome
+    ##NOT USING, just not needed
+    print("calculating allele statistics")
+    ##calc number of missing alleles per genome
     # missing_info_dict = calculate_missing_info(genome_alleles_dict, simple_out)
 
-    #calc the how many time an allele is missing across dataset
+    # #calc the how many time an allele is missing across dataset
     locus_missing_info_dict = calculate_missing_alleles(loci_list, genome_alleles_dict, simple_out)
 
     #extra pandas processing
