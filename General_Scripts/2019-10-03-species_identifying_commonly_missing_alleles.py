@@ -34,8 +34,8 @@ def extracting_alleles(input_folder, simple_out):
                         allele_list.append(allele)
 
         save_dict[accession] = allele_list
-
     loci_list = []
+
 
     first_strain = list(save_dict.keys())[0]
     for i in save_dict[first_strain]:
@@ -147,9 +147,6 @@ def calculate_missing_alleles(loci_list, genome_alleles_dict, simple_out):
             for i in value:
                 locus = i.split(':')[0]
 
-                if 'failed_filter' in i:
-                    locus_missing_info_dict[locus]['failed_filter'] += 1
-
                 if ':0' in i:
                     locus_missing_info_dict[locus]['missing_count'] += 1
 
@@ -183,7 +180,7 @@ def pandas_processing(locus_missing_info_dict, genome_alleles_dict, percen_out, 
 
     if not simple_out:
         df = df.sort_values(by=['worked'], ascending=False)
-        df = df[['worked', 'new', 'exact', 'missing_count', 'failed_filter', 'no_blast_hits', 'unscorable_too_much_missing',
+        df = df[['worked', 'new', 'exact', 'missing_count', 'no_blast_hits', 'unscorable_too_much_missing',
                  'unscorable_too_long', 'possible_duplication']]
 
     if percen_out:
@@ -199,10 +196,10 @@ def main():
 
 #write out as percentage or ints
     percen_out = False
-    simple_out = True
+    simple_out = False
 
     #reading in paths
-    input_folder = "/Users/liamcheneyy/Desktop/test/"
+    input_folder = "/Users/liamcheneyy/Desktop/hsp90_snp4_blast90/*/"
 
     #get alleles per genome
     print("extracting alleles")
@@ -220,7 +217,7 @@ def main():
     out_csv = pandas_processing(locus_missing_info_dict, genome_alleles_dict, percen_out, simple_out)
 
     #writing out
-    out_path = '/Users/liamcheneyy/Desktop/90_results.csv'
+    out_path = '/Users/liamcheneyy/Desktop/hsp90_snp4_blast90.csv'
     out_csv.to_csv(out_path,sep=',')
 
 if __name__ == '__main__':
