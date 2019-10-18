@@ -202,12 +202,13 @@ def main():
     simple_out = True
 
     #reading in paths
-    input_folder = "/Users/liamcheneyy/Desktop/test/"
+    input_folder = "/Users/liamcheneyy/Desktop/lanlab/all_allele_profiles/all_species_alleles/*/"
 
     #get alleles per genome
     print("extracting alleles")
     genome_alleles_dict,loci_list = extracting_alleles(input_folder, simple_out)
 
+    print(len(genome_alleles_dict.keys()))
     ##NOT USING, just not needed
     print("calculating allele statistics")
     ##calc number of missing alleles per genome
