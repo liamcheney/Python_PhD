@@ -196,10 +196,10 @@ def main():
 
 #write out as percentage or ints
     percen_out = False
-    simple_out = False
+    simple_out = True
 
     #reading in paths
-    input_folder = "/Users/liamcheneyy/Desktop/hsp90_snp4_blast90/*/"
+    input_folder = "/Users/liamcheneyy/Desktop/lanlab/all_allele_profiles/all_species_alleles/*"
 
     #get alleles per genome
     print("extracting alleles")
