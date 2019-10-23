@@ -402,19 +402,9 @@ from Bio import SeqIO
 #
 # SeqIO.write(save_list,"/Users/liamcheneyy/Desktop/mgt234_ref_alleles.fna","fasta")
 
-all = open('/Users/liamcheneyy/Desktop/un.txt', 'r').read().splitlines()
-for i in all:
-    if '/' in i:
-        col = i.split('/')[-1]
-        if len(col) == 2:
-            col = "20" +col
-            print(col)
+import pandas as pd
+main_df = pd.read_csv('/Users/liamcheneyy/Desktop/complete_metadata.csv', index_col='ID')
+join_df = pd.read_csv('/Users/liamcheneyy/Desktop/simple_blast_results.csv', index_col='ID')
 
-    elif '-' in i:
-        col = i.split('-')[-1]
-        if len(col) == 2:
-            col = "20" +col
-            print(col)
-    else:
-        print(i)
-
+joined = main_df.merge(join_df, left_index=True, right_index=True, how='left')
+joined.to_csv('/Users/liamcheneyy/Desktop/metadata.csv')

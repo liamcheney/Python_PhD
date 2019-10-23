@@ -14,9 +14,20 @@ def parseargs():
 
 def sts_per_attributes(element, df):
 
+    #create sub dataframe of MGT ST levels and attribute
     sub_df_cols = [element] + [x for x in df if 'MGT' in x and 'CC' not in x and 'MGT9' not in x]
     sub_df = df[sub_df_cols]
-    print(sub_df)
+    mgt_col_list = [x for x in sub_df if "MGT" in x]
+
+    for item in mgt_col_list:
+        want_levels = [sub_df_cols[0], item]
+        sub_level_df = sub_df[want_levels]
+        st_freq_dict = sub_level_df[item].value_counts()
+        for index, row in sub_level_df.iterrows():
+            row_values = row.tolist()
+
+            sl(1)
+
 
 
 
@@ -29,7 +40,7 @@ def main():
     include_CCs = False
 
     #read in metadata
-    df = pd.read_csv('/Users/liamcheneyy/Desktop/metadata.csv', index_col='ID', low_memory=False)
+    df = pd.read_csv('/Users/liamcheneyy/Desktop/vcseventh_21/grapetree/seventh/metadata.csv', index_col='ID', low_memory=False)
 
     #columns of attributes to take
     want_attributes = list(df.columns.values[start_col:end_col])
@@ -48,4 +59,5 @@ if __name__ == '__main__':
 
 #challenges
 #2. the script must choose the best MGT level
+    #find the level which defines the least amount of STs, with the largest number.
 #3. script must choose an ST unique to a certain attribute
