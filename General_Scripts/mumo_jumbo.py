@@ -391,13 +391,30 @@ from time import sleep as sl
 #         print("FALSE")
 
 from Bio import SeqIO
-all = open('/Users/liamcheneyy/Desktop/all.txt', 'r').read().splitlines()
+# all = open('/Users/liamcheneyy/Desktop/all.txt', 'r').read().splitlines()
+#
+# save_list = []
+# input = SeqIO.parse('/Users/liamcheneyy/Desktop/allele_testinspecies_ref_alleles.fna','fasta')
+# for record in input:
+#     name = record.id.split(':')[0]
+#     if name in all:
+#         save_list.append(record)
+#
+# SeqIO.write(save_list,"/Users/liamcheneyy/Desktop/mgt234_ref_alleles.fna","fasta")
 
-save_list = []
-input = SeqIO.parse('/Users/liamcheneyy/Desktop/allele_testinspecies_ref_alleles.fna','fasta')
-for record in input:
-    name = record.id.split(':')[0]
-    if name in all:
-        save_list.append(record)
+all = open('/Users/liamcheneyy/Desktop/un.txt', 'r').read().splitlines()
+for i in all:
+    if '/' in i:
+        col = i.split('/')[-1]
+        if len(col) == 2:
+            col = "20" +col
+            print(col)
 
-SeqIO.write(save_list,"/Users/liamcheneyy/Desktop/mgt234_ref_alleles.fna","fasta")
+    elif '-' in i:
+        col = i.split('-')[-1]
+        if len(col) == 2:
+            col = "20" +col
+            print(col)
+    else:
+        print(i)
+
