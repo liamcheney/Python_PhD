@@ -391,13 +391,20 @@ from time import sleep as sl
 #         print("FALSE")
 
 from Bio import SeqIO
-all = open('/Users/liamcheneyy/Desktop/all.txt', 'r').read().splitlines()
+# all = open('/Users/liamcheneyy/Desktop/all.txt', 'r').read().splitlines()
+#
+# save_list = []
+# input = SeqIO.parse('/Users/liamcheneyy/Desktop/allele_testinspecies_ref_alleles.fna','fasta')
+# for record in input:
+#     name = record.id.split(':')[0]
+#     if name in all:
+#         save_list.append(record)
+#
+# SeqIO.write(save_list,"/Users/liamcheneyy/Desktop/mgt234_ref_alleles.fna","fasta")
 
-save_list = []
-input = SeqIO.parse('/Users/liamcheneyy/Desktop/allele_testinspecies_ref_alleles.fna','fasta')
-for record in input:
-    name = record.id.split(':')[0]
-    if name in all:
-        save_list.append(record)
+import pandas as pd
+main_df = pd.read_csv('/Users/liamcheneyy/Desktop/complete_metadata.csv', index_col='ID')
+join_df = pd.read_csv('/Users/liamcheneyy/Desktop/simple_blast_results.csv', index_col='ID')
 
-SeqIO.write(save_list,"/Users/liamcheneyy/Desktop/mgt234_ref_alleles.fna","fasta")
+joined = main_df.merge(join_df, left_index=True, right_index=True, how='left')
+joined.to_csv('/Users/liamcheneyy/Desktop/metadata.csv')
