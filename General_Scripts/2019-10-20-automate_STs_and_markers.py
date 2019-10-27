@@ -105,3 +105,7 @@ if __name__ == '__main__':
 #2. the script must choose the best MGT level
     #find the level which defines the least amount of STs, with the largest number.
 #3. script must choose an ST unique to a certain attribute
+
+
+
+
