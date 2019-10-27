@@ -12,7 +12,20 @@ def parseargs():
 
     return args
 
-def filtering_level(st_save_dict, strains_number, describe_clade_percen):
+def choose_level_least_STs(keep_dict):
+
+    save_list = []
+    for key, value in keep_dict.items():
+        if len(value) != 0:
+            save_list.append([key, len(value)])
+
+    save_list.sort(key=lambda x: x[1])
+    chosen_level = save_list[0][0]
+    keep_dict = keep_dict[save_list[0][0]]
+
+    return keep_dict, chosen_level
+
+def remove_non_specific_st(st_save_dict, min_strains_per_st, percentage_of_contaminating_strains):
 
     # remove any STs which are not specific
     keep_dict = {}
@@ -20,32 +33,64 @@ def filtering_level(st_save_dict, strains_number, describe_clade_percen):
         keep_dict[mgt_level] = {}
 
         for ST in st_save_dict[mgt_level]:
-            if st_save_dict[mgt_level][ST]['true'] > 0 and st_save_dict[mgt_level][ST]['false'] > 0:
-                pass
-            else:
+
+            total_false_true_calls = st_save_dict[mgt_level][ST]['true'] + st_save_dict[mgt_level][ST]['false']
+            contamiating_strains = int(percentage_of_contaminating_strains / 100 * total_false_true_calls)
+
+            # if an ST covers both true and false
+            if st_save_dict[mgt_level][ST]['true'] >= 1 and st_save_dict[mgt_level][ST]['false'] >= 1:
+
+                # if ST shares a small amount of true and false strains, then remain, not removed.
+                if (st_save_dict[mgt_level][ST]['true'] <= contamiating_strains or st_save_dict[mgt_level][ST]['false'] <= contamiating_strains):
+                    keep_dict[mgt_level][ST] = st_save_dict[mgt_level][ST]
+
+                    # if ST has true and false within accepted issues, filter out smaller STs
+                    if st_save_dict[mgt_level][ST]['true'] >= min_strains_per_st or st_save_dict[mgt_level][ST][
+                        'false'] >= min_strains_per_st:
+                        keep_dict[mgt_level][ST] = st_save_dict[mgt_level][ST]
+
+            # if ST has no overlap of TRUE and FALSE, filter out smaller STs
+            elif st_save_dict[mgt_level][ST]['true'] >= min_strains_per_st or st_save_dict[mgt_level][ST]['false'] >= min_strains_per_st:
                 keep_dict[mgt_level][ST] = st_save_dict[mgt_level][ST]
 
+    return keep_dict
+
+def filtering_level(st_save_dict, strains_number, min_strains_per_st, percentage_of_contaminating_strains):
+
+    # remove any STs which are not specific
+    keep_dict = remove_non_specific_st(st_save_dict, min_strains_per_st, percentage_of_contaminating_strains)
+
     # choose the level with least STs
-    save_list = []
-    for key, value in keep_dict.items():
-        save_list.append([key, len(value)])
+    keep_dict, chosen_level = choose_level_least_STs(keep_dict)
 
-    save_list.sort(key=lambda x: x[1])
-    keep_dict = keep_dict[save_list[0][0]]
-
-    # choose the STs describing 95% the majority of clade
+    # choose the STs describing user defined % the majority of clade
     final_st_dict = {}
-    want_strain_number = int(describe_clade_percen * strains_number / 100)
-    strain_count = 0
-    st_list = []
-    for key,value in keep_dict.items():
-        if strain_count < want_strain_number:
-            true = value['true']
-            st_list.append(key)
-            strain_count = strain_count + true
+    true_strain_count = 0
+    true_st_list = []
+    false_strain_count = 0
+    false_st_list = []
 
-    percentage_st_reps = round((strain_count / strains_number * 100),2)
-    print(st_list, strain_count, percentage_st_reps)
+    for key,value in keep_dict.items():
+
+        if value['true'] > value['false']:
+
+            true = value['true']
+            true_st_list.append(key)
+            true_strain_count = true_strain_count + true
+
+        elif value['false'] > value['true']:
+
+            false = value['false']
+            false_st_list.append(key)
+            false_strain_count = false_strain_count + false
+
+    true_percentage_st_reps = round((true_strain_count / strains_number * 100),2)
+    false_percentage_st_reps = round((false_strain_count / strains_number * 100),2)
+
+    print(chosen_level, 'True', true_st_list, true_strain_count, true_percentage_st_reps)
+    print(chosen_level, 'False', false_st_list, false_strain_count, false_percentage_st_reps)
+
+    return final_st_dict
 
 def sts_per_attributes(element, df):
 
@@ -74,13 +119,13 @@ def main():
     args = parseargs()
 
     #variables
-    start_col = 28
-    end_col = 29
-    include_CCs = False
-    describe_clade_percen = 95
+    start_col = 191
+    end_col = 192
+    min_strains_per_st = 10
+    percentage_of_contaminating_strains = 5
 
     #read in metadata
-    df = pd.read_csv('/Users/liamcheneyy/Desktop/metadata.csv', index_col='ID', low_memory=False)
+    df = pd.read_csv('/Users/liamcheneyy/Desktop/vcseventh_21/grapetree/seventh/metadata.csv', index_col='ID', low_memory=False)
     strains_number = df.shape[0]
     #columns of attributes to take
     want_attributes = list(df.columns.values[start_col:end_col])
@@ -88,24 +133,23 @@ def main():
     #will return MGT level and best ST to describe group
     save_dict = {}
     for element in want_attributes:
+        print(element)
 
         # calculate the STs for each attribute
         st_save_dict = sts_per_attributes(element, df)
 
         # select the best level to define attribute
-        filtered_st_n_level = filtering_level(st_save_dict, strains_number, describe_clade_percen)
+        filtered_st_n_level = filtering_level(st_save_dict, strains_number, min_strains_per_st, percentage_of_contaminating_strains)
 
 if __name__ == '__main__':
     main()
+
+
 
 #Logic
 #to find the STs which best describe attributes
 
 #challenges
-#2. the script must choose the best MGT level
-    #find the level which defines the least amount of STs, with the largest number.
-#3. script must choose an ST unique to a certain attribute
-
-
-
+#take the wanted gene,
+#for each level calculate the
 
