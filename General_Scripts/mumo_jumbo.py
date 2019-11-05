@@ -403,8 +403,23 @@ from Bio import SeqIO
 # SeqIO.write(save_list,"/Users/liamcheneyy/Desktop/mgt234_ref_alleles.fna","fasta")
 
 import pandas as pd
-main_df = pd.read_csv('/Users/liamcheneyy/Desktop/complete_metadata.csv', index_col='ID')
-join_df = pd.read_csv('/Users/liamcheneyy/Desktop/simple_blast_results.csv', index_col='ID')
+# main_df = pd.read_csv('/Users/liamcheneyy/Desktop/complete_metadata.csv', index_col='ID')
+# join_df = pd.read_csv('/Users/liamcheneyy/Desktop/simple_blast_results.csv', index_col='ID')
+#
+# joined = main_df.merge(join_df, left_index=True, right_index=True, how='left')
+# joined.to_csv('/Users/liamcheneyy/Desktop/metadata.csv')
 
-joined = main_df.merge(join_df, left_index=True, right_index=True, how='left')
-joined.to_csv('/Users/liamcheneyy/Desktop/metadata.csv')
+# main = open('/Users/liamcheneyy/Downloads/species_MGT.txt', 'r').read().splitlines()
+#
+# save_list = []
+# for line in main:
+#     col = line.split('\t')
+#     if 'None' not in line:
+#         save_list.append(line)
+#
+# for i in save_list:
+#     print(i)
+
+# strains = open('/Users/liamche
+
+list = ['']

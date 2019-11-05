@@ -2,6 +2,7 @@ from time import sleep as sl
 import argparse
 import psycopg2
 import matplotlib.pyplot as plt
+
 from statistics import mean
 import sys
 
@@ -230,11 +231,10 @@ def main():
 
     # missmatch_counts = {x:missmatch_counts[x] for x in missmatch_counts.keys() if len(x.split(","))==1}
 
-
-    # plt.bar(range(len(missmatch_counts)), list(missmatch_counts.values()), align='center')
-    # plt.xticks(range(len(missmatch_counts)), list(missmatch_counts.keys()))
-    # plt.savefig("testplot_hier_incocnsistency.pdf")
-    # print(missmatch_counts)
+    plt.bar(range(len(missmatch_counts)), list(missmatch_counts.values()), align='center')
+    plt.xticks(range(len(missmatch_counts)), list(missmatch_counts.keys()))
+    plt.savefig("testplot_hier_incocnsistency.pdf")
+    print(missmatch_counts)
 
 if __name__ == '__main__':
     main()

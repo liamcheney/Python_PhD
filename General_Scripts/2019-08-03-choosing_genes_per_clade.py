@@ -245,7 +245,7 @@ def main():
 
     input_genomes_path = '/Users/liamcheneyy/Desktop/input_clades/'
     mgt9_alleles_path = '/Users/liamcheneyy/Desktop/MGT9_allele_profiles.tsv'
-    all_mgt9_alleles_path = '/Users/liamcheneyy/Desktop/vcseventh_20/grapetree/all_MGT9_allele_profiles.tsv'
+    all_mgt9_alleles_path = '/Users/liamcheneyy/Desktop/vcseventh_21/grapetree/seventh/all_MGT8_allele_profiles.tsv'
     vibrio_core_list_path = '/Users/liamcheneyy/Desktop/MGT8_gene_accessions.txt'
 
     loop = True

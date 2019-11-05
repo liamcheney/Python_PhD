@@ -88,16 +88,16 @@ print(filt[filt["pref"]==1]["pref"].count())
 filt.to_csv('/Users/liamcheneyy/Desktop/filt_all_genes_hgt.csv', index=False)
 
 #for MGT2 and MGT3
-# random.seed(561618)
-#
-# ##scheme target sizes
+random.seed(145156156)
+
+##scheme target sizes
 # target_sizes = {'MGT2':10329,'MGT3':51644, 'MGT4':103287}
 #
 # ##scheme lowest allowed loci preference numbers
 # preflimit = {'MGT2':1,'MGT3':1, 'MGT4':1}
 #
 # ##scheme smallest distance allowed between loci
-# distlimit = {'MGT2':20000,'MGT3':10000, 'MGT4':500}
+# distlimit = {'MGT2':20000,'MGT3':9000, 'MGT4':500}
 
 # #For MGT4 onwards
 target_sizes = {'MGT5':206575,'MGT6':516437,'MGT7':1032875}

@@ -87,7 +87,6 @@ def get_table_nos(conn, args):
             cur.close()
             # print(args.appname, lev, no)
 
-
             if lev == 9:
                 if no == 0:
                     locus_columns = [x[0] for x in res[3:-6]]
@@ -113,6 +112,8 @@ def parseargs():
     parser.add_argument("-f", "--fasta_output",
                         help="If used output will be a SNP alignment fasta file, if not output will be a position by position matrix",
                         action='store_true')
+    parser.add_argument("-l", "--mgt_lvl", help="MGT level to gather SNPs", default=8)
+
 
     args = parser.parse_args()
     return args
@@ -133,7 +134,7 @@ def get_conn():
     # conn = psycopg2.connect(DbConString)
     # conn.autocommit = True
 
-    DbConString = "dbname='vcseventh_15' host='0.0.0.0' port='5432' user='postgres' password='5678'"
+    DbConString = "dbname='vcseventh_21' host='0.0.0.0' port='5432' user='postgres' password='5678'"
     conn = psycopg2.connect(DbConString)
     conn.autocommit = True
     return conn
@@ -182,8 +183,8 @@ def get_max_scheme(connection, args):
 
     res = sqlquery_to_outls(connection, sqlquery)
 
-    maxno = int(res[0][0])
-
+    # maxno = int(res[0][0])
+    maxno = int(args.mgt_lvl)
     return maxno
 
 
@@ -262,6 +263,7 @@ def get_snpinfo(args, conn, loc2allls):
                 match = """("{app}_allele".locus_id = '{loc}' AND "{app}_allele".identifier = '{allele}')""".format(
                     app=args.appname, loc=loc, allele=allele)
                 orlist.append(match)
+
 
     # for ap in ap2all:
     #     for loc in ap2all[ap]:
@@ -443,6 +445,8 @@ def get_locils(args, conn, maxlev):
 
     loci_list = sqlquery_to_outls(conn, pqsl_query)
     loci_list = [x[0] for x in loci_list]
+    print(len(loci_list))
+    print(loci_list)
     return loci_list
 
 
@@ -462,7 +466,8 @@ def main():
     dash_nodash, nodash_dash = make_dash_nodash(conn, args)
     tablenos = get_table_nos(conn, args)
 
-    # allele_folder = settings.SUBDIR_ALLELES
+
+
     maxscheme = get_max_scheme(conn, args)
     mgt9loci = get_locils(args, conn, maxscheme)
     loci_pos_dict = get_loci_info(args, conn)
