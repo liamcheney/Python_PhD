@@ -121,7 +121,7 @@ def main():
     wanted_describe_percentage = 85
 
     #read in metadata
-    df = pd.read_csv('/Users/liamcheneyy/Desktop/metadata.csv', index_col='ID', low_memory=False)
+    df = pd.read_csv('/Users/liamcheneyy/Desktop/MGT_isolate_data.tsv', index_col='ID', low_memory=False, sep='\t')
 
     #columns of attributes to take
     want_attributes = list(df.columns.values[start_col:end_col])
@@ -154,6 +154,9 @@ if __name__ == '__main__':
 
 #Logic
 #to find the STs which best describe attributes
+#will go over each attribute (gene marker).
+#then for each level calculate how STs describe that marker
+#will select the lowest level which describes the most strains with marker
 
 #challenges
 #DONE: get list of strains with attribute
