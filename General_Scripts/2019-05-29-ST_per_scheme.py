@@ -11,9 +11,9 @@ def parseargs():
     parser = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter)
 
     parser.add_argument("-i", "--input", required=True,
-                        help="sql database to search (eg. vcseventh)")
+                        help="csv input of STs")
     parser.add_argument("-o", "--output", required=True,
-                        help="sql database to search (eg. vcseventh)")
+                        help="output file .csv")
 
     args = parser.parse_args()
 
@@ -22,8 +22,8 @@ def parseargs():
 
 def get_sts_per_scheme(args):
 
-    df = pd.read_csv(args.input, sep='\t')
-    keep_col_list = [x for x in df.columns.values if 'ST' in x and 'DST' not in x]
+    df = pd.read_csv(args.input, sep=',')
+    keep_col_list = [x for x in df.columns.values if 'MGT' in x and 'DST' not in x]
     df = df[df.columns.intersection(keep_col_list)]
 
     result_dict = {}
@@ -36,6 +36,7 @@ def get_sts_per_scheme(args):
 
     for key, value in result_dict.items():
         result_dict[key].to_excel(writer, sheet_name=str(key))
+        print(len(value))
     writer.save()
 
 
