@@ -207,7 +207,7 @@ def main():
 
                 print(round(missmatch_perc,1))
 
-                print(lev,compare,matching[compare],missmatch[compare],singlemissmatch[compare],singletons[compare])
+                # print(lev,compare,matching[compare],missmatch[compare],singlemissmatch[compare],singletons[compare])
 
                 for isolate in missmatch_isolates[compare]:
                     pair = '{}_{}'.format(compare,lev)
