@@ -11,7 +11,8 @@ def get_all_gene_types(args):
     strain_list = []
     for filename in glob.iglob(args.input_folder + '/*sv'):
         infile = open(filename,'r').read().splitlines()
-        accession = filename.split('/')[-1].strip("_abricate.csv")
+        accession = filename.split('/')[-1].strip("_abricate.tsv")
+        print(accession)
 
         if accession not in strain_list:
             strain_list.append(accession)
@@ -28,7 +29,6 @@ def absence_and_presence(AMR_list, strain_list, args):
     result_dict = {}
 
     for strain in strain_list:
-        print(strain)
         result_dict[strain] = {}
         ##add the possible genes for strain
         for element in AMR_list:

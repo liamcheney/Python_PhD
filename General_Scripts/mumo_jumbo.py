@@ -421,5 +421,56 @@ import pandas as pd
 #     print(i)
 
 # strains = open('/Users/liamche
+from shutil import copyfile
 
-list = ['']
+# import glob
+# for filename in glob.iglob('/Users/liamcheneyy/Desktop/results/*'):
+#     accession = filename.split('/')[-1].split('.')[0]
+#     infile = open(filename,'r').read().splitlines()
+#     #is tsv
+#     tsv = True
+#
+#     #is csv
+#     if len(infile[0].split('\t')) > 1:
+#         tsv = True
+#
+#     #is csv
+#     if len(infile[0].split(',')) > 1:
+#         tsv = False
+#
+#     if tsv:
+#         with open('/Users/liamcheneyy/Desktop/fixed/' + accession + '_abricate.csv', 'w') as out:
+#
+#             for element in infile:
+#                 col = element.split('\t')
+#                 for i in col:
+#                     out.write(i + ',')
+#                 out.write('\n')
+#
+#     if not tsv:
+#         fixed = accession + '.csv'
+#         copyfile(filename, '/Users/liamcheneyy/Desktop/fixed/' + fixed)
+#
+
+infile = open('/Users/liamcheneyy/Desktop/serogroup_results.txt','r').read().splitlines()
+
+for i in infile:
+    acc = i.split(' ')[0]
+    results = i.split('serogroup_cholerae')
+    save_list = []
+    for x in results:
+        if 'rfbV' in x or 'wbfZ' in x:
+            line = x.strip()
+            col = line.split()
+            gene = col[0]
+            percentage = float(col[1])
+            save_list.append([gene,percentage])
+    save_list.sort(key = lambda x:x[1], reverse=True)
+
+    if save_list[0][0] == 'wbfZ_O139':
+        print(acc + '\t' + 'TRUE')
+    if save_list[0][0] == 'rfbV_O1':
+        print(acc + '\t' + 'FALSE')
+
+
+
