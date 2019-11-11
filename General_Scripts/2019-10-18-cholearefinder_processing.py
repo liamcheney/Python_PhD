@@ -1,6 +1,7 @@
 import argparse
 from time import sleep as sl
 import glob
+import sys
 
 def parseargs():
     parser = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter)
@@ -16,7 +17,7 @@ def get_info(infile, wanted):
 
     results = []
     for line in infile:
-        if (wanted in line) and ('serogroup_cholerae' not in line) and ('biotype_cholerae' not in line):
+        if (wanted in line):
             blast_coverage = float(line.split('\t')[2])
             gene = line.split('\t')[1]
             results.append([gene, blast_coverage])
@@ -31,24 +32,27 @@ def get_info(infile, wanted):
 
 
 def main():
-    args = parseargs()
-    input_path = '/Users/liamcheneyy/Desktop/cholera_finder'
-    out_path = '/Users/liamcheneyy/Desktop/'
+    # args = parseargs()
+    # input_path = '/Users/liamcheneyy/Desktop/cholera_finder'
+    input_path = sys.argv[1]
+    # out_path = '/Users/liamcheneyy/Desktop/'
+    out_path = sys.argv[2]
 
     ###creating list for all genes
     wanted_db = []
+    print("Making Genes List")
     for filename in glob.iglob(input_path + '/*/results_tab.tsv'):
         infile = open(filename,'r').read().splitlines()
         for line in infile[1:]:
             col = line.split('\t')
             gene = col[1]
-            if ('serogroup_cholerae' not in line) and ('biotype_cholerae' not in line):
-                if gene not in wanted_db:
-                    wanted_db.append(gene)
+            if gene not in wanted_db:
+                wanted_db.append(gene)
 
     ###collecting metadata from all strains
     all_results = {}
     all_strains = []
+    print("Building Presence/Absence Matrix")
     for filename in glob.iglob(input_path + '/*/results_tab.tsv'):
         infile = open(filename,'r').read().splitlines()
         strain = filename.split('/')[-2]
@@ -62,6 +66,7 @@ def main():
             all_results[strain][wanted] = get_info(infile, wanted)
 
     ###writing out metadata
+    print("Writing Out")
     with open(out_path + '/choleraefinder_results.csv', 'w') as out:
         out.write('Strain' + ',')
         for element in wanted_db:
