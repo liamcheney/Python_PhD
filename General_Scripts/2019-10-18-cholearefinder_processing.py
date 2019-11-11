@@ -1,6 +1,7 @@
 import argparse
 from time import sleep as sl
 import glob
+import sys
 
 def parseargs():
     parser = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter)
@@ -32,13 +33,15 @@ def get_info(infile, wanted):
 
 def main():
     args = parseargs()
-    input_path = '/Users/liamcheneyy/Desktop/cholera_finder'
-    out_path = '/Users/liamcheneyy/Desktop/'
+    # input_path = '/Users/liamcheneyy/Desktop/cholera_finder'
+    input_path = sys.argv[1]
+    # out_path = '/Users/liamcheneyy/Desktop/'
+    out_path = sys.argv[2]
 
     ###creating list for all genes
     wanted_db = []
     for filename in glob.iglob(input_path + '/*/results_tab.tsv'):
-        infile = open(filename,'r').read().splitlines()
+        infzile = open(filename,'r').read().splitlines()
         for line in infile[1:]:
             col = line.split('\t')
             gene = col[1]

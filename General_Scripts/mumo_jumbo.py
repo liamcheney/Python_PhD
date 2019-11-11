@@ -452,25 +452,37 @@ from shutil import copyfile
 #         copyfile(filename, '/Users/liamcheneyy/Desktop/fixed/' + fixed)
 #
 
-infile = open('/Users/liamcheneyy/Desktop/serogroup_results.txt','r').read().splitlines()
+infile = open('/Users/liamcheneyy/Desktop/speices_genomes.txt','r').read().splitlines()
+dataset = open('/Users/liamcheneyy/Desktop/MGT_isolate_data.txt').read().splitlines()
 
-for i in infile:
-    acc = i.split(' ')[0]
-    results = i.split('serogroup_cholerae')
-    save_list = []
-    for x in results:
-        if 'rfbV' in x or 'wbfZ' in x:
-            line = x.strip()
-            col = line.split()
-            gene = col[0]
-            percentage = float(col[1])
-            save_list.append([gene,percentage])
-    save_list.sort(key = lambda x:x[1], reverse=True)
+inlist = [x for x in infile]
 
-    if save_list[0][0] == 'wbfZ_O139':
-        print(acc + '\t' + 'TRUE')
-    if save_list[0][0] == 'rfbV_O1':
-        print(acc + '\t' + 'FALSE')
+count = 0
+for line in dataset[1:]:
+    col = line.split('\t')
+    acc = col[0]
+    mgt8 = col[7]
+    if acc in inlist:
+        if "None.None" in col[1:7]:
+            print(line)
+
+# for i in infile:
+#     acc = i.split(' ')[0]
+#     results = i.split('serogroup_cholerae')
+#     save_list = []
+#     for x in results:
+#         if 'rfbV' in x or 'wbfZ' in x:
+#             line = x.strip()
+#             col = line.split()
+#             gene = col[0]
+#             percentage = float(col[1])
+#             save_list.append([gene,percentage])
+#     save_list.sort(key = lambda x:x[1], reverse=True)
+#
+#     if save_list[0][0] == 'wbfZ_O139':
+#         print(acc + '\t' + 'TRUE')
+#     if save_list[0][0] == 'rfbV_O1':
+#         print(acc + '\t' + 'FALSE')
 
 
 
