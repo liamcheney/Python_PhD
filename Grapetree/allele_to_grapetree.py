@@ -164,11 +164,11 @@ def convert_to_grapetree(allele_profiles_dict):
 
             #if neg and N allele assignmnts from MGT present then fix for grapetree
             if '_' in allele_profiles_dict[key][cell_num]:
-                # fix = allele_profiles_dict[key][cell_num].split('_')[0].strip('-')
-                # allele_profiles_dict[key][cell_num] = fix
+                fix = allele_profiles_dict[key][cell_num].split('_')[0].strip('-')
+                allele_profiles_dict[key][cell_num] = fix
                 print('skipped')
             elif 'N' in allele_profiles_dict[key][cell_num]:
-                # allele_profiles_dict[key][cell_num] = '0'
+                allele_profiles_dict[key][cell_num] = '0'
                 print('skipped')
 
     return allele_profiles_dict
@@ -231,7 +231,7 @@ def parseargs():
                         help="psql password", required=True)
 
     #Script running
-    parser.add_argument("-m","--wanted_mgt_level", default="9", type=str,
+    parser.add_argument("-m","--wanted_mgt_level", default="8", type=str,
                         help="The MGT level to extract allele profiles and compare alleles to generate phylonegy.")
     parser.add_argument("-o", "--output_folder", required=True,
                         help="Output folder to save phylogeny and alleles profiles.")

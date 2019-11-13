@@ -12,12 +12,14 @@ def parseargs():
 
     return args
 
-def sts_per_attributes(element, sub_df, min_strains_per_st, percen_contam_strains, final_save):
-    save_list = []
+def sts_per_attributes(i, element, sub_df, min_strains_per_st, percen_contam_strains, df):
+    mgt_st_list = []
     strains_list = []
-    strains_described = 0
-    total_true_strains = sub_df[sub_df[element] == True].shape[0]
+    strains_with_described = 0
+    total_strains = sub_df[sub_df[element] == i].shape[0]
     cols_list = sub_df.columns.values[0:-1]
+    total_st_freq_dict = {}
+
     for column in cols_list:
 
         st_freq = sub_df[column].value_counts()
@@ -25,19 +27,26 @@ def sts_per_attributes(element, sub_df, min_strains_per_st, percen_contam_strain
 
         #calculate the False and True strains per ST of level
         for ST, COUNT in st_freq_dict.items():
-            true_sub = sub_df[(sub_df[element] == True) & (sub_df[column] == ST)]
-            true_count = true_sub.shape[0]
+            sub = sub_df[(sub_df[element] == i) & (sub_df[column] == ST)]
+            count = sub.shape[0]
 
-            false_sub = sub_df[(sub_df[element] == False) & (sub_df[column] == ST)]
+            if i is True:
+                x = False
+            if i is False:
+                x = True
+
+            false_sub = sub_df[(sub_df[element] == x) & (sub_df[column] == ST)]
             false_count = false_sub.shape[0]
 
             #if ST IS NOT contaminated then add to dict
             strains_with_st = COUNT
             if false_count <= (percen_contam_strains / 100 * strains_with_st):
 
-                save_list.append(column + ' ST' + str(ST))
-                strains_described = strains_described + true_count
-                strains_list.append(list(true_sub.index))
+                mgt_st_list.append(column + ' ST' + str(ST))
+                strains_with_described = strains_with_described + count
+                strains_list.append(list(sub.index))
+
+                total_st_freq_dict[column + ' ST' + str(ST)] = COUNT
 
                 #remove any non comtaminated STs from sub_df
                 sub_df = sub_df[sub_df[column] != ST]
@@ -45,38 +54,42 @@ def sts_per_attributes(element, sub_df, min_strains_per_st, percen_contam_strain
             #if ST IS contaminated, then pass
             if false_count >= (percen_contam_strains / 100 * strains_with_st):
                 pass
-                # print(column, ST, COUNT, true_count, false_count)
 
-    strains_list_final = [i for x in strains_list for i in x]
-    percen_described = round((strains_described / total_true_strains * 100),2)
-    num_of_st = len(save_list)
-    final_save[element] = [percen_described] + [num_of_st] + save_list
+    percen_with_described = round((strains_with_described / total_strains * 100),2)
+    num_of_st = len(mgt_st_list)
+    all_strains_described = df.shape[0]
+    percen_all_strains = round((strains_with_described / all_strains_described * 100),2)
+    final_save = {'st_num':num_of_st, 'all_strains_described':all_strains_described, 'percen_all_strains':percen_all_strains, 'num_with_described': strains_with_described, 'percen_with_described':percen_with_described, 'mgt_sts':total_st_freq_dict}
 
-    return final_save,strains_list_final
+    strains_list = [i for x in strains_list for i in x]
+    return_df = df[df.index.isin(strains_list)]
 
+    return final_save, return_df
 
 def main():
     args = parseargs()
 
     #variables
-    start_col = 36
-    end_col = 37
+    start_col = 256
+    end_col = 264
     min_strains_per_st = 10
     percen_contam_strains = 10
 
     #read in metadata
-    df = pd.read_csv('/Users/liamcheneyy/Desktop/seventh_MGT_isolate_data.txt', index_col='ID', low_memory=False, delimiter='\t')
+    df = pd.read_csv('/Users/liamcheneyy/Desktop/vcseventh_22/grapetree/seventh/MGT_isolate_data.txt', index_col='ID', low_memory=False, delimiter='\t')
+    df.replace("None.None", "0", inplace=True)
 
+    df[list(df.columns)[0:8]] = df[list(df.columns)[0:8]].astype(int)
     #columns of attributes to take
     want_attributes = list(df.columns.values[start_col:end_col])
 
     ##will return MGT level and best ST to describe group
     final_save = {}
-    strains_list = []
+    return_df = pd.DataFrame()
 
     ##calculting non-overlapping STs
-    print("Element, Percentage, MGT STs".format('\t'))
     for element in want_attributes:
+        # print(element)
 
         ##saving dict
         final_save[element] = {}
@@ -85,42 +98,36 @@ def main():
         col_list = list(df.columns)[0:8] + [element]
         sub_df = df[col_list]
 
-        #TODO edit for both T and F
 
         #calculate the STs for each attribute
-        st_save_dict,strains_list = sts_per_attributes(element, sub_df, min_strains_per_st, percen_contam_strains, final_save)
+        t_f_list = [True,False]
+        st_save_dict = {}
+        df_dict = {}
+        for i in t_f_list:
+            return_dict, return_df = sts_per_attributes(i, element, sub_df, min_strains_per_st, percen_contam_strains, df)
+            st_save_dict[i] = return_dict
+            df_dict[i] = return_df
 
-    # for key, value in final_save.items():
-    #     print(key, *value, sep='\t')
+        #relate STs freq to waves
+        wave_list = [1, 2, 3]
+        waves_st_dict = {}
+        return_df = df_dict[True]
 
-        ##creating graphing data
+        for el in wave_list:
+            waves_st_dict[el] = {}
+            for MGTST in st_save_dict[True]['mgt_sts']:
+                level = MGTST.split(' ')[0]
+                ST = int(MGTST.split(' ')[1].strip('ST'))
+                sub_df = return_df[(return_df['Wave'] == el) & (return_df[level] == ST)]
 
-        #select strains from the previous ST
-        #select strains with year metadata
-        return_df = df[(df.index.isin(strains_list)) & (df['Year'].notnull())]
-        # return_df = return_df[list(df.columns)[0:8] + ['Year']]
+                if sub_df.shape[0] != 0:
+                    waves_st_dict[el][MGTST] = sub_df.shape[0]
+        print(element, st_save_dict[True])
+        for k,v in waves_st_dict.items():
+            for i,x in v.items():
+                print(element.split('_')[0],element,"Wave " + str(k), i,x,sep='\t')
 
-        #get the times for each ST
-        mgt_sts_and_years = {}
-        for key, value in st_save_dict.items():
-            mgt_sts_and_years[key] = {}
-            ST_list = value[2:]
-            for el in ST_list:
-                level = el.split(' ')[0]
-                ST = el.split(' ')[-1].strip('ST')
 
-                years_df = return_df[return_df[level] == float(ST)]
-                years_df = years_df[[level] + ['Year']]
-                years_freq = years_df['Year'].value_counts().to_dict()
-
-                mgt_sts_and_years[key][level + ' ST' + str(ST)] = years_freq
-
-        #graph out changes
-        for key, value in mgt_sts_and_years.items():
-            print(key,value)
-
-        # print(return_df['Year'].value_counts())
-        # print(sorted(list(set(return_df['Year']))))
 if __name__ == '__main__':
     main()
 
@@ -131,7 +138,7 @@ if __name__ == '__main__':
 
 #1. get a list of all strains TRUE and FALSE for gene
 #2. then make dict, for each MGT level, get the frequency of STs, the for each ST count the number of TRUE and FALSE for gene
-#3. quality filter: remove small STs, remove ST which has too many false and true strains, need just TRUE within threshold
+#3. quality filter: remove small STs, remove ST which has too many false and false strains, need just TRUE within threshold
 #4. organise the dict, and count
 #
 #
