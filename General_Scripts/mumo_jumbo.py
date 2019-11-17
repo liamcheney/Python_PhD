@@ -452,20 +452,20 @@ from shutil import copyfile
 #         copyfile(filename, '/Users/liamcheneyy/Desktop/fixed/' + fixed)
 #
 
-infile = open('/Users/liamcheneyy/Desktop/speices_genomes.txt','r').read().splitlines()
-dataset = open('/Users/liamcheneyy/Desktop/MGT_isolate_data.txt').read().splitlines()
+# infile = open('/Users/liamcheneyy/Desktop/speices_genomes.txt','r').read().splitlines()
+# dataset = open('/Users/liamcheneyy/Desktop/MGT_isolate_data.txt').read().splitlines()
+#
+# inlist = [x for x in infile]
+#
+# count = 0
+# for line in dataset[1:]:
+#     col = line.split('\t')
+#     acc = col[0]
+#     mgt8 = col[7]
+#     if acc in inlist:
+#         if "None.None" in col[1:7]:
 
-inlist = [x for x in infile]
-
-count = 0
-for line in dataset[1:]:
-    col = line.split('\t')
-    acc = col[0]
-    mgt8 = col[7]
-    if acc in inlist:
-        if "None.None" in col[1:7]:
-            print(line)
-
+#             print(line)
 # for i in infile:
 #     acc = i.split(' ')[0]
 #     results = i.split('serogroup_cholerae')
@@ -485,4 +485,38 @@ for line in dataset[1:]:
 #         print(acc + '\t' + 'FALSE')
 
 
+# infile = open('/Users/liamcheneyy/Desktop/Book5.csv','r').read().splitlines()
+#
+# for line in infile[1:]:
+#     col = line.split(',')
+#     strain = col[0]
+#
+#     ctxB_3 = col[1]
+#     ctxB_7 = col[2]
+#     ctxB_1 = ctxB_3[3]
+#
+#     tcpA_el_A226 = col[4]
+#     tcpA_el_WT = col[5]
+#     tcpA_cla_WT = col[6]
+#
+#     rstR_cc = col[7]
+#     rstR_et = col[8]
+#
+#     #El Tor
+#     # if ctxB_3 == 'TRUE' and tcpA_el_WT == 'TRUE' and rstR_et == 'TRUE':
+#     #     print('TRUE')
+#
+#     #Hatain
+#     # if ctxB_7 == 'TRUE' and tcpA_el_A226 == 'TRUE' and rstR_et == 'TRUE':
+#     #     print('TRUE')
+#
+#     #CLassical
+#     # if ctxB_1 == 'FALSE' and tcpA_el_WT == 'FALSE' and rstR_et == 'FALSE':
+#     #     print(strain)
+#
+#     # else:
+#     #     print('FALSE')
+#
+#     # print(col)
+#     # sl(1)
 
