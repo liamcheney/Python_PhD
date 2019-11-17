@@ -22,7 +22,7 @@ def df_setup(infile_path, start_col,end_col):
     want_attributes = list(df.columns.values[start_col:end_col])
 
     return df, want_attributes
-def sts_per_attributes(i, element, sub_df, min_strains_per_st, percen_contam_strains, df):
+def sts_per_attributes(i, element, sub_df, min_strains_per_st, percen_contam_strains,precen_inconsistent_strains, df):
     mgt_st_list = []
     strains_list = []
     num_with_described = 0
@@ -51,16 +51,23 @@ def sts_per_attributes(i, element, sub_df, min_strains_per_st, percen_contam_str
 
             #if ST IS NOT contaminated then add to dict
             strains_with_st = COUNT
+
+            #each ST reset hierarch flag
+            hierach_check = "Fail"
             if false_count <= (percen_contam_strains / 100 * strains_with_st):
 
-                mgt_st_list.append(column + ' ST' + str(ST))
-                num_with_described = num_with_described + count
-                strains_list.append(list(sub.index))
+                #check the ST has not hierach inconc
+                hierach_check = check_hierarch_incon(column, ST, precen_inconsistent_strains,sub)
+                if hierach_check == "Pass":
 
-                st_freq_dict[column + ' ST' + str(ST)] = COUNT
+                    mgt_st_list.append(column + ' ST' + str(ST))
+                    num_with_described = num_with_described + count
+                    strains_list.append(list(sub.index))
 
-                #remove any non comtaminated STs from sub_df
-                sub_df = sub_df[sub_df[column] != ST]
+                    st_freq_dict[column + ' ST' + str(ST)] = COUNT
+
+                    #remove any non comtaminated STs from sub_df
+                    sub_df = sub_df[sub_df[column] != ST]
 
             #if ST IS contaminated, then pass
             if false_count >= (percen_contam_strains / 100 * strains_with_st):
@@ -81,6 +88,30 @@ def sts_per_attributes(i, element, sub_df, min_strains_per_st, percen_contam_str
     not_st_strains_df = df[df.index.isin(not_st_strains_list)]
 
     return final_save, return_df, not_st_strains_df
+def check_hierarch_incon(column, ST, precen_inconsistent_strains, sub):
+
+    #for a ST, will get the STs from previous level that describe ST.
+    #if many previous level STs describe current ST then is hierachael incocnsistency
+
+    if column == "MGT2":
+        return "Pass"
+    else:
+
+        previous_level = "MGT" + str(int(column.replace("MGT",""))-1)
+        prev_level_sts = sub[previous_level]
+        strains_num = sub.shape[0]
+        allowed_precen_inconsistent_strains = round(( precen_inconsistent_strains / 100 ) * strains_num, 0)
+        prev_level_sts_freqs = prev_level_sts.value_counts().to_dict()
+
+        #count the number of inconsistencies
+        inconsis_count = 0
+        for i in list(prev_level_sts_freqs.values())[1:]:
+            inconsis_count = inconsis_count + i
+
+        #if inconsistencies less than allowed number, then return
+        if inconsis_count <= allowed_precen_inconsistent_strains:
+            return "Pass"
+
 def st_freq_and_waves(df_dict, st_save_dict, element, not_st_strains_df, min_st_for_figure):
     # relate STs freq to waves
     wave_list = [1, 2, 3]
@@ -103,12 +134,12 @@ def st_freq_and_waves(df_dict, st_save_dict, element, not_st_strains_df, min_st_
     print(element, st_save_dict[True])
     for k, v in waves_st_dict.items():
         for i, x in v.items():
-            ST = i.split(' ')[-1].strip('ST')
+            ST = i.split(' ')[-1]
             gene = element.split('_')[0]
             wave = "Wave " + str(k)
             freq = x
             level = i.split(' ')[0]
-            print(gene, wave, freq, element, level, ST, i, sep='\t')
+            print(gene, wave, freq, element, level, ST, sep='\t')
 
     for i in wave_list:
         wave_missing_st_num = (not_st_strains_df[not_st_strains_df['Wave'] == i].shape)[0]
@@ -126,7 +157,8 @@ def main():
     min_strains_per_st = 10
     percen_contam_strains = 10
     min_st_for_figure = 50
-    infile_path = '/Users/liamcheneyy/Desktop/vcseventh_22/grapetree/seventh/MGT_isolate_data.txt'
+    precen_inconsistent_strains = 5
+    infile_path = '/Users/liamcheneyy/Desktop/MGT_isolate_data.txt'
 
     #df read
     df, want_attributes = df_setup(infile_path, start_col,end_col)
@@ -146,15 +178,15 @@ def main():
         col_list = list(df.columns)[0:8] + [element]
         sub_df = df[col_list]
 
-
         #calculate the STs for each attribute
         # t_f_list = [True,False]
         t_f_list = [True]
 
         st_save_dict = {}
         df_dict = {}
+        not_st_strains_df = {}
         for i in t_f_list:
-            return_dict, return_df, not_st_strains_df = sts_per_attributes(i, element, sub_df, min_strains_per_st, percen_contam_strains, df)
+            return_dict, return_df, not_st_strains_df = sts_per_attributes(i, element, sub_df, min_strains_per_st, percen_contam_strains,precen_inconsistent_strains, df)
             st_save_dict[i] = return_dict
             df_dict[i] = return_df
 
