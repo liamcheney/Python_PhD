@@ -1,49 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="808d523f-cfb3-4699-b214-793d2f2a6efd" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/CTX_allele_caller/CTX_allele_caller.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/CTX_allele_caller/__init__.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/CTX_allele_caller/allele_lengths.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/CTX_allele_caller/blast_db/ctx/ctx_alleles.fasta" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/CTX_allele_caller/blast_db/ctx/ctx_alleles.fasta.rtf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/CTX_allele_caller/blast_db/ctx/ctx_alleles_db.nhr" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/CTX_allele_caller/blast_db/ctx/ctx_alleles_db.nin" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/CTX_allele_caller/blast_db/ctx/ctx_alleles_db.nog" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/CTX_allele_caller/blast_db/ctx/ctx_alleles_db.nsd" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/CTX_allele_caller/blast_db/ctx/ctx_alleles_db.nsi" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/CTX_allele_caller/blast_db/ctx/ctx_alleles_db.nsq" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/CTX_allele_caller/blast_db/serogroup/serogroup.fasta" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/CTX_allele_caller/blast_db/serogroup/serogroup_alleles_db.nhr" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/CTX_allele_caller/blast_db/serogroup/serogroup_alleles_db.nin" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/CTX_allele_caller/blast_db/serogroup/serogroup_alleles_db.nog" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/CTX_allele_caller/blast_db/serogroup/serogroup_alleles_db.nsd" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/CTX_allele_caller/blast_db/serogroup/serogroup_alleles_db.nsi" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/CTX_allele_caller/blast_db/serogroup/serogroup_alleles_db.nsq" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/CTX_allele_caller/blast_db/serotype/serotype.fasta" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/CTX_allele_caller/blast_db/serotype/serotype_alleles_db.nhr" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/CTX_allele_caller/blast_db/serotype/serotype_alleles_db.nin" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/CTX_allele_caller/blast_db/serotype/serotype_alleles_db.nog" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/CTX_allele_caller/blast_db/serotype/serotype_alleles_db.nsd" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/CTX_allele_caller/blast_db/serotype/serotype_alleles_db.nsi" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/CTX_allele_caller/blast_db/serotype/serotype_alleles_db.nsq" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/CTX_allele_caller/blast_db/tcp/tcp_alleles.fasta" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/CTX_allele_caller/blast_db/tcp/tcp_alleles_db.nhr" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/CTX_allele_caller/blast_db/tcp/tcp_alleles_db.nin" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/CTX_allele_caller/blast_db/tcp/tcp_alleles_db.nog" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/CTX_allele_caller/blast_db/tcp/tcp_alleles_db.nsd" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/CTX_allele_caller/blast_db/tcp/tcp_alleles_db.nsi" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/CTX_allele_caller/blast_db/tcp/tcp_alleles_db.nsq" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/CTX_allele_caller/output/blast_results.csv" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/CTX_allele_caller/output/o1_blast_results.csv" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/General_Scripts/2019-02-25-processing_roary_output.py" afterPath="$PROJECT_DIR$/General_Scripts/2019-02-25-processing_roary_output.py" />
-      <change beforePath="$PROJECT_DIR$/General_Scripts/2019-04-04-grapetree_metadata.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/General_Scripts/2019-04-10-allele_to_grapetree.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/General_Scripts/2019-04-28-genes_to_MGT_input.py" afterPath="$PROJECT_DIR$/General_Scripts/2019-04-28-genes_to_MGT_input.py" />
-      <change beforePath="$PROJECT_DIR$/General_Scripts/2019-05-08-output_MGT_for_isolates.py" afterPath="" />
+    <list default="true" id="808d523f-cfb3-4699-b214-793d2f2a6efd" name="Default" comment="test">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/General_Scripts/2019-10-20-automate_STs_and_markers.py" afterPath="$PROJECT_DIR$/General_Scripts/2019-10-20-automate_STs_and_markers.py" />
       <change beforePath="$PROJECT_DIR$/General_Scripts/mumo_jumbo.py" afterPath="$PROJECT_DIR$/General_Scripts/mumo_jumbo.py" />
-      <change beforePath="$PROJECT_DIR$/Grapetree/grapetree_metadata.py" afterPath="$PROJECT_DIR$/Grapetree/grapetree_metadata.py" />
-      <change beforePath="$PROJECT_DIR$/Grapetree/output_MGT_for_isolates.py" afterPath="$PROJECT_DIR$/Grapetree/output_MGT_for_isolates.py" />
+      <change beforePath="$PROJECT_DIR$/../vc_typer/test/DRR068857.fna" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../vc_typer/test/blast_results.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../vc_typer/test/simple_blast_results.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../vc_typer/vc_typer.py" afterPath="$PROJECT_DIR$/../vc_typer/vc_typer.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -54,92 +19,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="2018-08-10-MGT_locus_preference_filters.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/General_Scripts/2018-08-10-MGT_locus_preference_filters.py">
+      <file leaf-file-name="2019-10-20-automate_STs_and_markers.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/General_Scripts/2019-10-20-automate_STs_and_markers.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="267">
+              <caret line="124" column="18" lean-forward="false" selection-start-line="124" selection-start-column="18" selection-end-line="124" selection-end-column="18" />
               <folding>
-                <element signature="e#0#28#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="2019-02-25-processing_roary_output.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/General_Scripts/2019-02-25-processing_roary_output.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="307">
-              <caret line="564" column="0" lean-forward="true" selection-start-line="564" selection-start-column="0" selection-end-line="564" selection-end-column="0" />
-              <folding>
-                <element signature="e#713#1270#0" expanded="false" />
-                <element signature="e#837#1051#0" expanded="false" />
-                <element signature="e#982#1051#0" expanded="false" />
-                <element signature="e#1070#1270#0" expanded="false" />
-                <element signature="e#1351#3332#0" expanded="false" />
-                <element signature="e#1766#3004#0" expanded="false" />
-                <element signature="e#1885#3004#0" expanded="false" />
-                <element signature="e#2024#3004#0" expanded="false" />
-                <element signature="e#2080#3004#0" expanded="false" />
-                <element signature="e#2411#2501#0" expanded="false" />
-                <element signature="e#2650#2841#0" expanded="false" />
-                <element signature="e#3397#5121#0" expanded="false" />
-                <element signature="e#5267#5907#0" expanded="false" />
-                <element signature="e#5964#9114#0" expanded="false" />
-                <element signature="e#9140#9729#0" expanded="false" />
-                <element signature="e#9225#9291#0" expanded="false" />
-                <element signature="e#9384#9712#0" expanded="false" />
-                <element signature="e#9428#9504#0" expanded="false" />
-                <element signature="e#9539#9712#0" expanded="false" />
-                <element signature="e#9630#9712#0" expanded="false" />
-                <element signature="e#9860#11866#0" expanded="false" />
-                <element signature="e#9976#10324#0" expanded="false" />
-                <element signature="e#10353#10827#0" expanded="false" />
-                <element signature="e#10856#11330#0" expanded="false" />
-                <element signature="e#11358#11866#0" expanded="false" />
-                <element signature="e#11956#15159#0" expanded="false" />
-                <element signature="e#12079#12646#0" expanded="false" />
-                <element signature="e#12156#12646#0" expanded="false" />
-                <element signature="e#13474#14244#0" expanded="false" />
-                <element signature="e#13551#14244#0" expanded="false" />
-                <element signature="e#14272#15082#0" expanded="false" />
-                <element signature="e#14349#15082#0" expanded="false" />
-                <element signature="e#15252#17132#0" expanded="false" />
-                <element signature="e#15355#16993#0" expanded="false" />
-                <element signature="e#15522#16993#0" expanded="false" />
-                <element signature="e#15724#16993#0" expanded="false" />
-                <element signature="e#15876#16246#0" expanded="false" />
-                <element signature="e#16365#16993#0" expanded="false" />
-                <element signature="e#16499#16598#0" expanded="false" />
-                <element signature="e#17228#20332#0" expanded="false" />
-                <element signature="e#17310#20284#0" expanded="false" />
-                <element signature="e#17420#20284#0" expanded="false" />
-                <element signature="e#17621#17712#0" expanded="false" />
-                <element signature="e#17965#18366#0" expanded="false" />
-                <element signature="e#18061#18366#0" expanded="false" />
-                <element signature="e#18513#20284#0" expanded="false" />
-                <element signature="e#18555#18633#0" expanded="false" />
-                <element signature="e#18781#20132#0" expanded="false" />
-                <element signature="e#19000#19989#0" expanded="false" />
-                <element signature="e#19203#19894#0" expanded="false" />
-                <element signature="e#19298#19894#0" expanded="false" />
-                <element signature="e#20417#21891#0" expanded="false" />
-                <element signature="e#20732#21640#0" expanded="false" />
-                <element signature="e#21400#21524#0" expanded="false" />
-                <element signature="e#21735#21864#0" expanded="false" />
-                <element signature="e#21774#21864#0" expanded="false" />
-                <element signature="e#22006#22835#0" expanded="false" />
-                <element signature="e#22196#22835#0" expanded="false" />
-                <element signature="e#22361#22835#0" expanded="false" />
-                <element signature="e#22916#24117#0" expanded="false" />
-                <element signature="e#23065#24102#0" expanded="false" />
-                <element signature="e#23108#24102#0" expanded="false" />
-                <element signature="e#23144#24102#0" expanded="false" />
-                <element signature="e#23183#24102#0" expanded="false" />
-                <element signature="e#23424#24102#0" expanded="false" />
-                <element signature="e#23620#24102#0" expanded="false" />
-                <element signature="e#23679#24102#0" expanded="false" />
-                <element signature="e#23742#24102#0" expanded="false" />
+                <element signature="e#87#364#0" expanded="false" />
+                <element signature="e#181#242#0" expanded="false" />
+                <element signature="e#907#3473#0" expanded="false" />
+                <element signature="e#1170#2626#0" expanded="false" />
+                <element signature="e#1414#2626#0" expanded="false" />
+                <element signature="e#1878#2479#0" expanded="false" />
+                <element signature="e#2078#2479#0" expanded="false" />
+                <element signature="e#3551#4428#0" expanded="false" />
+                <element signature="e#3551#3616#0" expanded="false" />
+                <element signature="e#3770#4428#0" expanded="false" />
+                <element signature="e#4776#5039#0" expanded="false" />
+                <element signature="e#7041#7047#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -156,28 +53,43 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>find_number_of_cc_columns</find>
-      <find>Vibrio</find>
-      <find>hgt</find>
-      <find>mgt</find>
-      <find>os.</find>
-      <find>run_blas</find>
-      <find>run_blast</find>
-      <find>gff_folder_in</find>
-      <find>MGT_9</find>
-      <find>mgt_id</find>
-      <find>_13</find>
       <find>_9</find>
       <find>NZ_CP017119_00</find>
       <find>NZ_CP017119_00010</find>
-      <find>print</find>
       <find>ICEVchBan1</find>
+      <find>None</find>
+      <find>skipped</find>
+      <find>Bordetella</find>
+      <find>pertussis</find>
+      <find>vibrio</find>
+      <find>MGT</find>
+      <find>vcs</find>
+      <find>MGT_2</find>
+      <find>vcse</find>
+      <find>parseargs</find>
+      <find>genericin</find>
+      <find>mgt_l</find>
+      <find>9</find>
+      <find>vcseve</find>
+      <find>22</find>
+      <find>21</find>
+      <find>','</find>
+      <find>\t</find>
+      <find>abricate</find>
+      <find>image</find>
+      <find>Michael Publising in Microbial G</find>
+      <find>ERR114417</find>
+      <find>10</find>
+      <find>MGT3 ST10</find>
+      <find>print</find>
+      <find>total</find>
     </findStrings>
     <replaceStrings>
       <replace>allele</replace>
       <replace>MGT_11</replace>
       <replace>hgt_id</replace>
       <replace>_14</replace>
+      <replace>false</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -193,7 +105,6 @@
         <option value="$PROJECT_DIR$/CTX_allele_caller/CTX_allele_caller.py" />
         <option value="$PROJECT_DIR$/General Scripts/2019-04-04-grapetree_metadata.py" />
         <option value="$PROJECT_DIR$/General_Scripts/2019-04-10-allele_to_grapetree.py" />
-        <option value="$PROJECT_DIR$/Grapetree/allele_to_grapetree.py" />
         <option value="$PROJECT_DIR$/Grapetree/output_MGT_for_isolates.py" />
         <option value="$USER_HOME$/Desktop/vcseventh_13/Mgtfi_ref/vibrio_settings_copy.py" />
         <option value="$USER_HOME$/Desktop/vcseventh_14/Mgtfi_ref/vibrio_settings_copy.py" />
@@ -201,14 +112,33 @@
         <option value="$USER_HOME$/Library/Caches/Transmit/02EC8337-7F1C-46AF-B2DB-49876C526E13/kdm.science.unsw.edu.au/srv/scratch/lanlab/liam/2019-04-01-reads_to_alleles/Reads2MGTAlleles/reads_to_alleles.py" />
         <option value="$PROJECT_DIR$/General_Scripts/2019-02-25-processing_roary_output.py" />
         <option value="$PROJECT_DIR$/Grapetree/grapetree_metadata.py" />
-        <option value="$PROJECT_DIR$/General_Scripts/mumo_jumbo.py" />
         <option value="$PROJECT_DIR$/General_Scripts/2019-05-08-calculate_STs_per_wave.py" />
+        <option value="$PROJECT_DIR$/Grapetree/allele_to_grapetree.py" />
+        <option value="$PROJECT_DIR$/General_Scripts/2019-08-03-choosing_genes_per_clade.py" />
+        <option value="$PROJECT_DIR$/General_Scripts/2018-08-10-MGT_locus_preference_filters.py" />
+        <option value="$USER_HOME$/Desktop/vcseventh_22/Mgtfi_ref/vibrio_settings_copy.py" />
+        <option value="$USER_HOME$/Desktop/vcseventh_22/Mgtfi_ref/remove_isolate_and_data.py" />
+        <option value="$USER_HOME$/Desktop/vcseventh_22/Mgtfi_ref/delete_loose_ends.py" />
+        <option value="$PROJECT_DIR$/General_Scripts/2019-08-04-make_snp_alignment_frm_db.py" />
+        <option value="$PROJECT_DIR$/General_Scripts/2019-11-04-snps_to_tree.py" />
+        <option value="$PROJECT_DIR$/General_Scripts/2019-11-04-vcf_to_fasta.py" />
+        <option value="$PROJECT_DIR$/General_Scripts/2019-05-22-abricate_anti_resistances.py" />
+        <option value="$PROJECT_DIR$/General_Scripts/2019-05-29-ST_per_scheme.py" />
+        <option value="$PROJECT_DIR$/General_Scripts/2019-11-04-count_inconsistency.py" />
+        <option value="$USER_HOME$/MGTwebby/docs/news.html" />
+        <option value="$USER_HOME$/MGTwebby/docs/index.html" />
+        <option value="$USER_HOME$/miniconda3/envs/p3env/lib/python3.6/site-packages/pandas/core/dtypes/cast.py" />
+        <option value="$PROJECT_DIR$/General_Scripts/2019-10-20-automate_STs_and_markers.py" />
+        <option value="$PROJECT_DIR$/General_Scripts/mumo_jumbo.py" />
+        <option value="$PROJECT_DIR$/../vc_typer/vc_typer.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="width" value="1280" />
-    <option name="height" value="800" />
+    <option name="x" value="157" />
+    <option name="y" value="686" />
+    <option name="width" value="1744" />
+    <option name="height" value="1324" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -228,6 +158,37 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Python_PhD" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Python_PhD" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Python_PhD" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Python_PhD" type="462c0819:PsiDirectoryNode" />
+              <item name="General_Scripts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Python_PhD" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Python_PhD" type="462c0819:PsiDirectoryNode" />
+              <item name="Grapetree" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Python_PhD" type="b2602c69:ProjectViewProjectNode" />
+              <item name="vc_typer" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Python_PhD" type="b2602c69:ProjectViewProjectNode" />
+              <item name="vc_typer" type="462c0819:PsiDirectoryNode" />
+              <item name="blast_db" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
       <pane id="Scope">
         <subPane subId="Default">
           <expand>
@@ -244,27 +205,10 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="Python_PhD" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Python_PhD" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Python_PhD" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Python_PhD" type="462c0819:PsiDirectoryNode" />
-              <item name="General_Scripts" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
@@ -289,8 +233,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.2019-05-08-calculate_STs_per_wave">
-    <configuration name="2019-02-25-processing_roary_output" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.2019-10-20-automate_STs_and_markers">
+    <configuration name="2018-08-10-MGT_locus_preference_filters" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -302,13 +246,13 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Python_PhD" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/General_Scripts/2019-02-25-processing_roary_output.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/General_Scripts/2018-08-10-MGT_locus_preference_filters.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="2019-04-28-genes_to_MGT_input" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="2019-08-03-choosing_genes_per_clade" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -320,13 +264,13 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Python_PhD" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/General_Scripts/2019-04-28-genes_to_MGT_input.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/General_Scripts/2019-08-03-choosing_genes_per_clade.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="2019-05-08-calculate_STs_per_wave" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="2019-10-20-automate_STs_and_markers" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -338,25 +282,25 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Python_PhD" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/General_Scripts/2019-05-08-calculate_STs_per_wave.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/General_Scripts/2019-10-20-automate_STs_and_markers.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="grapetree_metadata" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="2019-11-04-vcf_to_fasta" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Grapetree" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/General_Scripts" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Python_PhD" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Grapetree/grapetree_metadata.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/General_Scripts/2019-11-04-vcf_to_fasta.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -381,19 +325,19 @@
       <option name="MODULE_MODE" value="false" />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.grapetree_metadata" />
-      <item index="1" class="java.lang.String" itemvalue="Python.2019-02-25-processing_roary_output" />
-      <item index="2" class="java.lang.String" itemvalue="Python.mumo_jumbo" />
-      <item index="3" class="java.lang.String" itemvalue="Python.2019-04-28-genes_to_MGT_input" />
-      <item index="4" class="java.lang.String" itemvalue="Python.2019-05-08-calculate_STs_per_wave" />
+      <item index="0" class="java.lang.String" itemvalue="Python.mumo_jumbo" />
+      <item index="1" class="java.lang.String" itemvalue="Python.2019-08-03-choosing_genes_per_clade" />
+      <item index="2" class="java.lang.String" itemvalue="Python.2018-08-10-MGT_locus_preference_filters" />
+      <item index="3" class="java.lang.String" itemvalue="Python.2019-11-04-vcf_to_fasta" />
+      <item index="4" class="java.lang.String" itemvalue="Python.2019-10-20-automate_STs_and_markers" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.2019-05-08-calculate_STs_per_wave" />
+        <item index="0" class="java.lang.String" itemvalue="Python.2019-10-20-automate_STs_and_markers" />
         <item index="1" class="java.lang.String" itemvalue="Python.mumo_jumbo" />
-        <item index="2" class="java.lang.String" itemvalue="Python.grapetree_metadata" />
-        <item index="3" class="java.lang.String" itemvalue="Python.2019-02-25-processing_roary_output" />
-        <item index="4" class="java.lang.String" itemvalue="Python.2019-04-28-genes_to_MGT_input" />
+        <item index="2" class="java.lang.String" itemvalue="Python.2019-11-04-vcf_to_fasta" />
+        <item index="3" class="java.lang.String" itemvalue="Python.2018-08-10-MGT_locus_preference_filters" />
+        <item index="4" class="java.lang.String" itemvalue="Python.2019-08-03-choosing_genes_per_clade" />
       </list>
     </recent_temporary>
   </component>
@@ -544,23 +488,71 @@
       <option name="project" value="LOCAL" />
       <updated>1557279889772</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="revert">
+      <created>1572561384651</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1572561384651</updated>
+    </task>
+    <task id="LOCAL-00021" summary="test">
+      <created>1572840033116</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1572840033116</updated>
+    </task>
+    <task id="LOCAL-00022" summary="test">
+      <created>1572952687178</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1572952687179</updated>
+    </task>
+    <task id="LOCAL-00023" summary="test">
+      <created>1573420892466</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1573420892467</updated>
+    </task>
+    <task id="LOCAL-00024" summary="test">
+      <created>1573513687726</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1573513687727</updated>
+    </task>
+    <task id="LOCAL-00025" summary="test">
+      <created>1573675737815</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1573675737815</updated>
+    </task>
+    <task id="LOCAL-00026" summary="test">
+      <created>1573944064360</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1573944064360</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
-    <editor active="true" />
+    <frame x="0" y="0" width="2560" height="1440" extended-state="0" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22116904" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20834975" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24925521" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31455743" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24730128" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32969216" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31380337" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29096326" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24899274" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26700804" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -575,144 +567,29 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="test commit" />
+    <MESSAGE value="revert" />
     <MESSAGE value="test" />
     <option name="LAST_COMMIT_MESSAGE" value="test" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/General_Scripts/2019-08-04-make_snp_alignment_frm_db.py</url>
+          <line>293</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="4" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Grapetree/grapetree_metadata.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#407#1434#0" expanded="false" />
-            <element signature="e#1480#4333#0" expanded="false" />
-            <element signature="e#4405#4909#0" expanded="false" />
-            <element signature="e#4976#5520#0" expanded="false" />
-            <element signature="e#5575#5998#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Grapetree/allele_to_grapetree.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="102" column="73" lean-forward="false" selection-start-line="102" selection-start-column="54" selection-end-line="102" selection-end-column="73" />
-          <folding>
-            <element signature="e#131#670#0" expanded="false" />
-            <element signature="e#131#453#1" expanded="false" />
-            <element signature="e#705#1010#0" expanded="false" />
-            <element signature="e#1056#1728#0" expanded="false" />
-            <element signature="e#1549#1673#0" expanded="false" />
-            <element signature="e#1789#2969#0" expanded="false" />
-            <element signature="e#1859#2744#0" expanded="false" />
-            <element signature="e#1893#1946#0" expanded="false" />
-            <element signature="e#2049#2358#0" expanded="false" />
-            <element signature="e#2435#2744#0" expanded="false" />
-            <element signature="e#3032#4475#0" expanded="false" />
-            <element signature="e#3053#3391#0" expanded="false" />
-            <element signature="e#3518#3558#0" expanded="false" />
-            <element signature="e#3630#4085#0" expanded="false" />
-            <element signature="e#3803#4041#0" expanded="false" />
-            <element signature="e#3841#4041#0" expanded="false" />
-            <element signature="e#3913#4041#0" expanded="false" />
-            <element signature="e#4105#4475#0" expanded="false" />
-            <element signature="e#4203#4438#0" expanded="false" />
-            <element signature="e#4271#4438#0" expanded="false" />
-            <element signature="e#4582#6079#0" expanded="false" />
-            <element signature="e#4776#5593#0" expanded="false" />
-            <element signature="e#5821#6003#0" expanded="false" />
-            <element signature="e#5891#5963#0" expanded="false" />
-            <element signature="e#6136#6709#0" expanded="false" />
-            <element signature="e#6606#6684#0" expanded="false" />
-            <element signature="e#6763#7415#0" expanded="false" />
-            <element signature="e#6916#7381#0" expanded="false" />
-            <element signature="e#6990#7381#0" expanded="false" />
-            <element signature="e#7137#7261#0" expanded="false" />
-            <element signature="e#7494#9128#0" expanded="false" />
-            <element signature="e#7520#8480#0" expanded="false" />
-            <element signature="e#7735#8078#0" expanded="false" />
-            <element signature="e#7917#8078#0" expanded="false" />
-            <element signature="e#8500#9128#0" expanded="false" />
-            <element signature="e#8681#9024#0" expanded="false" />
-            <element signature="e#8863#9024#0" expanded="false" />
-            <element signature="e#9151#11357#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Grapetree/grapetree_metadata.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#407#1434#0" expanded="false" />
-            <element signature="e#1480#4333#0" expanded="false" />
-            <element signature="e#4405#4909#0" expanded="false" />
-            <element signature="e#4976#5520#0" expanded="false" />
-            <element signature="e#5575#5998#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/General_Scripts/2019-04-28-genes_to_MGT_input.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="17" lean-forward="false" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Grapetree/grapetree_metadata.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#407#1434#0" expanded="false" />
-            <element signature="e#1480#4333#0" expanded="false" />
-            <element signature="e#4405#4909#0" expanded="false" />
-            <element signature="e#4976#5520#0" expanded="false" />
-            <element signature="e#5575#5998#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/General_Scripts/2019-05-08-calculate_STs_per_wave.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="15" column="34" lean-forward="false" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CTX_allele_caller/CTX_allele_caller.py" />
-    <entry file="file://$USER_HOME$/MGT_7/Mgt/Mgt/MGT_processing/MgtAllele2Db/Allele_to_mgt_db.py" />
-    <entry file="file://$USER_HOME$/MGT_7/Mgt/Mgt/MGT_processing/Reads2MGTAlleles/reads_to_alleles.py" />
-    <entry file="file://$PROJECT_DIR$/CTX_allele_caller/CTX_allele_caller.py" />
-    <entry file="file://$USER_HOME$/MGT_7/Mgt/Mgt/MGT_processing/Reads2MGTAlleles/reads_to_alleles.py" />
-    <entry file="file://$PROJECT_DIR$/General_Scripts/2019-04-10-allele_to_grapetree.py" />
-    <entry file="file://$USER_HOME$/Desktop/local/2019-04-10-allele_to_grapetree.py" />
-    <entry file="file://$PROJECT_DIR$/General Scripts/sd.py" />
-    <entry file="file://$PROJECT_DIR$/CTX_allele_caller/blast_db/1CTX_allele_caller.py" />
-    <entry file="file://$USER_HOME$/MGT_7/Mgt/Mgt/MGT_processing/MgtAllele2Db/Allele_to_mgt_db.py" />
-    <entry file="file://$USER_HOME$/MGT_7/Mgt/Mgt/MGT_processing/Reads2MGTAlleles/reads_to_alleles.py" />
-    <entry file="file://$PROJECT_DIR$/CTX_allele_caller/CTX_allele_caller.py" />
-    <entry file="file://$PROJECT_DIR$/General_Scripts/2019-04-04-grapetree_metadata.py" />
     <entry file="file://$PROJECT_DIR$/General_Scripts/2019-04-10-allele_to_grapetree.py" />
     <entry file="file://$PROJECT_DIR$/Grapetree/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/General_Scripts/compare_allele_profiles.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="8" column="40" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -731,27 +608,9 @@
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/Desktop/vcseventh_13/Mgtfi_ref/vibrio_settings_copy.py" />
-    <entry file="file://$USER_HOME$/Desktop/vcseventh_14/Mgtfi_ref/vibrio_settings_copy.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="947">
-          <caret line="159" column="24" lean-forward="false" selection-start-line="159" selection-start-column="24" selection-end-line="159" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/MGT_14/Mgt/Mgt/MGT_processing/Reads2MGTAlleles/reads_to_alleles.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="402">
-          <caret line="86" column="17" lean-forward="true" selection-start-line="86" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Library/Caches/Transmit/02EC8337-7F1C-46AF-B2DB-49876C526E13/kdm.science.unsw.edu.au/srv/scratch/lanlab/liam/2019-04-01-reads_to_alleles/Reads2MGTAlleles/reads_to_alleles.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1725" column="23" lean-forward="false" selection-start-line="1725" selection-start-column="23" selection-end-line="1725" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/Desktop/vcseventh_14/Mgtfi_ref/vibrio_settings_copy.py" />
+    <entry file="file://$USER_HOME$/MGT_14/Mgt/Mgt/MGT_processing/Reads2MGTAlleles/reads_to_alleles.py" />
+    <entry file="file://$USER_HOME$/Library/Caches/Transmit/02EC8337-7F1C-46AF-B2DB-49876C526E13/kdm.science.unsw.edu.au/srv/scratch/lanlab/liam/2019-04-01-reads_to_alleles/Reads2MGTAlleles/reads_to_alleles.py" />
     <entry file="file://$PROJECT_DIR$/General_Scripts/2019-04-28-genes_to_MGT_input.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -759,22 +618,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/General_Scripts/2019-02-22-new_roary_gap_processing.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#28#0" expanded="false" />
-            <element signature="e#271#1458#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/General_Scripts/2019-02-22-new_roary_gap_processing.py" />
     <entry file="file://$USER_HOME$/miniconda3/envs/p3env/lib/python3.6/site-packages/pandas/core/strings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="286">
           <caret line="1916" column="0" lean-forward="false" selection-start-line="1916" selection-start-column="0" selection-end-line="1916" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -782,195 +630,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="128">
           <caret line="4367" column="0" lean-forward="false" selection-start-line="4367" selection-start-column="0" selection-end-line="4367" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Grapetree/output_MGT_for_isolates.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="607" column="29" lean-forward="false" selection-start-line="607" selection-start-column="23" selection-end-line="607" selection-end-column="29" />
-          <folding>
-            <element signature="e#186#2090#0" expanded="false" />
-            <element signature="e#2131#2670#0" expanded="false" />
-            <element signature="e#2131#2453#1" expanded="false" />
-            <element signature="e#2725#4528#0" expanded="false" />
-            <element signature="e#2725#3100#1" expanded="false" />
-            <element signature="e#3465#3476#0" expanded="false" />
-            <element signature="e#3737#3783#0" expanded="false" />
-            <element signature="e#3788#3802#0" expanded="false" />
-            <element signature="e#3939#4078#0" expanded="false" />
-            <element signature="e#4417#4463#0" expanded="false" />
-            <element signature="e#4569#4887#0" expanded="false" />
-            <element signature="e#4803#4867#0" expanded="false" />
-            <element signature="e#4945#6351#0" expanded="false" />
-            <element signature="e#5056#5194#0" expanded="false" />
-            <element signature="e#5604#5650#0" expanded="false" />
-            <element signature="e#5687#5826#0" expanded="false" />
-            <element signature="e#6238#6284#0" expanded="false" />
-            <element signature="e#6396#8593#0" expanded="false" />
-            <element signature="e#6436#7079#0" expanded="false" />
-            <element signature="e#6709#6875#0" expanded="false" />
-            <element signature="e#7107#7628#0" expanded="false" />
-            <element signature="e#7657#8256#0" expanded="false" />
-            <element signature="e#8488#8569#0" expanded="false" />
-            <element signature="e#8631#9063#0" expanded="false" />
-            <element signature="e#8666#8936#0" expanded="false" />
-            <element signature="e#8692#8827#0" expanded="false" />
-            <element signature="e#8762#8827#0" expanded="false" />
-            <element signature="e#9065#9110#0" expanded="false" />
-            <element signature="e#9829#10525#0" expanded="false" />
-            <element signature="e#9885#10525#0" expanded="false" />
-            <element signature="e#9956#10441#0" expanded="false" />
-            <element signature="e#9993#10441#0" expanded="false" />
-            <element signature="e#10028#10441#0" expanded="false" />
-            <element signature="e#10070#10223#0" expanded="false" />
-            <element signature="e#10123#10223#0" expanded="false" />
-            <element signature="e#10288#10441#0" expanded="false" />
-            <element signature="e#10341#10441#0" expanded="false" />
-            <element signature="e#10559#12503#0" expanded="false" />
-            <element signature="e#10587#10656#0" expanded="false" />
-            <element signature="e#10815#11513#0" expanded="false" />
-            <element signature="e#10922#11004#0" expanded="false" />
-            <element signature="e#11217#11513#0" expanded="false" />
-            <element signature="e#11347#11513#0" expanded="false" />
-            <element signature="e#11454#11513#0" expanded="false" />
-            <element signature="e#11569#11679#0" expanded="false" />
-            <element signature="e#11812#12472#0" expanded="false" />
-            <element signature="e#11894#11972#0" expanded="false" />
-            <element signature="e#12161#12472#0" expanded="false" />
-            <element signature="e#12299#12472#0" expanded="false" />
-            <element signature="e#12409#12472#0" expanded="false" />
-            <element signature="e#12576#20076#0" expanded="false" />
-            <element signature="e#12589#12695#0" expanded="false" />
-            <element signature="e#13009#13021#0" expanded="false" />
-            <element signature="e#14271#14544#0" expanded="false" />
-            <element signature="e#14337#14544#0" expanded="false" />
-            <element signature="e#14364#14432#0" expanded="false" />
-            <element signature="e#14467#14544#0" expanded="false" />
-            <element signature="e#15054#17455#0" expanded="false" />
-            <element signature="e#15324#17434#0" expanded="false" />
-            <element signature="e#15712#16398#0" expanded="false" />
-            <element signature="e#15780#15844#0" expanded="false" />
-            <element signature="e#15887#16398#0" expanded="false" />
-            <element signature="e#15887#15917#0" expanded="false" />
-            <element signature="e#16105#16189#0" expanded="false" />
-            <element signature="e#16486#17206#0" expanded="false" />
-            <element signature="e#16726#16795#0" expanded="false" />
-            <element signature="e#16838#17206#0" expanded="false" />
-            <element signature="e#16895#16987#0" expanded="false" />
-            <element signature="e#17474#19970#0" expanded="false" />
-            <element signature="e#17714#19970#0" expanded="false" />
-            <element signature="e#18103#18797#0" expanded="false" />
-            <element signature="e#18174#18239#0" expanded="false" />
-            <element signature="e#18282#18797#0" expanded="false" />
-            <element signature="e#18282#18312#0" expanded="false" />
-            <element signature="e#18500#18587#0" expanded="false" />
-            <element signature="e#18884#19615#0" expanded="false" />
-            <element signature="e#19127#19197#0" expanded="false" />
-            <element signature="e#19240#19615#0" expanded="false" />
-            <element signature="e#19299#19395#0" expanded="false" />
-            <element signature="e#19978#19992#0" expanded="false" />
-            <element signature="e#20096#20263#1" expanded="false" />
-            <element signature="e#20728#20740#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../vc_typer/CTX_allele_caller.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="115" column="13" lean-forward="false" selection-start-line="115" selection-start-column="8" selection-end-line="115" selection-end-column="13" />
-          <folding>
-            <element signature="e#206#405#0" expanded="false" />
-            <element signature="e#312#379#0" expanded="false" />
-            <element signature="e#446#965#0" expanded="false" />
-            <element signature="e#721#939#0" expanded="false" />
-            <element signature="e#746#807#0" expanded="false" />
-            <element signature="e#835#939#0" expanded="false" />
-            <element signature="e#1020#1368#0" expanded="false" />
-            <element signature="e#1109#1346#0" expanded="false" />
-            <element signature="e#1436#1765#0" expanded="false" />
-            <element signature="e#1558#1740#0" expanded="false" />
-            <element signature="e#1853#3017#0" expanded="false" />
-            <element signature="e#2048#2228#0" expanded="false" />
-            <element signature="e#2323#2507#0" expanded="false" />
-            <element signature="e#2599#2716#0" expanded="false" />
-            <element signature="e#2771#2846#0" expanded="false" />
-            <element signature="e#2924#3017#0" expanded="false" />
-            <element signature="e#3237#3698#0" expanded="false" />
-            <element signature="e#3380#3491#0" expanded="false" />
-            <element signature="e#3519#3698#0" expanded="false" />
-            <element signature="e#4048#4221#0" expanded="false" />
-            <element signature="e#4344#4448#0" expanded="false" />
-            <element signature="e#4476#4647#0" expanded="false" />
-            <element signature="e#4681#4851#0" expanded="false" />
-            <element signature="e#4892#5607#0" expanded="false" />
-            <element signature="e#5125#5293#0" expanded="false" />
-            <element signature="e#5313#5607#0" expanded="false" />
-            <element signature="e#5670#6267#0" expanded="false" />
-            <element signature="e#5718#6267#0" expanded="false" />
-            <element signature="e#5990#6243#0" expanded="false" />
-            <element signature="e#6046#6243#0" expanded="false" />
-            <element signature="e#6297#7303#0" expanded="false" />
-            <element signature="e#6472#6676#0" expanded="false" />
-            <element signature="e#7322#7539#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Grapetree/allele_to_grapetree.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="282" column="11" lean-forward="false" selection-start-line="282" selection-start-column="11" selection-end-line="282" selection-end-column="11" />
-          <folding>
-            <element signature="e#131#670#0" expanded="false" />
-            <element signature="e#131#453#1" expanded="false" />
-            <element signature="e#705#1010#0" expanded="false" />
-            <element signature="e#1056#1728#0" expanded="false" />
-            <element signature="e#1549#1673#0" expanded="false" />
-            <element signature="e#1789#2969#0" expanded="false" />
-            <element signature="e#1859#2744#0" expanded="false" />
-            <element signature="e#1893#1946#0" expanded="false" />
-            <element signature="e#2049#2358#0" expanded="false" />
-            <element signature="e#2435#2744#0" expanded="false" />
-            <element signature="e#3032#4475#0" expanded="false" />
-            <element signature="e#3053#3391#0" expanded="false" />
-            <element signature="e#3518#3558#0" expanded="false" />
-            <element signature="e#3630#4085#0" expanded="false" />
-            <element signature="e#3803#4041#0" expanded="false" />
-            <element signature="e#3841#4041#0" expanded="false" />
-            <element signature="e#3913#4041#0" expanded="false" />
-            <element signature="e#4105#4475#0" expanded="false" />
-            <element signature="e#4203#4438#0" expanded="false" />
-            <element signature="e#4271#4438#0" expanded="false" />
-            <element signature="e#4582#6079#0" expanded="false" />
-            <element signature="e#4776#5593#0" expanded="false" />
-            <element signature="e#5821#6003#0" expanded="false" />
-            <element signature="e#5891#5963#0" expanded="false" />
-            <element signature="e#6136#6709#0" expanded="false" />
-            <element signature="e#6606#6684#0" expanded="false" />
-            <element signature="e#6763#7415#0" expanded="false" />
-            <element signature="e#6916#7381#0" expanded="false" />
-            <element signature="e#6990#7381#0" expanded="false" />
-            <element signature="e#7137#7261#0" expanded="false" />
-            <element signature="e#7494#9128#0" expanded="false" />
-            <element signature="e#7520#8480#0" expanded="false" />
-            <element signature="e#7735#8078#0" expanded="false" />
-            <element signature="e#7917#8078#0" expanded="false" />
-            <element signature="e#8500#9128#0" expanded="false" />
-            <element signature="e#8681#9024#0" expanded="false" />
-            <element signature="e#8863#9024#0" expanded="false" />
-            <element signature="e#9151#11357#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../vc_typer/CTX_allele_caller.py" />
     <entry file="file://$PROJECT_DIR$/General_Scripts/2019-05-08-calculate_STs_per_wave.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="435">
           <caret line="31" column="25" lean-forward="false" selection-start-line="31" selection-start-column="25" selection-end-line="31" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -978,107 +645,428 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="3" column="46" lean-forward="false" selection-start-line="3" selection-start-column="46" selection-end-line="3" selection-end-column="46" />
-          <folding>
-            <element signature="e#407#1434#0" expanded="false" />
-            <element signature="e#1480#4333#0" expanded="false" />
-            <element signature="e#4405#4909#0" expanded="false" />
-            <element signature="e#4976#5520#0" expanded="false" />
-            <element signature="e#5575#5998#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/General_Scripts/mumo_jumbo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="532">
-          <caret line="150" column="19" lean-forward="false" selection-start-line="140" selection-start-column="10" selection-end-line="150" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/General_Scripts/2018-08-10-MGT_locus_preference_filters.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/General_Scripts/2019-02-25-processing_roary_output.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="307">
-          <caret line="564" column="0" lean-forward="true" selection-start-line="564" selection-start-column="0" selection-end-line="564" selection-end-column="0" />
+        <state relative-caret-position="600">
+          <caret line="564" column="0" lean-forward="false" selection-start-line="564" selection-start-column="0" selection-end-line="564" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Grapetree/output_MGT_for_isolates.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="471">
+          <caret line="607" column="29" lean-forward="false" selection-start-line="607" selection-start-column="23" selection-end-line="607" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/vcseventh_22/Mgtfi_ref/Allele_to_mgt_db.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30064">
+          <caret line="2199" column="140" lean-forward="false" selection-start-line="2199" selection-start-column="134" selection-end-line="2199" selection-end-column="140" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/vcseventh_22/Mgtfi_ref/vibrio_settings_copy.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="244">
+          <caret line="109" column="20" lean-forward="false" selection-start-line="109" selection-start-column="17" selection-end-line="109" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/vcseventh_22/Mgtfi_ref/remove_isolate_and_data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="468" column="18" lean-forward="false" selection-start-line="468" selection-start-column="18" selection-end-line="468" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/vcseventh_22/Mgtfi_ref/delete_loose_ends.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="134" column="0" lean-forward="true" selection-start-line="134" selection-start-column="0" selection-end-line="134" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/General_Scripts/2018-08-10-MGT_locus_preference_filters.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="33" column="12" lean-forward="false" selection-start-line="33" selection-start-column="12" selection-end-line="33" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/General_Scripts/2019-11-04-snps_to_tree.py" />
+    <entry file="file://$PROJECT_DIR$/General_Scripts/compare_allele_profiles.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1221">
+          <caret line="8" column="40" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/General_Scripts/2019-08-04-make_snp_alignment_frm_db.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="265" column="0" lean-forward="false" selection-start-line="265" selection-start-column="0" selection-end-line="265" selection-end-column="0" />
           <folding>
-            <element signature="e#713#1270#0" expanded="false" />
-            <element signature="e#837#1051#0" expanded="false" />
-            <element signature="e#982#1051#0" expanded="false" />
-            <element signature="e#1070#1270#0" expanded="false" />
-            <element signature="e#1351#3332#0" expanded="false" />
-            <element signature="e#1766#3004#0" expanded="false" />
-            <element signature="e#1885#3004#0" expanded="false" />
-            <element signature="e#2024#3004#0" expanded="false" />
-            <element signature="e#2080#3004#0" expanded="false" />
-            <element signature="e#2411#2501#0" expanded="false" />
-            <element signature="e#2650#2841#0" expanded="false" />
-            <element signature="e#3397#5121#0" expanded="false" />
-            <element signature="e#5267#5907#0" expanded="false" />
-            <element signature="e#5964#9114#0" expanded="false" />
-            <element signature="e#9140#9729#0" expanded="false" />
-            <element signature="e#9225#9291#0" expanded="false" />
-            <element signature="e#9384#9712#0" expanded="false" />
-            <element signature="e#9428#9504#0" expanded="false" />
-            <element signature="e#9539#9712#0" expanded="false" />
-            <element signature="e#9630#9712#0" expanded="false" />
-            <element signature="e#9860#11866#0" expanded="false" />
-            <element signature="e#9976#10324#0" expanded="false" />
-            <element signature="e#10353#10827#0" expanded="false" />
-            <element signature="e#10856#11330#0" expanded="false" />
-            <element signature="e#11358#11866#0" expanded="false" />
-            <element signature="e#11956#15159#0" expanded="false" />
-            <element signature="e#12079#12646#0" expanded="false" />
-            <element signature="e#12156#12646#0" expanded="false" />
-            <element signature="e#13474#14244#0" expanded="false" />
-            <element signature="e#13551#14244#0" expanded="false" />
-            <element signature="e#14272#15082#0" expanded="false" />
-            <element signature="e#14349#15082#0" expanded="false" />
-            <element signature="e#15252#17132#0" expanded="false" />
-            <element signature="e#15355#16993#0" expanded="false" />
-            <element signature="e#15522#16993#0" expanded="false" />
-            <element signature="e#15724#16993#0" expanded="false" />
-            <element signature="e#15876#16246#0" expanded="false" />
-            <element signature="e#16365#16993#0" expanded="false" />
-            <element signature="e#16499#16598#0" expanded="false" />
-            <element signature="e#17228#20332#0" expanded="false" />
-            <element signature="e#17310#20284#0" expanded="false" />
-            <element signature="e#17420#20284#0" expanded="false" />
-            <element signature="e#17621#17712#0" expanded="false" />
-            <element signature="e#17965#18366#0" expanded="false" />
-            <element signature="e#18061#18366#0" expanded="false" />
-            <element signature="e#18513#20284#0" expanded="false" />
-            <element signature="e#18555#18633#0" expanded="false" />
-            <element signature="e#18781#20132#0" expanded="false" />
-            <element signature="e#19000#19989#0" expanded="false" />
-            <element signature="e#19203#19894#0" expanded="false" />
-            <element signature="e#19298#19894#0" expanded="false" />
-            <element signature="e#20417#21891#0" expanded="false" />
-            <element signature="e#20732#21640#0" expanded="false" />
-            <element signature="e#21400#21524#0" expanded="false" />
-            <element signature="e#21735#21864#0" expanded="false" />
-            <element signature="e#21774#21864#0" expanded="false" />
-            <element signature="e#22006#22835#0" expanded="false" />
-            <element signature="e#22196#22835#0" expanded="false" />
-            <element signature="e#22361#22835#0" expanded="false" />
-            <element signature="e#22916#24117#0" expanded="false" />
-            <element signature="e#23065#24102#0" expanded="false" />
-            <element signature="e#23108#24102#0" expanded="false" />
-            <element signature="e#23144#24102#0" expanded="false" />
-            <element signature="e#23183#24102#0" expanded="false" />
-            <element signature="e#23424#24102#0" expanded="false" />
-            <element signature="e#23620#24102#0" expanded="false" />
-            <element signature="e#23679#24102#0" expanded="false" />
-            <element signature="e#23742#24102#0" expanded="false" />
+            <element signature="e#226#706#1" expanded="false" />
+            <element signature="e#747#1073#0" expanded="false" />
+            <element signature="e#1115#1654#0" expanded="false" />
+            <element signature="e#1692#3090#0" expanded="false" />
+            <element signature="e#3114#3868#0" expanded="false" />
+            <element signature="e#3891#4652#0" expanded="false" />
+            <element signature="e#4697#5603#0" expanded="false" />
+            <element signature="e#4812#5085#0" expanded="false" />
+            <element signature="e#5255#5560#0" expanded="false" />
+            <element signature="e#5419#5560#0" expanded="false" />
+            <element signature="e#6037#6298#0" expanded="false" />
+            <element signature="e#6386#7693#0" expanded="false" />
+            <element signature="e#7170#7657#0" expanded="false" />
+            <element signature="e#7336#7657#0" expanded="false" />
+            <element signature="e#7740#7823#1" expanded="false" />
+            <element signature="e#9323#9408#0" expanded="false" />
+            <element signature="e#9778#10162#0" expanded="false" />
+            <element signature="e#9902#10162#0" expanded="false" />
+            <element signature="e#10041#10162#0" expanded="false" />
+            <element signature="e#10168#10189#0" expanded="false" />
+            <element signature="e#10455#10541#0" expanded="false" />
+            <element signature="e#10649#14147#0" expanded="false" />
+            <element signature="e#10649#11009#1" expanded="false" />
+            <element signature="e#11243#13846#0" expanded="false" />
+            <element signature="e#11276#13846#0" expanded="false" />
+            <element signature="e#11360#13846#0" expanded="false" />
+            <element signature="e#11601#11623#0" expanded="false" />
+            <element signature="e#11743#13846#0" expanded="false" />
+            <element signature="e#11791#11843#0" expanded="false" />
+            <element signature="e#11913#11935#0" expanded="false" />
+            <element signature="e#12045#12134#0" expanded="false" />
+            <element signature="e#12239#12696#0" expanded="false" />
+            <element signature="e#12297#12319#0" expanded="false" />
+            <element signature="e#12477#12599#0" expanded="false" />
+            <element signature="e#12527#12599#0" expanded="false" />
+            <element signature="e#12747#13311#0" expanded="false" />
+            <element signature="e#12983#13223#0" expanded="false" />
+            <element signature="e#13099#13223#0" expanded="false" />
+            <element signature="e#13156#13223#0" expanded="false" />
+            <element signature="e#13388#13449#0" expanded="false" />
+            <element signature="e#13500#13562#0" expanded="false" />
+            <element signature="e#13584#13606#0" expanded="false" />
+            <element signature="e#13901#14107#0" expanded="false" />
+            <element signature="e#13997#14107#0" expanded="false" />
+            <element signature="e#14047#14085#0" expanded="false" />
+            <element signature="e#14185#14439#0" expanded="false" />
+            <element signature="e#14824#14923#0" expanded="false" />
+            <element signature="e#16222#16472#0" expanded="false" />
+            <element signature="e#16354#16451#0" expanded="false" />
+            <element signature="e#16492#17156#0" expanded="false" />
+            <element signature="e#16627#16735#0" expanded="false" />
+            <element signature="e#16686#16735#0" expanded="false" />
+            <element signature="e#16861#17135#0" expanded="false" />
+            <element signature="e#17024#17106#0" expanded="false" />
+            <element signature="e#17162#17169#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/General_Scripts/2019-11-05-fasta2phylip.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/General_Scripts/2019-05-18-abricate_output.py" />
+    <entry file="file://$USER_HOME$/MGT_22/Mgt/Mgt/MGT_processing/MgtAllele2Db/Allele_to_mgt_db.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="47" column="10" lean-forward="false" selection-start-line="47" selection-start-column="10" selection-end-line="47" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/General_Scripts/2019-11-04-vcf_to_fasta.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="35" column="16" lean-forward="false" selection-start-line="35" selection-start-column="16" selection-end-line="35" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/MGT_22/Mgt/Mgt/Mgt/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="143">
+          <caret line="109" column="29" lean-forward="false" selection-start-line="109" selection-start-column="27" selection-end-line="109" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/MGT_22/Mgt/Mgt/MGT_processing/Reads2MGTAlleles/reads_to_alleles.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="254" column="29" lean-forward="false" selection-start-line="254" selection-start-column="27" selection-end-line="254" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/MGT_22/Mgt/Mgt/manage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="11" column="32" lean-forward="false" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/MGT_22/Mgt/Mgt/MGT_processing/db_search_modification/get_snps_for_isolate.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="15" lean-forward="false" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Grapetree/allele_to_grapetree.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="188">
+          <caret line="156" column="0" lean-forward="true" selection-start-line="156" selection-start-column="0" selection-end-line="156" selection-end-column="0" />
+          <folding>
+            <element signature="e#160#699#0" expanded="false" />
+            <element signature="e#160#482#1" expanded="false" />
+            <element signature="e#734#1039#0" expanded="false" />
+            <element signature="e#1085#1757#0" expanded="false" />
+            <element signature="e#1578#1702#0" expanded="false" />
+            <element signature="e#1818#2482#0" expanded="false" />
+            <element signature="e#1888#2378#0" expanded="false" />
+            <element signature="e#2260#2378#0" expanded="false" />
+            <element signature="e#2291#2378#0" expanded="false" />
+            <element signature="e#2545#3911#0" expanded="false" />
+            <element signature="e#2914#2954#0" expanded="false" />
+            <element signature="e#3026#3491#0" expanded="false" />
+            <element signature="e#3209#3447#0" expanded="false" />
+            <element signature="e#3247#3447#0" expanded="false" />
+            <element signature="e#3319#3447#0" expanded="false" />
+            <element signature="e#3511#3911#0" expanded="false" />
+            <element signature="e#3619#3874#0" expanded="false" />
+            <element signature="e#3687#3874#0" expanded="false" />
+            <element signature="e#4018#5515#0" expanded="false" />
+            <element signature="e#4212#5029#0" expanded="false" />
+            <element signature="e#5257#5439#0" expanded="false" />
+            <element signature="e#5327#5399#0" expanded="false" />
+            <element signature="e#5572#6145#0" expanded="false" />
+            <element signature="e#6042#6120#0" expanded="false" />
+            <element signature="e#6199#6915#0" expanded="false" />
+            <element signature="e#6352#6882#0" expanded="false" />
+            <element signature="e#6426#6882#0" expanded="false" />
+            <element signature="e#6573#6730#0" expanded="false" />
+            <element signature="e#6808#6882#0" expanded="false" />
+            <element signature="e#6994#8828#0" expanded="false" />
+            <element signature="e#7020#8094#0" expanded="false" />
+            <element signature="e#7273#7616#0" expanded="false" />
+            <element signature="e#7455#7616#0" expanded="false" />
+            <element signature="e#8114#8828#0" expanded="false" />
+            <element signature="e#8381#8724#0" expanded="false" />
+            <element signature="e#8563#8724#0" expanded="false" />
+            <element signature="e#8851#11057#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/General_Scripts/2019-08-03-choosing_genes_per_clade.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="371">
+          <caret line="246" column="77" lean-forward="false" selection-start-line="246" selection-start-column="77" selection-end-line="246" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/MGTwebby/docs/members.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-408">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/General_Scripts/2019-05-22-abricate_anti_resistances.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="387">
+          <caret line="44" column="87" lean-forward="false" selection-start-line="44" selection-start-column="71" selection-end-line="44" selection-end-column="87" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/General_Scripts/2019-11-04-count_inconsistency.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3045">
+          <caret line="209" column="35" lean-forward="false" selection-start-line="209" selection-start-column="35" selection-end-line="209" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/MGTwebby/docs/news.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="109" column="24" lean-forward="false" selection-start-line="109" selection-start-column="24" selection-end-line="109" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/General_Scripts/2019-05-29-ST_per_scheme.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="62" column="25" lean-forward="false" selection-start-line="62" selection-start-column="25" selection-end-line="62" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#15#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/MGTwebby/docs/projects.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-457">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/MGTwebby/docs/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="656">
+          <caret line="94" column="124" lean-forward="false" selection-start-line="94" selection-start-column="124" selection-end-line="94" selection-end-column="124" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/miniconda3/envs/p3env/lib/python3.6/site-packages/pandas/core/ops.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="1165" column="0" lean-forward="false" selection-start-line="1165" selection-start-column="0" selection-end-line="1165" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/General_Scripts/2019-10-03-species_identifying_commonly_missing_alleles.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="45" column="0" lean-forward="true" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+          <folding>
+            <element signature="e#121#398#0" expanded="false" />
+            <element signature="e#215#276#0" expanded="false" />
+            <element signature="e#455#1508#0" expanded="false" />
+            <element signature="e#544#1307#0" expanded="false" />
+            <element signature="e#777#1263#0" expanded="false" />
+            <element signature="e#890#1263#0" expanded="false" />
+            <element signature="e#1070#1263#0" expanded="false" />
+            <element signature="e#1152#1263#0" expanded="false" />
+            <element signature="e#1420#1475#0" expanded="false" />
+            <element signature="e#1575#3593#0" expanded="false" />
+            <element signature="e#1651#3571#0" expanded="false" />
+            <element signature="e#1678#1850#0" expanded="false" />
+            <element signature="e#1738#1799#0" expanded="false" />
+            <element signature="e#1880#3571#0" expanded="false" />
+            <element signature="e#2214#3259#0" expanded="false" />
+            <element signature="e#2290#2918#0" expanded="false" />
+            <element signature="e#3015#3259#0" expanded="false" />
+            <element signature="e#3676#6072#0" expanded="false" />
+            <element signature="e#3800#4631#0" expanded="false" />
+            <element signature="e#3827#3957#0" expanded="false" />
+            <element signature="e#3985#4631#0" expanded="false" />
+            <element signature="e#4766#6035#0" expanded="false" />
+            <element signature="e#4793#5042#0" expanded="false" />
+            <element signature="e#4825#5042#0" expanded="false" />
+            <element signature="e#5070#6035#0" expanded="false" />
+            <element signature="e#5102#6035#0" expanded="false" />
+            <element signature="e#6171#6675#0" expanded="false" />
+            <element signature="e#6260#6484#0" expanded="false" />
+            <element signature="e#6328#6483#0" expanded="false" />
+            <element signature="e#6513#6660#0" expanded="false" />
+            <element signature="e#7134#7177#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/miniconda3/envs/p3env/lib/python3.6/site-packages/pandas/core/dtypes/cast.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="296">
+          <caret line="701" column="12" lean-forward="false" selection-start-line="701" selection-start-column="12" selection-end-line="701" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/miniconda3/envs/p3env/lib/python3.6/site-packages/pandas/core/internals.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="296">
+          <caret line="574" column="0" lean-forward="false" selection-start-line="574" selection-start-column="0" selection-end-line="574" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/miniconda3/envs/p3env/lib/python3.6/site-packages/pandas/util/_decorators.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="176" column="0" lean-forward="false" selection-start-line="176" selection-start-column="0" selection-end-line="176" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../vc_typer/vc_typer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="90" column="83" lean-forward="false" selection-start-line="90" selection-start-column="83" selection-end-line="90" selection-end-column="83" />
+          <folding>
+            <element signature="e#216#1288#0" expanded="false" />
+            <element signature="e#1341#1459#0" expanded="false" />
+            <element signature="e#1522#1754#0" expanded="false" />
+            <element signature="e#2268#2570#0" expanded="false" />
+            <element signature="e#3542#4356#0" expanded="false" />
+            <element signature="e#3603#3906#0" expanded="false" />
+            <element signature="e#3926#4356#0" expanded="false" />
+            <element signature="e#4410#5045#0" expanded="false" />
+            <element signature="e#4444#4597#0" expanded="false" />
+            <element signature="e#4679#5045#0" expanded="false" />
+            <element signature="e#4886#5020#0" expanded="false" />
+            <element signature="e#5106#5451#0" expanded="false" />
+            <element signature="e#5509#5794#0" expanded="false" />
+            <element signature="e#5704#5769#0" expanded="false" />
+            <element signature="e#5840#6063#0" expanded="false" />
+            <element signature="e#5944#6036#0" expanded="false" />
+            <element signature="e#6095#6481#0" expanded="false" />
+            <element signature="e#6131#6280#0" expanded="false" />
+            <element signature="e#6147#6251#0" expanded="false" />
+            <element signature="e#6300#6481#0" expanded="false" />
+            <element signature="e#6514#6684#0" expanded="false" />
+            <element signature="e#6707#8000#0" expanded="false" />
+            <element signature="e#6886#7152#0" expanded="false" />
+            <element signature="e#8019#8303#0" expanded="false" />
+            <element signature="e#8209#8303#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../vc_typer/blast_db/alleles.fasta">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="458">
+          <caret line="121" column="0" lean-forward="false" selection-start-line="121" selection-start-column="0" selection-end-line="126" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/General_Scripts/mumo_jumbo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1060">
+          <caret line="511" column="1" lean-forward="true" selection-start-line="511" selection-start-column="1" selection-end-line="511" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/General_Scripts/2019-10-20-automate_STs_and_markers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="267">
+          <caret line="124" column="18" lean-forward="false" selection-start-line="124" selection-start-column="18" selection-end-line="124" selection-end-column="18" />
+          <folding>
+            <element signature="e#87#364#0" expanded="false" />
+            <element signature="e#181#242#0" expanded="false" />
+            <element signature="e#907#3473#0" expanded="false" />
+            <element signature="e#1170#2626#0" expanded="false" />
+            <element signature="e#1414#2626#0" expanded="false" />
+            <element signature="e#1878#2479#0" expanded="false" />
+            <element signature="e#2078#2479#0" expanded="false" />
+            <element signature="e#3551#4428#0" expanded="false" />
+            <element signature="e#3551#3616#0" expanded="false" />
+            <element signature="e#3770#4428#0" expanded="false" />
+            <element signature="e#4776#5039#0" expanded="false" />
+            <element signature="e#7041#7047#0" expanded="false" />
           </folding>
         </state>
       </provider>

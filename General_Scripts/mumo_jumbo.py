@@ -507,8 +507,8 @@ from shutil import copyfile
 #     #     print('TRUE')
 #
 #     #Hatain
-#     # if ctxB_7 == 'TRUE' and tcpA_el_A226 == 'TRUE' and rstR_et == 'TRUE':
-#     #     print('TRUE')
+    # if ctxB_7 == 'TRUE' and tcpA_el_A226 == 'TRUE' and rstR_et == 'TRUE':
+    #     print('TRUE')
 #
 #     #CLassical
 #     # if ctxB_1 == 'FALSE' and tcpA_el_WT == 'FALSE' and rstR_et == 'FALSE':

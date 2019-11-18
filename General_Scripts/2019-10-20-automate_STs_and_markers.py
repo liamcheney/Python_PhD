@@ -18,6 +18,7 @@ def df_setup(infile_path, start_col,end_col):
     df.replace("None.None", "0", inplace=True)
 
     df[list(df.columns)[0:8]] = df[list(df.columns)[0:8]].astype(int)
+
     #columns of attributes to take
     want_attributes = list(df.columns.values[start_col:end_col])
 
@@ -121,21 +122,24 @@ def st_freq_and_waves(return_df, st_save_dict, element, not_st_strains_df, min_s
             if sub_df.shape[0] != 0:
                 waves_st_dict[el][MGTST] = sub_df.shape[0]
 
+    print(element, st_save_dict)
     #printing out STs per wave
     for k, v in waves_st_dict.items():
         for i, x in v.items():
-            ST = i.split(' ')[-1]
-            gene = element.split('_')[0]
-            wave = "Wave " + str(k)
-            freq = x
-            level = i.split(' ')[0]
-            print(gene, wave, freq, element, level, ST, sep='\t')
+            if x >= min_st_for_figure:
+                ST = i.split(' ')[-1]
+                gene = element.split('_')[0]
+                wave = "Wave " + str(k)
+                freq = x
+                level = i.split(' ')[0]
+                print(gene, wave, freq, element, level, ST, sep='\t')
 
     #printing out missing strains per ST, per Wave
     for i in wave_list:
         wave_missing_st_num = (not_st_strains_df[not_st_strains_df['Wave'] == i].shape)[0]
         if wave_missing_st_num > 0:
             wave = "Wave " + str(i)
+            gene = element.split('_')[0]
             print(gene, wave, wave_missing_st_num, "No_ST", "No_ST", "No_ST", sep='\t')
             sl(1)
 
@@ -143,14 +147,14 @@ def main():
     args = parseargs()
 
     #variables
-    start_col = 260
-    end_col = 263
+    start_col = 252
+    end_col = 265
     min_strains_per_st = 10
     percen_contam_strains = 10
     min_st_for_figure = 50
     precen_inconsistent_strains = 5
     relate_results_to = "Wave"
-    infile_path = '/Users/liamcheneyy/Desktop/MGT_isolate_data.txt'
+    infile_path = '/Users/liamcheneyy/Desktop/vcseventh_22/grapetree/seventh/MGT_isolate_data.txt'
 
     #df read
     df, want_attributes = df_setup(infile_path, start_col,end_col)
