@@ -147,7 +147,7 @@ def main():
     args = parseargs()
 
     #variables
-    start_col = 252
+    start_col = 253
     end_col = 265
     min_strains_per_st = 10
     percen_contam_strains = 10
