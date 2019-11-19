@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="808d523f-cfb3-4699-b214-793d2f2a6efd" name="Default" comment="test">
+    <list default="true" id="808d523f-cfb3-4699-b214-793d2f2a6efd" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/General_Scripts/2019-10-20-automate_STs_and_markers.py" afterPath="$PROJECT_DIR$/General_Scripts/2019-10-20-automate_STs_and_markers.py" />
-      <change beforePath="$PROJECT_DIR$/General_Scripts/mumo_jumbo.py" afterPath="$PROJECT_DIR$/General_Scripts/mumo_jumbo.py" />
-      <change beforePath="$PROJECT_DIR$/../vc_typer/test/DRR068857.fna" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../vc_typer/test/blast_results.csv" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../vc_typer/test/simple_blast_results.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../vc_typer/blast_db/alleles.fasta" afterPath="$PROJECT_DIR$/../vc_typer/blast_db/alleles.fasta" />
+      <change beforePath="$PROJECT_DIR$/../vc_typer/blast_db/alleles.nhr" afterPath="$PROJECT_DIR$/../vc_typer/blast_db/alleles.nhr" />
+      <change beforePath="$PROJECT_DIR$/../vc_typer/blast_db/alleles.nin" afterPath="$PROJECT_DIR$/../vc_typer/blast_db/alleles.nin" />
+      <change beforePath="$PROJECT_DIR$/../vc_typer/blast_db/alleles.nsq" afterPath="$PROJECT_DIR$/../vc_typer/blast_db/alleles.nsq" />
       <change beforePath="$PROJECT_DIR$/../vc_typer/vc_typer.py" afterPath="$PROJECT_DIR$/../vc_typer/vc_typer.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,14 +18,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="2019-10-20-automate_STs_and_markers.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="2019-10-20-automate_STs_and_markers.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/General_Scripts/2019-10-20-automate_STs_and_markers.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="267">
-              <caret line="124" column="18" lean-forward="false" selection-start-line="124" selection-start-column="18" selection-end-line="124" selection-end-column="18" />
+            <state relative-caret-position="90">
+              <caret line="107" column="94" lean-forward="false" selection-start-line="107" selection-start-column="94" selection-end-line="107" selection-end-column="94" />
               <folding>
                 <element signature="e#87#364#0" expanded="false" />
                 <element signature="e#181#242#0" expanded="false" />
+                <element signature="e#416#768#0" expanded="false" />
                 <element signature="e#907#3473#0" expanded="false" />
                 <element signature="e#1170#2626#0" expanded="false" />
                 <element signature="e#1414#2626#0" expanded="false" />
@@ -35,8 +35,55 @@
                 <element signature="e#3551#4428#0" expanded="false" />
                 <element signature="e#3551#3616#0" expanded="false" />
                 <element signature="e#3770#4428#0" expanded="false" />
+                <element signature="e#4528#5857#0" expanded="false" />
                 <element signature="e#4776#5039#0" expanded="false" />
                 <element signature="e#7041#7047#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="alleles.fasta" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../vc_typer/blast_db/alleles.fasta">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="78">
+              <caret line="239" column="0" lean-forward="false" selection-start-line="239" selection-start-column="0" selection-end-line="270" selection-end-column="36" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="vc_typer.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../vc_typer/vc_typer.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="116" column="58" lean-forward="false" selection-start-line="116" selection-start-column="58" selection-end-line="116" selection-end-column="58" />
+              <folding>
+                <element signature="e#216#1288#0" expanded="false" />
+                <element signature="e#1341#1459#0" expanded="false" />
+                <element signature="e#1522#1754#0" expanded="false" />
+                <element signature="e#1833#2185#0" expanded="false" />
+                <element signature="e#2268#2570#0" expanded="false" />
+                <element signature="e#2637#3305#0" expanded="false" />
+                <element signature="e#3367#3748#0" expanded="false" />
+                <element signature="e#3812#4336#0" expanded="false" />
+                <element signature="e#4391#5205#0" expanded="false" />
+                <element signature="e#4452#4755#0" expanded="false" />
+                <element signature="e#4775#5205#0" expanded="false" />
+                <element signature="e#5259#5894#0" expanded="false" />
+                <element signature="e#5293#5446#0" expanded="false" />
+                <element signature="e#5528#5894#0" expanded="false" />
+                <element signature="e#5735#5869#0" expanded="false" />
+                <element signature="e#5955#6300#0" expanded="false" />
+                <element signature="e#6358#6643#0" expanded="false" />
+                <element signature="e#6553#6618#0" expanded="false" />
+                <element signature="e#6689#6912#0" expanded="false" />
+                <element signature="e#6793#6885#0" expanded="false" />
+                <element signature="e#6944#7330#0" expanded="false" />
+                <element signature="e#7149#7330#0" expanded="false" />
+                <element signature="e#7363#7533#0" expanded="false" />
+                <element signature="e#7556#8849#0" expanded="false" />
+                <element signature="e#7735#8001#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -53,7 +100,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>_9</find>
       <find>NZ_CP017119_00</find>
       <find>NZ_CP017119_00010</find>
       <find>ICEVchBan1</find>
@@ -83,6 +129,7 @@
       <find>MGT3 ST10</find>
       <find>print</find>
       <find>total</find>
+      <find>ICE_</find>
     </findStrings>
     <replaceStrings>
       <replace>allele</replace>
@@ -93,7 +140,7 @@
     </replaceStrings>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../vc_typer" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -126,10 +173,12 @@
         <option value="$PROJECT_DIR$/General_Scripts/2019-05-29-ST_per_scheme.py" />
         <option value="$PROJECT_DIR$/General_Scripts/2019-11-04-count_inconsistency.py" />
         <option value="$USER_HOME$/MGTwebby/docs/news.html" />
-        <option value="$USER_HOME$/MGTwebby/docs/index.html" />
         <option value="$USER_HOME$/miniconda3/envs/p3env/lib/python3.6/site-packages/pandas/core/dtypes/cast.py" />
         <option value="$PROJECT_DIR$/General_Scripts/2019-10-20-automate_STs_and_markers.py" />
         <option value="$PROJECT_DIR$/General_Scripts/mumo_jumbo.py" />
+        <option value="$PROJECT_DIR$/../vc_typer/blast_db/old_alleles.fasta" />
+        <option value="$PROJECT_DIR$/../vc_typer/blast_db/alleles.fasta" />
+        <option value="$USER_HOME$/MGTwebby/docs/index.html" />
         <option value="$PROJECT_DIR$/../vc_typer/vc_typer.py" />
       </list>
     </option>
@@ -172,11 +221,6 @@
             </path>
             <path>
               <item name="Python_PhD" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Python_PhD" type="462c0819:PsiDirectoryNode" />
-              <item name="Grapetree" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Python_PhD" type="b2602c69:ProjectViewProjectNode" />
               <item name="vc_typer" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -188,7 +232,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope">
         <subPane subId="Default">
           <expand>
@@ -205,6 +248,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -212,13 +256,14 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/../vc_typer/blast_db" />
+      <recent name="$PROJECT_DIR$/Grapetree" />
+      <recent name="$PROJECT_DIR$/CTX_allele_caller/blast_db" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/CTX_allele_caller" />
       <recent name="$PROJECT_DIR$/General Scripts" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/Grapetree" />
-      <recent name="$PROJECT_DIR$/CTX_allele_caller/blast_db" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -537,7 +582,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573944064360</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="test">
+      <created>1574058373441</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1574058373441</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -546,11 +598,12 @@
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20834975" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31455743" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31455743" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24730128" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32969216" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24899274" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26700804" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26700804" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -558,7 +611,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -585,7 +637,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/General_Scripts/2019-04-10-allele_to_grapetree.py" />
     <entry file="file://$PROJECT_DIR$/Grapetree/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -634,13 +685,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../vc_typer/CTX_allele_caller.py" />
-    <entry file="file://$PROJECT_DIR$/General_Scripts/2019-05-08-calculate_STs_per_wave.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="31" column="25" lean-forward="false" selection-start-line="31" selection-start-column="25" selection-end-line="31" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/General_Scripts/2019-05-08-calculate_STs_per_wave.py" />
     <entry file="file://$PROJECT_DIR$/Grapetree/grapetree_metadata.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -890,25 +935,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3045">
           <caret line="209" column="35" lean-forward="false" selection-start-line="209" selection-start-column="35" selection-end-line="209" selection-end-column="35" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/MGTwebby/docs/news.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="109" column="24" lean-forward="false" selection-start-line="109" selection-start-column="24" selection-end-line="109" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/MGTwebby/docs/news.html" />
     <entry file="file://$PROJECT_DIR$/General_Scripts/2019-05-29-ST_per_scheme.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="570">
           <caret line="62" column="25" lean-forward="false" selection-start-line="62" selection-start-column="25" selection-end-line="62" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#15#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -916,15 +950,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-457">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/MGTwebby/docs/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="656">
-          <caret line="94" column="124" lean-forward="false" selection-start-line="94" selection-start-column="124" selection-end-line="94" selection-end-column="124" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -932,7 +957,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="1165" column="0" lean-forward="false" selection-start-line="1165" selection-start-column="0" selection-end-line="1165" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -980,7 +1004,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="296">
           <caret line="701" column="12" lean-forward="false" selection-start-line="701" selection-start-column="12" selection-end-line="701" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -988,7 +1011,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="296">
           <caret line="574" column="0" lean-forward="false" selection-start-line="574" selection-start-column="0" selection-end-line="574" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -996,49 +1018,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="304">
           <caret line="176" column="0" lean-forward="false" selection-start-line="176" selection-start-column="0" selection-end-line="176" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../vc_typer/vc_typer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="90" column="83" lean-forward="false" selection-start-line="90" selection-start-column="83" selection-end-line="90" selection-end-column="83" />
-          <folding>
-            <element signature="e#216#1288#0" expanded="false" />
-            <element signature="e#1341#1459#0" expanded="false" />
-            <element signature="e#1522#1754#0" expanded="false" />
-            <element signature="e#2268#2570#0" expanded="false" />
-            <element signature="e#3542#4356#0" expanded="false" />
-            <element signature="e#3603#3906#0" expanded="false" />
-            <element signature="e#3926#4356#0" expanded="false" />
-            <element signature="e#4410#5045#0" expanded="false" />
-            <element signature="e#4444#4597#0" expanded="false" />
-            <element signature="e#4679#5045#0" expanded="false" />
-            <element signature="e#4886#5020#0" expanded="false" />
-            <element signature="e#5106#5451#0" expanded="false" />
-            <element signature="e#5509#5794#0" expanded="false" />
-            <element signature="e#5704#5769#0" expanded="false" />
-            <element signature="e#5840#6063#0" expanded="false" />
-            <element signature="e#5944#6036#0" expanded="false" />
-            <element signature="e#6095#6481#0" expanded="false" />
-            <element signature="e#6131#6280#0" expanded="false" />
-            <element signature="e#6147#6251#0" expanded="false" />
-            <element signature="e#6300#6481#0" expanded="false" />
-            <element signature="e#6514#6684#0" expanded="false" />
-            <element signature="e#6707#8000#0" expanded="false" />
-            <element signature="e#6886#7152#0" expanded="false" />
-            <element signature="e#8019#8303#0" expanded="false" />
-            <element signature="e#8209#8303#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../vc_typer/blast_db/alleles.fasta">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="458">
-          <caret line="121" column="0" lean-forward="false" selection-start-line="121" selection-start-column="0" selection-end-line="126" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1046,17 +1025,25 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1060">
           <caret line="511" column="1" lean-forward="true" selection-start-line="511" selection-start-column="1" selection-end-line="511" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../vc_typer/blast_db/alleles.fasta">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="222" column="31" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="374" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/General_Scripts/2019-10-20-automate_STs_and_markers.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="124" column="18" lean-forward="false" selection-start-line="124" selection-start-column="18" selection-end-line="124" selection-end-column="18" />
+        <state relative-caret-position="90">
+          <caret line="107" column="94" lean-forward="false" selection-start-line="107" selection-start-column="94" selection-end-line="107" selection-end-column="94" />
           <folding>
             <element signature="e#87#364#0" expanded="false" />
             <element signature="e#181#242#0" expanded="false" />
+            <element signature="e#416#768#0" expanded="false" />
             <element signature="e#907#3473#0" expanded="false" />
             <element signature="e#1170#2626#0" expanded="false" />
             <element signature="e#1414#2626#0" expanded="false" />
@@ -1065,8 +1052,59 @@
             <element signature="e#3551#4428#0" expanded="false" />
             <element signature="e#3551#3616#0" expanded="false" />
             <element signature="e#3770#4428#0" expanded="false" />
+            <element signature="e#4528#5857#0" expanded="false" />
             <element signature="e#4776#5039#0" expanded="false" />
             <element signature="e#7041#7047#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../vc_typer/blast_db/alleles.fasta">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="78">
+          <caret line="239" column="0" lean-forward="false" selection-start-line="239" selection-start-column="0" selection-end-line="270" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/MGTwebby/docs/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="622">
+          <caret line="114" column="131" lean-forward="false" selection-start-line="114" selection-start-column="131" selection-end-line="114" selection-end-column="131" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../vc_typer/vc_typer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="116" column="58" lean-forward="false" selection-start-line="116" selection-start-column="58" selection-end-line="116" selection-end-column="58" />
+          <folding>
+            <element signature="e#216#1288#0" expanded="false" />
+            <element signature="e#1341#1459#0" expanded="false" />
+            <element signature="e#1522#1754#0" expanded="false" />
+            <element signature="e#1833#2185#0" expanded="false" />
+            <element signature="e#2268#2570#0" expanded="false" />
+            <element signature="e#2637#3305#0" expanded="false" />
+            <element signature="e#3367#3748#0" expanded="false" />
+            <element signature="e#3812#4336#0" expanded="false" />
+            <element signature="e#4391#5205#0" expanded="false" />
+            <element signature="e#4452#4755#0" expanded="false" />
+            <element signature="e#4775#5205#0" expanded="false" />
+            <element signature="e#5259#5894#0" expanded="false" />
+            <element signature="e#5293#5446#0" expanded="false" />
+            <element signature="e#5528#5894#0" expanded="false" />
+            <element signature="e#5735#5869#0" expanded="false" />
+            <element signature="e#5955#6300#0" expanded="false" />
+            <element signature="e#6358#6643#0" expanded="false" />
+            <element signature="e#6553#6618#0" expanded="false" />
+            <element signature="e#6689#6912#0" expanded="false" />
+            <element signature="e#6793#6885#0" expanded="false" />
+            <element signature="e#6944#7330#0" expanded="false" />
+            <element signature="e#7149#7330#0" expanded="false" />
+            <element signature="e#7363#7533#0" expanded="false" />
+            <element signature="e#7556#8849#0" expanded="false" />
+            <element signature="e#7735#8001#0" expanded="false" />
           </folding>
         </state>
       </provider>
