@@ -147,14 +147,14 @@ def main():
     args = parseargs()
 
     #variables
-    start_col = 252
-    end_col = 265
-    min_strains_per_st = 10
+    start_col = 255
+    end_col = 260
+    min_strains_per_st = 5
     percen_contam_strains = 10
-    min_st_for_figure = 50
-    precen_inconsistent_strains = 5
+    min_st_for_figure = 1
+    precen_inconsistent_strains = 10
     relate_results_to = "Wave"
-    infile_path = '/Users/liamcheneyy/Desktop/vcseventh_22/grapetree/seventh/MGT_isolate_data.txt'
+    infile_path = '/Users/liamcheneyy/Desktop/MGT_isolate_data.txt'
 
     #df read
     df, want_attributes = df_setup(infile_path, start_col,end_col)
