@@ -147,12 +147,12 @@ def main():
     args = parseargs()
 
     #variables
-    start_col = 253
-    end_col = 265
+    start_col = 263
+    end_col = 266
     min_strains_per_st = 10
     percen_contam_strains = 10
-    min_st_for_figure = 50
-    precen_inconsistent_strains = 5
+    min_st_for_figure = 2
+    precen_inconsistent_strains = 10
     relate_results_to = "Wave"
     infile_path = '/Users/liamcheneyy/Desktop/vcseventh_22/grapetree/seventh/MGT_isolate_data.txt'
 
