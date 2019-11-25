@@ -122,6 +122,9 @@ def st_freq_and_waves(return_df, st_save_dict, element, not_st_strains_df, min_s
             if sub_df.shape[0] != 0:
                 waves_st_dict[el][MGTST] = sub_df.shape[0]
 
+    total_classified = 0
+    total_unclassified = 0
+    st_num = 0
     print(element, st_save_dict)
     #printing out STs per wave
     for k, v in waves_st_dict.items():
@@ -132,6 +135,8 @@ def st_freq_and_waves(return_df, st_save_dict, element, not_st_strains_df, min_s
                 wave = "Wave " + str(k)
                 freq = x
                 level = i.split(' ')[0]
+                total_classified = total_classified + freq
+                st_num = st_num + 1
                 print(gene, wave, freq, element, level, ST, sep='\t')
 
     #printing out missing strains per ST, per Wave
@@ -141,16 +146,23 @@ def st_freq_and_waves(return_df, st_save_dict, element, not_st_strains_df, min_s
             wave = "Wave " + str(i)
             gene = element.split('_')[0]
             print(gene, wave, wave_missing_st_num, "No_ST", "No_ST", "No_ST", sep='\t')
-            sl(1)
+            total_unclassified = total_unclassified + wave_missing_st_num
+
+    sum_of_all = total_classified + total_unclassified
+    percen_clasified = round(total_classified / sum_of_all * 100,2 )
+    percen_unclassified = round(total_unclassified / sum_of_all * 100, 2)
+
+    print(st_num,sum_of_all, total_classified, percen_clasified, total_unclassified, percen_unclassified,sep='\t')
+    print()
 
 def main():
     args = parseargs()
 
     #variables
-    start_col = 263
-    end_col = 266
+    start_col = 272
+    end_col = 273
     min_strains_per_st = 10
-    percen_contam_strains = 10
+    percen_contam_strains = 15
     min_st_for_figure = 2
     precen_inconsistent_strains = 10
     relate_results_to = "Wave"
@@ -165,7 +177,7 @@ def main():
 
     ##calculting non-overlapping STs
     for element in want_attributes:
-        # print(element)
+        print(element)
 
         ##saving dict
         final_save[element] = {}

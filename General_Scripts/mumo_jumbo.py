@@ -520,3 +520,42 @@ from shutil import copyfile
 #     # print(col)
 #     # sl(1)
 
+# inlist = open('/Users/liamcheneyy/Desktop/arm_abricate.txt').read().splitlines()
+#
+# inlist = [x for x in inlist]
+#
+# df = pd.read_csv('/Users/liamcheneyy/Desktop/vcseventh_22/grapetree/seventh/MGT_isolate_data.txt',sep='\t',low_memory=False, index_col=0)
+# new_df = df[inlist]
+# new_df.to_csv('/Users/liamcheneyy/Desktop/AMR_matrix.csv')
+# print(df
+#       .shape)
+# print(new_df.shape)
+
+# left_df = pd.read_csv('/Users/liamcheneyy/Desktop/left.csv', index_col=0)
+# right_df = pd.read_csv('/Users/liamcheneyy/Desktop/Book2.csv', index_col=0)
+#
+# new = left_df.join(right_df, how='left')
+# print(new)
+# new.to_csv('/Users/liamcheneyy/Desktop/combined.csv')
+
+# inlist = open('/Users/liamcheneyy/Downloads/genomicepidemiology-resfinder_db-149209df6444/antibiotic_classes.txt','r').read().splitlines()
+#
+# class_dict = {}
+# for i in inlist[1:]:
+#     col = i.split('\t')
+#     class_dict[col[0]] = []
+#     for i in col[1:]:
+#         if i != '':
+#             class_dict[col[0]].append(i)
+
+inlist = open('/Users/liamcheneyy/Desktop/Book3.txt','r').read().splitlines()
+inlist_p = [x.lower() for x in inlist]
+
+for line in open('/Users/liamcheneyy/Desktop/amr/card_database.txt').read().splitlines():
+    col = line.split('\t')
+    gene = col[0]
+    Class  = col[3].replace('antibiotic','').lower()
+
+    if Class not in inlist_p:
+        print(Class)
+        print(inlist_p)
