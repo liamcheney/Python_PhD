@@ -548,14 +548,19 @@ from shutil import copyfile
 #         if i != '':
 #             class_dict[col[0]].append(i)
 
-inlist = open('/Users/liamcheneyy/Desktop/Book3.txt','r').read().splitlines()
-inlist_p = [x.lower() for x in inlist]
+# inlist = open('/Users/liamcheneyy/Desktop/Book3.txt','r').read().splitlines()
+# inlist_p = [x.lower() for x in inlist]
 
-for line in open('/Users/liamcheneyy/Desktop/amr/card_database.txt').read().splitlines():
-    col = line.split('\t')
-    gene = col[0]
-    Class  = col[3].replace('antibiotic','').lower()
+for line in open('/Users/liamcheneyy/Desktop/Book4.csv').read().splitlines():
 
-    if Class not in inlist_p:
-        print(Class)
-        print(inlist_p)
+    col = line.split(',')
+    strain = col[0]
+    classes = col[3].count(';')
+    print(classes)
+
+    # gene = col[0]
+    # Class  = col[3].replace('antibiotic','').lower()
+    #
+    # if Class not in inlist_p:
+    #     print(Class)
+    #     print(inlist_p)
