@@ -19,7 +19,7 @@ def main():
     args = parseargs()
 
     #read in dataframe
-    df = pd.read_csv('/Users/liamcheneyy/Desktop/MGT_isolate_data.txt', sep='\t', low_memory=False, index_col=0)
+    df = pd.read_csv('/Users/liamcheneyy/Desktop/vcseventh_22/grapetree/seventh/MGT_isolate_data.txt', sep='\t', low_memory=False, index_col=0)
 
     #create combinations of alleles
     ctxB = ['ctxB1','ctxB3','ctxB4','ctxB5','ctxB7']
@@ -30,23 +30,50 @@ def main():
 
     #prelim check. get numbers of each allele combination
     freq_dict = {}
+    comb_count = 1
+    keep_combination = []
     for comb in combinations:
         sub_df = df[comb]
 
         for i in comb:
             sub_df = sub_df[sub_df[i] == True]
-        print(comb,sub_df.shape)
-        sl(1)
+
+        strains_num = sub_df.shape[0]
+
+        if strains_num > 0:
+            comb_string = '-'.join(comb)
+            freq_dict[comb_string] = {'comb':comb, 'size':strains_num, 'strains':list(sub_df.index)}
+            keep_combination.append(comb_string)
+
+        comb_count = comb_count +1
+
+    zip(keep_combination)
+
+    #get shorthand list results
+    results = []
+    for key, value in freq_dict.items():
+        string = '-'.join(value['comb'])
+        num = value['size']
+        results.append(num)
 
 
-        # print(true_sub_df.shape)
-        # true_sub_df = true_sub_df[true_sub_df[comb[0] == 'TRUE']]
-        # print(true_sub_df)
-        # strains_num = true_sub_df.shape
-        # print(comb, strains_num)
-        # sl(1)
+    #create df and fill TRUE or FALSE for each strain combiniation
+    save_dict = {}
+    len_of_combinations = len(keep_combination)
+    for strain in list(df.index):
+        save_dict[strain] = []
+        for comb in freq_dict.keys():
+            if strain in freq_dict[comb]['strains']:
+                save_dict[strain].append('TRUE')
+            elif strain not in freq_dict[comb]['strains']:
+                save_dict[strain].append('FALSE')
 
-    print(combinations)
+    print('ID', *keep_combination, sep='\t')
+    for key, value in save_dict.items():
+        print(key, *value,sep='\t')
+
+
+
 
 if __name__ == '__main__':
     main()
