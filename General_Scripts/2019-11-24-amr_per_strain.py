@@ -46,36 +46,27 @@ def create_gene_dict(card_db_path,matrix_input):
     card_db_dict = {}
     card_db = open(card_db_path, 'r').read().splitlines()
 
+    #create dict for classes
+    class_dict = {}
+
     for line in card_db[1:]:
-        col = line.split('\t')
+        col = line.split(',')
         Gene_Name = col[0]
-        Protein_Accession = col[1]
+        DNA_Accession = col[1]
         AMR_Gene_Family = col[2]
         Drug_Class = col[3]
-        Resistance_Mechanism = col[4]
+        group = col[4]
+        Resistance_Mechanism = col[5]
         MDRC = col[6]
 
-        card_db_dict[Gene_Name] = {'protein_acc':Protein_Accession,'AMR_fam':AMR_Gene_Family,'drug_class':Drug_Class,
-                                   'resis_mech':Resistance_Mechanism, 'MDRC':MDRC}
+        card_db_dict[Gene_Name] = {'dna_acc':DNA_Accession,'AMR_fam':AMR_Gene_Family,'drug_class':Drug_Class,
+                                   'resis_mech':Resistance_Mechanism, 'MDRC':MDRC, 'group':group}
 
-    # for i in card_db[1:]:
-    #     col = i.split('\t')
-    #     Gene_Name = col[0]
-    #     Drug_Class = col[3]
-    #
-    #     if ';' in Drug_Class:
-    #         ins = Drug_Class.split(';')
-    #         c = len(ins)
-    #         print(Gene_Name, Drug_Class, c, sep='\t')
-    #     else:
-    #         print(Gene_Name, Drug_Class, '1', sep='\t')
-    #
-
-    #create dict for
-
+        # class_dict[]
+    #read in matrix
     matrix = pd.read_csv(matrix_input, index_col=0)
 
-    return card_db_dict,matrix
+    return card_db_dict,matrix,class_dict
 def calc_genes_per_strains(card_db_dict,matrix):
 
     gene_info_dict = {}
@@ -97,11 +88,13 @@ def calc_genes_per_strains(card_db_dict,matrix):
         drug_class_list = []
         AMR_fam_list = []
         resis_mech_list = []
+        group_list = []
 
         for gene in gene_list:
             drug_class = card_db_dict[gene]['drug_class']
             resis_mech = card_db_dict[gene]['resis_mech']
             AMR_fam = card_db_dict[gene]['AMR_fam']
+            group = card_db_dict[gene]['group']
 
             if drug_class not in drug_class_list:
                 drug_class_list.append(drug_class)
@@ -112,7 +105,10 @@ def calc_genes_per_strains(card_db_dict,matrix):
             if resis_mech not in resis_mech_list:
                 resis_mech_list.append(resis_mech)
 
-        print(index, gene_count, len(drug_class_list), len(AMR_fam_list), len(resis_mech_list), card_db_dict[gene]['MDRC'],  sep=',')
+            if group not in group_list:
+                group_list.append(group)
+
+        print(index, gene_count, len(drug_class_list), len(AMR_fam_list), len(resis_mech_list), len(group_list),  sep=',')
 
         gene_info_dict[index]['class_count'] = len(drug_class_list)
         gene_info_dict[index]['fam_count'] = len(AMR_fam_list)
@@ -152,10 +148,10 @@ def main():
     #paths
     matrix_input = '/Users/liamcheneyy/Desktop/amr/AMR_matrix.csv'
     output_path = '/Users/liamcheneyy/Desktop/amr/test_AMR_matrix.csv'
-    card_db_path = '/Users/liamcheneyy/Desktop/amr/card_database.txt'
+    card_db_path = '/Users/liamcheneyy/Desktop/amr/card_database.csv'
 
     #create gene functions dict
-    card_db_dict,matrix = create_gene_dict(card_db_path,matrix_input)
+    card_db_dict,matrix,class_dict = create_gene_dict(card_db_path,matrix_input)
 
     #count AMR per strains
     save_dict = calc_genes_per_strains(card_db_dict,matrix)
