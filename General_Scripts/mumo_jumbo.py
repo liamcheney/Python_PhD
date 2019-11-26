@@ -548,14 +548,113 @@ from shutil import copyfile
 #         if i != '':
 #             class_dict[col[0]].append(i)
 
-inlist = open('/Users/liamcheneyy/Desktop/Book3.txt','r').read().splitlines()
-inlist_p = [x.lower() for x in inlist]
+# inlist = open('/Users/liamcheneyy/Desktop/Book3.txt','r').read().splitlines()
+# inlist_p = [x.lower() for x in inlist]
+#
+# for line in open('/Users/liamcheneyy/Desktop/amr/card_database.txt').read().splitlines():
+#     col = line.split('\t')
+#     gene = col[0]
+#     Class  = col[3].replace('antibiotic','').lower()
+#
+#     if Class not in inlist_p:
+#         print(Class)
+#         print(inlist_p)
 
-for line in open('/Users/liamcheneyy/Desktop/amr/card_database.txt').read().splitlines():
-    col = line.split('\t')
-    gene = col[0]
-    Class  = col[3].replace('antibiotic','').lower()
+# infile = open('/Users/liamcheneyy/Desktop/results.txt').read().splitlines()
+#
+# for line in infile:
+#     strain = line.split(' ')[0]
+#     count = line.count('biotype_cholerae')
+#     if count > 1:
+#         cols = line.split('biotype_cholerae')[1:]
+#         save = []
+#         for i in cols:
+#             # print(cols)
+#             if 'GCA' not in strain:
+#                 keep = i.split('contig')[0].strip()
+#                 save.append(keep)
+#             if 'GCA' in strain:
+#                 keep = i.split('NZ_')[0].strip()
+#                 save.append(keep)
+#
+#         save_string = '-'.join(save)
+#         print(strain, ',', save_string)
+#
+#     else:
+#         if len(line.split(' ')) > 1:
+#             single_keep = line.split('biotype_cholerae')[1].split('contig')[0].strip()
+#             print(strain, ',', single_keep)
+#         if 'biotype' not in line:
+#             print(strain)
 
-    if Class not in inlist_p:
-        print(Class)
-        print(inlist_p)
+# infile = open('/Users/liamcheneyy/Desktop/results.csv').read().splitlines()
+# infile_dict = {}
+# for line in infile:
+#     col = line.split(',')
+#     infile_dict[col[0]] = col[1:]
+#
+# df = pd.read_csv('/Users/liamcheneyy/Desktop/combinations.csv', index_col=0)
+#
+# save_dict = {}
+# for column in df:
+#     save_dict[column] = {}
+#     sub = df[df[column] == True]
+#     strains = list(sub.index)
+#     for i in strains:
+#         save_dict[column][i] = infile_dict[i]
+#
+# for key, value in save_dict.items():
+#     with open('/Users/liamcheneyy/Desktop/combs/' + str(len(value)) + '_' + key + '.txt','w') as out:
+#         for i in value:
+#             out.write(i + '\t')
+#             for x in value[i]:
+#                 out.write(x + '\t')
+#             out.write('\n')
+
+# import glob
+#
+# for filename in glob.iglob('/Users/liamcheneyy/Desktop/combs/1_*txt'):
+#     infile = open(filename,'r').read().splitlines()
+#     combination = '_'.join(filename.split('_')[1:]).replace('.txt','')
+#     for line in infile:
+#         print(combination, line)
+
+# infile = open('/Users/liamcheneyy/Desktop/combs/all.txt').read().splitlines()
+#
+# for line in infile:
+#     col = line.split('\t')
+#     rstR = col[-1]
+#     stain = col[0]
+#
+#     if rstR.count('100') == 2:
+#         print(stain,sep='\t')
+#
+#     if '-' in rstR:
+#         if rstR.count('100') != 2:
+#             print(stain,sep='\t')
+
+import glob
+
+save_dict = {}
+for filename in glob.iglob('/Users/liamcheneyy/Desktop/out/*txt'):
+    infile = open(filename,'r').read().splitlines()
+    strain = filename.split('/')[-1].strip('.txt')
+    keep = infile[0].split('virulence_cholerae')[0]
+    keep = keep.split('biotype_cholerae')[1:]
+    save_list = []
+    save_percen = []
+    save_cov = []
+    for i in keep:
+        ctxb = i[:23].strip(' ')
+        save_list.append(ctxb)
+        percen = ctxb.split()[1]
+        save_percen.append(percen)
+        cov = ctxb.split()[2]
+        save_cov.append(cov)
+
+    if save_percen[0] == save_percen[1] and (save_cov[0] == '375'):
+        # print(strain, save_percen, save_cov)
+        print(strain)
+
+    save_dict[strain] = '-'.join(save_list)
+    # for i in
