@@ -125,7 +125,7 @@ def st_freq_and_waves(return_df, st_save_dict, element, not_st_strains_df, min_s
     total_classified = 0
     total_unclassified = 0
     st_num = 0
-    print(element, st_save_dict)
+    print(element, st_save_dict, sep='\t')
     #printing out STs per wave
     for k, v in waves_st_dict.items():
         for i, x in v.items():
@@ -159,8 +159,8 @@ def main():
     args = parseargs()
 
     #variables
-    start_col = 272
-    end_col = 273
+    start_col = 266
+    end_col = 268
     min_strains_per_st = 10
     percen_contam_strains = 15
     min_st_for_figure = 2
@@ -177,7 +177,7 @@ def main():
 
     ##calculting non-overlapping STs
     for element in want_attributes:
-        print(element)
+        # print(element)
 
         ##saving dict
         final_save[element] = {}

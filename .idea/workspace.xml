@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="808d523f-cfb3-4699-b214-793d2f2a6efd" name="Default" comment="test">
+    <list default="true" id="808d523f-cfb3-4699-b214-793d2f2a6efd" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/General_Scripts/2019-10-20-automate_STs_and_markers.py" afterPath="$PROJECT_DIR$/General_Scripts/2019-10-20-automate_STs_and_markers.py" />
       <change beforePath="$PROJECT_DIR$/General_Scripts/2019-11-22-select_combinations_of_alleles.py" afterPath="$PROJECT_DIR$/General_Scripts/2019-11-22-select_combinations_of_alleles.py" />
@@ -19,8 +19,8 @@
       <file leaf-file-name="2019-10-20-automate_STs_and_markers.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/General_Scripts/2019-10-20-automate_STs_and_markers.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="546">
-              <caret line="162" column="17" lean-forward="true" selection-start-line="162" selection-start-column="17" selection-end-line="162" selection-end-column="17" />
+            <state relative-caret-position="315">
+              <caret line="128" column="12" lean-forward="false" selection-start-line="128" selection-start-column="12" selection-end-line="128" selection-end-column="12" />
               <folding>
                 <element signature="e#87#364#0" expanded="false" />
                 <element signature="e#181#242#0" expanded="false" />
@@ -34,27 +34,17 @@
                 <element signature="e#3551#3616#0" expanded="false" />
                 <element signature="e#3770#4428#0" expanded="false" />
                 <element signature="e#4776#5039#0" expanded="false" />
-                <element signature="e#7584#7590#0" expanded="false" />
+                <element signature="e#7596#7602#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mumo_jumbo.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/General_Scripts/mumo_jumbo.py">
+      <file leaf-file-name="cnvnator.py" pinned="false" current-in-tab="true">
+        <entry file="file://$USER_HOME$/Library/Caches/Transmit/5E2D07C0-7EE2-4B71-8F35-CB8BF8FA8D41/kdm.restech.unsw.edu.au/srv/scratch/z5087966/5_HGT_seventh_pandemic/2019-11-26-cnvnator/sample_data/cnvnator.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="706">
-              <caret line="560" column="22" lean-forward="false" selection-start-line="560" selection-start-column="22" selection-end-line="560" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="2019-11-22-select_combinations_of_alleles.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/General_Scripts/2019-11-22-select_combinations_of_alleles.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="492">
-              <caret line="57" column="0" lean-forward="true" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+            <state relative-caret-position="32">
+              <caret line="25" column="158" lean-forward="false" selection-start-line="25" selection-start-column="151" selection-end-line="25" selection-end-column="158" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -73,8 +63,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>skipped</find>
-      <find>Bordetella</find>
       <find>pertussis</find>
       <find>vibrio</find>
       <find>MGT</find>
@@ -102,6 +90,8 @@
       <find>format</find>
       <find>ctxB7-tcpA_el_A226-rstR_cla</find>
       <find>ctxB3-tcpA_el_WT-rstR_el</find>
+      <find>aminoglycoside</find>
+      <find>df</find>
       <find>sort</find>
     </findStrings>
     <replaceStrings>
@@ -152,9 +142,12 @@
         <option value="$USER_HOME$/MGTwebby/docs/index.html" />
         <option value="$PROJECT_DIR$/../vc_typer/vc_typer.py" />
         <option value="$USER_HOME$/Desktop/3.py" />
+        <option value="$PROJECT_DIR$/General_Scripts/2019-11-24-amr_per_strain.py" />
+        <option value="$PROJECT_DIR$/General_Scripts/mumo_jumbo.py" />
         <option value="$PROJECT_DIR$/General_Scripts/2019-11-22-select_combinations_of_alleles.py" />
         <option value="$PROJECT_DIR$/General_Scripts/2019-10-20-automate_STs_and_markers.py" />
-        <option value="$PROJECT_DIR$/General_Scripts/mumo_jumbo.py" />
+        <option value="$PROJECT_DIR$/General_Scripts/cnvnator.py" />
+        <option value="$USER_HOME$/Library/Caches/Transmit/5E2D07C0-7EE2-4B71-8F35-CB8BF8FA8D41/kdm.restech.unsw.edu.au/srv/scratch/z5087966/5_HGT_seventh_pandemic/2019-11-26-cnvnator/sample_data/cnvnator.py" />
       </list>
     </option>
   </component>
@@ -253,7 +246,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.mumo_jumbo">
+  <component name="RunManager" selected="Python.2019-10-20-automate_STs_and_markers">
     <configuration name="2019-10-20-automate_STs_and_markers" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -272,24 +265,6 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="2019-11-04-vcf_to_fasta" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/General_Scripts" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Python_PhD" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/General_Scripts/2019-11-04-vcf_to_fasta.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
     <configuration name="2019-11-22-select_combinations_of_alleles" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -303,6 +278,24 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Python_PhD" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/General_Scripts/2019-11-22-select_combinations_of_alleles.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="2019-11-24-amr_per_strain" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/General_Scripts" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Python_PhD" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/General_Scripts/2019-11-24-amr_per_strain.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -346,18 +339,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python.mumo_jumbo" />
-      <item index="1" class="java.lang.String" itemvalue="Python.2019-11-04-vcf_to_fasta" />
-      <item index="2" class="java.lang.String" itemvalue="Python.2019-10-20-automate_STs_and_markers" />
-      <item index="3" class="java.lang.String" itemvalue="Python.3" />
-      <item index="4" class="java.lang.String" itemvalue="Python.2019-11-22-select_combinations_of_alleles" />
+      <item index="1" class="java.lang.String" itemvalue="Python.2019-10-20-automate_STs_and_markers" />
+      <item index="2" class="java.lang.String" itemvalue="Python.3" />
+      <item index="3" class="java.lang.String" itemvalue="Python.2019-11-22-select_combinations_of_alleles" />
+      <item index="4" class="java.lang.String" itemvalue="Python.2019-11-24-amr_per_strain" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.mumo_jumbo" />
-        <item index="1" class="java.lang.String" itemvalue="Python.2019-10-20-automate_STs_and_markers" />
-        <item index="2" class="java.lang.String" itemvalue="Python.2019-11-22-select_combinations_of_alleles" />
-        <item index="3" class="java.lang.String" itemvalue="Python.3" />
-        <item index="4" class="java.lang.String" itemvalue="Python.2019-11-04-vcf_to_fasta" />
+        <item index="0" class="java.lang.String" itemvalue="Python.2019-10-20-automate_STs_and_markers" />
+        <item index="1" class="java.lang.String" itemvalue="Python.2019-11-22-select_combinations_of_alleles" />
+        <item index="2" class="java.lang.String" itemvalue="Python.mumo_jumbo" />
+        <item index="3" class="java.lang.String" itemvalue="Python.2019-11-24-amr_per_strain" />
+        <item index="4" class="java.lang.String" itemvalue="Python.3" />
       </list>
     </recent_temporary>
   </component>
@@ -585,7 +578,28 @@
       <option name="project" value="LOCAL" />
       <updated>1574302975511</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="test">
+      <created>1574641961905</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1574641961905</updated>
+    </task>
+    <task id="LOCAL-00032" summary="test">
+      <created>1574652275673</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1574652275673</updated>
+    </task>
+    <task id="LOCAL-00033" summary="test">
+      <created>1574730911586</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1574730911587</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -594,6 +608,7 @@
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20834975" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3950256" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24725677" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32969216" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -606,7 +621,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -628,20 +642,11 @@
           <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="4" />
+      <option name="time" value="5" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/General_Scripts/2019-03-03-MLST_output.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/vcseventh_13/Mgtfi_ref/vibrio_settings_copy.py" />
-    <entry file="file://$USER_HOME$/Desktop/vcseventh_14/Mgtfi_ref/vibrio_settings_copy.py" />
     <entry file="file://$USER_HOME$/MGT_14/Mgt/Mgt/MGT_processing/Reads2MGTAlleles/reads_to_alleles.py" />
     <entry file="file://$USER_HOME$/Library/Caches/Transmit/02EC8337-7F1C-46AF-B2DB-49876C526E13/kdm.science.unsw.edu.au/srv/scratch/lanlab/liam/2019-04-01-reads_to_alleles/Reads2MGTAlleles/reads_to_alleles.py" />
     <entry file="file://$PROJECT_DIR$/General_Scripts/2019-04-28-genes_to_MGT_input.py">
@@ -954,13 +959,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/General_Scripts/compare_allele_profiles.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="8" column="40" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Desktop/3.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="735">
@@ -968,20 +966,65 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/General_Scripts/2019-11-24-amr_per_strain.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="65" column="19" lean-forward="true" selection-start-line="65" selection-start-column="19" selection-end-line="65" selection-end-column="19" />
+          <folding>
+            <element signature="e#122#1458#0" expanded="false" />
+            <element signature="e#364#471#0" expanded="false" />
+            <element signature="e#426#471#0" expanded="false" />
+            <element signature="e#539#685#0" expanded="false" />
+            <element signature="e#608#685#0" expanded="false" />
+            <element signature="e#734#860#0" expanded="false" />
+            <element signature="e#775#860#0" expanded="false" />
+            <element signature="e#3868#3898#0" expanded="false" />
+            <element signature="e#3926#3952#0" expanded="false" />
+            <element signature="e#4843#4850#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/General_Scripts/2019-11-22-select_combinations_of_alleles.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="492">
-          <caret line="57" column="0" lean-forward="true" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+        <state relative-caret-position="251">
+          <caret line="28" column="42" lean-forward="false" selection-start-line="28" selection-start-column="35" selection-end-line="28" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/General_Scripts/compare_allele_profiles.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-17">
+          <caret line="8" column="40" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/General_Scripts/cnvnator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/General_Scripts/mumo_jumbo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1487">
+          <caret line="676" column="19" lean-forward="true" selection-start-line="676" selection-start-column="19" selection-end-line="683" selection-end-column="22" />
+          <folding>
+            <element signature="e#12610#12629#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/General_Scripts/2019-10-20-automate_STs_and_markers.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="546">
-          <caret line="162" column="17" lean-forward="true" selection-start-line="162" selection-start-column="17" selection-end-line="162" selection-end-column="17" />
+        <state relative-caret-position="315">
+          <caret line="128" column="12" lean-forward="false" selection-start-line="128" selection-start-column="12" selection-end-line="128" selection-end-column="12" />
           <folding>
             <element signature="e#87#364#0" expanded="false" />
             <element signature="e#181#242#0" expanded="false" />
@@ -995,16 +1038,18 @@
             <element signature="e#3551#3616#0" expanded="false" />
             <element signature="e#3770#4428#0" expanded="false" />
             <element signature="e#4776#5039#0" expanded="false" />
-            <element signature="e#7584#7590#0" expanded="false" />
+            <element signature="e#7596#7602#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/General_Scripts/mumo_jumbo.py">
+    <entry file="file://$USER_HOME$/Library/Caches/Transmit/5E2D07C0-7EE2-4B71-8F35-CB8BF8FA8D41/kdm.restech.unsw.edu.au/srv/scratch/z5087966/5_HGT_seventh_pandemic/2019-11-26-cnvnator/sample_data/cnvnator.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="706">
-          <caret line="560" column="22" lean-forward="false" selection-start-line="560" selection-start-column="22" selection-end-line="560" selection-end-column="22" />
-          <folding />
+        <state relative-caret-position="32">
+          <caret line="25" column="158" lean-forward="false" selection-start-line="25" selection-start-column="151" selection-end-line="25" selection-end-column="158" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -658,3 +658,27 @@ for filename in glob.iglob('/Users/liamcheneyy/Desktop/out/*txt'):
 
     save_dict[strain] = '-'.join(save_list)
     # for i in
+
+# for line in open('/Users/liamcheneyy/Desktop/Book4.csv').read().splitlines():
+#
+#     col = line.split(',')
+#     strain = col[0]
+#     classes = col[3].count(';')
+#     print(classes)
+
+    # gene = col[0]
+    # Class  = col[3].replace('antibiotic','').lower()
+    #
+    # if Class not in inlist_p:
+    #     print(Class)
+    #     print(inlist_p)
+
+ # import pandas as pd
+# df = pd.read_csv('/Users/liamcheneyy/Desktop/combinations.csv')
+#
+# save_dict = {}
+# for column in df:
+#     sub = df[df[column] == True]
+#     strains = list(sub.index)
+#
+#     print(sub.shape)

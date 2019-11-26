@@ -21,10 +21,12 @@ def main():
     #read in dataframe
     df = pd.read_csv('/Users/liamcheneyy/Desktop/vcseventh_22/grapetree/seventh/MGT_isolate_data.txt', sep='\t', low_memory=False, index_col=0)
 
+    out_path = '/Users/liamcheneyy/Desktop/new_combinations.tsv'
+
     #create combinations of alleles
     ctxB = ['ctxB1','ctxB3','ctxB4','ctxB5','ctxB7']
-    tcpA = ['tcpA_el_A226',	'tcpA_el_WT', 'tcpA_cla_WT']
-    rstR = ['rstR_el', 'rstR_cla']
+    tcpA = ['tcpA_A226',	'tcpA_el', 'tcpA_cla']
+    rstR = ['rstR_el', 'rstR_cla','rst_cla/el']
     combination = list(itertools.product(ctxB, tcpA, rstR))
     combinations = [list(x) for x in combination]
 
@@ -68,9 +70,18 @@ def main():
             elif strain not in freq_dict[comb]['strains']:
                 save_dict[strain].append('FALSE')
 
-    print('ID', *keep_combination, sep='\t')
-    for key, value in save_dict.items():
-        print(key, *value,sep='\t')
+
+    with open(out_path,'w') as out:
+        out.write('ID' + '\t')
+        for i in keep_combination:
+            out.write(i + '\t')
+        out.write('\n')
+
+        for key, value in save_dict.items():
+            out.write(key + '\t')
+            for k in value:
+                out.write(k + '\t')
+            out.write('\n')
 
 
 
