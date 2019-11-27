@@ -19,7 +19,7 @@ def main():
     args = parseargs()
 
     #read in dataframe
-    df = pd.read_csv('/Users/liamcheneyy/Desktop/vcseventh_22/grapetree/seventh/MGT_isolate_data.txt', sep='\t', low_memory=False, index_col=0)
+    df = pd.read_csv('/Users/liamcheneyy/Desktop/done/simple_blast_results.csv', sep=',', low_memory=False, index_col=0)
 
     out_path = '/Users/liamcheneyy/Desktop/new_combinations.tsv'
 

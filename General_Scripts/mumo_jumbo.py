@@ -633,31 +633,31 @@ from shutil import copyfile
 #         if rstR.count('100') != 2:
 #             print(stain,sep='\t')
 
-import glob
-
-save_dict = {}
-for filename in glob.iglob('/Users/liamcheneyy/Desktop/out/*txt'):
-    infile = open(filename,'r').read().splitlines()
-    strain = filename.split('/')[-1].strip('.txt')
-    keep = infile[0].split('virulence_cholerae')[0]
-    keep = keep.split('biotype_cholerae')[1:]
-    save_list = []
-    save_percen = []
-    save_cov = []
-    for i in keep:
-        ctxb = i[:23].strip(' ')
-        save_list.append(ctxb)
-        percen = ctxb.split()[1]
-        save_percen.append(percen)
-        cov = ctxb.split()[2]
-        save_cov.append(cov)
-
-    if save_percen[0] == save_percen[1] and (save_cov[0] == '375'):
-        # print(strain, save_percen, save_cov)
-        print(strain)
-
-    save_dict[strain] = '-'.join(save_list)
-    # for i in
+# import glob
+#
+# save_dict = {}
+# for filename in glob.iglob('/Users/liamcheneyy/Desktop/out/*txt'):
+#     infile = open(filename,'r').read().splitlines()
+#     strain = filename.split('/')[-1].strip('.txt')
+#     keep = infile[0].split('virulence_cholerae')[0]
+#     keep = keep.split('biotype_cholerae')[1:]
+#     save_list = []
+#     save_percen = []
+#     save_cov = []
+#     for i in keep:
+#         ctxb = i[:23].strip(' ')
+#         save_list.append(ctxb)
+#         percen = ctxb.split()[1]
+#         save_percen.append(percen)
+#         cov = ctxb.split()[2]
+#         save_cov.append(cov)
+#
+#     if save_percen[0] == save_percen[1] and (save_cov[0] == '375'):
+#         # print(strain, save_percen, save_cov)
+#         print(strain)
+#
+#     save_dict[strain] = '-'.join(save_list)
+#     # for i in
 
 # for line in open('/Users/liamcheneyy/Desktop/Book4.csv').read().splitlines():
 #
@@ -682,3 +682,13 @@ for filename in glob.iglob('/Users/liamcheneyy/Desktop/out/*txt'):
 #     strains = list(sub.index)
 #
 #     print(sub.shape)
+
+inlist_path = open('/Users/liamcheneyy/Desktop/list.txt').read().splitlines()
+
+inlist = [x for x in inlist_path]
+
+df = pd.read_csv('/Users/liamcheneyy/Desktop/input.txt', sep='\t')
+
+df = df.fillna('FALSE')
+df = df[inlist]
+df.to_csv('/Users/liamcheneyy/Desktop/input_check.csv')

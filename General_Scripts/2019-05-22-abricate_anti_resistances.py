@@ -11,8 +11,7 @@ def get_all_gene_types(args):
     strain_list = []
     for filename in glob.iglob(args.input_folder + '/*sv'):
         infile = open(filename,'r').read().splitlines()
-        accession = filename.split('/')[-1].strip("_abricate.tsv")
-        print(accession)
+        accession = filename.split('/')[-1].strip("_abricate.csv")
 
         if accession not in strain_list:
             strain_list.append(accession)
