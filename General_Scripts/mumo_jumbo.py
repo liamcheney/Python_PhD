@@ -683,12 +683,112 @@ from shutil import copyfile
 #
 #     print(sub.shape)
 
-inlist_path = open('/Users/liamcheneyy/Desktop/list.txt').read().splitlines()
+# import glob,re
+#
+# save_dict = {}
+# for file in glob.iglob('/Users/liamcheneyy/Desktop/x/*txt'):
+#     infile = open(file).read()
+#     sep = re.split("\n[0-9]*\:", infile)
+#
+#     bioproject = file.split('/')[-1].strip('.txt')
+#
+#     for strains in sep:
+#         strain = ''
+#         year = ''
+#         country = ''
+#         strain_id = ''
+#
+#         lines = strains.split('\n')
+#
+#         for line in lines:
+#             if 'SRA:' in line:
+#                 strain = line.split('SRA: ')[-1]
+#
+#                 if strain not in save_dict.keys():
+#                     save_dict[strain] = {}
+#
+#                 elif strain in save_dict.keys():
+#                     print(strain)
+#
+#             if ('date' in line or 'year' in line) and ('update' not in line) and ('issing' not in line) and ('not' not in line):
+#                 year = line.split('=')[-1].strip(""" " """)
+#
+#             if 'location' in line and ('long' not in line and 'lat' not in line and 'issing' not in line) and ('not' not in line):
+#                 if 'not' in line:
+#                     pass
+#                 else:
+#                     country = line.split('=')[-1].strip(""" " """)
+#
+#             if 'strain' in line and ('not' not in line) and ('issing' not in line):
+#                 strain_id = line.split('=')[-1].strip(""" " """)
+#
+#             # if 'isolate' in line:
+#             #     print(line)
+#
+#         save_dict[strain] = {'country':country, 'year':year, 'strain':strain_id, 'bioproject':bioproject}
+#
+# import pandas as pd
+#
+# df = pd.DataFrame(save_dict).T
+# df.replace()
+#
+# df.to_csv('/Users/liamcheneyy/Desktop/x/all.csv')
 
-inlist = [x for x in inlist_path]
+# keep_list = []
+# df = pd.read_csv('/Users/liamcheneyy/Desktop/Untitle.txt', sep='\t', index_col=0)
+#
+# count = 1
+#
+# for col in df:
+#     sub = df[df[col] == True]
+#     sub = sub[col]
+#     strains = list(sub.index)
+#     if '/' in col:
+#         col = col.split('/')[0] + '-' + col.split('/')[-1]
+#
+#     if len(strains) <= 21:
+#         keep_list.append(strains)
+#
+#     # sub.to_csv('/Users/liamcheneyy/Desktop/combs/' + str(len(strains)) + '_' + str(col) + '.csv', header=['ID',col])
+#
+# keep = [i for x in keep_list for i in x]
+# for i in keep:
+#     print(i)
 
-df = pd.read_csv('/Users/liamcheneyy/Desktop/input.txt', sep='\t')
+# import glob
+#
+# details = pd.read_csv('/Users/liamcheneyy/Desktop/test/simple_blast_results.csv', index_col=0)
+#
+# for filename in glob.iglob('/Users/liamcheneyy/Desktop/combs/*csv'):
+#     file = filename.strip('.csv')
+#     df = pd.read_csv(filename, index_col=0)
+#     strains = list(df.index)
+#     sub = details[details.index.isin(strains)]
+#     sub = sub.replace(to_replace='NaN',value='')
+#     sub.to_csv(file + '_details.csv')
+#     print(sub)
 
-df = df.fillna('FALSE')
-df = df[inlist]
-df.to_csv('/Users/liamcheneyy/Desktop/input_check.csv')
+# import glob
+# for filename in glob.iglob('/Users/liamcheneyy/Desktop/taking/*'):
+#     infile = open(filename).read().splitlines()
+#     strain = filename.split('/')[-1].strip('.tsv')
+#     save_list = []
+#     for line in infile:
+#         if 'biotype' in line and 'rstR' in line:
+#             col = line.split('\t')
+#             cov = col[3]
+#             percen = int(cov.split('/')[0].strip('')) / int(cov.split('/')[0].strip(''))
+#             save_list.append(percen)
+#
+#     if save_list[0] == save_list[1]:
+#         print(strain)
+
+from Bio import SeqIO
+from Bio.Seq import Seq
+
+
+for record in SeqIO.parse('/Users/liamcheneyy/Desktop/tt/Untitled.fasta','fasta'):
+    outfile = '/Users/liamcheneyy/Desktop/ref_index/xx.fasta'
+    SeqIO.write(record,outfile,'fasta')
+
+

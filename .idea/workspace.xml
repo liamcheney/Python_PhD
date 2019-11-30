@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="808d523f-cfb3-4699-b214-793d2f2a6efd" name="Default" comment="">
+    <list default="true" id="808d523f-cfb3-4699-b214-793d2f2a6efd" name="Default" comment="test">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/General_Scripts/2019-10-20-automate_STs_and_markers.py" afterPath="$PROJECT_DIR$/General_Scripts/2019-10-20-automate_STs_and_markers.py" />
-      <change beforePath="$PROJECT_DIR$/General_Scripts/2019-11-22-select_combinations_of_alleles.py" afterPath="$PROJECT_DIR$/General_Scripts/2019-11-22-select_combinations_of_alleles.py" />
       <change beforePath="$PROJECT_DIR$/General_Scripts/mumo_jumbo.py" afterPath="$PROJECT_DIR$/General_Scripts/mumo_jumbo.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,37 +14,89 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="2019-10-20-automate_STs_and_markers.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/General_Scripts/2019-10-20-automate_STs_and_markers.py">
+      <file leaf-file-name="cnvnator.py" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/Library/Caches/Transmit/88D263E0-FF96-4FCB-AD3F-C1C394989199/kdm.restech.unsw.edu.au/srv/scratch/z5087966/5_HGT_seventh_pandemic/2019-11-26-cnvnator/sample_data/cnvnator.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="128" column="12" lean-forward="false" selection-start-line="128" selection-start-column="12" selection-end-line="128" selection-end-column="12" />
+            <state relative-caret-position="695">
+              <caret line="250" column="22" lean-forward="false" selection-start-line="250" selection-start-column="22" selection-end-line="250" selection-end-column="22" />
               <folding>
-                <element signature="e#87#364#0" expanded="false" />
-                <element signature="e#181#242#0" expanded="false" />
-                <element signature="e#416#768#0" expanded="false" />
-                <element signature="e#907#3473#0" expanded="false" />
-                <element signature="e#1170#2626#0" expanded="false" />
-                <element signature="e#1414#2626#0" expanded="false" />
-                <element signature="e#1878#2479#0" expanded="false" />
-                <element signature="e#2078#2479#0" expanded="false" />
-                <element signature="e#3551#4428#0" expanded="false" />
-                <element signature="e#3551#3616#0" expanded="false" />
-                <element signature="e#3770#4428#0" expanded="false" />
-                <element signature="e#4776#5039#0" expanded="false" />
-                <element signature="e#7596#7602#0" expanded="false" />
+                <element signature="e#0#15#0" expanded="true" />
+                <element signature="e#130#2130#0" expanded="false" />
+                <element signature="e#2182#2955#0" expanded="false" />
+                <element signature="e#3088#5806#0" expanded="false" />
+                <element signature="e#5849#6841#0" expanded="false" />
+                <element signature="e#6908#7570#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cnvnator.py" pinned="false" current-in-tab="true">
-        <entry file="file://$USER_HOME$/Library/Caches/Transmit/5E2D07C0-7EE2-4B71-8F35-CB8BF8FA8D41/kdm.restech.unsw.edu.au/srv/scratch/z5087966/5_HGT_seventh_pandemic/2019-11-26-cnvnator/sample_data/cnvnator.py">
+      <file leaf-file-name="mumo_jumbo.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/General_Scripts/mumo_jumbo.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="32">
-              <caret line="25" column="158" lean-forward="false" selection-start-line="25" selection-start-column="151" selection-end-line="25" selection-end-column="158" />
+            <state relative-caret-position="1144">
+              <caret line="791" column="39" lean-forward="false" selection-start-line="791" selection-start-column="39" selection-end-line="791" selection-end-column="39" />
               <folding>
-                <element signature="e#0#15#0" expanded="true" />
+                <element signature="e#12610#12629#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="alleles.fasta" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../vc_typer/blast_db/alleles.fasta">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="111" column="0" lean-forward="false" selection-start-line="111" selection-start-column="0" selection-end-line="111" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="vc_typer.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../vc_typer/vc_typer.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="510">
+              <caret line="160" column="48" lean-forward="false" selection-start-line="160" selection-start-column="48" selection-end-line="160" selection-end-column="48" />
+              <folding>
+                <element signature="e#216#1606#0" expanded="false" />
+                <element signature="e#642#1548#0" expanded="false" />
+                <element signature="e#999#1467#0" expanded="false" />
+                <element signature="e#1235#1467#0" expanded="false" />
+                <element signature="e#1324#1379#0" expanded="false" />
+                <element signature="e#1659#1777#0" expanded="false" />
+                <element signature="e#1840#2072#0" expanded="false" />
+                <element signature="e#2151#2503#0" expanded="false" />
+                <element signature="e#2586#2888#0" expanded="false" />
+                <element signature="e#2698#2864#0" expanded="false" />
+                <element signature="e#2742#2864#0" expanded="false" />
+                <element signature="e#2956#3833#0" expanded="false" />
+                <element signature="e#3030#3809#0" expanded="false" />
+                <element signature="e#3347#3416#0" expanded="false" />
+                <element signature="e#3473#3809#0" expanded="false" />
+                <element signature="e#3646#3809#0" expanded="false" />
+                <element signature="e#3895#4276#0" expanded="false" />
+                <element signature="e#3965#4245#0" expanded="false" />
+                <element signature="e#4179#4245#0" expanded="false" />
+                <element signature="e#4340#4795#0" expanded="false" />
+                <element signature="e#4382#4795#0" expanded="false" />
+                <element signature="e#4747#4795#0" expanded="false" />
+                <element signature="e#5718#6460#0" expanded="false" />
+                <element signature="e#6194#6435#0" expanded="false" />
+                <element signature="e#6333#6407#0" expanded="false" />
+                <element signature="e#6922#7207#0" expanded="false" />
+                <element signature="e#7117#7182#0" expanded="false" />
+                <element signature="e#7253#7476#0" expanded="false" />
+                <element signature="e#7357#7449#0" expanded="false" />
+                <element signature="e#7508#7894#0" expanded="false" />
+                <element signature="e#7544#7693#0" expanded="false" />
+                <element signature="e#7560#7664#0" expanded="false" />
+                <element signature="e#7713#7894#0" expanded="false" />
+                <element signature="e#7927#8097#0" expanded="false" />
+                <element signature="e#8120#9566#0" expanded="false" />
+                <element signature="e#8299#8565#0" expanded="false" />
+                <element signature="e#9587#9871#0" expanded="false" />
+                <element signature="e#9777#9871#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -63,19 +113,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>pertussis</find>
-      <find>vibrio</find>
-      <find>MGT</find>
-      <find>vcs</find>
-      <find>MGT_2</find>
-      <find>vcse</find>
-      <find>parseargs</find>
-      <find>genericin</find>
-      <find>mgt_l</find>
-      <find>9</find>
-      <find>vcseve</find>
-      <find>22</find>
-      <find>21</find>
       <find>','</find>
       <find>\t</find>
       <find>abricate</find>
@@ -92,7 +129,20 @@
       <find>ctxB3-tcpA_el_WT-rstR_el</find>
       <find>aminoglycoside</find>
       <find>df</find>
+      <find>check</find>
+      <find>glob</find>
+      <find>AMR_matrix</find>
+      <find>card</find>
+      <find>arm_abricate</find>
       <find>sort</find>
+      <find>MGT</find>
+      <find>MGT_</find>
+      <find>MGT_2</find>
+      <find>rstR</find>
+      <find>rstR_el</find>
+      <find>#</find>
+      <find>input</find>
+      <find>count</find>
     </findStrings>
     <replaceStrings>
       <replace>allele</replace>
@@ -103,7 +153,8 @@
     </replaceStrings>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="PUSH_AUTO_UPDATE" value="true" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../vc_typer" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -132,30 +183,39 @@
         <option value="$PROJECT_DIR$/General_Scripts/2019-08-04-make_snp_alignment_frm_db.py" />
         <option value="$PROJECT_DIR$/General_Scripts/2019-11-04-snps_to_tree.py" />
         <option value="$PROJECT_DIR$/General_Scripts/2019-11-04-vcf_to_fasta.py" />
-        <option value="$PROJECT_DIR$/General_Scripts/2019-05-22-abricate_anti_resistances.py" />
         <option value="$PROJECT_DIR$/General_Scripts/2019-05-29-ST_per_scheme.py" />
         <option value="$PROJECT_DIR$/General_Scripts/2019-11-04-count_inconsistency.py" />
         <option value="$USER_HOME$/MGTwebby/docs/news.html" />
         <option value="$USER_HOME$/miniconda3/envs/p3env/lib/python3.6/site-packages/pandas/core/dtypes/cast.py" />
         <option value="$PROJECT_DIR$/../vc_typer/blast_db/old_alleles.fasta" />
-        <option value="$PROJECT_DIR$/../vc_typer/blast_db/alleles.fasta" />
-        <option value="$USER_HOME$/MGTwebby/docs/index.html" />
-        <option value="$PROJECT_DIR$/../vc_typer/vc_typer.py" />
         <option value="$USER_HOME$/Desktop/3.py" />
         <option value="$PROJECT_DIR$/General_Scripts/2019-11-24-amr_per_strain.py" />
-        <option value="$PROJECT_DIR$/General_Scripts/mumo_jumbo.py" />
-        <option value="$PROJECT_DIR$/General_Scripts/2019-11-22-select_combinations_of_alleles.py" />
         <option value="$PROJECT_DIR$/General_Scripts/2019-10-20-automate_STs_and_markers.py" />
         <option value="$PROJECT_DIR$/General_Scripts/cnvnator.py" />
         <option value="$USER_HOME$/Library/Caches/Transmit/5E2D07C0-7EE2-4B71-8F35-CB8BF8FA8D41/kdm.restech.unsw.edu.au/srv/scratch/z5087966/5_HGT_seventh_pandemic/2019-11-26-cnvnator/sample_data/cnvnator.py" />
+        <option value="$USER_HOME$/Library/Caches/Transmit/88D263E0-FF96-4FCB-AD3F-C1C394989199/kdm.restech.unsw.edu.au/srv/scratch/z5087966/5_HGT_seventh_pandemic/2019-11-26-cnvnator/sample_data/cnvnator.py" />
+        <option value="$PROJECT_DIR$/General_Scripts/2019-11-22-select_combinations_of_alleles.py" />
+        <option value="$USER_HOME$/Desktop/done/xx.py" />
+        <option value="$PROJECT_DIR$/General_Scripts/2019-05-22-abricate_anti_resistances.py" />
+        <option value="$USER_HOME$/Desktop/vcseventh_23/Mgtfi_ref/vibrio_settings_copy.py" />
+        <option value="$USER_HOME$/Desktop/vcseventh_23/Mgtfi_ref/Allele_to_mgt_db.py" />
+        <option value="$USER_HOME$/MGTwebby/docs/contacts.html" />
+        <option value="$USER_HOME$/MGTwebby/docs/projects.html" />
+        <option value="$USER_HOME$/MGTwebby/docs/members.html" />
+        <option value="$USER_HOME$/MGTwebby/docs/links.html" />
+        <option value="$USER_HOME$/MGTwebby/docs/index.html" />
+        <option value="$USER_HOME$/MGTwebby/docs/publications.html" />
+        <option value="$PROJECT_DIR$/../vc_typer/vc_typer.py" />
+        <option value="$PROJECT_DIR$/General_Scripts/mumo_jumbo.py" />
+        <option value="$PROJECT_DIR$/../vc_typer/blast_db/alleles.fasta" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="x" value="157" />
-    <option name="y" value="686" />
-    <option name="width" value="1744" />
-    <option name="height" value="1324" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="13" />
+    <option name="y" value="23" />
+    <option name="width" value="2560" />
+    <option name="height" value="989" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -246,8 +306,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.2019-10-20-automate_STs_and_markers">
-    <configuration name="2019-10-20-automate_STs_and_markers" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.mumo_jumbo">
+    <configuration name="2018-08-10-MGT_locus_preference_filters" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -259,7 +319,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Python_PhD" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/General_Scripts/2019-10-20-automate_STs_and_markers.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/General_Scripts/2018-08-10-MGT_locus_preference_filters.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -283,42 +343,6 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="2019-11-24-amr_per_strain" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/General_Scripts" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Python_PhD" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/General_Scripts/2019-11-24-amr_per_strain.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
-    <configuration name="3" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$USER_HOME$/Desktop" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="vc_typer" />
-      <option name="SCRIPT_NAME" value="$USER_HOME$/Desktop/3.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
     <configuration name="mumo_jumbo" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -337,20 +361,56 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
+    <configuration name="vc_typer" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../vc_typer" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="vc_typer" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../vc_typer/vc_typer.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="xx" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$USER_HOME$/Desktop/done" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="vc_typer" />
+      <option name="SCRIPT_NAME" value="$USER_HOME$/Desktop/done/xx.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python.mumo_jumbo" />
-      <item index="1" class="java.lang.String" itemvalue="Python.2019-10-20-automate_STs_and_markers" />
-      <item index="2" class="java.lang.String" itemvalue="Python.3" />
-      <item index="3" class="java.lang.String" itemvalue="Python.2019-11-22-select_combinations_of_alleles" />
-      <item index="4" class="java.lang.String" itemvalue="Python.2019-11-24-amr_per_strain" />
+      <item index="1" class="java.lang.String" itemvalue="Python.2019-11-22-select_combinations_of_alleles" />
+      <item index="2" class="java.lang.String" itemvalue="Python.xx" />
+      <item index="3" class="java.lang.String" itemvalue="Python.2018-08-10-MGT_locus_preference_filters" />
+      <item index="4" class="java.lang.String" itemvalue="Python.vc_typer" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.2019-10-20-automate_STs_and_markers" />
-        <item index="1" class="java.lang.String" itemvalue="Python.2019-11-22-select_combinations_of_alleles" />
-        <item index="2" class="java.lang.String" itemvalue="Python.mumo_jumbo" />
-        <item index="3" class="java.lang.String" itemvalue="Python.2019-11-24-amr_per_strain" />
-        <item index="4" class="java.lang.String" itemvalue="Python.3" />
+        <item index="0" class="java.lang.String" itemvalue="Python.mumo_jumbo" />
+        <item index="1" class="java.lang.String" itemvalue="Python.vc_typer" />
+        <item index="2" class="java.lang.String" itemvalue="Python.2018-08-10-MGT_locus_preference_filters" />
+        <item index="3" class="java.lang.String" itemvalue="Python.xx" />
+        <item index="4" class="java.lang.String" itemvalue="Python.2019-11-22-select_combinations_of_alleles" />
       </list>
     </recent_temporary>
   </component>
@@ -599,21 +659,42 @@
       <option name="project" value="LOCAL" />
       <updated>1574730911587</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="test">
+      <created>1574748465034</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1574748465034</updated>
+    </task>
+    <task id="LOCAL-00035" summary="test">
+      <created>1574898808562</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1574898808562</updated>
+    </task>
+    <task id="LOCAL-00036" summary="test">
+      <created>1575076939639</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1575076939639</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="2560" height="1440" extended-state="0" />
+    <frame x="13" y="23" width="2560" height="989" extended-state="0" />
     <layout>
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20834975" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3950256" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2201902" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24725677" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32969216" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24899274" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26700804" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4082774" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -642,36 +723,11 @@
           <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="5" />
+      <option name="time" value="10" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/MGT_14/Mgt/Mgt/MGT_processing/Reads2MGTAlleles/reads_to_alleles.py" />
-    <entry file="file://$USER_HOME$/Library/Caches/Transmit/02EC8337-7F1C-46AF-B2DB-49876C526E13/kdm.science.unsw.edu.au/srv/scratch/lanlab/liam/2019-04-01-reads_to_alleles/Reads2MGTAlleles/reads_to_alleles.py" />
-    <entry file="file://$PROJECT_DIR$/General_Scripts/2019-04-28-genes_to_MGT_input.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="17" lean-forward="false" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/General_Scripts/2019-02-22-new_roary_gap_processing.py" />
-    <entry file="file://$USER_HOME$/miniconda3/envs/p3env/lib/python3.6/site-packages/pandas/core/strings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="1916" column="0" lean-forward="false" selection-start-line="1916" selection-start-column="0" selection-end-line="1916" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/miniconda3/envs/p3env/lib/python3.6/site-packages/pandas/core/generic.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="4367" column="0" lean-forward="false" selection-start-line="4367" selection-start-column="0" selection-end-line="4367" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../vc_typer/CTX_allele_caller.py" />
     <entry file="file://$PROJECT_DIR$/General_Scripts/2019-05-08-calculate_STs_per_wave.py" />
     <entry file="file://$PROJECT_DIR$/Grapetree/grapetree_metadata.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -719,13 +775,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="134" column="0" lean-forward="true" selection-start-line="134" selection-start-column="0" selection-end-line="134" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/General_Scripts/2018-08-10-MGT_locus_preference_filters.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="33" column="12" lean-forward="false" selection-start-line="33" selection-start-column="12" selection-end-line="33" selection-end-column="12" />
         </state>
       </provider>
     </entry>
@@ -858,20 +907,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/MGTwebby/docs/members.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-408">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/General_Scripts/2019-05-22-abricate_anti_resistances.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="387">
-          <caret line="44" column="87" lean-forward="false" selection-start-line="44" selection-start-column="71" selection-end-line="44" selection-end-column="87" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/General_Scripts/2019-11-04-count_inconsistency.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3045">
@@ -884,13 +919,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="570">
           <caret line="62" column="25" lean-forward="false" selection-start-line="62" selection-start-column="25" selection-end-line="62" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/MGTwebby/docs/projects.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-457">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -935,27 +963,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="222" column="31" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="374" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/MGTwebby/docs/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="622">
-          <caret line="114" column="131" lean-forward="false" selection-start-line="114" selection-start-column="131" selection-end-line="114" selection-end-column="131" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../vc_typer/vc_typer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="116" column="58" lean-forward="false" selection-start-line="116" selection-start-column="58" selection-end-line="116" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../vc_typer/blast_db/alleles.fasta">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="78">
-          <caret line="239" column="0" lean-forward="false" selection-start-line="239" selection-start-column="0" selection-end-line="270" selection-end-column="36" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -966,10 +974,61 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/General_Scripts/cnvnator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#15#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Caches/Transmit/5E2D07C0-7EE2-4B71-8F35-CB8BF8FA8D41/kdm.restech.unsw.edu.au/srv/scratch/z5087966/5_HGT_seventh_pandemic/2019-11-26-cnvnator/sample_data/cnvnator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="32">
+          <caret line="25" column="158" lean-forward="false" selection-start-line="25" selection-start-column="151" selection-end-line="25" selection-end-column="158" />
+          <folding>
+            <element signature="e#0#15#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/General_Scripts/compare_allele_profiles.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="8" column="40" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/done/xx.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="5" column="16" lean-forward="false" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/General_Scripts/2019-05-22-abricate_anti_resistances.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding>
+            <element signature="e#827#1484#0" expanded="false" />
+            <element signature="e#884#1460#0" expanded="false" />
+            <element signature="e#1236#1460#0" expanded="false" />
+            <element signature="e#1535#1938#0" expanded="false" />
+            <element signature="e#1620#1938#0" expanded="false" />
+            <element signature="e#1798#1938#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/General_Scripts/2019-11-24-amr_per_strain.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="65" column="19" lean-forward="true" selection-start-line="65" selection-start-column="19" selection-end-line="65" selection-end-column="19" />
+        <state relative-caret-position="45">
+          <caret line="42" column="48" lean-forward="false" selection-start-line="42" selection-start-column="48" selection-end-line="42" selection-end-column="48" />
           <folding>
             <element signature="e#122#1458#0" expanded="false" />
             <element signature="e#364#471#0" expanded="false" />
@@ -978,6 +1037,11 @@
             <element signature="e#608#685#0" expanded="false" />
             <element signature="e#734#860#0" expanded="false" />
             <element signature="e#775#860#0" expanded="false" />
+            <element signature="e#1513#2282#0" expanded="false" />
+            <element signature="e#1970#2143#0" expanded="false" />
+            <element signature="e#2337#4402#0" expanded="false" />
+            <element signature="e#2477#3914#0" expanded="false" />
+            <element signature="e#2955#3534#0" expanded="false" />
             <element signature="e#3868#3898#0" expanded="false" />
             <element signature="e#3926#3952#0" expanded="false" />
             <element signature="e#4843#4850#0" expanded="false" />
@@ -987,37 +1051,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/General_Scripts/2019-11-22-select_combinations_of_alleles.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="28" column="42" lean-forward="false" selection-start-line="28" selection-start-column="35" selection-end-line="28" selection-end-column="42" />
+        <state relative-caret-position="255">
+          <caret line="21" column="87" lean-forward="false" selection-start-line="21" selection-start-column="87" selection-end-line="21" selection-end-column="87" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/General_Scripts/compare_allele_profiles.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-17">
-          <caret line="8" column="40" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/General_Scripts/cnvnator.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/General_Scripts/mumo_jumbo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1487">
-          <caret line="676" column="19" lean-forward="true" selection-start-line="676" selection-start-column="19" selection-end-line="683" selection-end-column="22" />
-          <folding>
-            <element signature="e#12610#12629#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1043,13 +1079,155 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Library/Caches/Transmit/5E2D07C0-7EE2-4B71-8F35-CB8BF8FA8D41/kdm.restech.unsw.edu.au/srv/scratch/z5087966/5_HGT_seventh_pandemic/2019-11-26-cnvnator/sample_data/cnvnator.py">
+    <entry file="file://$USER_HOME$/Desktop/vcseventh_23/Mgtfi_ref/vibrio_settings_copy.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="32">
-          <caret line="25" column="158" lean-forward="false" selection-start-line="25" selection-start-column="151" selection-end-line="25" selection-end-column="158" />
+        <state relative-caret-position="2235">
+          <caret line="149" column="25" lean-forward="false" selection-start-line="149" selection-start-column="22" selection-end-line="149" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/vcseventh_23/Mgtfi_ref/Allele_to_mgt_db.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="326">
+          <caret line="306" column="62" lean-forward="false" selection-start-line="306" selection-start-column="57" selection-end-line="306" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/MGTwebby/docs/contacts.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="645">
+          <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/MGTwebby/docs/projects.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="645">
+          <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/MGTwebby/docs/members.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="645">
+          <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/MGTwebby/docs/links.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="645">
+          <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/MGTwebby/docs/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/MGTwebby/docs/publications.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1020">
+          <caret line="68" column="18" lean-forward="false" selection-start-line="68" selection-start-column="18" selection-end-line="68" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/General_Scripts/2018-08-10-MGT_locus_preference_filters.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="33" column="12" lean-forward="false" selection-start-line="33" selection-start-column="12" selection-end-line="33" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Caches/Transmit/88D263E0-FF96-4FCB-AD3F-C1C394989199/kdm.restech.unsw.edu.au/srv/scratch/z5087966/5_HGT_seventh_pandemic/2019-11-26-cnvnator/sample_data/cnvnator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="695">
+          <caret line="250" column="22" lean-forward="false" selection-start-line="250" selection-start-column="22" selection-end-line="250" selection-end-column="22" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
+            <element signature="e#130#2130#0" expanded="false" />
+            <element signature="e#2182#2955#0" expanded="false" />
+            <element signature="e#3088#5806#0" expanded="false" />
+            <element signature="e#5849#6841#0" expanded="false" />
+            <element signature="e#6908#7570#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/General_Scripts/mumo_jumbo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1144">
+          <caret line="791" column="39" lean-forward="false" selection-start-line="791" selection-start-column="39" selection-end-line="791" selection-end-column="39" />
+          <folding>
+            <element signature="e#12610#12629#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../vc_typer/vc_typer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="160" column="48" lean-forward="false" selection-start-line="160" selection-start-column="48" selection-end-line="160" selection-end-column="48" />
+          <folding>
+            <element signature="e#216#1606#0" expanded="false" />
+            <element signature="e#642#1548#0" expanded="false" />
+            <element signature="e#999#1467#0" expanded="false" />
+            <element signature="e#1235#1467#0" expanded="false" />
+            <element signature="e#1324#1379#0" expanded="false" />
+            <element signature="e#1659#1777#0" expanded="false" />
+            <element signature="e#1840#2072#0" expanded="false" />
+            <element signature="e#2151#2503#0" expanded="false" />
+            <element signature="e#2586#2888#0" expanded="false" />
+            <element signature="e#2698#2864#0" expanded="false" />
+            <element signature="e#2742#2864#0" expanded="false" />
+            <element signature="e#2956#3833#0" expanded="false" />
+            <element signature="e#3030#3809#0" expanded="false" />
+            <element signature="e#3347#3416#0" expanded="false" />
+            <element signature="e#3473#3809#0" expanded="false" />
+            <element signature="e#3646#3809#0" expanded="false" />
+            <element signature="e#3895#4276#0" expanded="false" />
+            <element signature="e#3965#4245#0" expanded="false" />
+            <element signature="e#4179#4245#0" expanded="false" />
+            <element signature="e#4340#4795#0" expanded="false" />
+            <element signature="e#4382#4795#0" expanded="false" />
+            <element signature="e#4747#4795#0" expanded="false" />
+            <element signature="e#5718#6460#0" expanded="false" />
+            <element signature="e#6194#6435#0" expanded="false" />
+            <element signature="e#6333#6407#0" expanded="false" />
+            <element signature="e#6922#7207#0" expanded="false" />
+            <element signature="e#7117#7182#0" expanded="false" />
+            <element signature="e#7253#7476#0" expanded="false" />
+            <element signature="e#7357#7449#0" expanded="false" />
+            <element signature="e#7508#7894#0" expanded="false" />
+            <element signature="e#7544#7693#0" expanded="false" />
+            <element signature="e#7560#7664#0" expanded="false" />
+            <element signature="e#7713#7894#0" expanded="false" />
+            <element signature="e#7927#8097#0" expanded="false" />
+            <element signature="e#8120#9566#0" expanded="false" />
+            <element signature="e#8299#8565#0" expanded="false" />
+            <element signature="e#9587#9871#0" expanded="false" />
+            <element signature="e#9777#9871#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../vc_typer/blast_db/alleles.fasta">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="111" column="0" lean-forward="false" selection-start-line="111" selection-start-column="0" selection-end-line="111" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
