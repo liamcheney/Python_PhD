@@ -166,10 +166,10 @@ def convert_to_grapetree(allele_profiles_dict):
             if '_' in allele_profiles_dict[key][cell_num]:
                 fix = allele_profiles_dict[key][cell_num].split('_')[0].strip('-')
                 allele_profiles_dict[key][cell_num] = fix
-                print('skipped')
+                # print('skipped')
             elif 'N' in allele_profiles_dict[key][cell_num]:
                 allele_profiles_dict[key][cell_num] = '0'
-                print('skipped')
+                # print('skipped')
 
     return allele_profiles_dict
 
