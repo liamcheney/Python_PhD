@@ -144,7 +144,6 @@ def get_apids(args, conn, maxscheme):
     missing_strains = []
 
     inplist = open(args.isolatelist, "r").read().splitlines()
-    print(inplist)
 
     sqlq = """
 SELECT "{appname}_isolate".identifier,"{appname}_isolate".id,"{appname}_view_apcc".ap{maxscheme}_0 

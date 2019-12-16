@@ -15,12 +15,12 @@ from io import StringIO
 import csv
 
 #reading in roary gene absence and presence
-roary_path = "/Users/liamcheneyy/Desktop/roary/gene_presence_absence.csv"
-gff_folder_in = "/Users/liamcheneyy/Desktop/roary/prokka_gffs/"
-reference_accession = "GCA000006745"
-info_dict_out = "/Users/liamcheneyy/Desktop/roary/info_dict.txt"
+roary_path = "/Users/liamcheneyy/Desktop/gene_presence_absence.csv"
+gff_folder_in = "/Users/liamcheneyy/Desktop/all_gffs/"
+reference_accession = "GCA_000006745"
+info_dict_out = "/Users/liamcheneyy/Desktop/info_dict.txt"
 read_genome_info_dict = True
-outfile_path = "/Users/liamcheneyy/Desktop/roary/"
+outfile_path = "/Users/liamcheneyy/Desktop/"
 isolate_percentage = 0.99
 
 #dont need
@@ -112,7 +112,7 @@ def gathering_core_gene_information(temp_file, info_dict):
         group_count = group_count + 1
 
         # for each strain for the core gene
-        for j in range(15, len(temp_file[line])):
+        for j in range(14, len(temp_file[line])):
             info = temp_file[line][j]
             # will leave empty strains
             if 'nan' in str(info):
@@ -568,16 +568,20 @@ def converting_cds_to_vc(core_gene_in, gff_folder_in, reference_accession):
 #master function
 def master_handling_roary_paralog_problems(outfile_path, read_genome_info_dict, info_dict_out, reference_accession, roary_path, isolate_percentage, write_out_roary_details):
 
-    # ##isolate core genes found in >=99% of the dataset genomes
+    ##isolate core genes found in >=99% of the dataset genomes
     temp_file = isolate_ortho(roary_path, outfile_path, isolate_percentage)
 
     ##calculate the number of non paralogs core genes based on included genomes
     # temp_file = calculate_non_paralogous_core_genes(temp_file)
 
-    ##fix roary naming
+    #fix roary naming
     temp_file = fix_roary_csv(temp_file)
 
-    # ##will read in previoulsy created dictionary or create genome info dict if needed
+    #used to just make the extra info csv
+    # df = pd.read_csv(roary_path, low_memory=False, index_col=False)
+    # temp_file = [df.columns.values.tolist()] + df.values.tolist()
+
+    ###will read in previoulsy created dictionary or create genome info dict if needed
     info_dict = reading_or_creating_genomes_dict(read_genome_info_dict, info_dict_out)
 
     ##gathering information core gene groups

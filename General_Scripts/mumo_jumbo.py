@@ -786,9 +786,49 @@ from shutil import copyfile
 from Bio import SeqIO
 from Bio.Seq import Seq
 
+# contig = 'contig00010'
+# complete_start = 310
+# complete_end = 46484
+# for record in SeqIO.parse('/Users/liamcheneyy/Desktop/all_fasta/SRR3020409.fna', 'fasta'):
+#     if contig in record.id:
+#         record.seq = (record.seq)[complete_start:complete_end]
+#         SeqIO.write(record,
+#                     '/Users/liamcheneyy/Desktop/all_fasta/' + '/' + contig + '_' + str(complete_start) + '_' + str(complete_end) + '.fasta',
+#                     'fasta')
 
-for record in SeqIO.parse('/Users/liamcheneyy/Desktop/tt/Untitled.fasta','fasta'):
-    outfile = '/Users/liamcheneyy/Desktop/ref_index/xx.fasta'
-    SeqIO.write(record,outfile,'fasta')
 
+# all_strains = open('/Users/liamcheneyy/Desktop/all.txt','r').read().splitlines()
+# # tcpa = open('/Users/liamcheneyy/Desktop/tcpa.txt','r').read().splitlines()
+# #
+# # result_dict = {}
+# # for line in tcpa:
+# #     col = line.split('\t')
+# #     gene = col[1]
+# #     acc = col[0]
+# #     result_dict[acc] = gene
+# #
+# # el = ['tcpA_C48A','tcpA_A259G','tcpA_new']
+# # for strain in all_strains:
+# #     print(result_dict[strain])
+# #     print(el)
+# #     sl(1)
+# #     # if result_dict[strain] in el:
+# #     #     print('TRUE',sep='\t')
+# #     # else:
+# #     #     print('FALSE',sep='\t')
+#
+#
+# for line in all_strains:
+#     if 'TRUE' in line:
+#         print('TRUE')
+#         print(line)
+
+all_strains = open('/Users/liamcheneyy/Desktop/all.txt','r').read().splitlines()
+in_strains = open('/Users/liamcheneyy/Desktop/in.txt','r').read().splitlines()
+
+for line in all_strains:
+    if line in in_strains:
+        print('TRUE',sep='\t')
+    else:
+        print('FALSE',sep='\t')
 
