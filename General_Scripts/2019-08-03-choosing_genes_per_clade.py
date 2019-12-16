@@ -81,7 +81,7 @@ def add_extra_alleles_profiles(mgt9_alleles, input_genomes, all_mgt9_alleles):
 
 def count_alleles_per_loci(mgt9_alleles_path, input_clade_size):
 
-    df = pd.read_csv(mgt9_alleles_path, sep='\t', index_col=False)
+    df = pd.read_csv(mgt9_alleles_path, sep='\t', index_col=False, dtype='str')
 
     allele_count = {}
     strains_num = df.shape[0]
@@ -184,6 +184,7 @@ def alleles_specific_to_clade(allele_in_all_list, shared_alleles_from_input_clad
             # print(allele)
 
     print(str(len(specific_genes)) + " genes Specific to input clade.")
+    print("Allele" + '\t' + "Number of Variants" + '\t' + "Variant Statistics" + '\t' + "In Species Core")
     out_list = []
     for i in specific_genes:
         locus = i.split('_')[0]
@@ -243,10 +244,10 @@ def parseargs():
 def main():
     args = parseargs()
 
-    input_genomes_path = '/Users/liamcheneyy/Desktop/input_clades/'
-    mgt9_alleles_path = '/Users/liamcheneyy/Desktop/MGT9_allele_profiles.tsv'
-    all_mgt9_alleles_path = '/Users/liamcheneyy/Desktop/all_MGT8_allele_profiles.tsv'
-    vibrio_core_list_path = '/Users/liamcheneyy/Desktop/MGT8_gene_accessions.txt'
+    input_genomes_path = '/Users/liamcheneyy/Desktop/gene_select_script/'
+    mgt9_alleles_path = '/Users/liamcheneyy/Desktop/MGT9_allele_profiles_full.tsv'
+    all_mgt9_alleles_path = '/Users/liamcheneyy/Desktop/MGT9_allele_profiles_full.tsv'
+    vibrio_core_list_path = '/Users/liamcheneyy/Desktop/E-coli_coregenes.txt'
 
     loop = True
     if loop:
