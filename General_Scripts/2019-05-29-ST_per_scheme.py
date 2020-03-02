@@ -52,15 +52,15 @@ def get_sts_per_scheme(df):
     return result_dict
 def read_in(input):
 
-    df = pd.read_csv(input, sep='\t')
+    df = pd.read_csv(input, sep=',')
     keep_col_list = [x for x in df.columns.values if 'MGT' in x and 'DST' not in x and 'CC' not in x]
     df = df[df.columns.intersection(keep_col_list)]
-    df = df[(~df['MGT2'].str.contains('None')) & (~df['MGT3'].str.contains('None')) & (~df['MGT4'].str.contains('None')) & (~df['MGT5'].str.contains('None')) & (~df['MGT6'].str.contains('None')) & (~df['MGT7'].str.contains('None')) & (~df['MGT8'].str.contains('None'))]
+    # df = df[(~df['MGT2'].str.contains('None')) & (~df['MGT3'].str.contains('None')) & (~df['MGT4'].str.contains('None')) & (~df['MGT5'].str.contains('None')) & (~df['MGT6'].str.contains('None')) & (~df['MGT7'].str.contains('None')) & (~df['MGT8'].str.contains('None'))]
     return df
 
 def main():
     #I/O
-    input = '/Users/liamcheneyy/Desktop/MGT_isolate_data.txt'
+    input = '/Users/liamcheneyy/Desktop/data.csv'
     output = '/Users/liamcheneyy/Desktop/sts_per_scheme.txt'
 
     #convert to percentages
@@ -81,7 +81,7 @@ def main():
 
     for k,v in result_dict.items():
         print(k, *v, sep='\t')
-        print(sum(v))
+        # print(sum(v))
 
 if __name__ == '__main__':
     main()

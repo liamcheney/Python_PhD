@@ -28,7 +28,7 @@ info = pd.read_csv(input_path, sep="\t").fillna("none")
 
 filt = pd.DataFrame(info)
 
-#assign preferences starting at 13 and overwriting for each more resticted level
+##assign preferences starting at 13 and overwriting for each more resticted level
 filt["pref"] = 11
 print("pref 11")
 print(filt[filt["pref"]==11]["pref"].count())
@@ -74,7 +74,7 @@ print("pref 1")
 print(filt[filt["pref"]==1]["pref"].count())
 
 
-#choosing genes in MGT2 and MGT3
+# #choosing genes in MGT2 and MGT3
 # filt["pref"] = 2
 # print("pref 2")
 # print(filt[filt["pref"]==2]["pref"].count())
@@ -90,7 +90,7 @@ filt.to_csv('/Users/liamcheneyy/Desktop/filt_all_genes_hgt.csv', index=False)
 #for MGT2 and MGT3
 random.seed(145156156)
 
-##scheme target sizes
+# #scheme target sizes
 # target_sizes = {'MGT2':10329,'MGT3':51644, 'MGT4':103287}
 #
 # ##scheme lowest allowed loci preference numbers
@@ -99,7 +99,7 @@ random.seed(145156156)
 # ##scheme smallest distance allowed between loci
 # distlimit = {'MGT2':20000,'MGT3':9000, 'MGT4':500}
 
-# #For MGT4 onwards
+# #For MGT5 onwards
 target_sizes = {'MGT5':206575,'MGT6':516437,'MGT7':1032875}
 
 #scheme lowest allowed loci preference numbers

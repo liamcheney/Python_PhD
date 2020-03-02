@@ -9,9 +9,10 @@ def get_all_gene_types(args):
 
     total_genes_list = []
     strain_list = []
-    for filename in glob.iglob(args.input_folder + '/*sv'):
+    for filename in glob.iglob(args.input_folder + '/*csv'):
         infile = open(filename,'r').read().splitlines()
         accession = filename.split('/')[-1].strip("_abricate.csv")
+        print(accession)
 
         if accession not in strain_list:
             strain_list.append(accession)
@@ -19,9 +20,8 @@ def get_all_gene_types(args):
         for line in infile[1:]:
             col = line.split(',')
 
-            if col[4] not in total_genes_list and float(col[8]) >= 90.00 and float(col[9]) >= 90.00:
+            if col[4] not in total_genes_list and float(col[9]) >= 90.00 and float(col[9]) >= 90.00:
                 total_genes_list.append(col[4])
-
     return total_genes_list, strain_list
 
 def absence_and_presence(AMR_list, strain_list, args):
@@ -41,7 +41,7 @@ def absence_and_presence(AMR_list, strain_list, args):
             col = line.split(',')
 
             ##find genes and add True, false == leave blank
-            if col[4] in AMR_list and float(col[8]) >= 90.00 and float(col[9]) >= 90.00:
+            if col[4] in AMR_list and float(col[9]) >= 90.00 and float(col[9]) >= 90.00:
                 result_dict[strain][col[4]] = 'TRUE'
 
     return result_dict

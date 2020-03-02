@@ -37,7 +37,6 @@ def parseargs():
 
     return args
 
-
 def main():
     args = parseargs()
 

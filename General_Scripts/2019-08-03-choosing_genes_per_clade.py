@@ -121,15 +121,15 @@ def terminating_genes_per_clade(input_genomes, alleles_dict, calc_alleles_strain
     #MAIN: calculate the alleles specific to the input clade
 
     #get all alleles for a clade
-    shared_alleles_from_input_clade = alleles_per_clade(alleles_dict, input_genomes)
+    shared_input_alelles = alleles_per_clade(alleles_dict, input_genomes)
 
     #find the alleles in non input strains
     allele_in_all_list = alleles_from_all_strains(alleles_dict, input_genomes)
 
     #find alleles only changing in certain clade
-    clade_specific_genes = alleles_specific_to_clade(allele_in_all_list, shared_alleles_from_input_clade, calc_alleles_strains_per_loc, vibrio_chol_genes)
+    clade_specific_genes = alleles_specific_to_clade(allele_in_all_list, shared_input_alelles, calc_alleles_strains_per_loc, vibrio_chol_genes)
 
-    return clade_specific_genes
+    return clade_specific_genes, shared_input_alelles
 
 def alleles_per_clade(alleles_dict, input_genomes):
 
@@ -205,7 +205,27 @@ def alleles_specific_to_clade(allele_in_all_list, shared_alleles_from_input_clad
 
     print()
 
-def work_flow(input_genomes_path, mgt9_alleles_path, all_mgt9_alleles_path, vibrio_core_list_path):
+def checking_genomes(alleles_dict, input_genomes, shared_input_alelles):
+
+    # for i in shared_input_alelles:
+    #     print(i)
+    # sl(10)
+
+    allele_count_dict = {}
+    for allele in shared_input_alelles:
+        allele_count = 0
+        for key, value in alleles_dict.items():
+            if key not in input_genomes:
+                for item in value:
+                    if allele == item:
+                        allele_count = allele_count + 1
+
+        allele_count_dict[allele] = allele_count
+        # print(allele, allele_count)
+
+    pass
+
+def work_flow(input_genomes_path, mgt9_alleles_path, all_mgt9_alleles_path, vibrio_core_list_path, check_other_presence):
 
     input_genomes = open(input_genomes_path, 'r').read().splitlines()
 
@@ -227,9 +247,12 @@ def work_flow(input_genomes_path, mgt9_alleles_path, all_mgt9_alleles_path, vibr
     calc_alleles_strains_per_loc = count_alleles_per_loci(all_mgt9_alleles_path, input_clade_size)
 
     # find genes for a certain TERMINATING clade
-    input_clade_specific_genes = terminating_genes_per_clade(input_genomes, alleles_dict, calc_alleles_strains_per_loc,
+    input_clade_specific_genes, shared_input_alelles = terminating_genes_per_clade(input_genomes, alleles_dict, calc_alleles_strains_per_loc,
                                                              vibrio_chol_genes)
 
+    #if a gene can not be found unique to a clade, list other genomes is found in.
+    if check_other_presence:
+        checking_genomes(alleles_dict, input_genomes, shared_input_alelles)
 
 def parseargs():
     parser = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter)
@@ -244,19 +267,20 @@ def parseargs():
 def main():
     args = parseargs()
 
-    input_genomes_path = '/Users/liamcheneyy/Desktop/gene_select_script/'
-    mgt9_alleles_path = '/Users/liamcheneyy/Desktop/MGT9_allele_profiles_full.tsv'
-    all_mgt9_alleles_path = '/Users/liamcheneyy/Desktop/MGT9_allele_profiles_full.tsv'
-    vibrio_core_list_path = '/Users/liamcheneyy/Desktop/E-coli_coregenes.txt'
+    input_genomes_path = '/Users/liamcheneyy/Desktop/2019-10-05-selecting_genes_per_clade/input_clades/w2_t1.txt'
+    mgt9_alleles_path = '/Users/liamcheneyy/Desktop/2019-10-05-selecting_genes_per_clade/MGT9_allele_profiles.tsv'
+    all_mgt9_alleles_path = '/Users/liamcheneyy/Desktop/2019-10-05-selecting_genes_per_clade/all_MGT8_allele_profiles.tsv'
+    vibrio_core_list_path = '/Users/liamcheneyy/Desktop/2019-10-05-selecting_genes_per_clade/MGT8_gene_accessions.txt'
+    check_other_presence = True
 
-    loop = True
+    loop = False
     if loop:
         for filename in glob.iglob(input_genomes_path + '/*'):
             file_name = filename.split('/')[-1].split('.')[0]
             print(file_name)
-            work_flow(filename, mgt9_alleles_path, all_mgt9_alleles_path, vibrio_core_list_path)
+            work_flow(filename, mgt9_alleles_path, all_mgt9_alleles_path, vibrio_core_list_path, check_other_presence)
     else:
-        work_flow(input_genomes_path, mgt9_alleles_path, all_mgt9_alleles_path, vibrio_core_list_path)
+        work_flow(input_genomes_path, mgt9_alleles_path, all_mgt9_alleles_path, vibrio_core_list_path, check_other_presence)
 
 
 if __name__ == '__main__':

@@ -14,13 +14,14 @@ def parseargs():
 def df_setup(infile_path, start_col,end_col):
 
     #read in metadata
-    df = pd.read_csv(infile_path, index_col='ID', low_memory=False, delimiter='\t')
-    df.replace("None.None", "0", inplace=True)
+
+    df = pd.read_csv(infile_path, index_col='ID', low_memory=False, sep='\t')
 
     df[list(df.columns)[0:8]] = df[list(df.columns)[0:8]].astype(int)
 
     #columns of attributes to take
     want_attributes = list(df.columns.values[start_col:end_col])
+    print(want_attributes)
 
     return df, want_attributes
 def sts_per_attributes(element, sub_df, min_strains_per_st, percen_contam_strains,precen_inconsistent_strains,relate_results_to, df):
@@ -105,7 +106,7 @@ def check_hierarch_incon(column, ST, precen_inconsistent_strains, sub):
         #if inconsistencies less than allowed number, then return
         if inconsis_count <= allowed_precen_inconsistent_strains:
             return "Pass"
-def st_freq_and_waves(return_df, st_save_dict, element, not_st_strains_df, min_st_for_figure):
+def st_freq_and_waves(return_df, st_save_dict, element, not_st_strains_df):
     # relate STs freq to waves
     wave_list = [1, 2, 3]
     waves_st_dict = {}
@@ -125,33 +126,35 @@ def st_freq_and_waves(return_df, st_save_dict, element, not_st_strains_df, min_s
     total_classified = 0
     total_unclassified = 0
     st_num = 0
-    print(element, st_save_dict, sep='\t')
+    print(element)
+    print("Genotype", "Wave", "#Strains", "MGT_Level", "ST", sep='\t')
     #printing out STs per wave
     for k, v in waves_st_dict.items():
         for i, x in v.items():
-            if x >= min_st_for_figure:
-                ST = i.split(' ')[-1]
-                gene = element.split('_')[0]
-                wave = "Wave " + str(k)
-                freq = x
-                level = i.split(' ')[0]
-                total_classified = total_classified + freq
-                st_num = st_num + 1
-                print(gene, wave, freq, element, level, ST, sep='\t')
+            ST = i.split(' ')[-1]
+            gene = element.split('_')[0]
+            wave = str(k)
+            freq = x
+            level = i.split(' ')[0]
+            total_classified = total_classified + freq
+            st_num = st_num + 1
+            print(element, wave, freq, level, ST, sep='\t')
 
     #printing out missing strains per ST, per Wave
     for i in wave_list:
         wave_missing_st_num = (not_st_strains_df[not_st_strains_df['Wave'] == i].shape)[0]
         if wave_missing_st_num > 0:
-            wave = "Wave " + str(i)
+            wave = str(i)
             gene = element.split('_')[0]
-            print(gene, wave, wave_missing_st_num, "No_ST", "No_ST", "No_ST", sep='\t')
+            print(element, wave, wave_missing_st_num, "No_ST", "No_ST", sep='\t')
             total_unclassified = total_unclassified + wave_missing_st_num
 
     sum_of_all = total_classified + total_unclassified
     percen_clasified = round(total_classified / sum_of_all * 100,2 )
     percen_unclassified = round(total_unclassified / sum_of_all * 100, 2)
-
+    print()
+    print("Summary_Statistics")
+    print("Number_STs", "#Genotype", "#ST", "%ST", "#NoST", "%NoST", sep='\t')
     print(st_num,sum_of_all, total_classified, percen_clasified, total_unclassified, percen_unclassified,sep='\t')
     print()
 
@@ -159,14 +162,13 @@ def main():
     args = parseargs()
 
     #variables
-    start_col = 266
-    end_col = 268
+    start_col = 31
+    end_col = 36
     min_strains_per_st = 10
-    percen_contam_strains = 15
-    min_st_for_figure = 2
+    percen_contam_strains = 20
     precen_inconsistent_strains = 10
     relate_results_to = "Wave"
-    infile_path = '/Users/liamcheneyy/Desktop/vcseventh_22/grapetree/seventh/MGT_isolate_data.txt'
+    infile_path = '/Users/liamcheneyy/Desktop/vcseventh_26/grapetree/seventh/MGT_isolate_data.txt'
 
     #df read
     df, want_attributes = df_setup(infile_path, start_col,end_col)
@@ -183,13 +185,13 @@ def main():
         final_save[element] = {}
 
         ##create sub_df of element and STs
-        col_list = list(df.columns)[0:8] + [element]
+        col_list = list(df.columns)[1:8] + [element]
         sub_df = df[col_list]
 
         #calculate the STs for each attribute
         return_dict, return_df, not_st_strains_df = sts_per_attributes(element, sub_df, min_strains_per_st, percen_contam_strains,precen_inconsistent_strains,relate_results_to, df)
 
-        st_freq_and_waves(return_df, return_dict, element, not_st_strains_df, min_st_for_figure)
+        st_freq_and_waves(return_df, return_dict, element, not_st_strains_df)
 
 if __name__ == '__main__':
     main()
