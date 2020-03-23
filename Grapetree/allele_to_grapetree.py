@@ -136,6 +136,9 @@ def combine_allele_profiles(conn, table_numbers_list, column_headers_list, wante
 
     total_list = [column_headers_list] + total_list
 
+    alleles_num = len(total_list[0][2:])
+    print('Collected ' + str(alleles_num) + ' alleles to generate phylogeny.')
+
     return total_list
 
 def find_number_of_cc_columns(table, conn, args):

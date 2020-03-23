@@ -2,8 +2,109 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="808d523f-cfb3-4699-b214-793d2f2a6efd" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/Staph/2020-03-20-plasmid_sep.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/Vibrio/2020-03-17-alleles_over_grapetree.py" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/General_Scripts/2019-08-03-choosing_genes_per_clade.py" afterPath="$PROJECT_DIR$/General_Scripts/2019-08-03-choosing_genes_per_clade.py" />
+      <change beforePath="$PROJECT_DIR$/General_Scripts/2018-03-15-dataset2bmetainfopanx.py" afterPath="$PROJECT_DIR$/Vibrio/2018-03-15-dataset2bmetainfopanx.py" />
+      <change beforePath="$PROJECT_DIR$/General_Scripts/2018-03-16-dataset2beltorornot.py" afterPath="$PROJECT_DIR$/Vibrio/2018-03-16-dataset2beltorornot.py" />
+      <change beforePath="$PROJECT_DIR$/General_Scripts/2018-03-19-dataset3emetapanx.py" afterPath="$PROJECT_DIR$/Vibrio/2018-03-19-dataset3emetapanx.py" />
+      <change beforePath="$PROJECT_DIR$/General_Scripts/2018-03-21-d3emetainfo.py" afterPath="$PROJECT_DIR$/Vibrio/2018-03-21-d3emetainfo.py" />
+      <change beforePath="$PROJECT_DIR$/General_Scripts/2018-03-21-dataset3emetadatatable.py" afterPath="$PROJECT_DIR$/Vibrio/2018-03-21-dataset3emetadatatable.py" />
+      <change beforePath="$PROJECT_DIR$/General_Scripts/2018-03-28-didntworksraassemblies.py" afterPath="$PROJECT_DIR$/Vibrio/2018-03-28-didntworksraassemblies.py" />
+      <change beforePath="$PROJECT_DIR$/General_Scripts/2018-04-02-D2Ccoveragestats.py" afterPath="$PROJECT_DIR$/Vibrio/2018-04-02-D2Ccoveragestats.py" />
+      <change beforePath="$PROJECT_DIR$/General_Scripts/2018-04-06-D2Cblast+.py" afterPath="$PROJECT_DIR$/Vibrio/2018-04-06-D2Cblast+.py" />
+      <change beforePath="$PROJECT_DIR$/General_Scripts/2018-04-06-removingparalogsD2Afrypan.py" afterPath="$PROJECT_DIR$/Vibrio/2018-04-06-removingparalogsD2Afrypan.py" />
+      <change beforePath="$PROJECT_DIR$/General_Scripts/2018-04-09-d3a_geneabpr_analysis.py" afterPath="$PROJECT_DIR$/Vibrio/2018-04-09-d3a_geneabpr_analysis.py" />
+      <change beforePath="$PROJECT_DIR$/General_Scripts/2018-04-10-changenodeheaders.py" afterPath="$PROJECT_DIR$/Vibrio/2018-04-10-changenodeheaders.py" />
+      <change beforePath="$PROJECT_DIR$/General_Scripts/2018-04-10-dixgbfforpanx.py" afterPath="$PROJECT_DIR$/Vibrio/2018-04-10-dixgbfforpanx.py" />
+      <change beforePath="$PROJECT_DIR$/General_Scripts/2018-04-12-D2Cassemblystatsfromncbi.py" afterPath="$PROJECT_DIR$/Vibrio/2018-04-12-D2Cassemblystatsfromncbi.py" />
+      <change beforePath="$PROJECT_DIR$/General_Scripts/2018-04-19-rawreadsrepors.py" afterPath="$PROJECT_DIR$/Vibrio/2018-04-19-rawreadsrepors.py" />
+      <change beforePath="$PROJECT_DIR$/General_Scripts/2018-04-21-clusteredproteinsforpanx.py" afterPath="$PROJECT_DIR$/Vibrio/2018-04-21-clusteredproteinsforpanx.py" />
+      <change beforePath="$PROJECT_DIR$/General_Scripts/2018-04-21-culstered_proteinsstrip.py" afterPath="$PROJECT_DIR$/Vibrio/2018-04-21-culstered_proteinsstrip.py" />
+      <change beforePath="$PROJECT_DIR$/General_Scripts/2018-04-24-analyse_gap.py" afterPath="$PROJECT_DIR$/Vibrio/2018-04-24-analyse_gap.py" />
+      <change beforePath="$PROJECT_DIR$/General_Scripts/2018-04-24-basicstats_geneabsencepresence.py" afterPath="$PROJECT_DIR$/Vibrio/2018-04-24-basicstats_geneabsencepresence.py" />
+      <change beforePath="$PROJECT_DIR$/General_Scripts/2018-04-26-organisinggenesconservation.py" afterPath="$PROJECT_DIR$/Vibrio/2018-04-26-organisinggenesconservation.py" />
+      <change beforePath="$PROJECT_DIR$/General_Scripts/2018-05-23-BPGA_analyse_genes.py" afterPath="$PROJECT_DIR$/Vibrio/2018-05-23-BPGA_analyse_genes.py" />
+      <change beforePath="$PROJECT_DIR$/General_Scripts/2018-05-27-paralogstatistics_roary_gap.py" afterPath="$PROJECT_DIR$/Vibrio/2018-05-27-paralogstatistics_roary_gap.py" />
+      <change beforePath="$PROJECT_DIR$/General_Scripts/2018-06-07-GAP_paralogal_removal.py" afterPath="$PROJECT_DIR$/Vibrio/2018-06-07-GAP_paralogal_removal.py" />
+      <change beforePath="$PROJECT_DIR$/General_Scripts/2018-06-07-inves_annotation_D2C.py" afterPath="$PROJECT_DIR$/Vibrio/2018-06-07-inves_annotation_D2C.py" />
+      <change beforePath="$PROJECT_DIR$/General_Scripts/2018-06-07-removing_paralogous_strains_D2C.py" afterPath="$PROJECT_DIR$/Vibrio/2018-06-07-removing_paralogous_strains_D2C.py" />
+      <change beforePath="$PROJECT_DIR$/General_Scripts/2018-06-16-paralogs_assemblies_check.py" afterPath="$PROJECT_DIR$/Vibrio/2018-06-16-paralogs_assemblies_check.py" />
+      <change beforePath="$PROJECT_DIR$/General_Scripts/2018-06-18-gap_isolate_99%_orths.py" afterPath="$PROJECT_DIR$/Vibrio/2018-06-18-gap_isolate_99%_orths.py" />
+      <change beforePath="$PROJECT_DIR$/General_Scripts/2018-06-22-patric_organise_genes.py" afterPath="$PROJECT_DIR$/Vibrio/2018-06-22-patric_organise_genes.py" />
+      <change beforePath="$PROJECT_DIR$/General_Scripts/2018-06-27-fixing_anno_genes.py" afterPath="$PROJECT_DIR$/Vibrio/2018-06-27-fixing_anno_genes.py" />
+      <change beforePath="$PROJECT_DIR$/General_Scripts/2018-06-28-remove_overlaps_reference.py" afterPath="$PROJECT_DIR$/Vibrio/2018-06-28-remove_overlaps_reference.py" />
+      <change beforePath="$PROJECT_DIR$/General_Scripts/2018-06-30-checking_dataset_diversity.py" afterPath="$PROJECT_DIR$/Vibrio/2018-06-30-checking_dataset_diversity.py" />
+      <change beforePath="$PROJECT_DIR$/General_Scripts/2018-07-06-reference_info.py" afterPath="$PROJECT_DIR$/Vibrio/2018-07-06-reference_info.py" />
+      <change beforePath="$PROJECT_DIR$/General_Scripts/2018-07-15-graph_D3A_densiry.py" afterPath="$PROJECT_DIR$/Vibrio/2018-07-15-graph_D3A_densiry.py" />
+      <change beforePath="$PROJECT_DIR$/General_Scripts/2018-07-17-included_excluded_D3A_data.py" afterPath="$PROJECT_DIR$/Vibrio/2018-07-17-included_excluded_D3A_data.py" />
+      <change beforePath="$PROJECT_DIR$/General_Scripts/2018-07-21-degraded_DNA_fix.py" afterPath="$PROJECT_DIR$/Vibrio/2018-07-21-degraded_DNA_fix.py" />
+      <change beforePath="$PROJECT_DIR$/General_Scripts/2018-07-25-calculate_CG_bp_size.py" afterPath="$PROJECT_DIR$/Vibrio/2018-07-25-calculate_CG_bp_size.py" />
+      <change beforePath="$PROJECT_DIR$/General_Scripts/2018-08-09-Phaster_check.py" afterPath="$PROJECT_DIR$/Vibrio/2018-08-09-Phaster_check.py" />
+      <change beforePath="$PROJECT_DIR$/General_Scripts/2018-08-09-homo_polymer.py" afterPath="$PROJECT_DIR$/Vibrio/2018-08-09-homo_polymer.py" />
+      <change beforePath="$PROJECT_DIR$/General_Scripts/2018-08-10-MGT_locus_preference_filters.py" afterPath="$PROJECT_DIR$/Vibrio/2018-08-10-MGT_locus_preference_filters.py" />
+      <change beforePath="$PROJECT_DIR$/General_Scripts/2018-08-14-splitting_large_fasta_files.py" afterPath="$PROJECT_DIR$/Vibrio/2018-08-14-splitting_large_fasta_files.py" />
+      <change beforePath="$PROJECT_DIR$/General_Scripts/2018-08-15-fixing_alleles_dnds.py" afterPath="$PROJECT_DIR$/Vibrio/2018-08-15-fixing_alleles_dnds.py" />
+      <change beforePath="$PROJECT_DIR$/General_Scripts/2018-08-27-allele_check_chromsomeerror.py" afterPath="$PROJECT_DIR$/Vibrio/2018-08-27-allele_check_chromsomeerror.py" />
+      <change beforePath="$PROJECT_DIR$/General_Scripts/2018-08-28-Briggs_scheme_sequences.py" afterPath="$PROJECT_DIR$/Vibrio/2018-08-28-Briggs_scheme_sequences.py" />
+      <change beforePath="$PROJECT_DIR$/General_Scripts/2018-08-29-convert_profile_to_grapetree_profile.py" afterPath="$PROJECT_DIR$/Vibrio/2018-08-29-convert_profile_to_grapetree_profile.py" />
+      <change beforePath="$PROJECT_DIR$/General_Scripts/2018-08-30-check_HGT_zeros_n_negs.py" afterPath="$PROJECT_DIR$/Vibrio/2018-08-30-check_HGT_zeros_n_negs.py" />
+      <change beforePath="$PROJECT_DIR$/General_Scripts/2018-09-03-make_outp_excel_ready.py" afterPath="$PROJECT_DIR$/Vibrio/2018-09-03-make_outp_excel_ready.py" />
+      <change beforePath="$PROJECT_DIR$/General_Scripts/2018-09-04-study7_quast_failed_assemblies.py" afterPath="$PROJECT_DIR$/Vibrio/2018-09-04-study7_quast_failed_assemblies.py" />
+      <change beforePath="$PROJECT_DIR$/General_Scripts/2018-10-04-extra_acc_from_jason.py" afterPath="$PROJECT_DIR$/Vibrio/2018-10-04-extra_acc_from_jason.py" />
+      <change beforePath="$PROJECT_DIR$/General_Scripts/2018-10-06-STs_per_scheme.py" afterPath="$PROJECT_DIR$/Vibrio/2018-10-06-STs_per_scheme.py" />
+      <change beforePath="$PROJECT_DIR$/General_Scripts/2018-11-15-PAML_genes.py" afterPath="$PROJECT_DIR$/Vibrio/2018-11-15-PAML_genes.py" />
+      <change beforePath="$PROJECT_DIR$/General_Scripts/2018-11-15-SNAP_genes.py" afterPath="$PROJECT_DIR$/Vibrio/2018-11-15-SNAP_genes.py" />
+      <change beforePath="$PROJECT_DIR$/General_Scripts/2019-01-10-fix_roary_csv.py" afterPath="$PROJECT_DIR$/Vibrio/2019-01-10-fix_roary_csv.py" />
+      <change beforePath="$PROJECT_DIR$/General_Scripts/2019-02-04-adding_strand_orein_to_roary_csv.py" afterPath="$PROJECT_DIR$/Vibrio/2019-02-04-adding_strand_orein_to_roary_csv.py" />
+      <change beforePath="$PROJECT_DIR$/General_Scripts/2019-02-07-pal2nal_protein_alignments.py" afterPath="$PROJECT_DIR$/Vibrio/2019-02-07-pal2nal_protein_alignments.py" />
+      <change beforePath="$PROJECT_DIR$/General_Scripts/2019-02-08-micr_circRNA.py" afterPath="$PROJECT_DIR$/Vibrio/2019-02-08-micr_circRNA.py" />
+      <change beforePath="$PROJECT_DIR$/General_Scripts/2019-02-12-alice_virus.py" afterPath="$PROJECT_DIR$/Vibrio/2019-02-12-alice_virus.py" />
+      <change beforePath="$PROJECT_DIR$/General_Scripts/2019-02-13-pubMLST.py" afterPath="$PROJECT_DIR$/Vibrio/2019-02-13-pubMLST.py" />
+      <change beforePath="$PROJECT_DIR$/General_Scripts/2019-02-13-snap_output_dnds.py" afterPath="$PROJECT_DIR$/Vibrio/2019-02-13-snap_output_dnds.py" />
+      <change beforePath="$PROJECT_DIR$/General_Scripts/2019-02-25-processing_roary_output.py" afterPath="$PROJECT_DIR$/Vibrio/2019-02-25-processing_roary_output.py" />
+      <change beforePath="$PROJECT_DIR$/General_Scripts/2019-03-03-MLST_output.py" afterPath="$PROJECT_DIR$/Vibrio/2019-03-03-MLST_output.py" />
+      <change beforePath="$PROJECT_DIR$/General_Scripts/2019-03-07-allele_caller_zeros_count.py" afterPath="$PROJECT_DIR$/Vibrio/2019-03-07-allele_caller_zeros_count.py" />
+      <change beforePath="$PROJECT_DIR$/General_Scripts/2019-03-07-locus_to_sequence.py" afterPath="$PROJECT_DIR$/Vibrio/2019-03-07-locus_to_sequence.py" />
+      <change beforePath="$PROJECT_DIR$/General_Scripts/2019-03-14-MGT_check_gene_sizes.py" afterPath="$PROJECT_DIR$/Vibrio/2019-03-14-MGT_check_gene_sizes.py" />
+      <change beforePath="$PROJECT_DIR$/General_Scripts/2019-03-20-fix_alleles_to_database.py" afterPath="$PROJECT_DIR$/Vibrio/2019-03-20-fix_alleles_to_database.py" />
+      <change beforePath="$PROJECT_DIR$/General_Scripts/2019-03-20-remove_salmonella.py" afterPath="$PROJECT_DIR$/Vibrio/2019-03-20-remove_salmonella.py" />
+      <change beforePath="$PROJECT_DIR$/General_Scripts/2019-03-25-degraded_base_check.py" afterPath="$PROJECT_DIR$/Vibrio/2019-03-25-degraded_base_check.py" />
+      <change beforePath="$PROJECT_DIR$/General_Scripts/2019-04-01-oib_extract.py" afterPath="$PROJECT_DIR$/Vibrio/2019-04-01-oib_extract.py" />
+      <change beforePath="$PROJECT_DIR$/General_Scripts/2019-04-03-SRA_metadata.py" afterPath="$PROJECT_DIR$/Vibrio/2019-04-03-SRA_metadata.py" />
+      <change beforePath="$PROJECT_DIR$/General_Scripts/2019-04-15-graph_STs_per_wave.py" afterPath="$PROJECT_DIR$/Vibrio/2019-04-15-graph_STs_per_wave.py" />
+      <change beforePath="$PROJECT_DIR$/General_Scripts/2019-04-28-genes_to_MGT_input.py" afterPath="$PROJECT_DIR$/Vibrio/2019-04-28-genes_to_MGT_input.py" />
+      <change beforePath="$PROJECT_DIR$/General_Scripts/2019-05-22-abricate_anti_resistances.py" afterPath="$PROJECT_DIR$/Vibrio/2019-05-22-abricate_anti_resistances.py" />
+      <change beforePath="$PROJECT_DIR$/General_Scripts/2019-05-29-ST_per_scheme.py" afterPath="$PROJECT_DIR$/Vibrio/2019-05-29-ST_per_scheme.py" />
+      <change beforePath="$PROJECT_DIR$/General_Scripts/2019-07-07-allele_caller.py" afterPath="$PROJECT_DIR$/Vibrio/2019-07-07-allele_caller.py" />
+      <change beforePath="$PROJECT_DIR$/General_Scripts/2019-07-29-select_representative_strains.py" afterPath="$PROJECT_DIR$/Vibrio/2019-07-29-select_representative_strains.py" />
+      <change beforePath="$PROJECT_DIR$/General_Scripts/2019-08-03-choosing_genes_per_clade.py" afterPath="$PROJECT_DIR$/Vibrio/2019-08-03-choosing_genes_per_clade.py" />
+      <change beforePath="$PROJECT_DIR$/General_Scripts/2019-08-04-make_snp_alignment_frm_db.py" afterPath="$PROJECT_DIR$/Vibrio/2019-08-04-make_snp_alignment_frm_db.py" />
+      <change beforePath="$PROJECT_DIR$/General_Scripts/2019-09-11-get_ref_alleles_new_sero.py" afterPath="$PROJECT_DIR$/Vibrio/2019-09-11-get_ref_alleles_new_sero.py" />
+      <change beforePath="$PROJECT_DIR$/General_Scripts/2019-09-19-find_varying_species_genes.py" afterPath="$PROJECT_DIR$/Vibrio/2019-09-19-find_varying_species_genes.py" />
+      <change beforePath="$PROJECT_DIR$/General_Scripts/2019-09-23-size_of_STs_per_scheme.py" afterPath="$PROJECT_DIR$/Vibrio/2019-09-23-size_of_STs_per_scheme.py" />
+      <change beforePath="$PROJECT_DIR$/General_Scripts/2019-09-25-extract_locus_from_fna.py" afterPath="$PROJECT_DIR$/Vibrio/2019-09-25-extract_locus_from_fna.py" />
+      <change beforePath="$PROJECT_DIR$/General_Scripts/2019-10-03-species_identifying_commonly_missing_alleles.py" afterPath="$PROJECT_DIR$/Vibrio/2019-10-03-species_identifying_commonly_missing_alleles.py" />
+      <change beforePath="$PROJECT_DIR$/General_Scripts/2019-10-08-preparing_allele_testing_files.py" afterPath="$PROJECT_DIR$/Vibrio/2019-10-08-preparing_allele_testing_files.py" />
+      <change beforePath="$PROJECT_DIR$/General_Scripts/2019-10-14-mgt_db_thresholds.py" afterPath="$PROJECT_DIR$/Vibrio/2019-10-14-mgt_db_thresholds.py" />
+      <change beforePath="$PROJECT_DIR$/General_Scripts/2019-10-18-cholearefinder_processing.py" afterPath="$PROJECT_DIR$/Vibrio/2019-10-18-cholearefinder_processing.py" />
+      <change beforePath="$PROJECT_DIR$/General_Scripts/2019-10-20-automate_STs_and_markers.py" afterPath="$PROJECT_DIR$/Vibrio/2019-10-20-automate_STs_and_markers.py" />
+      <change beforePath="$PROJECT_DIR$/General_Scripts/2019-11-04-count_inconsistency.py" afterPath="$PROJECT_DIR$/Vibrio/2019-11-04-count_inconsistency.py" />
+      <change beforePath="$PROJECT_DIR$/General_Scripts/2019-11-04-vcf_to_fasta.py" afterPath="$PROJECT_DIR$/Vibrio/2019-11-04-vcf_to_fasta.py" />
+      <change beforePath="$PROJECT_DIR$/General_Scripts/2019-11-05-fasta2phylip.py" afterPath="$PROJECT_DIR$/Vibrio/2019-11-05-fasta2phylip.py" />
+      <change beforePath="$PROJECT_DIR$/General_Scripts/2019-11-22-select_combinations_of_alleles.py" afterPath="$PROJECT_DIR$/Vibrio/2019-11-22-select_combinations_of_alleles.py" />
+      <change beforePath="$PROJECT_DIR$/General_Scripts/2019-11-24-amr_per_strain.py" afterPath="$PROJECT_DIR$/Vibrio/2019-11-24-amr_per_strain.py" />
+      <change beforePath="$PROJECT_DIR$/General_Scripts/2019-12-09-accessory_blocks.py" afterPath="$PROJECT_DIR$/Vibrio/2019-12-09-accessory_blocks.py" />
+      <change beforePath="$PROJECT_DIR$/General_Scripts/2020-02-06-multi_blast_searcher.py" afterPath="$PROJECT_DIR$/Vibrio/2020-02-06-multi_blast_searcher.py" />
+      <change beforePath="$PROJECT_DIR$/General_Scripts/2020-03-02-MGT3_per_continent.py" afterPath="$PROJECT_DIR$/Vibrio/2020-03-02-MGT3_per_continent.py" />
+      <change beforePath="$PROJECT_DIR$/General_Scripts/README.md" afterPath="$PROJECT_DIR$/Vibrio/README.md" />
+      <change beforePath="$PROJECT_DIR$/General_Scripts/__init__.py" afterPath="$PROJECT_DIR$/Vibrio/__init__.py" />
+      <change beforePath="$PROJECT_DIR$/General_Scripts/cnvnator.py" afterPath="$PROJECT_DIR$/Vibrio/cnvnator.py" />
+      <change beforePath="$PROJECT_DIR$/General_Scripts/compare_allele_profiles.py" afterPath="$PROJECT_DIR$/Vibrio/compare_allele_profiles.py" />
+      <change beforePath="$PROJECT_DIR$/General_Scripts/mumo_jumbo.py" afterPath="$PROJECT_DIR$/Vibrio/mumo_jumbo.py" />
+      <change beforePath="$PROJECT_DIR$/Grapetree/allele_to_grapetree.py" afterPath="$PROJECT_DIR$/Grapetree/allele_to_grapetree.py" />
+      <change beforePath="$PROJECT_DIR$/../vc_typer/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../vc_typer/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/../vc_typer/blast_db/alleles.fasta" afterPath="$PROJECT_DIR$/../vc_typer/blast_db/alleles.fasta" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -13,70 +114,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="2019-12-09-accessory_blocks.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/General_Scripts/2019-12-09-accessory_blocks.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="249">
-              <caret line="122" column="134" lean-forward="false" selection-start-line="119" selection-start-column="4" selection-end-line="122" selection-end-column="134" />
-              <folding>
-                <element signature="e#0#15#0" expanded="true" />
-                <element signature="e#128#405#0" expanded="false" />
-                <element signature="e#446#1389#0" expanded="false" />
-                <element signature="e#1425#1688#0" expanded="false" />
-                <element signature="e#2318#3300#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="2019-08-03-choosing_genes_per_clade.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/General_Scripts/2019-08-03-choosing_genes_per_clade.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="231" column="0" lean-forward="true" selection-start-line="231" selection-start-column="0" selection-end-line="231" selection-end-column="0" />
-              <folding>
-                <element signature="e#137#2147#0" expanded="false" />
-                <element signature="e#323#885#0" expanded="false" />
-                <element signature="e#498#885#0" expanded="false" />
-                <element signature="e#614#698#0" expanded="false" />
-                <element signature="e#712#731#0" expanded="false" />
-                <element signature="e#891#958#0" expanded="false" />
-                <element signature="e#2233#2688#0" expanded="false" />
-                <element signature="e#2303#2371#0" expanded="false" />
-                <element signature="e#2452#2524#0" expanded="false" />
-                <element signature="e#2572#2663#0" expanded="false" />
-                <element signature="e#2919#3228#0" expanded="false" />
-                <element signature="e#2953#3228#0" expanded="false" />
-                <element signature="e#2953#2963#0" expanded="false" />
-                <element signature="e#3302#3441#0" expanded="false" />
-                <element signature="e#3356#3416#0" expanded="false" />
-                <element signature="e#3481#3761#0" expanded="false" />
-                <element signature="e#3555#3761#0" expanded="false" />
-                <element signature="e#3607#3761#0" expanded="false" />
-                <element signature="e#3879#4415#0" expanded="false" />
-                <element signature="e#3879#3935#0" expanded="false" />
-                <element signature="e#4474#4974#0" expanded="false" />
-                <element signature="e#4567#4637#0" expanded="false" />
-                <element signature="e#4643#4690#0" expanded="false" />
-                <element signature="e#5039#5571#0" expanded="false" />
-                <element signature="e#5039#5073#0" expanded="false" />
-                <element signature="e#5300#5333#0" expanded="false" />
-                <element signature="e#5438#5505#0" expanded="false" />
-                <element signature="e#5710#6799#0" expanded="false" />
-                <element signature="e#5710#5750#0" expanded="false" />
-                <element signature="e#6740#6786#0" expanded="false" />
-                <element signature="e#6906#7966#0" expanded="false" />
-                <element signature="e#7990#8267#0" expanded="false" />
-                <element signature="e#8084#8145#0" expanded="false" />
-                <element signature="e#8665#8907#0" expanded="false" />
-                <element signature="e#8732#8907#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -87,36 +125,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>MGT_2</find>
-      <find>rstR</find>
-      <find>rstR_el</find>
-      <find>#</find>
-      <find>count</find>
-      <find>skipped</find>
-      <find>rst</find>
-      <find>input</find>
-      <find>isolatelist</find>
-      <find>vc</find>
-      <find>MGT</find>
-      <find>MGT_</find>
-      <find>paris</find>
-      <find>clones</find>
-      <find>sand</find>
-      <find>write_out_roary_details</find>
-      <find>liam</find>
-      <find>salmonella</find>
-      <find>resista</find>
-      <find>michael</find>
-      <find>TRUE</find>
-      <find>laurence</find>
-      <find>ICE</find>
-      <find>access</find>
       <find>member</find>
       <find>ICE_</find>
       <find>$PROJECT_DIR$/../../..</find>
-      <find>print</find>
       <find>genes Specific to input clade.</find>
+      <find>write</find>
       <find>pd</find>
+      <find>_2</find>
+      <find>SRS4182199</find>
+      <find>isin</find>
+      <find>combi</find>
+      <find>35</find>
+      <find>print</find>
+      <find>vcs</find>
+      <find>_23</find>
+      <find>rstR</find>
+      <find>new</find>
+      <find>ctxB7-rstR_el-tcpA_A226G</find>
+      <find>col[8</find>
+      <find>vcse</find>
+      <find>MGT</find>
+      <find>ICE_check</find>
+      <find>col[5]</find>
+      <find>.txt</find>
+      <find>vcseve</find>
+      <find>MGT_</find>
+      <find>MGT_2</find>
+      <find>blast</find>
+      <find>blastn</find>
+      <find>ctxB3-rstR_el-tcpA_el</find>
+      <find>string</find>
     </findStrings>
     <replaceStrings>
       <replace>allele</replace>
@@ -124,6 +162,9 @@
       <replace>hgt_id</replace>
       <replace>_14</replace>
       <replace>false</replace>
+      <replace>,</replace>
+      <replace>col[4]</replace>
+      <replace>col[9]</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -133,65 +174,65 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/2019-04-10-allele_to_grapetree.py" />
-        <option value="$PROJECT_DIR$/General Scripts/sd.py" />
-        <option value="$PROJECT_DIR$/General Scripts/2019-04-28-CTX_allele_caller.py" />
-        <option value="$PROJECT_DIR$/CTX_allele_caller/blast_db/1CTX_allele_caller.py" />
-        <option value="$PROJECT_DIR$/CTX_allele_caller/CTX_allele_caller.py" />
-        <option value="$PROJECT_DIR$/General Scripts/2019-04-04-grapetree_metadata.py" />
-        <option value="$PROJECT_DIR$/General_Scripts/2019-04-10-allele_to_grapetree.py" />
-        <option value="$PROJECT_DIR$/Grapetree/output_MGT_for_isolates.py" />
-        <option value="$USER_HOME$/Desktop/vcseventh_13/Mgtfi_ref/vibrio_settings_copy.py" />
-        <option value="$USER_HOME$/Desktop/vcseventh_14/Mgtfi_ref/vibrio_settings_copy.py" />
-        <option value="$PROJECT_DIR$/General_Scripts/2019-04-28-genes_to_MGT_input.py" />
-        <option value="$USER_HOME$/Library/Caches/Transmit/02EC8337-7F1C-46AF-B2DB-49876C526E13/kdm.science.unsw.edu.au/srv/scratch/lanlab/liam/2019-04-01-reads_to_alleles/Reads2MGTAlleles/reads_to_alleles.py" />
-        <option value="$PROJECT_DIR$/Grapetree/grapetree_metadata.py" />
         <option value="$PROJECT_DIR$/General_Scripts/2019-05-08-calculate_STs_per_wave.py" />
-        <option value="$PROJECT_DIR$/General_Scripts/2018-08-10-MGT_locus_preference_filters.py" />
         <option value="$USER_HOME$/Desktop/vcseventh_22/Mgtfi_ref/vibrio_settings_copy.py" />
         <option value="$USER_HOME$/Desktop/vcseventh_22/Mgtfi_ref/remove_isolate_and_data.py" />
         <option value="$USER_HOME$/Desktop/vcseventh_22/Mgtfi_ref/delete_loose_ends.py" />
         <option value="$PROJECT_DIR$/General_Scripts/2019-11-04-snps_to_tree.py" />
-        <option value="$PROJECT_DIR$/General_Scripts/2019-05-29-ST_per_scheme.py" />
         <option value="$PROJECT_DIR$/General_Scripts/2019-11-04-count_inconsistency.py" />
         <option value="$USER_HOME$/MGTwebby/docs/news.html" />
         <option value="$USER_HOME$/miniconda3/envs/p3env/lib/python3.6/site-packages/pandas/core/dtypes/cast.py" />
         <option value="$PROJECT_DIR$/../vc_typer/blast_db/old_alleles.fasta" />
         <option value="$USER_HOME$/Desktop/3.py" />
         <option value="$PROJECT_DIR$/General_Scripts/2019-11-24-amr_per_strain.py" />
-        <option value="$PROJECT_DIR$/General_Scripts/2019-10-20-automate_STs_and_markers.py" />
-        <option value="$PROJECT_DIR$/General_Scripts/cnvnator.py" />
         <option value="$USER_HOME$/Library/Caches/Transmit/5E2D07C0-7EE2-4B71-8F35-CB8BF8FA8D41/kdm.restech.unsw.edu.au/srv/scratch/z5087966/5_HGT_seventh_pandemic/2019-11-26-cnvnator/sample_data/cnvnator.py" />
         <option value="$USER_HOME$/Library/Caches/Transmit/88D263E0-FF96-4FCB-AD3F-C1C394989199/kdm.restech.unsw.edu.au/srv/scratch/z5087966/5_HGT_seventh_pandemic/2019-11-26-cnvnator/sample_data/cnvnator.py" />
         <option value="$PROJECT_DIR$/General_Scripts/2019-11-22-select_combinations_of_alleles.py" />
         <option value="$USER_HOME$/Desktop/done/xx.py" />
-        <option value="$PROJECT_DIR$/General_Scripts/2019-05-22-abricate_anti_resistances.py" />
         <option value="$PROJECT_DIR$/../vc_typer/vc_typer.py" />
-        <option value="$USER_HOME$/Desktop/lanlab/all_allele_profiles/2019-10-03-species_identifying_commonly_missing_alleles.py" />
-        <option value="$PROJECT_DIR$/Grapetree/allele_to_grapetree.py" />
         <option value="$PROJECT_DIR$/General_Scripts/2019-08-04-make_snp_alignment_frm_db.py" />
         <option value="$PROJECT_DIR$/General_Scripts/2019-11-04-vcf_to_fasta.py" />
         <option value="$USER_HOME$/Desktop/vcseventh_23/Mgtfi_ref/vibrio_settings_copy.py" />
         <option value="$USER_HOME$/Desktop/vcseventh_23/Mgtfi_ref/Allele_to_mgt_db.py" />
         <option value="$PROJECT_DIR$/General_Scripts/2019-02-25-processing_roary_output.py" />
         <option value="$PROJECT_DIR$/General_Scripts/2019-12-09-accessory_blocks.py" />
-        <option value="$PROJECT_DIR$/General_Scripts/mumo_jumbo.py" />
-        <option value="$PROJECT_DIR$/../vc_typer/blast_db/alleles.fasta" />
-        <option value="$USER_HOME$/MGTwebby/docs/index.html" />
         <option value="$USER_HOME$/MGTwebby/docs/links.html" />
         <option value="$USER_HOME$/MGTwebby/docs/publications.html" />
         <option value="$USER_HOME$/MGTwebby/docs/projects.html" />
         <option value="$USER_HOME$/MGTwebby/docs/contacts.html" />
         <option value="$USER_HOME$/MGTwebby/docs/members.html" />
+        <option value="$USER_HOME$/Downloads/profile_annotation_2_allele_profiletsv.py" />
+        <option value="$PROJECT_DIR$/Grapetree/allele_to_grapetree.py" />
+        <option value="$USER_HOME$/Desktop/vcseventh_24/Mgtfi_ref/Allele_to_mgt_db.py" />
+        <option value="$USER_HOME$/Desktop/vcseventh_24/Mgtfi_ref/remove_isolate_and_data.py" />
+        <option value="$USER_HOME$/Desktop/vcseventh_24/Mgtfi_ref/vibrio_settings_copy.py" />
+        <option value="$PROJECT_DIR$/General_Scripts/2018-08-10-MGT_locus_preference_filters.py" />
+        <option value="$USER_HOME$/Desktop/vcseventh_25/Mgtfi_ref/remove_isolate_and_data.py" />
+        <option value="$USER_HOME$/Desktop/vcseventh_25/Mgtfi_ref/vibrio_settings_copy.py" />
+        <option value="$USER_HOME$/Desktop/vcseventh_25/Mgtfi_ref/delete_loose_ends.py" />
+        <option value="$PROJECT_DIR$/../vc_typer/blast_db/alleles.fasta" />
+        <option value="$PROJECT_DIR$/General_Scripts/2019-05-22-abricate_anti_resistances.py" />
+        <option value="$USER_HOME$/MGTwebby/docs/index.html" />
         <option value="$PROJECT_DIR$/General_Scripts/2019-08-03-choosing_genes_per_clade.py" />
+        <option value="$USER_HOME$/Desktop/vcseventh_26/Mgtfi_ref/vibrio_settings_copy.py" />
+        <option value="$PROJECT_DIR$/General_Scripts/2020-02-06-multi_blast_searcher.py" />
+        <option value="$PROJECT_DIR$/General_Scripts/2019-05-29-ST_per_scheme.py" />
+        <option value="$USER_HOME$/Desktop/lanlab/all_allele_profiles/2019-10-03-species_identifying_commonly_missing_alleles.py" />
+        <option value="$PROJECT_DIR$/General_Scripts/mumo_jumbo.py" />
+        <option value="$PROJECT_DIR$/General_Scripts/cnvnator.py" />
+        <option value="$PROJECT_DIR$/General_Scripts/2019-10-20-automate_STs_and_markers.py" />
+        <option value="$PROJECT_DIR$/General_Scripts/2020-03-02-MGT3_per_continent.py" />
+        <option value="$PROJECT_DIR$/General_Scripts/2020-03-17-alleles_over_grapetree.py" />
+        <option value="$PROJECT_DIR$/Staph/2020-03-20-plasmid_sep.py" />
+        <option value="$USER_HOME$/spa_typing/get_spa_type.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="x" value="370" />
-    <option name="y" value="49" />
-    <option name="width" value="2560" />
-    <option name="height" value="1349" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="502" />
+    <option name="y" value="255" />
+    <option name="width" value="1633" />
+    <option name="height" value="990" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -211,6 +252,23 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Python_PhD" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Python_PhD" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Python_PhD" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Python_PhD" type="462c0819:PsiDirectoryNode" />
+              <item name="Vibrio" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="Scope">
         <subPane subId="Default">
           <expand>
@@ -227,42 +285,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="Python_PhD" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Python_PhD" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Python_PhD" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Python_PhD" type="462c0819:PsiDirectoryNode" />
-              <item name="General_Scripts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Python_PhD" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Python_PhD" type="462c0819:PsiDirectoryNode" />
-              <item name="Grapetree" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Python_PhD" type="b2602c69:ProjectViewProjectNode" />
-              <item name="vc_typer" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Python_PhD" type="b2602c69:ProjectViewProjectNode" />
-              <item name="vc_typer" type="462c0819:PsiDirectoryNode" />
-              <item name="blast_db" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Python_PhD" type="b2602c69:ProjectViewProjectNode" />
-              <item name="vc_typer" type="462c0819:PsiDirectoryNode" />
-              <item name="output" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -270,14 +292,15 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/CTX_allele_caller" />
+      <recent name="$PROJECT_DIR$/General Scripts" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/../vc_typer/blast_db" />
       <recent name="$PROJECT_DIR$/Grapetree" />
       <recent name="$PROJECT_DIR$/CTX_allele_caller/blast_db" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/CTX_allele_caller" />
-      <recent name="$PROJECT_DIR$/General Scripts" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -292,8 +315,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.2019-08-03-choosing_genes_per_clade">
-    <configuration name="2019-02-25-processing_roary_output" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.2020-03-20-plasmid_sep">
+    <configuration name="2019-10-20-automate_STs_and_markers" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -305,13 +328,13 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Python_PhD" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/General_Scripts/2019-02-25-processing_roary_output.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/General_Scripts/2019-10-20-automate_STs_and_markers.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="2019-08-03-choosing_genes_per_clade" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="2020-03-02-MGT3_per_continent" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -323,13 +346,13 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Python_PhD" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/General_Scripts/2019-08-03-choosing_genes_per_clade.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/General_Scripts/2020-03-02-MGT3_per_continent.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="2019-11-04-vcf_to_fasta" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="2020-03-17-alleles_over_grapetree" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -341,25 +364,25 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Python_PhD" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/General_Scripts/2019-11-04-vcf_to_fasta.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/General_Scripts/2020-03-17-alleles_over_grapetree.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="2019-12-09-accessory_blocks" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="2020-03-20-plasmid_sep" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/General_Scripts" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Staph" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Python_PhD" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/General_Scripts/2019-12-09-accessory_blocks.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Staph/2020-03-20-plasmid_sep.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -384,19 +407,19 @@
       <option name="MODULE_MODE" value="false" />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.2019-11-04-vcf_to_fasta" />
-      <item index="1" class="java.lang.String" itemvalue="Python.2019-08-03-choosing_genes_per_clade" />
-      <item index="2" class="java.lang.String" itemvalue="Python.2019-02-25-processing_roary_output" />
-      <item index="3" class="java.lang.String" itemvalue="Python.2019-12-09-accessory_blocks" />
-      <item index="4" class="java.lang.String" itemvalue="Python.mumo_jumbo" />
+      <item index="0" class="java.lang.String" itemvalue="Python.mumo_jumbo" />
+      <item index="1" class="java.lang.String" itemvalue="Python.2019-10-20-automate_STs_and_markers" />
+      <item index="2" class="java.lang.String" itemvalue="Python.2020-03-02-MGT3_per_continent" />
+      <item index="3" class="java.lang.String" itemvalue="Python.2020-03-17-alleles_over_grapetree" />
+      <item index="4" class="java.lang.String" itemvalue="Python.2020-03-20-plasmid_sep" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.2019-08-03-choosing_genes_per_clade" />
-        <item index="1" class="java.lang.String" itemvalue="Python.mumo_jumbo" />
-        <item index="2" class="java.lang.String" itemvalue="Python.2019-12-09-accessory_blocks" />
-        <item index="3" class="java.lang.String" itemvalue="Python.2019-02-25-processing_roary_output" />
-        <item index="4" class="java.lang.String" itemvalue="Python.2019-11-04-vcf_to_fasta" />
+        <item index="0" class="java.lang.String" itemvalue="Python.2020-03-20-plasmid_sep" />
+        <item index="1" class="java.lang.String" itemvalue="Python.2020-03-17-alleles_over_grapetree" />
+        <item index="2" class="java.lang.String" itemvalue="Python.2020-03-02-MGT3_per_continent" />
+        <item index="3" class="java.lang.String" itemvalue="Python.2019-10-20-automate_STs_and_markers" />
+        <item index="4" class="java.lang.String" itemvalue="Python.mumo_jumbo" />
       </list>
     </recent_temporary>
   </component>
@@ -701,7 +724,21 @@
       <option name="project" value="LOCAL" />
       <updated>1576458895640</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="test">
+      <created>1576469526311</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1576469526311</updated>
+    </task>
+    <task id="LOCAL-00043" summary="test">
+      <created>1583131405860</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1583131405860</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TodoView">
@@ -714,26 +751,45 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="2560" height="1440" extended-state="0" />
+    <frame x="502" y="255" width="1633" height="990" extended-state="0" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37219378" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991952" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34305212" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329188" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38039503" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24720894" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32969216" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.08826815" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24899274" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25676665" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39941478" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3329609" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39941478" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329188" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36536312" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24720894" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32969216" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3329609" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34305212" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24899274" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39941478" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -748,227 +804,173 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/General_Scripts/2019-08-04-make_snp_alignment_frm_db.py</url>
+          <url>file://$PROJECT_DIR$/Vibrio/2019-08-04-make_snp_alignment_frm_db.py</url>
           <line>292</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$USER_HOME$/spa_typing/get_spa_type.py</url>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="11" />
+      <option name="time" value="15" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/Desktop/vcseventh_22/Mgtfi_ref/Allele_to_mgt_db.py">
+    <entry file="file://$PROJECT_DIR$/Vibrio/2019-11-04-vcf_to_fasta.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30064">
-          <caret line="2199" column="140" lean-forward="false" selection-start-line="2199" selection-start-column="134" selection-end-line="2199" selection-end-column="140" />
+        <state relative-caret-position="405">
+          <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Desktop/vcseventh_22/Mgtfi_ref/vibrio_settings_copy.py">
+    <entry file="file://$USER_HOME$/Downloads/metadata (3).txt" />
+    <entry file="file://$USER_HOME$/Desktop/vcseventh_23/Mgtfi_ref/vibrio_settings_copy.py" />
+    <entry file="file://$USER_HOME$/Desktop/vcseventh_23/Mgtfi_ref/Allele_to_mgt_db.py" />
+    <entry file="file://$PROJECT_DIR$/Vibrio/2019-02-25-processing_roary_output.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="109" column="20" lean-forward="false" selection-start-line="109" selection-start-column="17" selection-end-line="109" selection-end-column="20" />
+        <state relative-caret-position="245">
+          <caret line="578" column="4" lean-forward="true" selection-start-line="578" selection-start-column="4" selection-end-line="578" selection-end-column="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Desktop/vcseventh_22/Mgtfi_ref/remove_isolate_and_data.py">
+    <entry file="file://$USER_HOME$/MGTwebby/docs/publications.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="468" column="18" lean-forward="false" selection-start-line="468" selection-start-column="18" selection-end-line="468" selection-end-column="18" />
+        <state relative-caret-position="460">
+          <caret line="36" column="74" lean-forward="false" selection-start-line="36" selection-start-column="74" selection-end-line="36" selection-end-column="74" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Desktop/vcseventh_22/Mgtfi_ref/delete_loose_ends.py">
+    <entry file="file://$USER_HOME$/MGTwebby/docs/projects.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="134" column="0" lean-forward="true" selection-start-line="134" selection-start-column="0" selection-end-line="134" selection-end-column="0" />
+        <state relative-caret-position="675">
+          <caret line="45" column="78" lean-forward="false" selection-start-line="45" selection-start-column="78" selection-end-line="45" selection-end-column="78" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/General_Scripts/2019-11-04-snps_to_tree.py" />
-    <entry file="file://$PROJECT_DIR$/General_Scripts/2019-11-05-fasta2phylip.py">
+    <entry file="file://$USER_HOME$/MGTwebby/docs/contacts.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="675">
+          <caret line="45" column="78" lean-forward="false" selection-start-line="45" selection-start-column="78" selection-end-line="45" selection-end-column="78" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/General_Scripts/2019-05-18-abricate_output.py" />
-    <entry file="file://$USER_HOME$/MGT_22/Mgt/Mgt/MGT_processing/MgtAllele2Db/Allele_to_mgt_db.py">
+    <entry file="file://$USER_HOME$/MGTwebby/docs/links.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="47" column="10" lean-forward="false" selection-start-line="47" selection-start-column="10" selection-end-line="47" selection-end-column="10" />
+        <state relative-caret-position="720">
+          <caret line="48" column="79" lean-forward="false" selection-start-line="48" selection-start-column="79" selection-end-line="48" selection-end-column="79" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/MGT_22/Mgt/Mgt/Mgt/settings.py">
+    <entry file="file://$USER_HOME$/MGTwebby/docs/members.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="109" column="29" lean-forward="false" selection-start-line="109" selection-start-column="27" selection-end-line="109" selection-end-column="29" />
+        <state relative-caret-position="333">
+          <caret line="232" column="335" lean-forward="false" selection-start-line="232" selection-start-column="335" selection-end-line="232" selection-end-column="335" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/MGT_22/Mgt/Mgt/MGT_processing/Reads2MGTAlleles/reads_to_alleles.py">
+    <entry file="file://$USER_HOME$/Downloads/profile_annotation_2_allele_profiletsv.py" />
+    <entry file="file://$PROJECT_DIR$/Vibrio/2019-12-09-accessory_blocks.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="254" column="29" lean-forward="false" selection-start-line="254" selection-start-column="27" selection-end-line="254" selection-end-column="29" />
+        <state relative-caret-position="600">
+          <caret line="122" column="134" lean-forward="false" selection-start-line="119" selection-start-column="4" selection-end-line="122" selection-end-column="134" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/MGT_22/Mgt/Mgt/manage.py">
+    <entry file="file://$PROJECT_DIR$/Vibrio/2019-11-24-amr_per_strain.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="11" column="32" lean-forward="false" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
+        <state relative-caret-position="60">
+          <caret line="69" column="48" lean-forward="false" selection-start-line="69" selection-start-column="48" selection-end-line="69" selection-end-column="48" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/MGT_22/Mgt/Mgt/MGT_processing/db_search_modification/get_snps_for_isolate.py">
+    <entry file="file://$PROJECT_DIR$/Grapetree/allele_to_grapetree.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="15" lean-forward="false" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
+        <state relative-caret-position="480">
+          <caret line="139" column="0" lean-forward="false" selection-start-line="139" selection-start-column="0" selection-end-line="139" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/General_Scripts/2019-11-04-count_inconsistency.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3045">
-          <caret line="209" column="35" lean-forward="false" selection-start-line="209" selection-start-column="35" selection-end-line="209" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/MGTwebby/docs/news.html" />
-    <entry file="file://$PROJECT_DIR$/General_Scripts/2019-05-29-ST_per_scheme.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="62" column="25" lean-forward="false" selection-start-line="62" selection-start-column="25" selection-end-line="62" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/miniconda3/envs/p3env/lib/python3.6/site-packages/pandas/core/ops.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="1165" column="0" lean-forward="false" selection-start-line="1165" selection-start-column="0" selection-end-line="1165" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/General_Scripts/2019-10-03-species_identifying_commonly_missing_alleles.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="45" column="0" lean-forward="true" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/miniconda3/envs/p3env/lib/python3.6/site-packages/pandas/core/dtypes/cast.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="701" column="12" lean-forward="false" selection-start-line="701" selection-start-column="12" selection-end-line="701" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/miniconda3/envs/p3env/lib/python3.6/site-packages/pandas/core/internals.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="574" column="0" lean-forward="false" selection-start-line="574" selection-start-column="0" selection-end-line="574" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/miniconda3/envs/p3env/lib/python3.6/site-packages/pandas/util/_decorators.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="176" column="0" lean-forward="false" selection-start-line="176" selection-start-column="0" selection-end-line="176" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../vc_typer/blast_db/alleles.fasta">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="222" column="31" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="374" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/3.py" />
-    <entry file="file://$PROJECT_DIR$/General_Scripts/cnvnator.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Library/Caches/Transmit/5E2D07C0-7EE2-4B71-8F35-CB8BF8FA8D41/kdm.restech.unsw.edu.au/srv/scratch/z5087966/5_HGT_seventh_pandemic/2019-11-26-cnvnator/sample_data/cnvnator.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="32">
-          <caret line="25" column="158" lean-forward="false" selection-start-line="25" selection-start-column="151" selection-end-line="25" selection-end-column="158" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/General_Scripts/compare_allele_profiles.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="8" column="40" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/done/xx.py" />
-    <entry file="file://$PROJECT_DIR$/General_Scripts/2019-05-22-abricate_anti_resistances.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/General_Scripts/2019-11-24-amr_per_strain.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="42" column="48" lean-forward="false" selection-start-line="42" selection-start-column="48" selection-end-line="42" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/General_Scripts/2019-11-22-select_combinations_of_alleles.py">
+    <entry file="file://$PROJECT_DIR$/Vibrio/2019-11-22-select_combinations_of_alleles.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="21" column="87" lean-forward="false" selection-start-line="21" selection-start-column="87" selection-end-line="21" selection-end-column="87" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/General_Scripts/2018-08-10-MGT_locus_preference_filters.py">
+    <entry file="file://$USER_HOME$/Desktop/vcseventh_24/Mgtfi_ref/Allele_to_mgt_db.py" />
+    <entry file="file://$USER_HOME$/Desktop/vcseventh_24/Mgtfi_ref/remove_isolate_and_data.py" />
+    <entry file="file://$USER_HOME$/Desktop/vcseventh_24/Mgtfi_ref/vibrio_settings_copy.py" />
+    <entry file="file://$USER_HOME$/miniconda3/envs/p3env/lib/python3.6/site-packages/pandas/core/internals.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="33" column="12" lean-forward="false" selection-start-line="33" selection-start-column="12" selection-end-line="33" selection-end-column="12" />
+        <state relative-caret-position="243">
+          <caret line="3712" column="38" lean-forward="false" selection-start-line="3712" selection-start-column="38" selection-end-line="3712" selection-end-column="38" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Library/Caches/Transmit/88D263E0-FF96-4FCB-AD3F-C1C394989199/kdm.restech.unsw.edu.au/srv/scratch/z5087966/5_HGT_seventh_pandemic/2019-11-26-cnvnator/sample_data/cnvnator.py">
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="250" column="22" lean-forward="false" selection-start-line="250" selection-start-column="22" selection-end-line="250" selection-end-column="22" />
+        <state relative-caret-position="255">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Desktop/lanlab/all_allele_profiles/2019-10-03-species_identifying_commonly_missing_alleles.py">
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="533">
-          <caret line="222" column="55" lean-forward="false" selection-start-line="222" selection-start-column="55" selection-end-line="222" selection-end-column="55" />
+        <state relative-caret-position="669">
+          <caret line="1667" column="0" lean-forward="false" selection-start-line="1667" selection-start-column="0" selection-end-line="1667" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Grapetree/allele_to_grapetree.py">
+    <entry file="file://$USER_HOME$/miniconda3/envs/p3env/lib/python3.6/site-packages/pandas/util/_decorators.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="172" column="0" lean-forward="true" selection-start-line="172" selection-start-column="0" selection-end-line="172" selection-end-column="0" />
+        <state relative-caret-position="258">
+          <caret line="176" column="0" lean-forward="false" selection-start-line="176" selection-start-column="0" selection-end-line="176" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../vc_typer/vc_typer.py">
+    <entry file="file://$USER_HOME$/miniconda3/envs/p3env/lib/python3.6/site-packages/pandas/core/generic.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="160" column="48" lean-forward="false" selection-start-line="160" selection-start-column="48" selection-end-line="160" selection-end-column="48" />
+        <state relative-caret-position="258">
+          <caret line="4996" column="0" lean-forward="false" selection-start-line="4996" selection-start-column="0" selection-end-line="4996" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/General_Scripts/2019-08-04-make_snp_alignment_frm_db.py">
+    <entry file="file://$USER_HOME$/miniconda3/envs/p3env/lib/python3.6/site-packages/pandas/core/dtypes/cast.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
+        <state relative-caret-position="258">
+          <caret line="702" column="0" lean-forward="false" selection-start-line="702" selection-start-column="0" selection-end-line="702" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vibrio/2018-08-10-MGT_locus_preference_filters.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="568">
+          <caret line="90" column="22" lean-forward="true" selection-start-line="90" selection-start-column="22" selection-end-line="90" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/vcseventh_25/Mgtfi_ref/remove_isolate_and_data.py" />
+    <entry file="file://$USER_HOME$/Desktop/vcseventh_25/Mgtfi_ref/delete_loose_ends.py" />
+    <entry file="file://$USER_HOME$/Desktop/vcseventh_25/Mgtfi_ref/vibrio_settings_copy.py" />
+    <entry file="file://$PROJECT_DIR$/../vc_typer/blast_db/alleles.fasta">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="560">
+          <caret line="374" column="13" lean-forward="false" selection-start-line="374" selection-start-column="13" selection-end-line="374" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vibrio/2019-05-22-abricate_anti_resistances.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="36" column="68" lean-forward="false" selection-start-line="36" selection-start-column="68" selection-end-line="36" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vibrio/2019-08-04-make_snp_alignment_frm_db.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
           <caret line="136" column="39" lean-forward="false" selection-start-line="136" selection-start-column="39" selection-end-line="136" selection-end-column="39" />
           <folding>
             <element signature="e#226#706#1" expanded="false" />
@@ -1047,155 +1049,192 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/General_Scripts/2019-11-04-vcf_to_fasta.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Downloads/metadata (3).txt" />
-    <entry file="file://$USER_HOME$/Desktop/vcseventh_23/Mgtfi_ref/vibrio_settings_copy.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="85" column="24" lean-forward="false" selection-start-line="85" selection-start-column="21" selection-end-line="85" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/vcseventh_23/Mgtfi_ref/Allele_to_mgt_db.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="306" column="61" lean-forward="false" selection-start-line="306" selection-start-column="57" selection-end-line="306" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/General_Scripts/2019-02-25-processing_roary_output.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="578" column="4" lean-forward="true" selection-start-line="578" selection-start-column="4" selection-end-line="578" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/MGTwebby/docs/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="35" column="74" lean-forward="false" selection-start-line="35" selection-start-column="74" selection-end-line="35" selection-end-column="74" />
+        <state relative-caret-position="0">
+          <caret line="88" column="80" lean-forward="false" selection-start-line="88" selection-start-column="80" selection-end-line="88" selection-end-column="80" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../vc_typer/blast_db/alleles.fasta">
+    <entry file="file://$USER_HOME$/Desktop/vcseventh_26/Mgtfi_ref/vibrio_settings_copy.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="952">
-          <caret line="394" column="59" lean-forward="false" selection-start-line="394" selection-start-column="59" selection-end-line="394" selection-end-column="59" />
-          <folding />
+        <state relative-caret-position="693">
+          <caret line="149" column="25" lean-forward="false" selection-start-line="149" selection-start-column="25" selection-end-line="149" selection-end-column="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/General_Scripts/2019-10-20-automate_STs_and_markers.py">
+    <entry file="file://$USER_HOME$/Desktop/vcseventh_26/Mgtfi_ref/Allele_to_mgt_db.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="107" column="94" lean-forward="false" selection-start-line="107" selection-start-column="94" selection-end-line="107" selection-end-column="94" />
+        <state relative-caret-position="426">
+          <caret line="310" column="48" lean-forward="false" selection-start-line="310" selection-start-column="48" selection-end-line="310" selection-end-column="48" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/General_Scripts/mumo_jumbo.py">
+    <entry file="file://$USER_HOME$/MGT_26/Mgt/Mgt/Scripts/setUpApsAndMgt.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="927">
-          <caret line="832" column="14" lean-forward="false" selection-start-line="832" selection-start-column="14" selection-end-line="832" selection-end-column="14" />
-          <folding />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/MGTwebby/docs/publications.html">
+    <entry file="file://$PROJECT_DIR$/Vibrio/2019-02-13-pubMLST.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="36" column="74" lean-forward="false" selection-start-line="36" selection-start-column="74" selection-end-line="36" selection-end-column="74" />
+        <state relative-caret-position="-516">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/MGTwebby/docs/projects.html">
+    <entry file="file://$PROJECT_DIR$/../vc_typer/vc_typer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="45" column="78" lean-forward="false" selection-start-line="45" selection-start-column="78" selection-end-line="45" selection-end-column="78" />
+        <state relative-caret-position="885">
+          <caret line="66" column="4" lean-forward="false" selection-start-line="66" selection-start-column="4" selection-end-line="66" selection-end-column="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/MGTwebby/docs/contacts.html">
+    <entry file="file://$PROJECT_DIR$/Vibrio/2019-05-29-ST_per_scheme.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="45" column="78" lean-forward="false" selection-start-line="45" selection-start-column="78" selection-end-line="45" selection-end-column="78" />
+        <state relative-caret-position="474">
+          <caret line="69" column="20" lean-forward="false" selection-start-line="69" selection-start-column="20" selection-end-line="69" selection-end-column="20" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/MGTwebby/docs/links.html">
+    <entry file="file://$PROJECT_DIR$/Vibrio/2019-08-03-choosing_genes_per_clade.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="48" column="79" lean-forward="false" selection-start-line="48" selection-start-column="79" selection-end-line="48" selection-end-column="79" />
+        <state relative-caret-position="744">
+          <caret line="287" column="0" lean-forward="false" selection-start-line="287" selection-start-column="0" selection-end-line="287" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/MGTwebby/docs/members.html">
+    <entry file="file://$PROJECT_DIR$/Vibrio/2018-08-30-check_HGT_zeros_n_negs.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
-          <caret line="232" column="335" lean-forward="false" selection-start-line="232" selection-start-column="335" selection-end-line="232" selection-end-column="335" />
-          <folding />
+        <state relative-caret-position="195">
+          <caret line="13" column="7" lean-forward="true" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/General_Scripts/2019-12-09-accessory_blocks.py">
+    <entry file="file://$PROJECT_DIR$/Vibrio/2019-03-07-allele_caller_zeros_count.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="122" column="134" lean-forward="false" selection-start-line="119" selection-start-column="4" selection-end-line="122" selection-end-column="134" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vibrio/mumo_jumbo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="878" column="38" lean-forward="false" selection-start-line="878" selection-start-column="38" selection-end-line="878" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vibrio/2020-02-06-multi_blast_searcher.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="15" column="14" lean-forward="false" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/lanlab/all_allele_profiles/2019-10-03-species_identifying_commonly_missing_alleles.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="222" column="55" lean-forward="false" selection-start-line="222" selection-start-column="55" selection-end-line="222" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vibrio/cnvnator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="13" column="26" lean-forward="false" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Caches/Transmit/46119394-C70E-47DE-BB3C-2B08EAEB5780/katana.restech.unsw.edu.au/srv/scratch/z5087966/5_HGT_seventh_pandemic/2019-11-26-cnvnator/sample_data/cnvnator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="272" column="26" lean-forward="false" selection-start-line="272" selection-start-column="26" selection-end-line="272" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vibrio/2019-10-20-automate_STs_and_markers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="167" column="16" lean-forward="false" selection-start-line="167" selection-start-column="16" selection-end-line="167" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vibrio/2020-03-02-MGT3_per_continent.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vibrio/2020-03-17-alleles_over_grapetree.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="39" lean-forward="false" selection-start-line="25" selection-start-column="39" selection-end-line="25" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Staph/2020-03-20-plasmid_sep.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
-            <element signature="e#128#405#0" expanded="false" />
-            <element signature="e#446#1389#0" expanded="false" />
-            <element signature="e#1425#1688#0" expanded="false" />
-            <element signature="e#2318#3300#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/General_Scripts/2019-08-03-choosing_genes_per_clade.py">
+    <entry file="file://$USER_HOME$/spa_typing/get_spa_type.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="231" column="0" lean-forward="true" selection-start-line="231" selection-start-column="0" selection-end-line="231" selection-end-column="0" />
+        <state relative-caret-position="525">
+          <caret line="225" column="22" lean-forward="false" selection-start-line="225" selection-start-column="22" selection-end-line="225" selection-end-column="22" />
           <folding>
-            <element signature="e#137#2147#0" expanded="false" />
-            <element signature="e#323#885#0" expanded="false" />
-            <element signature="e#498#885#0" expanded="false" />
-            <element signature="e#614#698#0" expanded="false" />
-            <element signature="e#712#731#0" expanded="false" />
-            <element signature="e#891#958#0" expanded="false" />
-            <element signature="e#2233#2688#0" expanded="false" />
-            <element signature="e#2303#2371#0" expanded="false" />
-            <element signature="e#2452#2524#0" expanded="false" />
-            <element signature="e#2572#2663#0" expanded="false" />
-            <element signature="e#2919#3228#0" expanded="false" />
-            <element signature="e#2953#3228#0" expanded="false" />
-            <element signature="e#2953#2963#0" expanded="false" />
-            <element signature="e#3302#3441#0" expanded="false" />
-            <element signature="e#3356#3416#0" expanded="false" />
-            <element signature="e#3481#3761#0" expanded="false" />
-            <element signature="e#3555#3761#0" expanded="false" />
-            <element signature="e#3607#3761#0" expanded="false" />
-            <element signature="e#3879#4415#0" expanded="false" />
-            <element signature="e#3879#3935#0" expanded="false" />
-            <element signature="e#4474#4974#0" expanded="false" />
-            <element signature="e#4567#4637#0" expanded="false" />
-            <element signature="e#4643#4690#0" expanded="false" />
-            <element signature="e#5039#5571#0" expanded="false" />
-            <element signature="e#5039#5073#0" expanded="false" />
-            <element signature="e#5300#5333#0" expanded="false" />
-            <element signature="e#5438#5505#0" expanded="false" />
-            <element signature="e#5710#6799#0" expanded="false" />
-            <element signature="e#5710#5750#0" expanded="false" />
-            <element signature="e#6740#6786#0" expanded="false" />
-            <element signature="e#6906#7966#0" expanded="false" />
-            <element signature="e#7990#8267#0" expanded="false" />
-            <element signature="e#8084#8145#0" expanded="false" />
-            <element signature="e#8665#8907#0" expanded="false" />
-            <element signature="e#8732#8907#0" expanded="false" />
+            <element signature="e#172#289#0" expanded="false" />
+            <element signature="e#358#881#0" expanded="false" />
+            <element signature="e#358#424#1" expanded="false" />
+            <element signature="e#483#862#0" expanded="false" />
+            <element signature="e#591#862#0" expanded="false" />
+            <element signature="e#883#912#0" expanded="false" />
+            <element signature="e#1020#2255#0" expanded="false" />
+            <element signature="e#1110#1223#0" expanded="false" />
+            <element signature="e#1331#1445#0" expanded="false" />
+            <element signature="e#1473#1630#0" expanded="false" />
+            <element signature="e#1500#1630#0" expanded="false" />
+            <element signature="e#1548#1630#0" expanded="false" />
+            <element signature="e#1738#1852#0" expanded="false" />
+            <element signature="e#1929#2042#0" expanded="false" />
+            <element signature="e#2070#2235#0" expanded="false" />
+            <element signature="e#2097#2235#0" expanded="false" />
+            <element signature="e#2145#2235#0" expanded="false" />
+            <element signature="e#2373#4630#0" expanded="false" />
+            <element signature="e#2456#2794#0" expanded="false" />
+            <element signature="e#2826#3160#0" expanded="false" />
+            <element signature="e#3192#4229#0" expanded="false" />
+            <element signature="e#4337#4443#0" expanded="false" />
+            <element signature="e#4480#4580#0" expanded="false" />
+            <element signature="e#4507#4580#0" expanded="false" />
+            <element signature="e#4734#7154#0" expanded="false" />
+            <element signature="e#4784#5853#0" expanded="false" />
+            <element signature="e#4910#5041#0" expanded="false" />
+            <element signature="e#5081#5247#0" expanded="false" />
+            <element signature="e#5113#5247#0" expanded="false" />
+            <element signature="e#5287#5459#0" expanded="false" />
+            <element signature="e#5319#5459#0" expanded="false" />
+            <element signature="e#5499#5666#0" expanded="false" />
+            <element signature="e#5531#5666#0" expanded="false" />
+            <element signature="e#5872#5947#0" expanded="false" />
+            <element signature="e#5997#6700#0" expanded="false" />
+            <element signature="e#6098#6665#0" expanded="false" />
+            <element signature="e#6161#6579#0" expanded="false" />
+            <element signature="e#6213#6579#0" expanded="false" />
+            <element signature="e#6363#6453#0" expanded="false" />
+            <element signature="e#6622#6665#0" expanded="false" />
+            <element signature="e#6750#7134#0" expanded="false" />
+            <element signature="e#6795#6906#0" expanded="false" />
+            <element signature="e#7279#7542#0" expanded="false" />
+            <element signature="e#7779#7939#0" expanded="false" />
+            <element signature="e#8103#8275#0" expanded="false" />
           </folding>
         </state>
       </provider>
