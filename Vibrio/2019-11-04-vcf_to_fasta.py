@@ -1,6 +1,6 @@
 def main():
 
-    infile_path = '/Users/liamcheneyy/Desktop/overlap/noM/overlap_nM.txt'
+    infile_path = '/Users/liamcheney/Desktop/norecom.real'
     infile = open(infile_path,'r').read().splitlines()
 
     strains_num = len(infile[0].split('\t')) - 1
@@ -17,7 +17,7 @@ def main():
         complete = ''.join(save_list)
         save_dict[strain] = complete
 
-    out_path = '/Users/liamcheneyy/Desktop/overlap/noM/overlap_nM.fasta'
+    out_path = '/Users/liamcheney/Desktop/norecom.fasta'
     with open(out_path,'w') as out:
         for k, v in save_dict.items():
             out.write('>' + k + '\n')
