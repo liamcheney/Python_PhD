@@ -2,10 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="808d523f-cfb3-4699-b214-793d2f2a6efd" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/Staph/2020-03-20-testing_typability.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/Staph/2020-04-26-extract-BioSample-metadata.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/Staph/2020-04-29-MLST_STs.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/Staph/2020-04-29-get_diverse_dataset.py" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Vibrio/2019-02-25-processing_roary_output.py" afterPath="$PROJECT_DIR$/Vibrio/2019-02-25-processing_roary_output.py" />
-      <change beforePath="$PROJECT_DIR$/../vc_typer/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../vc_typer/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/../vc_typer/blast_db/alleles.fasta" afterPath="$PROJECT_DIR$/../vc_typer/blast_db/alleles.fasta" />
+      <change beforePath="$PROJECT_DIR$/Staph/2020-03-20-plasmid_sep.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Staph/2020-04-15-plasmid_res.py" afterPath="$PROJECT_DIR$/Staph/2020-04-15-plasmid_res.py" />
+      <change beforePath="$PROJECT_DIR$/Vibrio/2019-11-04-vcf_to_fasta.py" afterPath="$PROJECT_DIR$/Vibrio/2019-11-04-vcf_to_fasta.py" />
+      <change beforePath="$PROJECT_DIR$/Vibrio/mumo_jumbo.py" afterPath="$PROJECT_DIR$/Vibrio/mumo_jumbo.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -16,205 +21,33 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="2020-04-15-plasmid_res.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Staph/2020-04-15-plasmid_res.py">
+      <file leaf-file-name="mumo_jumbo.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Vibrio/mumo_jumbo.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="603">
-              <caret line="85" column="59" lean-forward="false" selection-start-line="85" selection-start-column="59" selection-end-line="85" selection-end-column="59" />
-              <folding>
-                <element signature="e#0#15#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="898">
+              <caret line="974" column="22" lean-forward="false" selection-start-line="968" selection-start-column="16" selection-end-line="974" selection-end-column="22" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="reads_to_alleles.py" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/Library/Caches/Transmit/4ED1620A-4D5E-48DF-B84C-397661146B7C/katana.restech.unsw.edu.au/srv/scratch/lanlab/liam/2019-04-01-reads_to_alleles/Reads2MGTAlleles_genomes/reads_to_alleles.py">
+      <file leaf-file-name="2020-04-29-get_diverse_dataset.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Staph/2020-04-29-get_diverse_dataset.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2160">
-              <caret line="1338" column="0" lean-forward="false" selection-start-line="1338" selection-start-column="0" selection-end-line="1338" selection-end-column="0" />
+            <state relative-caret-position="465">
+              <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2019-11-05-fasta2phylip.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Vibrio/2019-11-05-fasta2phylip.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" column="94" lean-forward="false" selection-start-line="11" selection-start-column="94" selection-end-line="11" selection-end-column="94" />
               <folding>
-                <element signature="e#493#1125#1" expanded="false" />
-                <element signature="e#1218#1516#0" expanded="false" />
-                <element signature="e#1625#5641#0" expanded="false" />
-                <element signature="e#1625#2096#1" expanded="false" />
-                <element signature="e#3054#3102#0" expanded="false" />
-                <element signature="e#4329#4450#0" expanded="false" />
-                <element signature="e#4363#4450#0" expanded="false" />
-                <element signature="e#4456#4526#0" expanded="false" />
-                <element signature="e#4863#4924#0" expanded="false" />
-                <element signature="e#5718#8770#0" expanded="false" />
-                <element signature="e#5718#7503#1" expanded="false" />
-                <element signature="e#7548#7583#0" expanded="false" />
-                <element signature="e#7824#8726#0" expanded="false" />
-                <element signature="e#7920#8726#0" expanded="false" />
-                <element signature="e#8260#8726#0" expanded="false" />
-                <element signature="e#8436#8726#0" expanded="false" />
-                <element signature="e#8850#11269#0" expanded="false" />
-                <element signature="e#8850#9042#1" expanded="false" />
-                <element signature="e#9047#9074#0" expanded="false" />
-                <element signature="e#9384#9397#0" expanded="false" />
-                <element signature="e#9797#9824#0" expanded="false" />
-                <element signature="e#9931#11243#1" expanded="false" />
-                <element signature="e#11385#14202#0" expanded="false" />
-                <element signature="e#11385#11584#1" expanded="false" />
-                <element signature="e#11590#11930#1" expanded="false" />
-                <element signature="e#12017#13033#0" expanded="false" />
-                <element signature="e#12065#13033#0" expanded="false" />
-                <element signature="e#12232#13033#0" expanded="false" />
-                <element signature="e#12399#13033#0" expanded="false" />
-                <element signature="e#12672#12769#0" expanded="false" />
-                <element signature="e#13148#14037#0" expanded="false" />
-                <element signature="e#13304#13622#0" expanded="false" />
-                <element signature="e#13431#13506#0" expanded="false" />
-                <element signature="e#13649#13715#0" expanded="false" />
-                <element signature="e#13764#14037#0" expanded="false" />
-                <element signature="e#13955#14037#0" expanded="false" />
-                <element signature="e#14094#14164#0" expanded="false" />
-                <element signature="e#14393#18820#0" expanded="false" />
-                <element signature="e#14393#15123#1" expanded="false" />
-                <element signature="e#15302#15406#0" expanded="false" />
-                <element signature="e#15504#18207#0" expanded="false" />
-                <element signature="e#16244#17651#0" expanded="false" />
-                <element signature="e#16303#16677#0" expanded="false" />
-                <element signature="e#16437#16677#0" expanded="false" />
-                <element signature="e#16779#17124#0" expanded="false" />
-                <element signature="e#17161#17651#0" expanded="false" />
-                <element signature="e#17232#17651#0" expanded="false" />
-                <element signature="e#17708#18207#0" expanded="false" />
-                <element signature="e#18266#18789#0" expanded="false" />
-                <element signature="e#18603#18734#0" expanded="false" />
-                <element signature="e#18928#19801#0" expanded="false" />
-                <element signature="e#18928#19189#1" expanded="false" />
-                <element signature="e#19239#19498#0" expanded="false" />
-                <element signature="e#19311#19498#0" expanded="false" />
-                <element signature="e#19841#20346#0" expanded="false" />
-                <element signature="e#19973#20328#0" expanded="false" />
-                <element signature="e#20048#20328#0" expanded="false" />
-                <element signature="e#20136#20272#0" expanded="false" />
-                <element signature="e#20406#21007#0" expanded="false" />
-                <element signature="e#20406#20694#1" expanded="false" />
-                <element signature="e#20762#20836#0" expanded="false" />
-                <element signature="e#20879#20990#0" expanded="false" />
-                <element signature="e#21075#25721#0" expanded="false" />
-                <element signature="e#21075#21538#1" expanded="false" />
-                <element signature="e#21586#24436#0" expanded="false" />
-                <element signature="e#21852#23142#0" expanded="false" />
-                <element signature="e#21892#22535#0" expanded="false" />
-                <element signature="e#22604#23142#0" expanded="false" />
-                <element signature="e#23169#24390#0" expanded="false" />
-                <element signature="e#23211#23700#0" expanded="false" />
-                <element signature="e#23767#24390#0" expanded="false" />
-                <element signature="e#23792#24314#0" expanded="false" />
-                <element signature="e#24442#25703#1" expanded="false" />
-                <element signature="e#25795#29642#0" expanded="false" />
-                <element signature="e#25795#26186#1" expanded="false" />
-                <element signature="e#26329#26611#0" expanded="false" />
-                <element signature="e#26399#26453#0" expanded="false" />
-                <element signature="e#26480#26534#0" expanded="false" />
-                <element signature="e#26975#29167#0" expanded="false" />
-                <element signature="e#27410#28289#0" expanded="false" />
-                <element signature="e#27410#27503#0" expanded="false" />
-                <element signature="e#28355#28615#0" expanded="false" />
-                <element signature="e#28679#29102#0" expanded="false" />
-                <element signature="e#28679#28757#0" expanded="false" />
-                <element signature="e#29261#29642#0" expanded="false" />
-                <element signature="e#29261#29328#0" expanded="false" />
-                <element signature="e#29715#34069#0" expanded="false" />
-                <element signature="e#29715#30231#1" expanded="false" />
-                <element signature="e#30403#30508#0" expanded="false" />
-                <element signature="e#30528#34069#0" expanded="false" />
-                <element signature="e#30577#30630#0" expanded="false" />
-                <element signature="e#31007#32522#0" expanded="false" />
-                <element signature="e#31066#32522#0" expanded="false" />
-                <element signature="e#31461#31822#0" expanded="false" />
-                <element signature="e#31867#32522#0" expanded="false" />
-                <element signature="e#32236#32339#0" expanded="false" />
-                <element signature="e#32609#33836#0" expanded="false" />
-                <element signature="e#32667#33836#0" expanded="false" />
-                <element signature="e#32937#33296#0" expanded="false" />
-                <element signature="e#33339#33836#0" expanded="false" />
-                <element signature="e#34109#34617#0" expanded="false" />
-                <element signature="e#34109#34328#1" expanded="false" />
-                <element signature="e#34378#34524#0" expanded="false" />
-                <element signature="e#34673#35122#0" expanded="false" />
-                <element signature="e#34706#34894#0" expanded="false" />
-                <element signature="e#34934#35122#0" expanded="false" />
-                <element signature="e#35163#36636#0" expanded="false" />
-                <element signature="e#35163#35204#1" expanded="false" />
-                <element signature="e#35534#35734#0" expanded="false" />
-                <element signature="e#35857#36599#0" expanded="false" />
-                <element signature="e#35891#36548#0" expanded="false" />
-                <element signature="e#36094#36239#0" expanded="false" />
-                <element signature="e#36332#36478#0" expanded="false" />
-                <element signature="e#36357#36437#0" expanded="false" />
-                <element signature="e#36722#39511#0" expanded="false" />
-                <element signature="e#36722#37198#1" expanded="false" />
-                <element signature="e#37427#38559#0" expanded="false" />
-                <element signature="e#37427#37478#0" expanded="false" />
-                <element signature="e#37845#38169#1" expanded="false" />
-                <element signature="e#38220#38501#1" expanded="false" />
-                <element signature="e#38604#39304#0" expanded="false" />
-                <element signature="e#38757#39304#1" expanded="false" />
-                <element signature="e#39603#43059#0" expanded="false" />
-                <element signature="e#39603#39764#1" expanded="false" />
-                <element signature="e#39769#39943#1" expanded="false" />
-                <element signature="e#39949#39990#0" expanded="false" />
-                <element signature="e#40347#40358#0" expanded="false" />
-                <element signature="e#40531#40596#0" expanded="false" />
-                <element signature="e#40615#40680#0" expanded="false" />
-                <element signature="e#40810#41452#0" expanded="false" />
-                <element signature="e#41103#41452#1" expanded="false" />
-                <element signature="e#41471#41835#0" expanded="false" />
-                <element signature="e#41517#41835#1" expanded="false" />
-                <element signature="e#41908#41971#0" expanded="false" />
-                <element signature="e#41990#42053#0" expanded="false" />
-                <element signature="e#42059#42090#0" expanded="false" />
-                <element signature="e#42254#42586#0" expanded="false" />
-                <element signature="e#42304#42586#1" expanded="false" />
-                <element signature="e#42631#42956#0" expanded="false" />
-                <element signature="e#42683#42956#1" expanded="false" />
-                <element signature="e#43181#45405#0" expanded="false" />
-                <element signature="e#43181#43243#1" expanded="false" />
-                <element signature="e#43314#43669#0" expanded="false" />
-                <element signature="e#43386#43669#0" expanded="false" />
-                <element signature="e#43479#43537#0" expanded="false" />
-                <element signature="e#43572#43630#0" expanded="false" />
-                <element signature="e#43675#43728#0" expanded="false" />
-                <element signature="e#43895#44194#0" expanded="false" />
-                <element signature="e#43934#44194#0" expanded="false" />
-                <element signature="e#44244#44353#0" expanded="false" />
-                <element signature="e#44279#44353#0" expanded="false" />
-                <element signature="e#44387#45373#0" expanded="false" />
-                <element signature="e#44735#44944#0" expanded="false" />
-                <element signature="e#44845#44944#0" expanded="false" />
-                <element signature="e#45005#45175#0" expanded="false" />
-                <element signature="e#45047#45175#0" expanded="false" />
-                <element signature="e#45086#45175#0" expanded="false" />
-                <element signature="e#45258#45351#0" expanded="false" />
-                <element signature="e#45294#45351#0" expanded="false" />
-                <element signature="e#45472#47294#0" expanded="false" />
-                <element signature="e#45472#45695#1" expanded="false" />
-                <element signature="e#45700#45839#0" expanded="false" />
-                <element signature="e#46044#46118#0" expanded="false" />
-                <element signature="e#46183#47270#0" expanded="false" />
-                <element signature="e#46232#46266#0" expanded="false" />
-                <element signature="e#46293#46327#0" expanded="false" />
-                <element signature="e#46464#46533#0" expanded="false" />
-                <element signature="e#46676#46749#0" expanded="false" />
-                <element signature="e#46822#46922#0" expanded="false" />
-                <element signature="e#46996#47096#0" expanded="false" />
-                <element signature="e#47170#47270#0" expanded="false" />
-                <element signature="e#47356#47536#0" expanded="false" />
-                <element signature="e#47356#47397#1" expanded="false" />
-                <element signature="e#47578#47721#0" expanded="false" />
-                <element signature="e#47578#47622#1" expanded="false" />
-                <element signature="e#47748#47801#0" expanded="false" />
-                <element signature="e#47856#48028#0" expanded="false" />
-                <element signature="e#48123#48812#0" expanded="false" />
-                <element signature="e#48246#48795#0" expanded="false" />
-                <element signature="e#48704#48795#0" expanded="false" />
-                <element signature="e#49997#50046#0" expanded="false" />
+                <element signature="e#22#31#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -231,20 +64,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>col[5]</find>
-      <find>.txt</find>
-      <find>vcseve</find>
-      <find>MGT_</find>
-      <find>MGT_2</find>
-      <find>blast</find>
-      <find>blastn</find>
-      <find>ctxB3-rstR_el-tcpA_el</find>
-      <find>read_in_fix_roary</find>
-      <find>15</find>
-      <find>ascp</find>
-      <find>KDM_update</find>
-      <find>sub_dir_creator</find>
-      <find>outpath</find>
       <find>prefe</find>
       <find>infile_list</find>
       <find>prefetch</find>
@@ -261,6 +80,20 @@
       <find>genome_max</find>
       <find>kraken</find>
       <find>serotype</find>
+      <find>,</find>
+      <find>?</find>
+      <find>collection_date</find>
+      <find>Paris</find>
+      <find>species</find>
+      <find>no_serotyping</find>
+      <find>threads</find>
+      <find>min_largest_contig</find>
+      <find>kraken_db</find>
+      <find>refsize</find>
+      <find>memory</find>
+      <find>newno</find>
+      <find>vibrio</find>
+      <find>Vibrio</find>
     </findStrings>
     <replaceStrings>
       <replace>allele</replace>
@@ -280,23 +113,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/General_Scripts/2019-11-24-amr_per_strain.py" />
-        <option value="$USER_HOME$/Library/Caches/Transmit/5E2D07C0-7EE2-4B71-8F35-CB8BF8FA8D41/kdm.restech.unsw.edu.au/srv/scratch/z5087966/5_HGT_seventh_pandemic/2019-11-26-cnvnator/sample_data/cnvnator.py" />
-        <option value="$USER_HOME$/Library/Caches/Transmit/88D263E0-FF96-4FCB-AD3F-C1C394989199/kdm.restech.unsw.edu.au/srv/scratch/z5087966/5_HGT_seventh_pandemic/2019-11-26-cnvnator/sample_data/cnvnator.py" />
-        <option value="$PROJECT_DIR$/General_Scripts/2019-11-22-select_combinations_of_alleles.py" />
-        <option value="$USER_HOME$/Desktop/done/xx.py" />
-        <option value="$PROJECT_DIR$/../vc_typer/vc_typer.py" />
-        <option value="$PROJECT_DIR$/General_Scripts/2019-08-04-make_snp_alignment_frm_db.py" />
-        <option value="$PROJECT_DIR$/General_Scripts/2019-11-04-vcf_to_fasta.py" />
-        <option value="$USER_HOME$/Desktop/vcseventh_23/Mgtfi_ref/vibrio_settings_copy.py" />
-        <option value="$USER_HOME$/Desktop/vcseventh_23/Mgtfi_ref/Allele_to_mgt_db.py" />
-        <option value="$PROJECT_DIR$/General_Scripts/2019-02-25-processing_roary_output.py" />
-        <option value="$PROJECT_DIR$/General_Scripts/2019-12-09-accessory_blocks.py" />
-        <option value="$USER_HOME$/MGTwebby/docs/links.html" />
         <option value="$USER_HOME$/MGTwebby/docs/publications.html" />
         <option value="$USER_HOME$/MGTwebby/docs/projects.html" />
         <option value="$USER_HOME$/MGTwebby/docs/contacts.html" />
-        <option value="$USER_HOME$/MGTwebby/docs/members.html" />
         <option value="$USER_HOME$/Downloads/profile_annotation_2_allele_profiletsv.py" />
         <option value="$PROJECT_DIR$/Grapetree/allele_to_grapetree.py" />
         <option value="$USER_HOME$/Desktop/vcseventh_24/Mgtfi_ref/Allele_to_mgt_db.py" />
@@ -308,7 +127,6 @@
         <option value="$USER_HOME$/Desktop/vcseventh_25/Mgtfi_ref/delete_loose_ends.py" />
         <option value="$PROJECT_DIR$/../vc_typer/blast_db/alleles.fasta" />
         <option value="$PROJECT_DIR$/General_Scripts/2019-05-22-abricate_anti_resistances.py" />
-        <option value="$USER_HOME$/MGTwebby/docs/index.html" />
         <option value="$PROJECT_DIR$/General_Scripts/2019-08-03-choosing_genes_per_clade.py" />
         <option value="$USER_HOME$/Desktop/vcseventh_26/Mgtfi_ref/vibrio_settings_copy.py" />
         <option value="$PROJECT_DIR$/General_Scripts/2020-02-06-multi_blast_searcher.py" />
@@ -319,7 +137,6 @@
         <option value="$PROJECT_DIR$/General_Scripts/2019-10-20-automate_STs_and_markers.py" />
         <option value="$PROJECT_DIR$/General_Scripts/2020-03-02-MGT3_per_continent.py" />
         <option value="$PROJECT_DIR$/General_Scripts/2020-03-17-alleles_over_grapetree.py" />
-        <option value="$PROJECT_DIR$/Staph/2020-03-20-plasmid_sep.py" />
         <option value="$USER_HOME$/spa_typing/get_spa_type.py" />
         <option value="$USER_HOME$/Library/Caches/Transmit/33024626-1B37-4E67-85D8-32B8F3F335B8/kdm.restech.unsw.edu.au/srv/scratch/lanlab/liam/2020-03-23-staph_sra/scripts/auto_dl_assembly.py" />
         <option value="$PROJECT_DIR$/Vibrio/2019-02-25-processing_roary_output.py" />
@@ -330,7 +147,23 @@
         <option value="$USER_HOME$/Library/Caches/Transmit/CF8640C2-B7B7-43EC-A540-0FA2371A79C3/katana.restech.unsw.edu.au/srv/scratch/z5087966/programs/spa_typing/get_spa_type.py" />
         <option value="$USER_HOME$/Library/Caches/Transmit/AD84AA9E-6CB8-4F90-ACE8-4CF0933B63CF/katana.restech.unsw.edu.au/srv/scratch/lanlab/liam/2019-04-01-reads_to_alleles/Reads2MGTAlleles_genomes/reads_to_alleles.py" />
         <option value="$USER_HOME$/Library/Caches/Transmit/4ED1620A-4D5E-48DF-B84C-397661146B7C/katana.restech.unsw.edu.au/srv/scratch/lanlab/liam/2019-04-01-reads_to_alleles/Reads2MGTAlleles_genomes/reads_to_alleles.py" />
+        <option value="$PROJECT_DIR$/Staph/202004-26-extract-metadata.py" />
         <option value="$PROJECT_DIR$/Staph/2020-04-15-plasmid_res.py" />
+        <option value="$PROJECT_DIR$/Staph/2020-03-20-plasmid_sep.py" />
+        <option value="$USER_HOME$/MGTwebby/docs/members.html" />
+        <option value="$PROJECT_DIR$/Staph/2020-03-20-testing_typability.py" />
+        <option value="$USER_HOME$/Library/Caches/Transmit/4CF9646D-740A-4182-BE9A-13C57F1676A3/katana.restech.unsw.edu.au/srv/scratch/z5087966/7_Staph_aureus/2020-04-26-staph_alleles/2019-09-11-get_ref_alleles_new_sero.py" />
+        <option value="$USER_HOME$/Library/Caches/Transmit/9B079A01-D087-4777-92C5-3573D2A94C12/katana.restech.unsw.edu.au/srv/scratch/z5087966/7_Staph_aureus/2020-04-26-staph_alleles/2019-09-11-get_ref_alleles_new_sero.py" />
+        <option value="$USER_HOME$/Library/Caches/Transmit/FB9CE9C1-BE9F-452E-B667-734509382228/katana.restech.unsw.edu.au/srv/scratch/z5087966/7_Staph_aureus/2020-04-26-staph_alleles/2019-09-11-get_ref_alleles_new_sero.py" />
+        <option value="$USER_HOME$/Desktop/saureus_1/Mgtfi_ref/vibrio_settings_copy.py" />
+        <option value="$USER_HOME$/Desktop/saureus_1/Mgtfi_ref/Staphylococcus_settings_copy.py" />
+        <option value="$USER_HOME$/MGT_27/Mgt/Mgt/Mgt/urls.py" />
+        <option value="$PROJECT_DIR$/Vibrio/mumo_jumbo.py" />
+        <option value="$USER_HOME$/MGTwebby/docs/index.html" />
+        <option value="$PROJECT_DIR$/Staph/2020-04-29-MLST_novel_alleles.py" />
+        <option value="$PROJECT_DIR$/Staph/2020-04-29-get_diverse_dataset.py" />
+        <option value="$PROJECT_DIR$/Vibrio/2019-11-04-vcf_to_fasta.py" />
+        <option value="$PROJECT_DIR$/Vibrio/2019-11-05-fasta2phylip.py" />
       </list>
     </option>
   </component>
@@ -383,6 +216,11 @@
             <path>
               <item name="Python_PhD" type="b2602c69:ProjectViewProjectNode" />
               <item name="Python_PhD" type="462c0819:PsiDirectoryNode" />
+              <item name="Grapetree" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Python_PhD" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Python_PhD" type="462c0819:PsiDirectoryNode" />
               <item name="Staph" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -424,8 +262,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.2020-04-15-plasmid_res">
-    <configuration name="2019-02-25-processing_roary_output" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.2019-11-04-vcf_to_fasta">
+    <configuration name="2019-11-04-vcf_to_fasta" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -437,43 +275,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Python_PhD" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Vibrio/2019-02-25-processing_roary_output.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
-    <configuration name="2020-03-02-MGT3_per_continent" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/General_Scripts" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Python_PhD" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/General_Scripts/2020-03-02-MGT3_per_continent.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
-    <configuration name="2020-03-17-alleles_over_grapetree" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/General_Scripts" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Python_PhD" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/General_Scripts/2020-03-17-alleles_over_grapetree.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Vibrio/2019-11-04-vcf_to_fasta.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -491,13 +293,13 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Python_PhD" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Staph/2020-03-20-plasmid_sep.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Staph/2020-03-20-testing_typability.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="2020-04-15-plasmid_res" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="2020-04-29-MLST_novel_alleles" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -509,26 +311,62 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Python_PhD" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Staph/2020-04-15-plasmid_res.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Staph/2020-04-29-MLST_STs.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="2020-04-29-get_diverse_dataset" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Staph" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Python_PhD" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Staph/2020-04-29-get_diverse_dataset.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="mumo_jumbo" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Vibrio" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Python_PhD" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Vibrio/mumo_jumbo.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.2020-03-02-MGT3_per_continent" />
-      <item index="1" class="java.lang.String" itemvalue="Python.2020-03-17-alleles_over_grapetree" />
-      <item index="2" class="java.lang.String" itemvalue="Python.2020-03-20-plasmid_sep" />
-      <item index="3" class="java.lang.String" itemvalue="Python.2019-02-25-processing_roary_output" />
-      <item index="4" class="java.lang.String" itemvalue="Python.2020-04-15-plasmid_res" />
+      <item index="0" class="java.lang.String" itemvalue="Python.2020-03-20-plasmid_sep" />
+      <item index="1" class="java.lang.String" itemvalue="Python.2020-04-29-get_diverse_dataset" />
+      <item index="2" class="java.lang.String" itemvalue="Python.2020-04-29-MLST_novel_alleles" />
+      <item index="3" class="java.lang.String" itemvalue="Python.mumo_jumbo" />
+      <item index="4" class="java.lang.String" itemvalue="Python.2019-11-04-vcf_to_fasta" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.2020-04-15-plasmid_res" />
-        <item index="1" class="java.lang.String" itemvalue="Python.2019-02-25-processing_roary_output" />
-        <item index="2" class="java.lang.String" itemvalue="Python.2020-03-20-plasmid_sep" />
-        <item index="3" class="java.lang.String" itemvalue="Python.2020-03-17-alleles_over_grapetree" />
-        <item index="4" class="java.lang.String" itemvalue="Python.2020-03-02-MGT3_per_continent" />
+        <item index="0" class="java.lang.String" itemvalue="Python.2019-11-04-vcf_to_fasta" />
+        <item index="1" class="java.lang.String" itemvalue="Python.2020-04-29-get_diverse_dataset" />
+        <item index="2" class="java.lang.String" itemvalue="Python.2020-04-29-MLST_novel_alleles" />
+        <item index="3" class="java.lang.String" itemvalue="Python.mumo_jumbo" />
+        <item index="4" class="java.lang.String" itemvalue="Python.2020-03-20-plasmid_sep" />
       </list>
     </recent_temporary>
   </component>
@@ -854,7 +692,21 @@
       <option name="project" value="LOCAL" />
       <updated>1584935752385</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="test">
+      <created>1587361389753</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1587361389753</updated>
+    </task>
+    <task id="LOCAL-00046" summary="test">
+      <created>1587361426517</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1587361426517</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="TodoView">
@@ -872,13 +724,13 @@
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25482473" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329188" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24720894" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21580103" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24652524" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32969216" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21068032" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24899274" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3329609" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33284566" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39941478" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -934,67 +786,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Vibrio/2019-11-22-select_combinations_of_alleles.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="21" column="87" lean-forward="false" selection-start-line="21" selection-start-column="87" selection-end-line="21" selection-end-column="87" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/vcseventh_24/Mgtfi_ref/Allele_to_mgt_db.py" />
-    <entry file="file://$USER_HOME$/Desktop/vcseventh_24/Mgtfi_ref/remove_isolate_and_data.py" />
-    <entry file="file://$USER_HOME$/Desktop/vcseventh_24/Mgtfi_ref/vibrio_settings_copy.py" />
-    <entry file="file://$USER_HOME$/miniconda3/envs/p3env/lib/python3.6/site-packages/pandas/core/internals.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="3712" column="38" lean-forward="false" selection-start-line="3712" selection-start-column="38" selection-end-line="3712" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="669">
-          <caret line="1667" column="0" lean-forward="false" selection-start-line="1667" selection-start-column="0" selection-end-line="1667" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/miniconda3/envs/p3env/lib/python3.6/site-packages/pandas/util/_decorators.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="176" column="0" lean-forward="false" selection-start-line="176" selection-start-column="0" selection-end-line="176" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/miniconda3/envs/p3env/lib/python3.6/site-packages/pandas/core/generic.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="4996" column="0" lean-forward="false" selection-start-line="4996" selection-start-column="0" selection-end-line="4996" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/miniconda3/envs/p3env/lib/python3.6/site-packages/pandas/core/dtypes/cast.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="702" column="0" lean-forward="false" selection-start-line="702" selection-start-column="0" selection-end-line="702" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Vibrio/2018-08-10-MGT_locus_preference_filters.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="568">
-          <caret line="90" column="22" lean-forward="true" selection-start-line="90" selection-start-column="22" selection-end-line="90" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/vcseventh_25/Mgtfi_ref/remove_isolate_and_data.py" />
-    <entry file="file://$USER_HOME$/Desktop/vcseventh_25/Mgtfi_ref/delete_loose_ends.py" />
     <entry file="file://$USER_HOME$/Desktop/vcseventh_25/Mgtfi_ref/vibrio_settings_copy.py" />
     <entry file="file://$PROJECT_DIR$/Vibrio/2019-05-22-abricate_anti_resistances.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -1084,13 +875,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/MGTwebby/docs/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="88" column="80" lean-forward="false" selection-start-line="88" selection-start-column="80" selection-end-line="88" selection-end-column="80" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Desktop/vcseventh_26/Mgtfi_ref/vibrio_settings_copy.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="693">
@@ -1154,13 +938,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Vibrio/mumo_jumbo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="878" column="38" lean-forward="false" selection-start-line="878" selection-start-column="38" selection-end-line="878" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Vibrio/2020-02-06-multi_blast_searcher.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -1182,13 +959,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Library/Caches/Transmit/46119394-C70E-47DE-BB3C-2B08EAEB5780/katana.restech.unsw.edu.au/srv/scratch/z5087966/5_HGT_seventh_pandemic/2019-11-26-cnvnator/sample_data/cnvnator.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="272" column="26" lean-forward="false" selection-start-line="272" selection-start-column="26" selection-end-line="272" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/Library/Caches/Transmit/46119394-C70E-47DE-BB3C-2B08EAEB5780/katana.restech.unsw.edu.au/srv/scratch/z5087966/5_HGT_seventh_pandemic/2019-11-26-cnvnator/sample_data/cnvnator.py" />
     <entry file="file://$PROJECT_DIR$/Vibrio/2019-10-20-automate_STs_and_markers.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
@@ -1200,13 +971,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
           <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Staph/2020-03-20-plasmid_sep.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1264,13 +1028,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Library/Caches/Transmit/33024626-1B37-4E67-85D8-32B8F3F335B8/kdm.restech.unsw.edu.au/srv/scratch/lanlab/liam/2020-03-23-staph_sra/scripts/auto_dl_assembly.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="65" column="19" lean-forward="false" selection-start-line="65" selection-start-column="15" selection-end-line="65" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/Library/Caches/Transmit/33024626-1B37-4E67-85D8-32B8F3F335B8/kdm.restech.unsw.edu.au/srv/scratch/lanlab/liam/2020-03-23-staph_sra/scripts/auto_dl_assembly.py" />
     <entry file="file://$PROJECT_DIR$/Vibrio/FT_auto_DL.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
@@ -1278,41 +1036,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Vibrio/2020-03-17-alleles_over_grapetree.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="8" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Library/Caches/Transmit/9635A19D-63C7-48ED-8E8B-7D4F4858D7E6/katana.restech.unsw.edu.au/srv/scratch/lanlab/liam/2020-03-23-staph_sra/michael/ena_dl/ena_read_dl.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Library/Caches/Transmit/0D753237-20D9-474B-A2B9-83703A3FA742/katana.restech.unsw.edu.au/srv/scratch/lanlab/liam/2020-03-23-staph_sra/kdm_parallel/New/FTP_auto_dl.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="147" column="75" lean-forward="false" selection-start-line="147" selection-start-column="75" selection-end-line="147" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Library/Caches/Transmit/61530138-E029-43EA-B612-39122CFDA44B/katana.restech.unsw.edu.au/srv/scratch/lanlab/liam/2020-03-23-staph_sra/kdm_parallel/New/FTP_auto_dl.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="147" column="14" lean-forward="true" selection-start-line="147" selection-start-column="14" selection-end-line="147" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Vibrio/2019-02-25-processing_roary_output.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="363" column="0" lean-forward="false" selection-start-line="363" selection-start-column="0" selection-end-line="363" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/Library/Caches/Transmit/9635A19D-63C7-48ED-8E8B-7D4F4858D7E6/katana.restech.unsw.edu.au/srv/scratch/lanlab/liam/2020-03-23-staph_sra/michael/ena_dl/ena_read_dl.py" />
+    <entry file="file://$USER_HOME$/Library/Caches/Transmit/0D753237-20D9-474B-A2B9-83703A3FA742/katana.restech.unsw.edu.au/srv/scratch/lanlab/liam/2020-03-23-staph_sra/kdm_parallel/New/FTP_auto_dl.py" />
+    <entry file="file://$USER_HOME$/Library/Caches/Transmit/61530138-E029-43EA-B612-39122CFDA44B/katana.restech.unsw.edu.au/srv/scratch/lanlab/liam/2020-03-23-staph_sra/kdm_parallel/New/FTP_auto_dl.py" />
     <entry file="file://$PROJECT_DIR$/../vc_typer/blast_db/alleles.fasta">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="863">
@@ -1320,231 +1046,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Library/Caches/Transmit/09049A3B-0A94-4E7D-BA0E-634BFB970EBD/katana.restech.unsw.edu.au/srv/scratch/lanlab/liam/2020-03-23-staph_sra/kdm_parallel/New/FTP_auto_dl.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="148" column="29" lean-forward="false" selection-start-line="148" selection-start-column="29" selection-end-line="148" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Library/Caches/Transmit/CF8640C2-B7B7-43EC-A540-0FA2371A79C3/katana.restech.unsw.edu.au/srv/scratch/z5087966/programs/spa_typing/get_spa_type.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="124" column="77" lean-forward="false" selection-start-line="124" selection-start-column="77" selection-end-line="124" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Library/Caches/Transmit/3AEF2A49-FE53-4C93-9A45-A2E2FFEAEF58/katana.restech.unsw.edu.au/srv/scratch/lanlab/liam/2019-04-01-reads_to_alleles/Reads2MGTAlleles/reads_to_alleles.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-316">
-          <caret line="94" column="8" lean-forward="true" selection-start-line="94" selection-start-column="8" selection-end-line="94" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Library/Caches/Transmit/AD84AA9E-6CB8-4F90-ACE8-4CF0933B63CF/katana.restech.unsw.edu.au/srv/scratch/lanlab/liam/2019-04-01-reads_to_alleles/Reads2MGTAlleles_genomes/reads_to_alleles.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="86" column="4" lean-forward="false" selection-start-line="86" selection-start-column="4" selection-end-line="86" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Library/Caches/Transmit/2242ABFC-728D-4209-9770-968E8DEE8E05/katana.restech.unsw.edu.au/srv/scratch/z5087966/programs/spa_typing/get_spa_type.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="232" column="22" lean-forward="false" selection-start-line="232" selection-start-column="17" selection-end-line="232" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Library/Caches/Transmit/4ED1620A-4D5E-48DF-B84C-397661146B7C/katana.restech.unsw.edu.au/srv/scratch/lanlab/liam/2019-04-01-reads_to_alleles/Reads2MGTAlleles_genomes/reads_to_alleles.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2160">
-          <caret line="1338" column="0" lean-forward="false" selection-start-line="1338" selection-start-column="0" selection-end-line="1338" selection-end-column="0" />
-          <folding>
-            <element signature="e#493#1125#1" expanded="false" />
-            <element signature="e#1218#1516#0" expanded="false" />
-            <element signature="e#1625#5641#0" expanded="false" />
-            <element signature="e#1625#2096#1" expanded="false" />
-            <element signature="e#3054#3102#0" expanded="false" />
-            <element signature="e#4329#4450#0" expanded="false" />
-            <element signature="e#4363#4450#0" expanded="false" />
-            <element signature="e#4456#4526#0" expanded="false" />
-            <element signature="e#4863#4924#0" expanded="false" />
-            <element signature="e#5718#8770#0" expanded="false" />
-            <element signature="e#5718#7503#1" expanded="false" />
-            <element signature="e#7548#7583#0" expanded="false" />
-            <element signature="e#7824#8726#0" expanded="false" />
-            <element signature="e#7920#8726#0" expanded="false" />
-            <element signature="e#8260#8726#0" expanded="false" />
-            <element signature="e#8436#8726#0" expanded="false" />
-            <element signature="e#8850#11269#0" expanded="false" />
-            <element signature="e#8850#9042#1" expanded="false" />
-            <element signature="e#9047#9074#0" expanded="false" />
-            <element signature="e#9384#9397#0" expanded="false" />
-            <element signature="e#9797#9824#0" expanded="false" />
-            <element signature="e#9931#11243#1" expanded="false" />
-            <element signature="e#11385#14202#0" expanded="false" />
-            <element signature="e#11385#11584#1" expanded="false" />
-            <element signature="e#11590#11930#1" expanded="false" />
-            <element signature="e#12017#13033#0" expanded="false" />
-            <element signature="e#12065#13033#0" expanded="false" />
-            <element signature="e#12232#13033#0" expanded="false" />
-            <element signature="e#12399#13033#0" expanded="false" />
-            <element signature="e#12672#12769#0" expanded="false" />
-            <element signature="e#13148#14037#0" expanded="false" />
-            <element signature="e#13304#13622#0" expanded="false" />
-            <element signature="e#13431#13506#0" expanded="false" />
-            <element signature="e#13649#13715#0" expanded="false" />
-            <element signature="e#13764#14037#0" expanded="false" />
-            <element signature="e#13955#14037#0" expanded="false" />
-            <element signature="e#14094#14164#0" expanded="false" />
-            <element signature="e#14393#18820#0" expanded="false" />
-            <element signature="e#14393#15123#1" expanded="false" />
-            <element signature="e#15302#15406#0" expanded="false" />
-            <element signature="e#15504#18207#0" expanded="false" />
-            <element signature="e#16244#17651#0" expanded="false" />
-            <element signature="e#16303#16677#0" expanded="false" />
-            <element signature="e#16437#16677#0" expanded="false" />
-            <element signature="e#16779#17124#0" expanded="false" />
-            <element signature="e#17161#17651#0" expanded="false" />
-            <element signature="e#17232#17651#0" expanded="false" />
-            <element signature="e#17708#18207#0" expanded="false" />
-            <element signature="e#18266#18789#0" expanded="false" />
-            <element signature="e#18603#18734#0" expanded="false" />
-            <element signature="e#18928#19801#0" expanded="false" />
-            <element signature="e#18928#19189#1" expanded="false" />
-            <element signature="e#19239#19498#0" expanded="false" />
-            <element signature="e#19311#19498#0" expanded="false" />
-            <element signature="e#19841#20346#0" expanded="false" />
-            <element signature="e#19973#20328#0" expanded="false" />
-            <element signature="e#20048#20328#0" expanded="false" />
-            <element signature="e#20136#20272#0" expanded="false" />
-            <element signature="e#20406#21007#0" expanded="false" />
-            <element signature="e#20406#20694#1" expanded="false" />
-            <element signature="e#20762#20836#0" expanded="false" />
-            <element signature="e#20879#20990#0" expanded="false" />
-            <element signature="e#21075#25721#0" expanded="false" />
-            <element signature="e#21075#21538#1" expanded="false" />
-            <element signature="e#21586#24436#0" expanded="false" />
-            <element signature="e#21852#23142#0" expanded="false" />
-            <element signature="e#21892#22535#0" expanded="false" />
-            <element signature="e#22604#23142#0" expanded="false" />
-            <element signature="e#23169#24390#0" expanded="false" />
-            <element signature="e#23211#23700#0" expanded="false" />
-            <element signature="e#23767#24390#0" expanded="false" />
-            <element signature="e#23792#24314#0" expanded="false" />
-            <element signature="e#24442#25703#1" expanded="false" />
-            <element signature="e#25795#29642#0" expanded="false" />
-            <element signature="e#25795#26186#1" expanded="false" />
-            <element signature="e#26329#26611#0" expanded="false" />
-            <element signature="e#26399#26453#0" expanded="false" />
-            <element signature="e#26480#26534#0" expanded="false" />
-            <element signature="e#26975#29167#0" expanded="false" />
-            <element signature="e#27410#28289#0" expanded="false" />
-            <element signature="e#27410#27503#0" expanded="false" />
-            <element signature="e#28355#28615#0" expanded="false" />
-            <element signature="e#28679#29102#0" expanded="false" />
-            <element signature="e#28679#28757#0" expanded="false" />
-            <element signature="e#29261#29642#0" expanded="false" />
-            <element signature="e#29261#29328#0" expanded="false" />
-            <element signature="e#29715#34069#0" expanded="false" />
-            <element signature="e#29715#30231#1" expanded="false" />
-            <element signature="e#30403#30508#0" expanded="false" />
-            <element signature="e#30528#34069#0" expanded="false" />
-            <element signature="e#30577#30630#0" expanded="false" />
-            <element signature="e#31007#32522#0" expanded="false" />
-            <element signature="e#31066#32522#0" expanded="false" />
-            <element signature="e#31461#31822#0" expanded="false" />
-            <element signature="e#31867#32522#0" expanded="false" />
-            <element signature="e#32236#32339#0" expanded="false" />
-            <element signature="e#32609#33836#0" expanded="false" />
-            <element signature="e#32667#33836#0" expanded="false" />
-            <element signature="e#32937#33296#0" expanded="false" />
-            <element signature="e#33339#33836#0" expanded="false" />
-            <element signature="e#34109#34617#0" expanded="false" />
-            <element signature="e#34109#34328#1" expanded="false" />
-            <element signature="e#34378#34524#0" expanded="false" />
-            <element signature="e#34673#35122#0" expanded="false" />
-            <element signature="e#34706#34894#0" expanded="false" />
-            <element signature="e#34934#35122#0" expanded="false" />
-            <element signature="e#35163#36636#0" expanded="false" />
-            <element signature="e#35163#35204#1" expanded="false" />
-            <element signature="e#35534#35734#0" expanded="false" />
-            <element signature="e#35857#36599#0" expanded="false" />
-            <element signature="e#35891#36548#0" expanded="false" />
-            <element signature="e#36094#36239#0" expanded="false" />
-            <element signature="e#36332#36478#0" expanded="false" />
-            <element signature="e#36357#36437#0" expanded="false" />
-            <element signature="e#36722#39511#0" expanded="false" />
-            <element signature="e#36722#37198#1" expanded="false" />
-            <element signature="e#37427#38559#0" expanded="false" />
-            <element signature="e#37427#37478#0" expanded="false" />
-            <element signature="e#37845#38169#1" expanded="false" />
-            <element signature="e#38220#38501#1" expanded="false" />
-            <element signature="e#38604#39304#0" expanded="false" />
-            <element signature="e#38757#39304#1" expanded="false" />
-            <element signature="e#39603#43059#0" expanded="false" />
-            <element signature="e#39603#39764#1" expanded="false" />
-            <element signature="e#39769#39943#1" expanded="false" />
-            <element signature="e#39949#39990#0" expanded="false" />
-            <element signature="e#40347#40358#0" expanded="false" />
-            <element signature="e#40531#40596#0" expanded="false" />
-            <element signature="e#40615#40680#0" expanded="false" />
-            <element signature="e#40810#41452#0" expanded="false" />
-            <element signature="e#41103#41452#1" expanded="false" />
-            <element signature="e#41471#41835#0" expanded="false" />
-            <element signature="e#41517#41835#1" expanded="false" />
-            <element signature="e#41908#41971#0" expanded="false" />
-            <element signature="e#41990#42053#0" expanded="false" />
-            <element signature="e#42059#42090#0" expanded="false" />
-            <element signature="e#42254#42586#0" expanded="false" />
-            <element signature="e#42304#42586#1" expanded="false" />
-            <element signature="e#42631#42956#0" expanded="false" />
-            <element signature="e#42683#42956#1" expanded="false" />
-            <element signature="e#43181#45405#0" expanded="false" />
-            <element signature="e#43181#43243#1" expanded="false" />
-            <element signature="e#43314#43669#0" expanded="false" />
-            <element signature="e#43386#43669#0" expanded="false" />
-            <element signature="e#43479#43537#0" expanded="false" />
-            <element signature="e#43572#43630#0" expanded="false" />
-            <element signature="e#43675#43728#0" expanded="false" />
-            <element signature="e#43895#44194#0" expanded="false" />
-            <element signature="e#43934#44194#0" expanded="false" />
-            <element signature="e#44244#44353#0" expanded="false" />
-            <element signature="e#44279#44353#0" expanded="false" />
-            <element signature="e#44387#45373#0" expanded="false" />
-            <element signature="e#44735#44944#0" expanded="false" />
-            <element signature="e#44845#44944#0" expanded="false" />
-            <element signature="e#45005#45175#0" expanded="false" />
-            <element signature="e#45047#45175#0" expanded="false" />
-            <element signature="e#45086#45175#0" expanded="false" />
-            <element signature="e#45258#45351#0" expanded="false" />
-            <element signature="e#45294#45351#0" expanded="false" />
-            <element signature="e#45472#47294#0" expanded="false" />
-            <element signature="e#45472#45695#1" expanded="false" />
-            <element signature="e#45700#45839#0" expanded="false" />
-            <element signature="e#46044#46118#0" expanded="false" />
-            <element signature="e#46183#47270#0" expanded="false" />
-            <element signature="e#46232#46266#0" expanded="false" />
-            <element signature="e#46293#46327#0" expanded="false" />
-            <element signature="e#46464#46533#0" expanded="false" />
-            <element signature="e#46676#46749#0" expanded="false" />
-            <element signature="e#46822#46922#0" expanded="false" />
-            <element signature="e#46996#47096#0" expanded="false" />
-            <element signature="e#47170#47270#0" expanded="false" />
-            <element signature="e#47356#47536#0" expanded="false" />
-            <element signature="e#47356#47397#1" expanded="false" />
-            <element signature="e#47578#47721#0" expanded="false" />
-            <element signature="e#47578#47622#1" expanded="false" />
-            <element signature="e#47748#47801#0" expanded="false" />
-            <element signature="e#47856#48028#0" expanded="false" />
-            <element signature="e#48123#48812#0" expanded="false" />
-            <element signature="e#48246#48795#0" expanded="false" />
-            <element signature="e#48704#48795#0" expanded="false" />
-            <element signature="e#49997#50046#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/Library/Caches/Transmit/09049A3B-0A94-4E7D-BA0E-634BFB970EBD/katana.restech.unsw.edu.au/srv/scratch/lanlab/liam/2020-03-23-staph_sra/kdm_parallel/New/FTP_auto_dl.py" />
+    <entry file="file://$USER_HOME$/Library/Caches/Transmit/CF8640C2-B7B7-43EC-A540-0FA2371A79C3/katana.restech.unsw.edu.au/srv/scratch/z5087966/programs/spa_typing/get_spa_type.py" />
+    <entry file="file://$USER_HOME$/Library/Caches/Transmit/3AEF2A49-FE53-4C93-9A45-A2E2FFEAEF58/katana.restech.unsw.edu.au/srv/scratch/lanlab/liam/2019-04-01-reads_to_alleles/Reads2MGTAlleles/reads_to_alleles.py" />
+    <entry file="file://$USER_HOME$/Library/Caches/Transmit/AD84AA9E-6CB8-4F90-ACE8-4CF0933B63CF/katana.restech.unsw.edu.au/srv/scratch/lanlab/liam/2019-04-01-reads_to_alleles/Reads2MGTAlleles_genomes/reads_to_alleles.py" />
+    <entry file="file://$USER_HOME$/Library/Caches/Transmit/2242ABFC-728D-4209-9770-968E8DEE8E05/katana.restech.unsw.edu.au/srv/scratch/z5087966/programs/spa_typing/get_spa_type.py" />
     <entry file="file://$USER_HOME$/miniconda3/envs/p3env/lib/python3.6/site-packages/Bio/SeqIO/FastaIO.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="271">
@@ -1552,12 +1058,137 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/Library/Caches/Transmit/4ED1620A-4D5E-48DF-B84C-397661146B7C/katana.restech.unsw.edu.au/srv/scratch/lanlab/liam/2019-04-01-reads_to_alleles/Reads2MGTAlleles_genomes/reads_to_alleles.py" />
+    <entry file="file://$PROJECT_DIR$/Vibrio/2020-03-17-alleles_over_grapetree.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="8" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vibrio/2019-02-25-processing_roary_output.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="585">
+          <caret line="356" column="100" lean-forward="false" selection-start-line="356" selection-start-column="100" selection-end-line="356" selection-end-column="100" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Staph/2020-04-15-plasmid_res.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="603">
-          <caret line="85" column="59" lean-forward="false" selection-start-line="85" selection-start-column="59" selection-end-line="85" selection-end-column="59" />
+        <state relative-caret-position="225">
+          <caret line="54" column="32" lean-forward="true" selection-start-line="36" selection-start-column="19" selection-end-line="54" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Staph/2020-04-26-extract-BioSample-metadata.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="573">
+          <caret line="40" column="43" lean-forward="false" selection-start-line="40" selection-start-column="43" selection-end-line="40" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/MGTwebby/docs/members.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="485">
+          <caret line="267" column="54" lean-forward="false" selection-start-line="267" selection-start-column="54" selection-end-line="267" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Staph/2020-03-20-testing_typability.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="467">
+          <caret line="66" column="59" lean-forward="false" selection-start-line="66" selection-start-column="59" selection-end-line="66" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Caches/Transmit/4CF9646D-740A-4182-BE9A-13C57F1676A3/katana.restech.unsw.edu.au/srv/scratch/z5087966/7_Staph_aureus/2020-04-26-staph_alleles/2019-09-11-get_ref_alleles_new_sero.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-18767">
+          <caret line="67" column="0" lean-forward="true" selection-start-line="67" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Caches/Transmit/9B079A01-D087-4777-92C5-3573D2A94C12/katana.restech.unsw.edu.au/srv/scratch/z5087966/7_Staph_aureus/2020-04-26-staph_alleles/2019-09-11-get_ref_alleles_new_sero.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="735">
+          <caret line="1330" column="38" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="1342" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Caches/Transmit/FB9CE9C1-BE9F-452E-B667-734509382228/katana.restech.unsw.edu.au/srv/scratch/z5087966/7_Staph_aureus/2020-04-26-staph_alleles/2019-09-11-get_ref_alleles_new_sero.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="1310" column="32" lean-forward="true" selection-start-line="1310" selection-start-column="32" selection-end-line="1310" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/saureus_1/Mgtfi_ref/vibrio_settings_copy.py" />
+    <entry file="file://$USER_HOME$/Desktop/saureus_1/Mgtfi_ref/Allele_to_mgt_db.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="2199" column="140" lean-forward="false" selection-start-line="2199" selection-start-column="134" selection-end-line="2199" selection-end-column="140" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/saureus_1/Mgtfi_ref/Staphylococcus_settings_copy.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/MGT_27/Mgt/Mgt/Mgt/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="30" column="32" lean-forward="false" selection-start-line="30" selection-start-column="32" selection-end-line="30" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/MGTwebby/docs/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="96" column="85" lean-forward="false" selection-start-line="96" selection-start-column="85" selection-end-line="96" selection-end-column="85" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Staph/2020-04-29-MLST_STs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="36" column="22" lean-forward="false" selection-start-line="36" selection-start-column="22" selection-end-line="36" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vibrio/mumo_jumbo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="898">
+          <caret line="974" column="22" lean-forward="false" selection-start-line="968" selection-start-column="16" selection-end-line="974" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Staph/2020-04-29-get_diverse_dataset.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vibrio/2019-11-04-vcf_to_fasta.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="50" lean-forward="false" selection-start-line="19" selection-start-column="50" selection-end-line="19" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vibrio/2019-11-05-fasta2phylip.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="94" lean-forward="false" selection-start-line="11" selection-start-column="94" selection-end-line="11" selection-end-column="94" />
           <folding>
-            <element signature="e#0#15#0" expanded="true" />
+            <element signature="e#22#31#0" expanded="true" />
           </folding>
         </state>
       </provider>
