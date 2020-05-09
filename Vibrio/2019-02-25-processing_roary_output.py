@@ -15,12 +15,12 @@ from io import StringIO
 import csv
 
 #reading in roary gene absence and presence
-roary_path = "/Users/liamcheneyy/Desktop/gene_presence_absence.csv"
-gff_folder_in = "/Users/liamcheneyy/Desktop/all_gffs/"
-reference_accession = "GCA_000006745"
-info_dict_out = "/Users/liamcheneyy/Desktop/info_dict.txt"
+roary_path = "/Users/liamcheneyy/Desktop/kp_gene_presence_absence.csv"
+gff_folder_in = "/Users/liamcheneyy/Desktop/gffs/"
+reference_accession = "GCF000013425"
+info_dict_out = "/Users/liamcheneyy/Desktop/roary_processing/info_dict.txt"
 read_genome_info_dict = True
-outfile_path = "/Users/liamcheneyy/Desktop/"
+outfile_path = "/Users/liamcheneyy/Desktop/roary_processing/"
 isolate_percentage = 0.99
 
 #dont need
@@ -112,7 +112,7 @@ def gathering_core_gene_information(temp_file, info_dict):
         group_count = group_count + 1
 
         # for each strain for the core gene
-        for j in range(14, len(temp_file[line])):
+        for j in range(15, len(temp_file[line])):
             info = temp_file[line][j]
             # will leave empty strains
             if 'nan' in str(info):
@@ -381,12 +381,6 @@ def fasely_split_ortholgs_filter(reference_accession, keep_core_gene, temp_file,
                     if ref_lower_range <= other_size <= ref_upper_range:
                         cell_in_size = cell_in_size + 1
 
-                    # para_ref_lower_range = int(1.8 * reference_size)
-                    # para_ref_upper_range = int(2.2 * reference_size)
-                    # if para_ref_lower_range <= other_size <= para_ref_upper_range:
-                    #     true_para = true_para + 1
-
-
                 # if other cells are fragmented
                 if '\t' in l and 'nan' not in l:
                     frag_sizes_list = []
@@ -401,11 +395,6 @@ def fasely_split_ortholgs_filter(reference_accession, keep_core_gene, temp_file,
                     ref_upper_range = int(1.2 * reference_size)
                     if ref_lower_range <= total_frag_size <= ref_upper_range:
                         cell_in_size = cell_in_size + 1
-
-                    # para_ref_lower_range = int(1.8 * reference_size)
-                    # para_ref_upper_range = int(2.2 * reference_size)
-                    # if para_ref_lower_range <= total_frag_size <= para_ref_upper_range:
-                    #     true_para = true_para + 1
 
         elif reference_accession in j and '\t' in j and 'nan' not in j:
             fail_reason = "No intact reference gene."
@@ -512,7 +501,7 @@ def handling_roary_core_gene_ortholog_paralogs(temp_file, reference_accession):
         if keep_core_gene == False and split_core_gene == False:
             excluded_list.append(temp_file[line])
 
-
+        # print(keep_core_gene, split_core_gene)
     return core_gene_list, excluded_list
 
 #writing out core genes
