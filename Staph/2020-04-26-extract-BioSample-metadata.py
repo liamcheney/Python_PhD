@@ -33,8 +33,8 @@ def main():
                 biosmaple = infile[line].split('BioSample">')[-1].split('<')[0]
 
 
-            # if ('collection' in infile[line]) and ('date' in infile[line]):
-            #     collcetion_date = infile[line + 1].split('>')[1].strip().split('<')[0]
+            if ('collection' in infile[line]) and ('date' in infile[line]):
+                collcetion_date = infile[line + 1].split('>')[1].strip().split('<')[0]
             #
             if 'geo' in infile[line]:
                 geo = infile[line + 1].split('>')[1].strip().split('<')[0]
