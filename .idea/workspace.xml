@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="808d523f-cfb3-4699-b214-793d2f2a6efd" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/Staph/2020-03-20-testing_typability.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Staph/2020-04-26-extract-BioSample-metadata.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Staph/2020-04-29-MLST_STs.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Staph/2020-04-29-get_diverse_dataset.py" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Staph/2020-03-20-plasmid_sep.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Staph/2020-04-15-plasmid_res.py" afterPath="$PROJECT_DIR$/Staph/2020-04-15-plasmid_res.py" />
-      <change beforePath="$PROJECT_DIR$/Vibrio/2019-11-04-vcf_to_fasta.py" afterPath="$PROJECT_DIR$/Vibrio/2019-11-04-vcf_to_fasta.py" />
-      <change beforePath="$PROJECT_DIR$/Vibrio/mumo_jumbo.py" afterPath="$PROJECT_DIR$/Vibrio/mumo_jumbo.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -24,7 +16,7 @@
       <file leaf-file-name="mumo_jumbo.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Vibrio/mumo_jumbo.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="898">
+            <state relative-caret-position="14610">
               <caret line="974" column="22" lean-forward="false" selection-start-line="968" selection-start-column="16" selection-end-line="974" selection-end-column="22" />
               <folding />
             </state>
@@ -190,22 +182,6 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
-      <pane id="Scope">
-        <subPane subId="Default">
-          <expand>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="Python_PhD" type="cbb8eebc:String" user="Python_PhD" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="Python_PhD" type="cbb8eebc:String" user="Python_PhD" />
-              <item name="CTX_allele_caller" type="cbb8eebc:String" user="CTX_allele_caller" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -223,10 +199,21 @@
               <item name="Python_PhD" type="462c0819:PsiDirectoryNode" />
               <item name="Staph" type="462c0819:PsiDirectoryNode" />
             </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Default">
+          <expand>
             <path>
-              <item name="Python_PhD" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Python_PhD" type="462c0819:PsiDirectoryNode" />
-              <item name="Vibrio" type="462c0819:PsiDirectoryNode" />
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="Python_PhD" type="cbb8eebc:String" user="Python_PhD" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="Python_PhD" type="cbb8eebc:String" user="Python_PhD" />
+              <item name="CTX_allele_caller" type="cbb8eebc:String" user="CTX_allele_caller" />
             </path>
           </expand>
           <select />
@@ -706,7 +693,28 @@
       <option name="project" value="LOCAL" />
       <updated>1587361426517</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="test">
+      <created>1589000920247</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1589000920247</updated>
+    </task>
+    <task id="LOCAL-00048" summary="test">
+      <created>1589000941948</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1589000941948</updated>
+    </task>
+    <task id="LOCAL-00049" summary="test">
+      <created>1589001006740</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1589001006740</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1155,13 +1163,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="525">
           <caret line="36" column="22" lean-forward="false" selection-start-line="36" selection-start-column="22" selection-end-line="36" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Vibrio/mumo_jumbo.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="898">
+        <state relative-caret-position="14610">
           <caret line="974" column="22" lean-forward="false" selection-start-line="968" selection-start-column="16" selection-end-line="974" selection-end-column="22" />
           <folding />
         </state>
@@ -1179,7 +1186,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="19" column="50" lean-forward="false" selection-start-line="19" selection-start-column="50" selection-end-line="19" selection-end-column="50" />
-          <folding />
         </state>
       </provider>
     </entry>
