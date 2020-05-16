@@ -48,5 +48,16 @@ def main():
         for q in i:
             print(*q)
 
+    # df = pd.read_csv('/Users/liamcheneyy/Desktop/meta_7-gene-alleles.txt', sep='\t')
+    #
+    # infile = list(open('/Users/liamcheneyy/Desktop/Untitled.txt').read().splitlines())
+    #
+    # sub = df[df['ST'].isin(infile)]
+    # sub.to_csv('/Users/liamcheneyy/Desktop/XX.csv')
+    # print(infile)
+    #
+
+
+
 if __name__ == '__main__':
     main()
