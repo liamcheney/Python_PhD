@@ -63,8 +63,8 @@ def main():
     #         out.write('\n')
 
 
-    ##check how gene went across dataset
-    # infile = open('//Users/liamcheney/Desktop/want.txt').read().splitlines()
+    # ##check how gene went across dataset
+    # infile = open('//Users/liamcheneyy/Desktop/all_alleles.txt').read().splitlines()
     # # print(len(infile))
     #
     # #make list of genes
@@ -86,13 +86,42 @@ def main():
     #         gene = j.split(':')[0].strip('>')
     #         if ':0' in j:
     #             save_dict[gene]['fail'] = save_dict[gene]['fail'] + 1
-    #         else:
-    #             save_dict[gene]['pass'] = save_dict[gene]['pass'] + 1
+    #         # else:
+    #         #     save_dict[gene]['pass'] = save_dict[gene]['pass'] + 1
     # #
     # for k,v in save_dict.items():
-    #     print(k,v['pass'],v['fail'])
+    #     print(k,v['pass'],v['fail'], sep='\t')
+    # #
+    # # ##check per strain zeros
+    # # save_dict = {}
+    # # for line in infile:
+    # #     col = line.split(' ')
+    # #
+    # #     acc=col[0].split('/')[-1].split('_')[0]
+    # #
+    # #     print(acc, line.count(':0'))
 
-    # infile = open('/Users/liamcheneyy/Desktop/MLST_test.txt').read().splitlines()
+    # ##count negs per gene
+    # path = "/Users/liamcheneyy/Desktop/all/"
+    #
+    # save_dict = {}
+    # for file in glob.iglob(path + "/*alleles.fasta"):
+    #     seqs = SeqIO.parse(file, 'fasta')
+    #     name=file.split('/')[-1].split('.')[0]
+    #     for records in seqs:
+    #
+    #         locus = records.id.split(':')[0]
+    #
+    #         if locus not in save_dict.keys():
+    #             save_dict[locus] = 0
+    #
+    #         if (':1' in records.id) or (':2' in records.id) or (':3' in records.id) or (':4' in records.id):
+    #             save_dict[locus] = save_dict[locus] + 1
+    #
+    # for k,v in save_dict.items():
+    #     print(k, v, sep='\t')
+
+# infile = open('/Users/liamcheneyy/Desktop/MLST_test.txt').read().splitlines()
     #
     # with open('/Users/liamcheneyy/Desktop/MLST_pass.txt','w') as out:
     #     for line in infile:
@@ -124,17 +153,83 @@ def main():
     #         #     out.write(line + '\n')
 
 
-    infile = open('/Users/liamcheney/Desktop/get_new_sero.pbs.e329654').read()
-    files = infile.split('Parsing')
-    count = 1
 
-    for file in files:
-        with open('/Users/liamcheney/Desktop/xx/' + str(count) + '.txt','w') as out:
-            out.write(file)
+    # seqs = SeqIO.parse('/Users/liamcheneyy/Desktop/refs.fasta', 'fasta')
+    # save_list = []
+    # for records in seqs:
+    #
+    #     locus = records.id.split(':')[0]
+    #
+    #     if locus not in save_list:
+    #         save_list.append(locus)
+    #
+    # seqx = SeqIO.to_dict(SeqIO.parse('/Users/liamcheneyy/Desktop/refs.fasta', 'fasta'))
+    #
+    # save_dict = {}
+    # for el in save_list:
+    #     save_dict[el] = {}
+    #     for x in seqx:
+    #         if el in x:
+    #             save_dict[el][x] = seqx[x]
+    #
+    # for k,v in save_dict.items():
+    #     with open('/Users/liamcheneyy/Desktop/outs/' + k + '.fasta' ,'w') as out:
+    #         for i in v:
+    #             out.write('>' + i + '\n')
+    #             out.write(str(v[i].seq) + '\n')
 
-            count = count + 1
-            print(count)
-    # print(files)
+    ###go over allele profiles and get summary stats
+    genome_zero_neg_dict = {}
+    gene_zero_dict = {}
+    for filename in glob.iglob('/Users/liamcheneyy/Desktop/alleles/*fasta'):
+        bios = SeqIO.parse(filename,'fasta')
+        accession = filename.split('/')[-1].split('_')[0]
+        print(accession)
+
+        genome_zero_neg_dict[accession] = {'zero':0,'neg':0}
+
+        ##count zeros per genome
+        for record in bios:
+            gene = record.id.split(':')[0]
+
+            if gene not in gene_zero_dict.keys():
+                gene_zero_dict[gene] = {'zero':0, 'intact':0, 'new':0, 'neg':0}
+
+            if ":0" in record.id:
+                gene_zero_dict[gene]['zero'] = gene_zero_dict[gene]['zero'] + 1
+                genome_zero_neg_dict[accession]['zero'] = genome_zero_neg_dict[accession]['zero'] + 1
+
+            if ":1" in record.id or ":2" in record.id or ":3" in record.id or ":4" in record.id or ":5" in record.id or ":6" in record.id or ":7" in record.id:
+                gene_zero_dict[gene]['intact'] = gene_zero_dict[gene]['intact'] + 1
+
+            if ":new" in record.id:
+                gene_zero_dict[gene]['new'] = gene_zero_dict[gene]['new'] + 1
+
+            if 'N' in record.seq:
+                gene_zero_dict[gene]['neg'] = gene_zero_dict[gene]['neg'] + 1
+                genome_zero_neg_dict[accession]['neg'] = genome_zero_neg_dict[accession]['neg'] + 1
+
+
+    with open('/Users/liamcheneyy/Desktop/alleles/genome_zeros.txt', 'w') as out:
+        out.write('Accessions' + '\t' + 'Zero' + '\t' + 'Neg' + '\n')
+        for key, value in genome_zero_neg_dict.items():
+            out.write(key + '\t')
+            for i in value:
+                out.write(str(value[i]) + '\t')
+            out.write('\n')
+
+    with open('/Users/liamcheneyy/Desktop/alleles/gene_zeros.txt', 'w') as out:
+        out.write('Gene' + '\t' + 'Zero' + '\t' + 'Intact' + '\t' + 'New' + '\t' + 'Neg' + '\n')
+        for key, value in gene_zero_dict.items():
+            out.write(key + '\t')
+            for i in value:
+                out.write(str(value[i]) + '\t')
+            out.write('\n')
+
+
+
+
+        # genome_zero_dict[accession] = genome_zero_conut
 
 if __name__ == '__main__':
     main()
