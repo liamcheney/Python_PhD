@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="808d523f-cfb3-4699-b214-793d2f2a6efd" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/Staph/2020-03-20-testing_typability.py" afterPath="$PROJECT_DIR$/Staph/2020-03-20-testing_typability.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -13,12 +14,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="2020-03-20-testing_typability.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="2020-03-20-testing_typability.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Staph/2020-03-20-testing_typability.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1021">
-              <caret line="220" column="49" lean-forward="false" selection-start-line="220" selection-start-column="49" selection-end-line="220" selection-end-column="49" />
+            <state relative-caret-position="225">
+              <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2019-05-18-multI_ref_spliter.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Staph/2019-05-18-multI_ref_spliter.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="600">
+              <caret line="41" column="49" lean-forward="false" selection-start-line="41" selection-start-column="49" selection-end-line="41" selection-end-column="49" />
+              <folding>
+                <element signature="e#0#15#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -83,7 +96,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$USER_HOME$/MGTwebby/docs/contacts.html" />
         <option value="$USER_HOME$/Downloads/profile_annotation_2_allele_profiletsv.py" />
         <option value="$PROJECT_DIR$/Grapetree/allele_to_grapetree.py" />
         <option value="$USER_HOME$/Desktop/vcseventh_24/Mgtfi_ref/Allele_to_mgt_db.py" />
@@ -134,12 +146,15 @@
         <option value="$PROJECT_DIR$/Staph/2020-04-26-extract-BioSample-metadata.py" />
         <option value="$PROJECT_DIR$/Staph/2020-04-29-get_diverse_dataset.py" />
         <option value="$PROJECT_DIR$/Staph/2020-03-20-testing_typability.py" />
+        <option value="$PROJECT_DIR$/Staph/2019-05-18-multI_ref_spliter.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="width" value="2560" />
-    <option name="height" value="1440" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="484" />
+    <option name="y" value="117" />
+    <option name="width" value="1709" />
+    <option name="height" value="1191" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -222,7 +237,25 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.2020-03-20-plasmid_sep">
+  <component name="RunManager" selected="Python.2019-05-18-multI_ref_spliter">
+    <configuration name="2019-05-18-multI_ref_spliter" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Staph" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Python_PhD" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Staph/2019-05-18-multI_ref_spliter.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
     <configuration name="2019-11-04-vcf_to_fasta" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -277,24 +310,6 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="2020-04-29-MLST_novel_alleles" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Staph" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Python_PhD" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Staph/2020-04-29-MLST_STs.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
     <configuration name="2020-04-29-get_diverse_dataset" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -316,17 +331,17 @@
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python.2020-03-20-plasmid_sep" />
       <item index="1" class="java.lang.String" itemvalue="Python.2020-04-29-get_diverse_dataset" />
-      <item index="2" class="java.lang.String" itemvalue="Python.2020-04-29-MLST_novel_alleles" />
-      <item index="3" class="java.lang.String" itemvalue="Python.2019-11-04-vcf_to_fasta" />
-      <item index="4" class="java.lang.String" itemvalue="Python.2020-04-26-extract-BioSample-metadata" />
+      <item index="2" class="java.lang.String" itemvalue="Python.2019-11-04-vcf_to_fasta" />
+      <item index="3" class="java.lang.String" itemvalue="Python.2020-04-26-extract-BioSample-metadata" />
+      <item index="4" class="java.lang.String" itemvalue="Python.2019-05-18-multI_ref_spliter" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.2020-03-20-plasmid_sep" />
-        <item index="1" class="java.lang.String" itemvalue="Python.2020-04-29-get_diverse_dataset" />
-        <item index="2" class="java.lang.String" itemvalue="Python.2020-04-26-extract-BioSample-metadata" />
-        <item index="3" class="java.lang.String" itemvalue="Python.2019-11-04-vcf_to_fasta" />
-        <item index="4" class="java.lang.String" itemvalue="Python.2020-04-29-MLST_novel_alleles" />
+        <item index="0" class="java.lang.String" itemvalue="Python.2019-05-18-multI_ref_spliter" />
+        <item index="1" class="java.lang.String" itemvalue="Python.2020-03-20-plasmid_sep" />
+        <item index="2" class="java.lang.String" itemvalue="Python.2020-04-29-get_diverse_dataset" />
+        <item index="3" class="java.lang.String" itemvalue="Python.2020-04-26-extract-BioSample-metadata" />
+        <item index="4" class="java.lang.String" itemvalue="Python.2019-11-04-vcf_to_fasta" />
       </list>
     </recent_temporary>
   </component>
@@ -343,13 +358,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1556755171968</updated>
-    </task>
-    <task id="LOCAL-00003" summary="test commit">
-      <created>1556763124064</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1556763124064</updated>
     </task>
     <task id="LOCAL-00004" summary="test commit">
       <created>1556766693208</created>
@@ -687,7 +695,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589603346008</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="test">
+      <created>1589768760562</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1589768760562</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TodoView">
@@ -700,12 +715,13 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="2560" height="1440" extended-state="0" />
+    <frame x="484" y="117" width="1709" height="1191" extended-state="0" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1988972" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2991706" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329188" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22823702" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28467155" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24652524" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32969216" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24899274" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -767,13 +783,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/Desktop/vcseventh_26/Mgtfi_ref/Allele_to_mgt_db.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="426">
-          <caret line="310" column="48" lean-forward="false" selection-start-line="310" selection-start-column="48" selection-end-line="310" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/MGT_26/Mgt/Mgt/Scripts/setUpApsAndMgt.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -958,13 +967,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Staph/2020-04-15-plasmid_res.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="54" column="32" lean-forward="true" selection-start-line="36" selection-start-column="19" selection-end-line="54" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/MGTwebby/docs/members.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="485">
@@ -1065,13 +1067,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Staph/2020-04-29-get_diverse_dataset.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="25" column="13" lean-forward="false" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Staph/2020-04-29-MLST_STs.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
@@ -1086,11 +1081,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Staph/2020-04-29-get_diverse_dataset.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="25" column="13" lean-forward="false" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Staph/2020-03-20-testing_typability.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1021">
-          <caret line="220" column="49" lean-forward="false" selection-start-line="220" selection-start-column="49" selection-end-line="220" selection-end-column="49" />
+        <state relative-caret-position="225">
+          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Staph/2020-04-15-plasmid_res.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="54" column="32" lean-forward="true" selection-start-line="36" selection-start-column="19" selection-end-line="54" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Staph/2019-05-18-multI_ref_spliter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="41" column="49" lean-forward="false" selection-start-line="41" selection-start-column="49" selection-end-line="41" selection-end-column="49" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
