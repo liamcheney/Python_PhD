@@ -13,34 +13,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="mumo_jumbo.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Vibrio/mumo_jumbo.py">
+      <file leaf-file-name="2020-03-20-testing_typability.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Staph/2020-03-20-testing_typability.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="14610">
-              <caret line="974" column="22" lean-forward="false" selection-start-line="968" selection-start-column="16" selection-end-line="974" selection-end-column="22" />
+            <state relative-caret-position="1021">
+              <caret line="220" column="49" lean-forward="false" selection-start-line="220" selection-start-column="49" selection-end-line="220" selection-end-column="49" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="2020-04-29-get_diverse_dataset.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Staph/2020-04-29-get_diverse_dataset.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="2019-11-05-fasta2phylip.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Vibrio/2019-11-05-fasta2phylip.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="94" lean-forward="false" selection-start-line="11" selection-start-column="94" selection-end-line="11" selection-end-column="94" />
-              <folding>
-                <element signature="e#22#31#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -56,21 +34,11 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>prefe</find>
-      <find>infile_list</find>
-      <find>prefetch</find>
-      <find>scripts</find>
-      <find>prin</find>
-      <find>\r</find>
-      <find>request</find>
-      <find>string</find>
-      <find>infile</find>
       <find>findPattern</find>
       <find>write</find>
       <find>genome_min</find>
       <find>max_contig_no</find>
       <find>genome_max</find>
-      <find>kraken</find>
       <find>serotype</find>
       <find>,</find>
       <find>?</find>
@@ -86,6 +54,16 @@
       <find>newno</find>
       <find>vibrio</find>
       <find>Vibrio</find>
+      <find>arg</find>
+      <find>write_outalleles</find>
+      <find>pd.</find>
+      <find>zero': 1</find>
+      <find>:  2</find>
+      <find>: 1</find>
+      <find>pd</find>
+      <find>mgt1st</find>
+      <find>kraken</find>
+      <find>mlst</find>
     </findStrings>
     <replaceStrings>
       <replace>allele</replace>
@@ -105,8 +83,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$USER_HOME$/MGTwebby/docs/publications.html" />
-        <option value="$USER_HOME$/MGTwebby/docs/projects.html" />
         <option value="$USER_HOME$/MGTwebby/docs/contacts.html" />
         <option value="$USER_HOME$/Downloads/profile_annotation_2_allele_profiletsv.py" />
         <option value="$PROJECT_DIR$/Grapetree/allele_to_grapetree.py" />
@@ -143,7 +119,6 @@
         <option value="$PROJECT_DIR$/Staph/2020-04-15-plasmid_res.py" />
         <option value="$PROJECT_DIR$/Staph/2020-03-20-plasmid_sep.py" />
         <option value="$USER_HOME$/MGTwebby/docs/members.html" />
-        <option value="$PROJECT_DIR$/Staph/2020-03-20-testing_typability.py" />
         <option value="$USER_HOME$/Library/Caches/Transmit/4CF9646D-740A-4182-BE9A-13C57F1676A3/katana.restech.unsw.edu.au/srv/scratch/z5087966/7_Staph_aureus/2020-04-26-staph_alleles/2019-09-11-get_ref_alleles_new_sero.py" />
         <option value="$USER_HOME$/Library/Caches/Transmit/9B079A01-D087-4777-92C5-3573D2A94C12/katana.restech.unsw.edu.au/srv/scratch/z5087966/7_Staph_aureus/2020-04-26-staph_alleles/2019-09-11-get_ref_alleles_new_sero.py" />
         <option value="$USER_HOME$/Library/Caches/Transmit/FB9CE9C1-BE9F-452E-B667-734509382228/katana.restech.unsw.edu.au/srv/scratch/z5087966/7_Staph_aureus/2020-04-26-staph_alleles/2019-09-11-get_ref_alleles_new_sero.py" />
@@ -153,9 +128,12 @@
         <option value="$PROJECT_DIR$/Vibrio/mumo_jumbo.py" />
         <option value="$USER_HOME$/MGTwebby/docs/index.html" />
         <option value="$PROJECT_DIR$/Staph/2020-04-29-MLST_novel_alleles.py" />
-        <option value="$PROJECT_DIR$/Staph/2020-04-29-get_diverse_dataset.py" />
         <option value="$PROJECT_DIR$/Vibrio/2019-11-04-vcf_to_fasta.py" />
         <option value="$PROJECT_DIR$/Vibrio/2019-11-05-fasta2phylip.py" />
+        <option value="$USER_HOME$/Desktop/2019-09-11-get_ref_alleles_new_sero.py" />
+        <option value="$PROJECT_DIR$/Staph/2020-04-26-extract-BioSample-metadata.py" />
+        <option value="$PROJECT_DIR$/Staph/2020-04-29-get_diverse_dataset.py" />
+        <option value="$PROJECT_DIR$/Staph/2020-03-20-testing_typability.py" />
       </list>
     </option>
   </component>
@@ -181,28 +159,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="Python_PhD" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Python_PhD" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Python_PhD" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Python_PhD" type="462c0819:PsiDirectoryNode" />
-              <item name="Grapetree" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Python_PhD" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Python_PhD" type="462c0819:PsiDirectoryNode" />
-              <item name="Staph" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="Scope">
         <subPane subId="Default">
           <expand>
@@ -219,6 +175,23 @@
           <select />
         </subPane>
       </pane>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Python_PhD" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Python_PhD" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Python_PhD" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Python_PhD" type="462c0819:PsiDirectoryNode" />
+              <item name="Staph" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -249,7 +222,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.2019-11-04-vcf_to_fasta">
+  <component name="RunManager" selected="Python.2020-03-20-plasmid_sep">
     <configuration name="2019-11-04-vcf_to_fasta" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -281,6 +254,24 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Python_PhD" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Staph/2020-03-20-testing_typability.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="2020-04-26-extract-BioSample-metadata" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Staph" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Python_PhD" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Staph/2020-04-26-extract-BioSample-metadata.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -322,38 +313,20 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="mumo_jumbo" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Vibrio" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Python_PhD" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Vibrio/mumo_jumbo.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python.2020-03-20-plasmid_sep" />
       <item index="1" class="java.lang.String" itemvalue="Python.2020-04-29-get_diverse_dataset" />
       <item index="2" class="java.lang.String" itemvalue="Python.2020-04-29-MLST_novel_alleles" />
-      <item index="3" class="java.lang.String" itemvalue="Python.mumo_jumbo" />
-      <item index="4" class="java.lang.String" itemvalue="Python.2019-11-04-vcf_to_fasta" />
+      <item index="3" class="java.lang.String" itemvalue="Python.2019-11-04-vcf_to_fasta" />
+      <item index="4" class="java.lang.String" itemvalue="Python.2020-04-26-extract-BioSample-metadata" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.2019-11-04-vcf_to_fasta" />
+        <item index="0" class="java.lang.String" itemvalue="Python.2020-03-20-plasmid_sep" />
         <item index="1" class="java.lang.String" itemvalue="Python.2020-04-29-get_diverse_dataset" />
-        <item index="2" class="java.lang.String" itemvalue="Python.2020-04-29-MLST_novel_alleles" />
-        <item index="3" class="java.lang.String" itemvalue="Python.mumo_jumbo" />
-        <item index="4" class="java.lang.String" itemvalue="Python.2020-03-20-plasmid_sep" />
+        <item index="2" class="java.lang.String" itemvalue="Python.2020-04-26-extract-BioSample-metadata" />
+        <item index="3" class="java.lang.String" itemvalue="Python.2019-11-04-vcf_to_fasta" />
+        <item index="4" class="java.lang.String" itemvalue="Python.2020-04-29-MLST_novel_alleles" />
       </list>
     </recent_temporary>
   </component>
@@ -370,20 +343,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1556755171968</updated>
-    </task>
-    <task id="LOCAL-00001" summary="test commit">
-      <created>1556755271567</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1556755271567</updated>
-    </task>
-    <task id="LOCAL-00002" summary="test commit">
-      <created>1556761363725</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1556761363725</updated>
     </task>
     <task id="LOCAL-00003" summary="test commit">
       <created>1556763124064</created>
@@ -714,7 +673,21 @@
       <option name="project" value="LOCAL" />
       <updated>1589001006740</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="test">
+      <created>1589170709744</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1589170709744</updated>
+    </task>
+    <task id="LOCAL-00051" summary="test">
+      <created>1589603346007</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1589603346008</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TodoView">
@@ -729,14 +702,14 @@
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="2560" height="1440" extended-state="0" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25482473" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1988972" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329188" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21580103" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22823702" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24652524" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32969216" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24899274" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33284566" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.054613937" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39941478" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -789,107 +762,11 @@
           <option name="timeStamp" value="14" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="17" />
+      <option name="time" value="18" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/Desktop/vcseventh_25/Mgtfi_ref/vibrio_settings_copy.py" />
-    <entry file="file://$PROJECT_DIR$/Vibrio/2019-05-22-abricate_anti_resistances.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="36" column="68" lean-forward="false" selection-start-line="36" selection-start-column="68" selection-end-line="36" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Vibrio/2019-08-04-make_snp_alignment_frm_db.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="136" column="39" lean-forward="false" selection-start-line="136" selection-start-column="39" selection-end-line="136" selection-end-column="39" />
-          <folding>
-            <element signature="e#226#706#1" expanded="false" />
-            <element signature="e#747#1073#0" expanded="false" />
-            <element signature="e#1115#1654#0" expanded="false" />
-            <element signature="e#1115#1437#1" expanded="false" />
-            <element signature="e#1692#3090#0" expanded="false" />
-            <element signature="e#1692#1929#1" expanded="false" />
-            <element signature="e#2114#2265#0" expanded="false" />
-            <element signature="e#2298#3071#0" expanded="false" />
-            <element signature="e#2334#3071#0" expanded="false" />
-            <element signature="e#2677#2834#0" expanded="false" />
-            <element signature="e#2869#3026#0" expanded="false" />
-            <element signature="e#3891#3948#0" expanded="false" />
-            <element signature="e#4697#5584#0" expanded="false" />
-            <element signature="e#4793#5066#0" expanded="false" />
-            <element signature="e#5236#5541#0" expanded="false" />
-            <element signature="e#5400#5541#0" expanded="false" />
-            <element signature="e#5629#5975#0" expanded="false" />
-            <element signature="e#5629#5753#1" expanded="false" />
-            <element signature="e#6018#6279#0" expanded="false" />
-            <element signature="e#6516#7638#0" expanded="false" />
-            <element signature="e#6593#6657#0" expanded="false" />
-            <element signature="e#7151#7638#0" expanded="false" />
-            <element signature="e#7317#7638#0" expanded="false" />
-            <element signature="e#7721#10382#0" expanded="false" />
-            <element signature="e#7721#7804#1" expanded="false" />
-            <element signature="e#7998#8284#0" expanded="false" />
-            <element signature="e#8040#8284#0" expanded="false" />
-            <element signature="e#8085#8284#0" expanded="false" />
-            <element signature="e#8291#8310#0" expanded="false" />
-            <element signature="e#8619#8956#0" expanded="false" />
-            <element signature="e#9074#10143#0" expanded="false" />
-            <element signature="e#9304#9389#0" expanded="false" />
-            <element signature="e#9499#9574#0" expanded="false" />
-            <element signature="e#9759#10143#0" expanded="false" />
-            <element signature="e#9883#10143#0" expanded="false" />
-            <element signature="e#10022#10143#0" expanded="false" />
-            <element signature="e#10149#10170#0" expanded="false" />
-            <element signature="e#10436#10522#0" expanded="false" />
-            <element signature="e#10630#14128#0" expanded="false" />
-            <element signature="e#10630#10990#1" expanded="false" />
-            <element signature="e#11224#13827#0" expanded="false" />
-            <element signature="e#11257#13827#0" expanded="false" />
-            <element signature="e#11341#13827#0" expanded="false" />
-            <element signature="e#11582#11604#0" expanded="false" />
-            <element signature="e#11724#13827#0" expanded="false" />
-            <element signature="e#11772#11824#0" expanded="false" />
-            <element signature="e#11894#11916#0" expanded="false" />
-            <element signature="e#12026#12115#0" expanded="false" />
-            <element signature="e#12220#12677#0" expanded="false" />
-            <element signature="e#12278#12300#0" expanded="false" />
-            <element signature="e#12458#12580#0" expanded="false" />
-            <element signature="e#12508#12580#0" expanded="false" />
-            <element signature="e#12728#13292#0" expanded="false" />
-            <element signature="e#12964#13204#0" expanded="false" />
-            <element signature="e#13080#13204#0" expanded="false" />
-            <element signature="e#13137#13204#0" expanded="false" />
-            <element signature="e#13369#13430#0" expanded="false" />
-            <element signature="e#13481#13543#0" expanded="false" />
-            <element signature="e#13565#13587#0" expanded="false" />
-            <element signature="e#13882#14088#0" expanded="false" />
-            <element signature="e#13978#14088#0" expanded="false" />
-            <element signature="e#14028#14066#0" expanded="false" />
-            <element signature="e#14166#14420#0" expanded="false" />
-            <element signature="e#14463#14740#0" expanded="false" />
-            <element signature="e#16203#16453#0" expanded="false" />
-            <element signature="e#16335#16432#0" expanded="false" />
-            <element signature="e#16473#17137#0" expanded="false" />
-            <element signature="e#16608#16716#0" expanded="false" />
-            <element signature="e#16667#16716#0" expanded="false" />
-            <element signature="e#16842#17116#0" expanded="false" />
-            <element signature="e#17005#17087#0" expanded="false" />
-            <element signature="e#17143#17150#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/vcseventh_26/Mgtfi_ref/vibrio_settings_copy.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="693">
-          <caret line="149" column="25" lean-forward="false" selection-start-line="149" selection-start-column="25" selection-end-line="149" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Desktop/vcseventh_26/Mgtfi_ref/Allele_to_mgt_db.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="426">
@@ -1088,24 +965,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Staph/2020-04-26-extract-BioSample-metadata.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="573">
-          <caret line="40" column="43" lean-forward="false" selection-start-line="40" selection-start-column="43" selection-end-line="40" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/MGTwebby/docs/members.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="485">
           <caret line="267" column="54" lean-forward="false" selection-start-line="267" selection-start-column="54" selection-end-line="267" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Staph/2020-03-20-testing_typability.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="467">
-          <caret line="66" column="59" lean-forward="false" selection-start-line="66" selection-start-column="59" selection-end-line="66" selection-end-column="59" />
         </state>
       </provider>
     </entry>
@@ -1159,29 +1022,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Staph/2020-04-29-MLST_STs.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="36" column="22" lean-forward="false" selection-start-line="36" selection-start-column="22" selection-end-line="36" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Vibrio/mumo_jumbo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="14610">
-          <caret line="974" column="22" lean-forward="false" selection-start-line="968" selection-start-column="16" selection-end-line="974" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Staph/2020-04-29-get_diverse_dataset.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Vibrio/2019-11-04-vcf_to_fasta.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -1191,11 +1031,66 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Vibrio/2019-11-05-fasta2phylip.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="94" lean-forward="false" selection-start-line="11" selection-start-column="94" selection-end-line="11" selection-end-column="94" />
-          <folding>
-            <element signature="e#22#31#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="240">
+          <caret line="19" column="47" lean-forward="false" selection-start-line="19" selection-start-column="47" selection-end-line="19" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/2019-09-11-get_ref_alleles_new_sero.py" />
+    <entry file="file://$USER_HOME$/Library/Caches/Transmit/9792094A-5512-402E-9981-0C815101790D/kdm.restech.unsw.edu.au/srv/scratch/z5087966/7_Staph_aureus/2020-04-26-staph_alleles/2019-09-11-get_ref_alleles_new_sero.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-208">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Staph/2020-04-26-extract-BioSample-metadata.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="640">
+          <caret line="66" column="5" lean-forward="true" selection-start-line="66" selection-start-column="5" selection-end-line="66" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Caches/Transmit/B7C4E3AC-D8E1-42B9-A4A1-462B30C1D074/kdm.restech.unsw.edu.au/srv/scratch/z5087966/7_Staph_aureus/2020-05-11-making_multi_ref/2019-09-11-get_ref_alleles_new_sero.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vibrio/mumo_jumbo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="874">
+          <caret line="974" column="22" lean-forward="false" selection-start-line="968" selection-start-column="16" selection-end-line="974" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Staph/2020-04-29-get_diverse_dataset.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="25" column="13" lean-forward="false" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Staph/2020-04-29-MLST_STs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="26" column="21" lean-forward="false" selection-start-line="26" selection-start-column="21" selection-end-line="26" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Caches/Transmit/7DD8B1F2-C23B-45D3-A1B1-E36718451330/kdm.restech.unsw.edu.au/srv/scratch/z5087966/7_Staph_aureus/2020-05-11-making_multi_ref/2019-09-11-get_ref_alleles_new_sero.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="42" column="30" lean-forward="false" selection-start-line="42" selection-start-column="26" selection-end-line="42" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Staph/2020-03-20-testing_typability.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1021">
+          <caret line="220" column="49" lean-forward="false" selection-start-line="220" selection-start-column="49" selection-end-line="220" selection-end-column="49" />
+          <folding />
         </state>
       </provider>
     </entry>
