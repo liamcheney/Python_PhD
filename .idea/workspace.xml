@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="808d523f-cfb3-4699-b214-793d2f2a6efd" name="Default" comment="test">
-      <change beforePath="" afterPath="$PROJECT_DIR$/Staph/2020-05-07-strains_per_st.py" />
+    <list default="true" id="808d523f-cfb3-4699-b214-793d2f2a6efd" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Staph/2020-04-09-references_per_clade.py" afterPath="$PROJECT_DIR$/Staph/2020-04-09-references_per_clade.py" />
-      <change beforePath="$PROJECT_DIR$/Staph/2020-04-26-extract-BioSample-metadata.py" afterPath="$PROJECT_DIR$/Staph/2020-04-26-extract-BioSample-metadata.py" />
-      <change beforePath="$PROJECT_DIR$/Vibrio/2019-11-04-vcf_to_fasta.py" afterPath="$PROJECT_DIR$/Vibrio/2019-11-04-vcf_to_fasta.py" />
-      <change beforePath="$PROJECT_DIR$/Vibrio/2019-11-05-fasta2phylip.py" afterPath="$PROJECT_DIR$/Vibrio/2019-11-05-fasta2phylip.py" />
+      <change beforePath="$PROJECT_DIR$/Staph/2020-03-20-testing_typability.py" afterPath="$PROJECT_DIR$/Staph/2020-03-20-testing_typability.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,21 +14,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="2019-11-04-vcf_to_fasta.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Vibrio/2019-11-04-vcf_to_fasta.py">
+      <file leaf-file-name="2020-03-20-testing_typability.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Staph/2020-03-20-testing_typability.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="16" lean-forward="false" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="55" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="2019-11-05-fasta2phylip.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Vibrio/2019-11-05-fasta2phylip.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+            <state relative-caret-position="255">
+              <caret line="36" column="25" lean-forward="false" selection-start-line="36" selection-start-column="25" selection-end-line="36" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -49,10 +35,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>$PROJECT_DIR$/../../..</find>
-      <find>genes Specific to input clade.</find>
-      <find>write</find>
-      <find>pd</find>
       <find>_2</find>
       <find>SRS4182199</find>
       <find>isin</find>
@@ -79,6 +61,10 @@
       <find>string</find>
       <find>SACOL0001</find>
       <find>pandas</find>
+      <find>stderr</find>
+      <find>std</find>
+      <find>write</find>
+      <find>N</find>
     </findStrings>
     <replaceStrings>
       <replace>allele</replace>
@@ -98,8 +84,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/General_Scripts/2019-11-04-count_inconsistency.py" />
-        <option value="$USER_HOME$/MGTwebby/docs/news.html" />
         <option value="$USER_HOME$/miniconda3/envs/p3env/lib/python3.6/site-packages/pandas/core/dtypes/cast.py" />
         <option value="$PROJECT_DIR$/../vc_typer/blast_db/old_alleles.fasta" />
         <option value="$USER_HOME$/Desktop/3.py" />
@@ -149,6 +133,8 @@
         <option value="$PROJECT_DIR$/Vibrio/2019-11-04-vcf_to_fasta.py" />
         <option value="$PROJECT_DIR$/Vibrio/2019-11-05-fasta2phylip.py" />
         <option value="$PROJECT_DIR$/Staph/2020-05-07-strains_per_st.py" />
+        <option value="$USER_HOME$/Library/Caches/Transmit/C28C33C7-2279-41F5-8FB2-23E4800E2F8F/katana.restech.unsw.edu.au/srv/scratch/z5087966/7_Staph_aureus/2020-05-11-making_multi_ref/2019-09-11-get_ref_alleles_new_sero.py" />
+        <option value="$PROJECT_DIR$/Staph/2020-03-20-testing_typability.py" />
       </list>
     </option>
   </component>
@@ -186,11 +172,6 @@
               <item name="Python_PhD" type="b2602c69:ProjectViewProjectNode" />
               <item name="Python_PhD" type="462c0819:PsiDirectoryNode" />
               <item name="Staph" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Python_PhD" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Python_PhD" type="462c0819:PsiDirectoryNode" />
-              <item name="Vibrio" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -242,7 +223,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.2019-11-05-fasta2phylip">
+  <component name="RunManager" selected="Python.2020-03-20-testing_typability">
     <configuration name="2019-11-04-vcf_to_fasta" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -279,7 +260,7 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="2020-03-20-plasmid_sep" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="2020-03-20-testing_typability" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -291,7 +272,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Python_PhD" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Staph/2020-03-20-plasmid_sep.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Staph/2020-03-20-testing_typability.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -334,19 +315,19 @@
       <option name="MODULE_MODE" value="false" />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.2020-03-20-plasmid_sep" />
-      <item index="1" class="java.lang.String" itemvalue="Python.2019-11-04-vcf_to_fasta" />
-      <item index="2" class="java.lang.String" itemvalue="Python.2020-04-09-references_per_clade" />
-      <item index="3" class="java.lang.String" itemvalue="Python.2019-11-05-fasta2phylip" />
-      <item index="4" class="java.lang.String" itemvalue="Python.2020-05-07-strains_per_st" />
+      <item index="0" class="java.lang.String" itemvalue="Python.2019-11-04-vcf_to_fasta" />
+      <item index="1" class="java.lang.String" itemvalue="Python.2020-04-09-references_per_clade" />
+      <item index="2" class="java.lang.String" itemvalue="Python.2019-11-05-fasta2phylip" />
+      <item index="3" class="java.lang.String" itemvalue="Python.2020-05-07-strains_per_st" />
+      <item index="4" class="java.lang.String" itemvalue="Python.2020-03-20-testing_typability" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.2019-11-05-fasta2phylip" />
-        <item index="1" class="java.lang.String" itemvalue="Python.2019-11-04-vcf_to_fasta" />
-        <item index="2" class="java.lang.String" itemvalue="Python.2020-05-07-strains_per_st" />
-        <item index="3" class="java.lang.String" itemvalue="Python.2020-04-09-references_per_clade" />
-        <item index="4" class="java.lang.String" itemvalue="Python.2020-03-20-plasmid_sep" />
+        <item index="0" class="java.lang.String" itemvalue="Python.2020-03-20-testing_typability" />
+        <item index="1" class="java.lang.String" itemvalue="Python.2019-11-05-fasta2phylip" />
+        <item index="2" class="java.lang.String" itemvalue="Python.2019-11-04-vcf_to_fasta" />
+        <item index="3" class="java.lang.String" itemvalue="Python.2020-05-07-strains_per_st" />
+        <item index="4" class="java.lang.String" itemvalue="Python.2020-04-09-references_per_clade" />
       </list>
     </recent_temporary>
   </component>
@@ -686,7 +667,21 @@
       <option name="project" value="LOCAL" />
       <updated>1589001079828</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="test">
+      <created>1589153802182</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1589153802182</updated>
+    </task>
+    <task id="LOCAL-00048" summary="test">
+      <created>1589603363128</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1589603363128</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TodoView">
@@ -704,9 +699,9 @@
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32406673" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329188" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24621733" sideWeight="0.50277996" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3149931" sideWeight="0.4940429" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3149931" sideWeight="0.4940429" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24621733" sideWeight="0.49722" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32969216" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287483" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24899274" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33287483" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39889959" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -766,7 +761,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/Downloads/profile_annotation_2_allele_profiletsv.py" />
     <entry file="file://$PROJECT_DIR$/Vibrio/2019-12-09-accessory_blocks.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="600">
@@ -987,72 +981,11 @@
     </entry>
     <entry file="file://$USER_HOME$/spa_typing/get_spa_type.py" />
     <entry file="file://$PROJECT_DIR$/Staph/2020-03-20-plasmid_sep.py" />
-    <entry file="file://$USER_HOME$/Desktop/Book2.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Staph/2020-04-26-extract-BioSample-metadata.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-302">
-          <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="36" selection-end-column="86" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Staph/2020-04-15-plasmid_res.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-333">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Staph/2020-04-09-references_per_clade.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-59">
-          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Staph/2020-03-20-testing_typability.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/Desktop/Book2.csv" />
     <entry file="file://$PROJECT_DIR$/Vibrio/2020-03-02-MGT3_per_continent.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Staph/2020-04-29-get_diverse_dataset.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Staph/2020-04-29-MLST_STs.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#15#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Staph/2020-05-07-strains_per_st.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="59" lean-forward="true" selection-start-line="25" selection-start-column="59" selection-end-line="25" selection-end-column="59" />
-          <folding>
-            <element signature="e#0#15#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1067,7 +1000,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="19" column="16" lean-forward="false" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="55" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Staph/2020-04-29-MLST_STs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="18" column="30" lean-forward="false" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
         </state>
       </provider>
     </entry>
@@ -1075,6 +1014,55 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Staph/2020-05-07-strains_per_st.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="25" column="59" lean-forward="true" selection-start-line="25" selection-start-column="59" selection-end-line="25" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Staph/2020-04-29-get_diverse_dataset.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-54">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Staph/2020-04-26-extract-BioSample-metadata.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-235">
+          <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="36" selection-end-column="86" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Staph/2020-04-15-plasmid_res.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Staph/2020-04-09-references_per_clade.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Caches/Transmit/C28C33C7-2279-41F5-8FB2-23E4800E2F8F/katana.restech.unsw.edu.au/srv/scratch/z5087966/7_Staph_aureus/2020-05-11-making_multi_ref/2019-09-11-get_ref_alleles_new_sero.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="1290" column="32" lean-forward="false" selection-start-line="1290" selection-start-column="32" selection-end-line="1290" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Staph/2020-03-20-testing_typability.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="36" column="25" lean-forward="false" selection-start-line="36" selection-start-column="25" selection-end-line="36" selection-end-column="25" />
           <folding />
         </state>
       </provider>
