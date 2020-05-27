@@ -17,7 +17,7 @@ def parseargs():
 def main():
     args = parseargs()
 
-    ##go over allele profiles and get summary stats
+    #go over allele profiles and get summary stats
     genome_zero_neg_dict = {}
     gene_zero_dict = {}
     for filename in glob.iglob('/Users/liamcheney/Desktop/alleles/*fasta'):
@@ -66,9 +66,9 @@ def main():
             out.write('\n')
 
     # ##remove locus from alleles based on input list
-    # infile = open('/Users/liamcheney/Desktop/xx.txt','r').read().splitlines()
+    # infile = open('/Users/liamcheneyy/Desktop/xx.txt','r').read().splitlines()
     # save_dict  = {}
-    # for filename in glob.iglob('/Users/liamcheney/Desktop/alleles/*fasta'):
+    # for filename in glob.iglob('/Users/liamcheneyy/Desktop/fixed_alleles/*fasta'):
     #     records = SeqIO.parse(filename, 'fasta')
     #
     #     accession = filename.split('/')[-1]
@@ -79,7 +79,7 @@ def main():
     #
     # for k, v in save_dict.items():
     #     print(k)
-    #     with open('/Users/liamcheney/Desktop/fixed/' + k ,'w') as out:
+    #     with open('/Users/liamcheneyy/Desktop/outs/' + k ,'w') as out:
     #         for id,seq in v.items():
     #             out.write(">" + id + "\n")
     #
@@ -87,6 +87,26 @@ def main():
     #                 out.write(str(seq) + "\n\n")
     #             elif not "new" in id:
     #                 out.write(str(seq) + "\n")
+
+
+    # # remove locus from reference file
+    # keep = open('/Users/liamcheneyy/Desktop/out.txt').read().splitlines()
+    #
+    # records = SeqIO.parse('/Users/liamcheneyy/Desktop/refs.fasta','fasta')
+    #
+    # rem_list = []
+    # save_list = []
+    # for record in records:
+    #     locus = record.id.split(':')[0]
+    #
+    #     if locus in keep:
+    #         save_list.append(record)
+    #         rem_list.append(locus)
+
+
+    # SeqIO.write(save_list,'/Users/liamcheneyy/Desktop/fixrefs.fasta','fasta')
+    # for i in save_list:
+    #     print(i)
 
 if __name__ == '__main__':
     main()
