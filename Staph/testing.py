@@ -1,9 +1,7 @@
 import argparse
 from time import sleep as sl
-from Bio import SeqIO
-import glob
-import pandas as pd
-import random
+import multiprocessing as mp
+
 
 def parseargs():
     parser = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter)
@@ -15,20 +13,28 @@ def parseargs():
 
     return args
 
+def process(line):
+
+    pass
 
 def main():
     args = parseargs()
 
-    df = pd.read_csv('/Users/liamcheneyy/Desktop/MGT9_alleles.txt',sep='\t')
+    # init objects
+    pool = mp.Pool(mp.cpu_count())
+    jobs = []
 
-    for col in df:
-        if "#" not in col:
-            sub = df[col].astype(int)
-            uniques = sub.value_counts().shape[0]
+    # create jobs
+    with open("/Users/liamcheneyy/Desktop/out.txt") as f:
+        for line in f:
+            jobs.append(pool.apply_async(process(line), (line)))
 
-            # for i,r in uniques.iteritems():
-            #     print(i,r)
-            print(col, uniques, sep='\t')
+    # wait for all jobs to finish
+    for job in jobs:
+        job.get()
+
+    # clean up
+    pool.close()
 
 if __name__ == '__main__':
     main()

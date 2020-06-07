@@ -19,9 +19,9 @@ def parseargs():
 def main():
     args = parseargs()
 
-    STs_in_df = open('/Users/liamcheney/Desktop/strains_st_nm.txt').read().splitlines()
+    STs_in_df = open('/Users/liamcheneyy/Desktop/strains_st_nm.txt').read().splitlines()
 
-    df = pd.read_csv('/Users/liamcheney/Desktop/meta_7-gene-alleles.txt',sep='\t')
+    df = pd.read_csv('/Users/liamcheneyy/Desktop/meta_7-gene-alleles.txt',sep='\t')
 
     save_list = []
     for line in STs_in_df:
@@ -34,7 +34,7 @@ def main():
 
         save_list.append([ST, sample['ID'].tolist()])
 
-    with open('/Users/liamcheney/Desktop/genomes_STs.txt','w') as out:
+    with open('/Users/liamcheneyy/Desktop/genomes_STs.txt','w') as out:
         for element in save_list:
             print(element[0])
             for item in element[1]:
