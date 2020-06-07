@@ -220,9 +220,9 @@ def generate_grapetree(allele_profiles_dict, column_headers_list, args):
 def parseargs():
     parser = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter)
     ##Database connecting
-    parser.add_argument("-d", "--database_name", required=True,
+    parser.add_argument("-d", "--database_name", default="saureus_1",
                         help="sql database to search (eg. vcseventh)")
-    parser.add_argument("-a", "--app_name", required=True,
+    parser.add_argument("-a", "--app_name",  default="Staphylococcus",
                         help="MGT database App Name(eg. Vibrio)")
     parser.add_argument("-s", "--host",
                         help="db host address", default="0.0.0.0")
@@ -231,10 +231,10 @@ def parseargs():
     parser.add_argument("-u", "--psqluser",
                         help="pqsl username", default="postgres")
     parser.add_argument("-w", "--password",
-                        help="psql password", required=True)
+                        help="psql password", default="5678")
 
     #Script running
-    parser.add_argument("-m","--wanted_mgt_level", default="8", type=str,
+    parser.add_argument("-m","--wanted_mgt_level", default="9", type=str,
                         help="The MGT level to extract allele profiles and compare alleles to generate phylonegy.")
     parser.add_argument("-o", "--output_folder", required=True,
                         help="Output folder to save phylogeny and alleles profiles.")
@@ -248,7 +248,7 @@ def parseargs():
                         help="The path to which grapetree has been installed. If in activate $PATH leave blank")
     parser.add_argument("-skip", default=False,
                         help="Skip the grapetree analysis. Only write out alleles profile.")
-    parser.add_argument("-penv", required=True,
+    parser.add_argument("-penv",  default="source activate p3env",
                         help="""Command to activate python environment to run Grapetree. Enclose in double quotes. Eg "source activate python_3_env".""")
     parser.add_argument("-gm", default="RapidNJ",
                         help="""Method for grapetre phyloengy model" (Eg. RapidNJ).""")
