@@ -74,162 +74,117 @@ import multiprocessing as mp
 #     print('Finding fullnames.')
 #     finder(want_lineages, infile, args)
 
-if __name__ == '__main__':
-    main()
+from multiprocessing import Pool
 
-##previous attempt, way to slow
-def parseargs():
-    parser = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter)
-    parser.add_argument("-i", "--input",
-                         help="Input for annotated contigs.", default="/Users/liamcheneyy/Desktop/out.txt")
-    parser.add_argument("-f", "--fullnamelineage",
-                        help="Input for NCBI Taxonomy fullnamelineage file (/new_taxdump/fullnamelineage.dmp).", default="/Users/liamcheneyy/Downloads/new_taxdump/fullnamelineage.dmp")
-    parser.add_argument("-a", "--acc2taxid",
-                        help="Input for NCBI Taxonomy accessions2taxid file (/accessions2taxid.zip).",
-                        default="/Users/liamcheneyy/Downloads/prot.accession2taxid")
-    parser.add_argument("-os", "--output_success",
-                        help="Output for work.",
-                        default="/Users/liamcheneyy/Downloads/alice_GI_worked.txt")
-    parser.add_argument("-of", "--output_failed",
-                        help="Output for work.",
-                        default="/Users/liamcheneyy/Downloads/alice_GI_failed.txt")
+def GI_getter(infile_path):
 
-    # parser.add_argument("-d", "--database_name", required=True,
-    #                     help="sql database to search (eg. vcseventh)")
+    infile = open(infile_path).read().splitlines()
 
-    args = parser.parse_args()
-
-    return args
-
-def get_GI_input(args):
-
-    infile = open(args.input,'r').read().splitlines()
-
-    save_list = []
+    GI_list = []
+    beg_list = []
     for line in infile:
         col = line.split('\t')
         GI = col[2]
-        save_list.append(GI)
+        beg = GI[0:3]
 
-    print("Number of GI read in: " +str(len(save_list)))
-    return save_list
+        if GI not in GI_list:
+           GI_list.append(GI)
 
-def GI_to_taxid(want_GI_list, args):
+        if beg not in beg_list:
+            beg_list.append(beg)
 
-    ##read in namelienage file
-    fullnamelineage_Dict = fullnamelineage_toDict(args)
+    return GI_list, beg_list
 
-    #iterate over lagre taxonomy file
-    save_dict = mp(want_GI_list, fullnamelineage_Dict, args)
+def gi_to_taxID_dict_creator(GI_list, beg_list, pro_2_tax_path):
 
-    #check input GI that failed
-    failed(want_GI_list, save_dict, args)
-
-def fullnamelineage_toDict(args):
-
-    print('Creating dict for fullenamelineages.')
-    ##read in namelienage file
-    fullnamelineage = open(args.fullnamelineage, 'r').read().splitlines()
-
-    save_dict= {}
-    for line in fullnamelineage:
-        col = line.split('	|	')
-        taxId = col[0]
-        fix_line = line.replace('|',';')
-        fix_line = fix_line.replace('\t','')
-
-        save_dict[taxId] = fix_line
-
-    return save_dict
-
-def mp(want_GI_list, fullnamelineage_Dict, args):
-    # init objects
-
-    pool = mp.Pool(mp.cpu_count())
-    jobs = []
-
-    # create jobs
-    print('Read and iterating over large file: accessions2taxid')
-
+    print('Converting GIs to taxIDs. Can take a while.')
     save_dict = {}
-    line_count = 0
-    with open(args.acc2taxid) as f:
-        for line in f:
-            jobs.append(pool.apply_async(iterator(line, save_dict, line_count, want_GI_list, fullnamelineage_Dict, args), (line)) )
 
-    # wait for all jobs to finish
-    for job in jobs:
-        job.get()
+    all_GI_len = len(GI_list)
 
-    # clean up
-    pool.close()
-
-def iterator(line, save_dict, line_count, want_GI_list, fullnamelineage_Dict, args):
-    total_lines = 844546480
-
-    for line in f:
-            if 'accession' not in line:
-                line = line.split('\n')[0]
-                col = line.split('\t')
-                GI = col[1]
-                tax_id = col[2]
-
-                if GI in want_GI_list:
-                    lineage = fullnamelineage_Dict[tax_id]
-                    save_dict[GI] = lineage
-                    print(GI, lineage)
-                    with open(args.output_success, 'a') as out:
-                            out.write(GI + '\t' + tax_id + '\t' + lineage + '\n')
-
-            pecen_done = (line_count / total_lines ) * 100
-            # print(line_count)
-            line_count += 1
-
-    percen_found = (len(save_dict.keys()) / len(want_GI_list)) * 100
-    print('Found lineages for tax_ids: ' + str(len(save_dict.keys())) + ',' + str(percen_found) + '%')
-
-    write_sucessful(save_dict, args)
-
-def failed(want_GI_list, save_dict, args):
-    # check input GI that failed
+    ##go over the inputs for beg list
+    count = 1
     failed_list = []
-    for el in want_GI_list:
-        if el not in save_dict.keys():
-            failed_list.append(el)
+    for beg in beg_list:
 
-    ##print failed GIs
-    print("Failed input GIs: ")
-    print(*failed_list, sep='\t')
+        if os.path.isfile(pro_2_tax_path + '/' + beg):
+            with open(pro_2_tax_path + '/' + beg) as f:
+                for lines in f:
+                    line = lines.splitlines()[0]
+                    col = line.split('\t')
+                    in_GI = col[1]
+                    if in_GI in GI_list:
+                        tax_id = col[2]
+                        save_dict[in_GI] = {'taxid':tax_id, 'lineage':''}
+                        print(f"Found {count} out of {all_GI_len}. Database {beg}. {in_GI}")
+                        count += 1
+        else:
+            failed_list.append(beg)
 
-    with open(args.output_failed,'w') as out:
-        out.write('Faled GIs' + '\n')
-        for el in failed_list:
-            out.write(el + '\n')
+    return save_dict, failed_list
 
-def write_sucessful(save_dict, args):
+def taxID_to_lineage_creator(GI_to_taxID_dict, full_name):
 
-    with open(args.output_success,'w') as out:
-        for key, value in save_dict.items():
-            out.write(key + '\t' + value + '\n')
+    print('Getting full lineage names.')
 
-def file_checker(args):
+    ##conver to full lineage
+    save_dict = {}
+    with open(full_name) as f:
+        for lines in f:
+            line = lines.splitlines()[0]
+            tax_id = line.split('\t')[0]
+            lineage = ' '.join(line.replace('|','').replace('\t',' ').split(' ')[1:]).strip(' ')
 
-    if os.path.isfile(args.output_success):
-        os.remove(args.output_success)
+            for key, value in GI_to_taxID_dict.items():
+                if tax_id in value['taxid']:
+                    GI_to_taxID_dict[key]['lineage'] = lineage
 
-    with open(args.output_success,'w') as out:
-        pass
+    return GI_to_taxID_dict
+
+def iterator(GI_list, beg_list, full_name, pro_2_tax_path):
+
+    GI_to_taxID_dict, failed_list = gi_to_taxID_dict_creator(GI_list, beg_list, pro_2_tax_path)
+
+    taxID_to_lineage_dict = taxID_to_lineage_creator(GI_to_taxID_dict, full_name)
+
+    return taxID_to_lineage_dict, failed_list
+
+def outwrite(GI2lineage_dict, infile_path, output_path, failed_list):
+
+    print(f"Writing out results.")
+    with open(output_path,'w') as out:
+        infile = open(infile_path).read().splitlines()
+        for line in infile:
+            col = line.split('\t')
+            GI = col[2]
+
+            taxid = GI2lineage_dict[GI]['taxid']
+            lineage = GI2lineage_dict[GI]['lineage']
+
+            out.write(line + '\t' + taxid + '\t' + lineage + '\n')
+
+    print(f"{len(failed_list)} failed as there were not protein2taxid databases for: {failed_list}")
 
 def main():
-    args = parseargs()
+    starttime = time.time()
 
-    file_checker(args)
+    ##inputs
+    infile_path = '/Users/liamcheneyy/Desktop/out.txt'
+    full_name = '/Users/liamcheneyy/Desktop/fullnamelineage.dmp'
+    pro_2_tax_path = '/Users/liamcheneyy/Desktop/split_protaccessions2taxid/'
+    output_path = '/Users/liamcheneyy/Desktop/out_test.txt'
 
-    ##create list of input GI
-    want_GI_list = get_GI_input(args)
+    ##get list of accessions
+    GI_list, beg_list = GI_getter(infile_path)
 
-    ##iterate over large GI to taxid
-    GI_to_taxid(want_GI_list, args)
+    ##iterator
+    GI2lineage_dict, failed_list = iterator(GI_list, beg_list, full_name, pro_2_tax_path)
 
-if __name__ == '__main__':
+    ##write out
+    outwrite(GI2lineage_dict, infile_path, output_path, failed_list)
+
+    endtime = time.time() - starttime
+    print(f"Finished in {endtime}")
+
+if __name__ == "__main__":
     main()

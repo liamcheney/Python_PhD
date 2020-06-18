@@ -4,6 +4,7 @@ from Bio import SeqIO
 import glob
 import pandas as pd
 import random
+from pycountry_convert import country_alpha2_to_continent_code, country_name_to_country_alpha2
 
 def parseargs():
     parser = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter)
@@ -19,16 +20,18 @@ def parseargs():
 def main():
     args = parseargs()
 
-    df = pd.read_csv('/Users/liamcheneyy/Desktop/MGT9_alleles.txt',sep='\t')
 
-    for col in df:
-        if "#" not in col:
-            sub = df[col].astype(int)
-            uniques = sub.value_counts().shape[0]
+    infile = open('/Users/liamcheneyy/Desktop/meta_7-gene-alleles.txt').read().splitlines()
 
-            # for i,r in uniques.iteritems():
-            #     print(i,r)
-            print(col, uniques, sep='\t')
+    for line in infile[1:]:
+        col = line.split('\t')
+        code = col[6].strip('"')
+        if code.isalpha():
+            print(country_alpha2_to_continent_code(code))
+        else:
+            print()
+
+
 
 if __name__ == '__main__':
     main()
