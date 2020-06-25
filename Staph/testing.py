@@ -36,22 +36,8 @@ def main():
     # # clean up
     # pool.close()
 
-    # import Bio.SeqIO
-    # import glob
-    # import numpy as np
-    #
-    # for filename in glob.iglob('/Users/liamcheneyy/MGT_28/Mgt/Mgt/Alleles/Staphylococcus/SACOL0001.fasta'):
-    #     save_list = []
-    #     diff_lengths = False
-    #     for records in Bio.SeqIO.parse(filename,'fasta'):
-    #         length = len(records.seq)
-    #         save_list.append(length)
-    #
-    #         if len(records.seq) == 1361:
-    #             print(records.id)
-    #
-    #     save_list = list(set(save_list))
-    #     print(len(save_list), save_list, filename)
+
+
 # import Bio.SeqIO
 # save_list =[]
 # for record in Bio.SeqIO.parse('/Users/liamcheneyy/Desktop/2020-06-18-dNdS/aligned_SACOL0001.fasta','fasta'):
@@ -59,49 +45,81 @@ def main():
 # 	save_list.append(aa_seq)
 # 	aa_seq.id = record.id
 # 	aa_seq.description = ''
-# 
+#
 # Bio.SeqIO.write(save_list, '/Users/liamcheneyy/Desktop/test.fasta','fasta')
 # print(save_list)
+#
+# from Bio.Alphabet import generic_dna, generic_protein
+# from Bio.Seq import Seq
+# from Bio.SeqRecord import SeqRecord
+# from Bio.Align import MultipleSeqAlignment
+# from Bio.codonalign import build
+# import Bio.SeqIO
+# import glob
+# seqs_list = []
+# for record in Bio.SeqIO.parse('/Users/liamcheney/Desktop/2020-06-18-dNdS/*.fasta','fasta'):
+#     # seqs_list.append(record)
 
-from Bio.Alphabet import generic_dna, generic_protein
-from Bio.Seq import Seq
-from Bio.SeqRecord import SeqRecord
-from Bio.Align import MultipleSeqAlignment
-from Bio.codonalign import build
-import Bio.SeqIO
 
-seqs_list = []
-for record in Bio.SeqIO.parse('/Users/liamcheneyy/Desktop/2020-06-18-dNdS/SACOL0001.fasta','fasta'):
-    seqs_list.append(record)
-
-pro_list = []
-for el in seqs_list:
-    pro = el.translate()
-    pro.id = el.id
-    pro_list.append(pro)
-    print(pro.id, len(pro.seq))
-    sl(1)
-
-pro_align = MultipleSeqAlignment(pro_list)
-
-seq1 = SeqRecord(Seq('ATGTCTCGT', alphabet=generic_dna), id='pro1')
-seq2 = SeqRecord(Seq('ATGCGT', alphabet=generic_dna), id='pro2')
-seq3 = SeqRecord(Seq('ATGTCTCGT', alphabet=generic_dna), id='pro3')
-s = [seq1,seq2,seq3]
-
-pro1 = SeqRecord(Seq('MSR', alphabet=generic_protein), id='pro1')
-pro2 = SeqRecord(Seq('M-R', alphabet=generic_protein), id='pro2')
-pro3 = SeqRecord(Seq('MSR', alphabet=generic_protein), id='pro3')
-p = [pro1,pro2,pro3]
-
-aln = MultipleSeqAlignment(p)
-codon_aln = build(aln, s)
-print(codon_aln)
+# pro_list = []
+# for el in seqs_list:
+#     pro = el.translate()
+#     pro.id = el.id
+#     pro_list.append(pro)
+#     print(pro.id, len(pro.seq))
+#     sl(1)
+#
+# pro_align = MultipleSeqAlignment(pro_list)
+#
+# seq1 = SeqRecord(Seq('ATGTCTCGT', alphabet=generic_dna), id='pro1')
+# seq2 = SeqRecord(Seq('ATGCGT', alphabet=generic_dna), id='pro2')
+# seq3 = SeqRecord(Seq('ATGTCTCGT', alphabet=generic_dna), id='pro3')
+# s = [seq1,seq2,seq3]
+#
+# pro1 = SeqRecord(Seq('MSR', alphabet=generic_protein), id='pro1')
+# pro2 = SeqRecord(Seq('M-R', alphabet=generic_protein), id='pro2')
+# pro3 = SeqRecord(Seq('MSR', alphabet=generic_protein), id='pro3')
+# p = [pro1,pro2,pro3]
+#
+# aln = MultipleSeqAlignment(p)
+# codon_aln = build(aln, s)
+# print(codon_aln)
 # print(pro2)
 # x = Bio.codonalign.codonseq.cal_dn_ds(codon_aln)
 # print(x)
 
+    import glob
+    import Bio.SeqIO
+    save_dict = {}
+    forward_start = ['ATG','GTG','TTG']
+    reverse_sarts = ['CAT','CAC','AAT']
+
+    tcount = 0
+    fcount = 0
+    s_list =[]
+    for filename in glob.iglob('/Users/liamcheney/Desktop/Staphylococcus/SACOL0007.fasta'):
+
+        for records in Bio.SeqIO.parse(filename, 'fasta'):
+            print(records.id)
+            print(records.seq.translate())
+            print(str(records.seq.translate()).count('*'))
+
+            print(records.seq.reverse_complement().translate())
+            print(str(records.seq.reverse_complement().translate()).count('*'))
 
 
+
+#     save_list = []
+    #     locus = filename.split('/')[-1].strip('.fasta')
+    #     count = 0
+    #     forward = False
+    #     for records in Bio.SeqIO.parse(filename, 'fasta'):
+    #         if '-' not in records.id:
+    #             if records.seq[0:3] not in forward_start and records.seq[-3:] not in reverse_sarts:
+    #                 s_list.append(records.id)
+    #
+    # s_list = list(set(s_list))
+    # for n in s_list:
+    #     print(n)
 if __name__ == '__main__':
     main()
