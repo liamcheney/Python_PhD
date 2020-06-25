@@ -55,16 +55,16 @@ def main():
 
     percentiles = [5,10,15,20,25,30,35,40,45,50]
 
-    df = pd.read_csv('/Users/liamcheneyy/Desktop/subset_changes.txt', sep='\t', dtype={'Attribute':int})
+    df = pd.read_csv('/Users/liamcheney/Desktop/Book2.txt', sep='\t', dtype={'Attribute':float})
 
-    average_atr = int(pd.DataFrame.mean(df['Attribute']))
+    average_atr = float(pd.DataFrame.mean(df['Attribute']))
     middle_avgerage_index = get_middle_index(df, average_atr)
 
     percentile_dicts = get_percentiles(percentiles,middle_avgerage_index, df)
 
     add_to_dataframe(percentile_dicts, df)
 
-    df.to_csv('/Users/liamcheneyy/Desktop/pref_done.csv', index=False)
+    df.to_csv('/Users/liamcheney/Desktop/pref_done.csv', index=False)
 
 
 

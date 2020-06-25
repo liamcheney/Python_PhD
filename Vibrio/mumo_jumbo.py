@@ -974,3 +974,14 @@
 #     SeqIO.write(record,'/Users/liamcheneyy/Desktop/reads_to_alleles_inputs/' + new_id + '.fasta','fasta')
 #     print(record.id)
 
+save_list = []
+with open('/Users/liamcheney/Desktop/sample.txt') as f:
+    for line in f:
+        beg = line.split('\n')[0]
+        if beg not in save_list:
+            save_list.append(beg)
+            print(len(save_list))
+
+with open('/Users/liamcheney/Desktop/beg.txt','w') as o:
+    for el in save_list:
+        o.write(el + '\n')
