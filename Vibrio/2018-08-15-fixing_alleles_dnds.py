@@ -1,11 +1,7 @@
 from Bio import SeqIO
 from collections import defaultdict
-from time import sleep as sl
 from Bio.Seq import translate
-from itertools import combinations
-import glob
-import re
-# import dnds
+
 inseqs = SeqIO.parse("/Users/liam/Desktop/Vibrio_D3A_alleles_ref.fasta","fasta")
 MGT8 = open("/Users/liam/Desktop/species_loci.txt","r").read().splitlines()
 
