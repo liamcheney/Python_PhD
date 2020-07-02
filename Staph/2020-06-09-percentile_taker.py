@@ -53,18 +53,19 @@ def main():
     ##will take the percentile from the mean of a dataset
     ##assumes normal distribution for data
 
-    percentiles = [10,20,30,40,50]
+    percentiles = [10,20,30,40,50,60,70,80,90]
 
-    df = pd.read_csv('/Users/liamcheney/Desktop/Book5.txt', sep='\t', dtype={'Attribute':float})
+    df = pd.read_csv('/Users/liamcheneyy/Desktop/Book2.txt', sep='\t', dtype={'Attribute':float})
 
     average_atr = float(pd.DataFrame.mean(df['Attribute']))
     middle_avgerage_index = get_middle_index(df, average_atr)
+    print(f"Using average of: {average_atr}")
 
     percentile_dicts = get_percentiles(percentiles,middle_avgerage_index, df)
 
     add_to_dataframe(percentile_dicts, df)
 
-    df.to_csv('/Users/liamcheney/Desktop/pref_done.csv', index=False)
+    df.to_csv('/Users/liamcheneyy/Desktop/pref_done.csv', index=False)
 
 
 
