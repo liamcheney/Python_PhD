@@ -20,7 +20,7 @@ def main():
     #go over allele profiles and get summary stats
     genome_zero_neg_dict = {}
     gene_zero_dict = {}
-    for filename in glob.iglob('/Users/liamcheney/Desktop/alleles/*fasta'):
+    for filename in glob.iglob('/Users/liamcheney/Desktop/2_alleles/*fasta'):
         bios = SeqIO.parse(filename,'fasta')
         accession = filename.split('/')[-1].split('_')[0]
         print(accession)
@@ -49,7 +49,7 @@ def main():
                 genome_zero_neg_dict[accession]['neg'] = genome_zero_neg_dict[accession]['neg'] + 1
 
 
-    with open('/Users/liamcheney/Desktop/alleles/genome_zeros.txt', 'w') as out:
+    with open('/Users/liamcheney/Desktop/genome_zeros.txt', 'w') as out:
         out.write('Accessions' + '\t' + 'Zero' + '\t' + 'Neg' + '\n')
         for key, value in genome_zero_neg_dict.items():
             out.write(key + '\t')
@@ -57,7 +57,7 @@ def main():
                 out.write(str(value[i]) + '\t')
             out.write('\n')
 
-    with open('/Users/liamcheney/Desktop/alleles/gene_zeros.txt', 'w') as out:
+    with open('/Users/liamcheney/Desktop/gene_zeros.txt', 'w') as out:
         out.write('Gene' + '\t' + 'Zero' + '\t' + 'Intact' + '\t' + 'New' + '\t' + 'Neg' + '\n')
         for key, value in gene_zero_dict.items():
             out.write(key + '\t')

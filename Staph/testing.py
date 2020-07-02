@@ -97,16 +97,15 @@ def main():
     tcount = 0
     fcount = 0
     s_list =[]
-    for filename in glob.iglob('/Users/liamcheney/Desktop/Staphylococcus/SACOL0007.fasta'):
+    for filename in glob.iglob('/Users/liamcheney/Desktop/refs.fasta'):
 
         for records in Bio.SeqIO.parse(filename, 'fasta'):
-            print(records.id)
-            print(records.seq.translate())
-            print(str(records.seq.translate()).count('*'))
+            id = int(records.id.split(':')[-1])
+            if id != 359:
+                s_list.append(records)
 
-            print(records.seq.reverse_complement().translate())
-            print(str(records.seq.reverse_complement().translate()).count('*'))
 
+    Bio.SeqIO.parse(s_list,'/Users/liamcheney/Desktop/fixrefs.fasta','fasta')
 
 
 #     save_list = []

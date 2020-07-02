@@ -53,9 +53,9 @@ def main():
     ##will take the percentile from the mean of a dataset
     ##assumes normal distribution for data
 
-    percentiles = [5,10,15,20,25,30,35,40,45,50]
+    percentiles = [10,20,30,40,50]
 
-    df = pd.read_csv('/Users/liamcheney/Desktop/Book2.txt', sep='\t', dtype={'Attribute':float})
+    df = pd.read_csv('/Users/liamcheney/Desktop/Book5.txt', sep='\t', dtype={'Attribute':float})
 
     average_atr = float(pd.DataFrame.mean(df['Attribute']))
     middle_avgerage_index = get_middle_index(df, average_atr)
