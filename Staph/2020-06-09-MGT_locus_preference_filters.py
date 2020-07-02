@@ -11,36 +11,39 @@ def preferences(info):
     ##assign preferences
     filt["pref"] = 5
 
-    filt.loc[(filt["within_norm_length"].astype(str).str.contains("T")) & (filt["pref"] <= 5), "pref"] = 4
+    filt.loc[(filt["within_90_percen_length"].astype(str).str.contains("T")) & (filt["alleles_90_percen"].astype(str).str.contains("T")) & (filt["pref"] <= 5), "pref"] = 4
     print("pref 4", filt[filt["pref"] == 4]["pref"].count())
-
+    #
     filt.loc[(filt["Homopolymer"].astype(str).str.contains("F")) & (filt["Tandem Repeats"].astype(str).str.contains("F")) & (filt["pref"] <= 4), "pref"] = 3
     print("pref 3", filt[filt["pref"] == 3]["pref"].count())
+    #
+    # filt.loc[(filt["Zero_percen"] <= 5) & (filt["Negative_percen"] <= 10) & (filt["Alleles_10_percentile"].astype(str).str.contains("T")) & (filt["pref"] <= 3), "pref"] = 2
+    # print("pref 2", filt[filt["pref"] == 2]["pref"].count())
 
-    filt.loc[(filt["Zero"] <= 5) & (filt["Negative"] <= 10) & (filt["Alleles_10_percentile"].astype(str).str.contains("T")) & (filt["pref"] <= 3), "pref"] = 2
+    # filt.loc[(filt["Zero"]<=5) & (filt["Negative"]<=10) & (filt["Alleles_10_percentile"].astype(str).str.contains("T")), "pref"] = 1
+    filt.loc[(filt["Zero_percen"] < 0.1) & (filt["Negative_percen"] < 0.1) & (filt["dNdS_30_percentile"].astype(str).str.contains("T")) & (filt["Recombination Events"] <= 4) & (filt["pref"] <= 3), "pref"] = 2
     print("pref 2", filt[filt["pref"] == 2]["pref"].count())
 
     # filt.loc[(filt["Zero"]<=5) & (filt["Negative"]<=10) & (filt["Alleles_10_percentile"].astype(str).str.contains("T")), "pref"] = 1
-    filt.loc[(filt["Zero"] == 0) & (filt["Negative"] <= 5) & (filt["Alleles_5_percentile"].astype(str).str.contains("T")) & (filt["pref"] <= 2), "pref"] = 1
+    filt.loc[(filt["dNdS_20_percentile"].astype(str).str.contains("T")) & (filt["Recombination Events"] <= 1) & (filt["pref"] <= 2), "pref"] = 1
     print("pref 1", filt[filt["pref"] == 1]["pref"].count())
 
-    filt.to_csv('/Users/liamcheneyy/Desktop/filt_all_genes_hgt.csv', index=False)
+    #filt.to_csv('/Users/liamcheneyy/Desktop/filt_all_genes_hgt.csv', index=False)
 
     return filt
 
 def wanted_limits():
     # for MGT2 and MGT3
-    random.seed(98145145)
+    random.seed(651102)
 
     ##scheme target sizes
-    target_sizes = {'MGT2': 3534}
-    # target_sizes = {'MGT2':3534,'MGT3':17668,'MGT4':35336,'MGT5':70671,'MGT6':176678,'MGT7':353357}
+    target_sizes = {'MGT2':17559,'MGT3':35118,'MGT4':70236,'MGT5':175589,'MGT6':351178,'MGT7':702356}
 
     # scheme lowest allowed loci preference numbers
-    preflimit = {'MGT2': 1}
+    preflimit = {'MGT2': 1, 'MGT3': 2,'MGT4': 1, 'MGT5': 1,'MGT6': 1, 'MGT7': 1}
 
     # scheme smallest distance allowed between loci
-    distlimit = {'MGT2': 800000}
+    distlimit = {'MGT2': 1000, 'MGT3': 0,'MGT4': 0, 'MGT5': 0,'MGT6': 0, 'MGT7': 0}
 
     return target_sizes, preflimit, distlimit
 
@@ -54,7 +57,7 @@ def too_close(poslists,newpos,limit):
     :return: True if within limit, false if further
     """
 
-    print(poslists, newpos, limit)
+    # print(poslists, newpos, limit)
     poslists1 = [x for x in poslists]
     poslists1 = map(int,poslists1)
 
@@ -154,7 +157,7 @@ def choose_genes(outputs, donegenes, startposs, prefassigns, toclose_genes, pref
                 # print("preference_no: "+str(prefno))
             # if length limit is  is more than cutoff for min distance
             elif limno > distlimit[i]:
-                print(distlimit, i, limno)
+                # print(distlimit, i, limno)
                 # reset preference to 1 and reset pref_loci to preference 1
                 prefno = 1
                 pref_loci = list(filt[filt["pref"] == prefno]["Locus Tag"].get_values())
@@ -166,7 +169,7 @@ def choose_genes(outputs, donegenes, startposs, prefassigns, toclose_genes, pref
                     toclose_genes[limno] += toclose_genes[limno - 1000]
 
                 # print(toclose_genes)
-                print("distance limit: " + str(limno), len(toclose_genes[limno]))
+                # print("distance limit: " + str(limno), len(toclose_genes[limno]))
             else:
                 break
 

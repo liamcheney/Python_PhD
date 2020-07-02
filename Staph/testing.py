@@ -88,24 +88,41 @@ def main():
 # x = Bio.codonalign.codonseq.cal_dn_ds(codon_aln)
 # print(x)
 
-    import glob
-    import Bio.SeqIO
-    save_dict = {}
-    forward_start = ['ATG','GTG','TTG']
-    reverse_sarts = ['CAT','CAC','AAT']
+    # import glob
+    # import Bio.SeqIO
+    # save_dict = {}
+    # forward_start = ['ATG','GTG','TTG']
+    # reverse_sarts = ['CAT','CAC','AAT']
+    #
+    # tcount = 0
+    # fcount = 0
+    # s_list =[]
+    # for filename in glob.iglob('/Users/liamcheney/Desktop/Staphylococcus/SACOL0007.fasta'):
+    #
+    #     for records in Bio.SeqIO.parse(filename, 'fasta'):
+    #         print(records.id)
+    #         print(records.seq.translate())
+    #         print(str(records.seq.translate()).count('*'))
+    #
+    #         print(records.seq.reverse_complement().translate())
+    #         print(str(records.seq.reverse_complement().translate()).count('*'))
 
-    tcount = 0
-    fcount = 0
-    s_list =[]
-    for filename in glob.iglob('/Users/liamcheney/Desktop/Staphylococcus/SACOL0007.fasta'):
+import glob
+from Bio import SeqIO
+infile = open('/Users/liamcheneyy/Desktop/Untitled.txt').read().splitlines()
+save_list = []
+save = []
+for filename in glob.iglob('/Users/liamcheneyy/Desktop/old_refs.fasta'):
+    for records in SeqIO.parse(filename,'fasta'):
+        locus=records.id.split(':')[0]
+        if locus in infile:
+            save.append(records)
+        if locus in infile and locus not in save_list:
+            save_list.append(locus)
 
-        for records in Bio.SeqIO.parse(filename, 'fasta'):
-            print(records.id)
-            print(records.seq.translate())
-            print(str(records.seq.translate()).count('*'))
+SeqIO.write(save, '/Users/liamcheneyy/Desktop/refs.fasta','fasta')
+print(len(save_list))
 
-            print(records.seq.reverse_complement().translate())
-            print(str(records.seq.reverse_complement().translate()).count('*'))
 
 
 
