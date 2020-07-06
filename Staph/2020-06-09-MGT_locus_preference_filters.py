@@ -8,25 +8,41 @@ import sys
 def preferences(info):
     filt = pd.DataFrame(info)
 
+    p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11 = 1,2,3,4,5,6,7,8,9,10,11
+
     ##assign preferences
-    filt["pref"] = 5
+    filt["pref"] = p11
+    print(f"pref p11", filt[filt["pref"] == p11]["pref"].count())
 
-    filt.loc[(filt["within_90_percen_length"].astype(str).str.contains("T")) & (filt["alleles_90_percen"].astype(str).str.contains("T")) & (filt["pref"] <= 5), "pref"] = 4
-    print("pref 4", filt[filt["pref"] == 4]["pref"].count())
-    #
-    filt.loc[(filt["Homopolymer"].astype(str).str.contains("F")) & (filt["Tandem Repeats"].astype(str).str.contains("F")) & (filt["pref"] <= 4), "pref"] = 3
-    print("pref 3", filt[filt["pref"] == 3]["pref"].count())
-    #
-    # filt.loc[(filt["Zero_percen"] <= 5) & (filt["Negative_percen"] <= 10) & (filt["Alleles_10_percentile"].astype(str).str.contains("T")) & (filt["pref"] <= 3), "pref"] = 2
-    # print("pref 2", filt[filt["pref"] == 2]["pref"].count())
+    filt.loc[(filt["alleles_96_percen"].astype(str).str.contains("T")) & (filt["pref"] <= p10+1), "pref"] = p10
+    print(f"pref {p1}", filt[filt["pref"] == p10]["pref"].count())
 
-    # filt.loc[(filt["Zero"]<=5) & (filt["Negative"]<=10) & (filt["Alleles_10_percentile"].astype(str).str.contains("T")), "pref"] = 1
-    filt.loc[(filt["Zero_percen"] < 0.1) & (filt["Negative_percen"] < 0.1) & (filt["dNdS_30_percentile"].astype(str).str.contains("T")) & (filt["Recombination Events"] <= 4) & (filt["pref"] <= 3), "pref"] = 2
-    print("pref 2", filt[filt["pref"] == 2]["pref"].count())
+    filt.loc[(filt["dNdS_90_percentile"].astype(str).str.contains("T")) & (filt["length_90_percentile"].astype(str).str.contains("T")) & (filt["Recombination Events"] <= 30) & (filt["pref"] <= p9+1), "pref"] = p9
+    print(f"pref {p9}", filt[filt["pref"] == p9]["pref"].count())
 
-    # filt.loc[(filt["Zero"]<=5) & (filt["Negative"]<=10) & (filt["Alleles_10_percentile"].astype(str).str.contains("T")), "pref"] = 1
-    filt.loc[(filt["dNdS_20_percentile"].astype(str).str.contains("T")) & (filt["Recombination Events"] <= 1) & (filt["pref"] <= 2), "pref"] = 1
-    print("pref 1", filt[filt["pref"] == 1]["pref"].count())
+    filt.loc[(filt["Homopolymer"].astype(str).str.contains("F")) & (filt["In Phage Region"].astype(str).str.contains("F")) & (filt["Tandem Repeats"].astype(str).str.contains("F")) & (filt["pref"] <= p8+1), "pref"] = p8
+    print(f"pref {p8}", filt[filt["pref"] == p8]["pref"].count())
+
+    filt.loc[(filt["alleles_70_percen"].astype(str).str.contains("T")) & (filt["pref"] <= p7+1), "pref"] = p7
+    print(f"pref {p7}", filt[filt["pref"] == p7]["pref"].count())
+
+    filt.loc[(filt["Recombination Events"] <= 20) & (filt["Zero_percen"] <= 0.5) & (filt["Negative_percen"] <= 1) & (filt["pref"] <= p6+1), "pref"] = p6
+    print(f"pref {p6}", filt[filt["pref"] == p6]["pref"].count())
+
+    filt.loc[(filt["alleles_60_percen"].astype(str).str.contains("T")) & (filt["pref"] <= p5+1), "pref"] = p5
+    print(f"pref {p5}", filt[filt["pref"] == p5]["pref"].count())
+
+    filt.loc[(filt["alleles_50_percen"].astype(str).str.contains("T")) & (filt["dNdS_50_percentile"].astype(str).str.contains("T")) & (filt["pref"] <= p4+1), "pref"] = p4
+    print(f"pref {p4}", filt[filt["pref"] == p4]["pref"].count())
+
+    filt.loc[(filt["Recombination Events"] <= 10) & (filt["Zero_percen"] <= 0.05) & (filt["Negative_percen"] <= 0.05) & (filt["pref"] <= p3+1), "pref"] = p3
+    print(f"pref {p3}", filt[filt["pref"] == p3]["pref"].count())
+
+    filt.loc[(filt["alleles_20_percen"].astype(str).str.contains("T")) & (filt["pref"] <= p2+1), "pref"] = p2
+    print(f"pref {p2}", filt[filt["pref"] == p2]["pref"].count())
+
+    filt.loc[(filt["alleles_10_percen"].astype(str).str.contains("T")) & (filt["pref"] <= p1+1), "pref"] = p1
+    print(f"pref {p1}", filt[filt["pref"] == p1]["pref"].count())
 
     #filt.to_csv('/Users/liamcheneyy/Desktop/filt_all_genes_hgt.csv', index=False)
 
@@ -34,16 +50,16 @@ def preferences(info):
 
 def wanted_limits():
     # for MGT2 and MGT3
-    random.seed(651102)
+    random.seed(5432213243)
 
     ##scheme target sizes
     target_sizes = {'MGT2':17559,'MGT3':35118,'MGT4':70236,'MGT5':175589,'MGT6':351178,'MGT7':702356}
 
     # scheme lowest allowed loci preference numbers
-    preflimit = {'MGT2': 1, 'MGT3': 2,'MGT4': 1, 'MGT5': 1,'MGT6': 1, 'MGT7': 1}
+    preflimit = {'MGT2': 1, 'MGT3': 3,'MGT4': 4, 'MGT5': 5,'MGT6': 9, 'MGT7': 10}
 
     # scheme smallest distance allowed between loci
-    distlimit = {'MGT2': 1000, 'MGT3': 0,'MGT4': 0, 'MGT5': 0,'MGT6': 0, 'MGT7': 0}
+    distlimit = {'MGT2': 20000, 'MGT3': 10000,'MGT4': 5000, 'MGT5': 1000,'MGT6': 0, 'MGT7': 0}
 
     return target_sizes, preflimit, distlimit
 
@@ -92,7 +108,7 @@ def initialise_variables(filt):
     limno = 80000
 
     # get initial list of loci names from preference 1
-    pref_loci = list(filt[filt["pref"] == prefno]["Locus Tag"].get_values())
+    pref_loci = list(filt[filt["pref"] == prefno]["Locus Tag"])
 
     # make a dataframe of noly preference 1
     pref_df = pd.DataFrame(filt[filt["pref"] == prefno])
@@ -103,7 +119,7 @@ def choose_genes(outputs, donegenes, startposs, prefassigns, toclose_genes, pref
     # print(pref_loci)
     # for each MGT scheme
     for i in sorted(target_sizes.keys()):
-        print("Print Starting: ", i)
+        print("Starting: ", i)
         outputs[i] = []
         totlen = 0
         locino = 0
@@ -152,7 +168,7 @@ def choose_genes(outputs, donegenes, startposs, prefassigns, toclose_genes, pref
                 # increase the preference no by 1
                 prefno += 1
                 # get loci for this preference
-                pref_loci = list(filt[filt["pref"] == prefno]["Locus Tag"].get_values())
+                pref_loci = list(filt[filt["pref"] == prefno]["Locus Tag"])
                 pref_df = pd.DataFrame(filt[filt["pref"] == prefno])
                 # print("preference_no: "+str(prefno))
             # if length limit is  is more than cutoff for min distance
@@ -160,7 +176,7 @@ def choose_genes(outputs, donegenes, startposs, prefassigns, toclose_genes, pref
                 # print(distlimit, i, limno)
                 # reset preference to 1 and reset pref_loci to preference 1
                 prefno = 1
-                pref_loci = list(filt[filt["pref"] == prefno]["Locus Tag"].get_values())
+                pref_loci = list(filt[filt["pref"] == prefno]["Locus Tag"])
                 # reduce distance limit to 1000 less
                 limno -= 1000
                 # if limit is more than 0
@@ -187,11 +203,11 @@ def choose_genes(outputs, donegenes, startposs, prefassigns, toclose_genes, pref
 
 def output(toclose_genes, outputs, prefassigns):
     # output writing
-    print(len(toclose_genes))
+    # print(len(toclose_genes))
     # print(len(donegenes))
-    outfolder = '/Users/liamcheneyy/Desktop/loci/'
+    outfolder = '/Users/liamcheney/Desktop/loci/'
     outsummary = open(outfolder + "/all_schemes_loci.txt", "w")
-    out_alleles = '/Users/liamcheneyy/Desktop/refonly_allelic_profiles/'
+    out_alleles = '/Users/liamcheney/Desktop/refonly_allelic_profiles/'
     for i in outputs:
         outf = open(outfolder + "/" + i + "_gene_accessions.txt", "w")
         print(i, len(outputs[i]))
@@ -200,21 +216,21 @@ def output(toclose_genes, outputs, prefassigns):
         outf.write("\n".join(outputs[i]))
         outf.close()
     outsummary.close()
-    #
-    # #writeout allelic profiles
-    # for i in outputs:
-    #     with open(out_alleles +"/"+i+"_gene_profiles.txt","w") as out:
-    #         out.write('ST' + '\t' + 'dST' + '\t')
-    #         for gene in outputs[i]:
-    #             out.write(gene + '\t')
-    #         out.write('\n')
-    #         out.write('1' + '\t' + '0' + '\t')
-    #         for gene in outputs[i]:
-    #             out.write('1' + '\t')
+
+    #writeout allelic profiles
+    for i in outputs:
+        with open(out_alleles +"/"+i+"_gene_profiles.txt","w") as out:
+            out.write('ST' + '\t' + 'dST' + '\t')
+            for gene in outputs[i]:
+                out.write(gene + '\t')
+            out.write('\n')
+            out.write('1' + '\t' + '0' + '\t')
+            for gene in outputs[i]:
+                out.write('1' + '\t')
 
 def main():
 
-    input_path = "/Users/liamcheneyy/Desktop/Preferences.xlsx"
+    input_path = "/Users/liamcheney/Desktop/Preferences.xlsx"
 
     info = pd.read_excel(open(input_path, 'rb'), sheet_name='Preferences').fillna("none")
 

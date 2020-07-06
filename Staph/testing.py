@@ -109,22 +109,20 @@ def main():
 
 import glob
 from Bio import SeqIO
-infile = open('/Users/liamcheneyy/Desktop/Untitled.txt').read().splitlines()
 save_list = []
-save = []
-for filename in glob.iglob('/Users/liamcheneyy/Desktop/old_refs.fasta'):
-    for records in SeqIO.parse(filename,'fasta'):
-        locus=records.id.split(':')[0]
-        if locus in infile:
-            save.append(records)
-        if locus in infile and locus not in save_list:
-            save_list.append(locus)
+for records in SeqIO.parse('/Users/liamcheney/Desktop/refs.fasta','fasta'):
+    locus=records.id.split(':')[0]
+    if locus not in save_list:
+        save_list.append(locus)
 
-SeqIO.write(save, '/Users/liamcheneyy/Desktop/refs.fasta','fasta')
-print(len(save_list))
-
-
-
+for element in save_list:
+    lists = []
+    for record in SeqIO.parse('/Users/liamcheney/Desktop/refs.fasta', 'fasta'):
+        in_locus=record.id.split(':')[0]
+        if element == in_locus:
+            lists.append(record)
+    SeqIO.write(lists, '/Users/liamcheney/Desktop/locus/' + element + '.fasta','fasta')
+    print(element, len(lists))
 
 #     save_list = []
     #     locus = filename.split('/')[-1].strip('.fasta')
