@@ -107,22 +107,22 @@ def main():
     #         print(records.seq.reverse_complement().translate())
     #         print(str(records.seq.reverse_complement().translate()).count('*'))
 
-import glob
-from Bio import SeqIO
-save_list = []
-for records in SeqIO.parse('/Users/liamcheney/Desktop/refs.fasta','fasta'):
-    locus=records.id.split(':')[0]
-    if locus not in save_list:
-        save_list.append(locus)
-
-for element in save_list:
-    lists = []
-    for record in SeqIO.parse('/Users/liamcheney/Desktop/refs.fasta', 'fasta'):
-        in_locus=record.id.split(':')[0]
-        if element == in_locus:
-            lists.append(record)
-    SeqIO.write(lists, '/Users/liamcheney/Desktop/locus/' + element + '.fasta','fasta')
-    print(element, len(lists))
+# import glob
+# from Bio import SeqIO
+# save_list = []
+# for records in SeqIO.parse('/Users/liamcheney/Desktop/refs.fasta','fasta'):
+#     locus=records.id.split(':')[0]
+#     if locus not in save_list:
+#         save_list.append(locus)
+#
+# for element in save_list:
+#     lists = []
+#     for record in SeqIO.parse('/Users/liamcheney/Desktop/refs.fasta', 'fasta'):
+#         in_locus=record.id.split(':')[0]
+#         if element == in_locus:
+#             lists.append(record)
+#     SeqIO.write(lists, '/Users/liamcheney/Desktop/locus/' + element + '.fasta','fasta')
+#     print(element, len(lists))
 
 #     save_list = []
     #     locus = filename.split('/')[-1].strip('.fasta')
@@ -136,5 +136,44 @@ for element in save_list:
     # s_list = list(set(s_list))
     # for n in s_list:
     #     print(n)
+
+
+    infile = open('/Users/liamcheney/Desktop/meta_7-gene-alleles.txt').read().splitlines()
+    save = {}
+    for line in infile[1:]:
+        col = line.split('\t')
+        biopro = col[3]
+        if biopro not in save.keys():
+            save[biopro] = 0
+    fin = {}
+    listss = []
+    for i in save.keys():
+        count  = 0
+        both_meta = 0
+        for line in infile[1:]:
+            col = line.split('\t')
+            biopro = col[3]
+            year = col[4]
+            country = col[5]
+
+            if i == biopro:
+                count += 1
+
+                if year != '' and country != '':
+                    both_meta += 1
+
+
+
+        fin[i] = count
+        print(i, count, both_meta, int(both_meta/count * 100))
+
+    with open('/Users/liamcheney/Desktop/test-gene-alleles.txt','w') as out:
+        for el in listss:
+            for i in el:
+                out.write(i + '\t')
+            out.write('\n')
+            out.write(el[0])
+
+
 if __name__ == '__main__':
     main()
