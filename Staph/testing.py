@@ -1,7 +1,7 @@
 import argparse
 from time import sleep as sl
 import multiprocessing as mp
-
+import pandas as pd
 
 def parseargs():
     parser = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter)
@@ -138,42 +138,54 @@ def main():
     #     print(n)
 
 
-    infile = open('/Users/liamcheney/Desktop/meta_7-gene-alleles.txt').read().splitlines()
-    save = {}
-    for line in infile[1:]:
-        col = line.split('\t')
-        biopro = col[3]
-        if biopro not in save.keys():
-            save[biopro] = 0
-    fin = {}
-    listss = []
-    for i in save.keys():
-        count  = 0
-        both_meta = 0
-        for line in infile[1:]:
-            col = line.split('\t')
-            biopro = col[3]
-            year = col[4]
-            country = col[5]
+    # infile = open('/Users/liamcheney/Desktop/meta_7-gene-alleles.txt').read().splitlines()
+    # save = {}
+    # for line in infile[1:]:
+    #     col = line.split('\t')
+    #     biopro = col[3]
+    #     if biopro not in save.keys():
+    #         save[biopro] = 0
+    # fin = {}
+    # listss = []
+    # for i in save.keys():
+    #     count  = 0
+    #     both_meta = 0
+    #     for line in infile[1:]:
+    #         col = line.split('\t')
+    #         biopro = col[3]
+    #         year = col[4]
+    #         country = col[5]
+    #
+    #         if i == biopro:
+    #             count += 1
+    #
+    #             if year != '' and country != '':
+    #                 both_meta += 1
+    #
+    #
+    #
+    #     fin[i] = count
+    #     print(i, count, both_meta, int(both_meta/count * 100))
+    #
+    # with open('/Users/liamcheney/Desktop/test-gene-alleles.txt','w') as out:
+    #     for el in listss:
+    #         for i in el:
+    #             out.write(i + '\t')
+    #         out.write('\n')
+    #         out.write(el[0])
 
-            if i == biopro:
-                count += 1
+    infile = open('/Users/liamcheney/Desktop/keep.txt').read().splitlines()
 
-                if year != '' and country != '':
-                    both_meta += 1
+    df = pd.read_csv('/Users/liamcheney/Desktop/test.txt',sep='\t')
 
+    keep = []
+    for line in infile:
+        sub = df[df['BioSample'] == line]
+        sub = sub.sort_values('Contig Number', ascending=True)
+        want = sub.iloc[1,]['ID']
+        keep.append(want)
 
-
-        fin[i] = count
-        print(i, count, both_meta, int(both_meta/count * 100))
-
-    with open('/Users/liamcheney/Desktop/test-gene-alleles.txt','w') as out:
-        for el in listss:
-            for i in el:
-                out.write(i + '\t')
-            out.write('\n')
-            out.write(el[0])
-
+        print(want)
 
 if __name__ == '__main__':
     main()
