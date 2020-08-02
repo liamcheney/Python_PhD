@@ -14,46 +14,45 @@ def parseargs():
 
 
 def main():
+    abrevs= ['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC']
     args = parseargs()
     #
-    # #for extracting metadata from biosamples
-    # results_dict = {}
-    # inpath = "/Users/liamcheneyy/Desktop/splits/*xml"
-    # for file in glob.iglob(inpath):
-    #     infile  = open(file).read().splitlines()
-    #
-    #     biosmaple = ""
-    #     collcetion_date = ""
-    #     geo = ""
-    #     flag_country_and_geo = False
-    #
-    #     for line in range(0, len(infile), 1):
-    #
-    #         if 'namespace="BioSample' in infile[line]:
-    #             biosmaple = infile[line].split('BioSample">')[-1].split('<')[0]
-    #
-    #
-    #         # if ('collection' in infile[line]) and ('date' in infile[line]):
-    #         #     collcetion_date = infile[line + 1].split('>')[1].strip().split('<')[0]
-    #         #
-    #         if 'geo' in infile[line]:
-    #             geo = infile[line + 1].split('>')[1].strip().split('<')[0]
-    #             flag_country_and_geo = True
-    #
-    #         if ('country' in infile[line]) and ("geo" not in infile[line]) and flag_country_and_geo == True:
-    #             geo = infile[line+1].split('>')[1].split('<')[0]
-    #
-    #     results_dict[biosmaple] = [geo]
-    #
-    #     print(biosmaple,geo)
-    #
-    # with open('/Users/liamcheneyy/Desktop/fixing_saues_metadata.tsv','w') as out:
-    #     for k,v in results_dict.items():
-    #         out.write(k + '\t')
-    #         for i in v:
-    #             out.write(i + '\t')
-    #
-    #         out.write('\n')
+    #for extracting metadata from biosamples
+    results_dict = {}
+    inpath = "/Users/liamcheneyy/Desktop/splits/*xml"
+    for file in glob.iglob(inpath):
+        infile = open(file).read().splitlines()
+        biosmaple = file.split('/')[-1].split('.')[0]
+        geo = ""
+        collection_date = ""
+
+        for line in range(0, len(infile), 1):
+
+            if ('collection' in infile[line]) and ('date' in infile[line]):
+                collection_date = infile[line + 1].split('>')[1].strip().split('<')[0]
+
+                if '-' in collection_date:
+                    split = collection_date.split('-')
+                    for x in split:
+                        if len(x) == 4:
+                            collection_date = x
+
+
+
+            # if 'location' in infile[line] or 'country' in infile[line]:
+            #     geo = infile[line + 1].split('>')[1].strip().split('<')[0]
+
+                # print(biosmaple, collection_date)
+        results_dict[biosmaple] = [collection_date]
+
+
+    with open('/Users/liamcheneyy/Desktop/fixing_saues_metadata.tsv','w') as out:
+        for k,v in results_dict.items():
+            out.write(k + '\t')
+            for i in v:
+                out.write(i + '\t')
+
+            out.write('\n')
 
     #for fixing year metadata
     # infile = open('/Users/liamcheneyy/Desktop/saues_metadata.tsv').read().splitlines()

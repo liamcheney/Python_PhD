@@ -1,6 +1,7 @@
 import argparse
 from time import sleep as sl
 import multiprocessing as mp
+import pandas as pd
 
 
 def parseargs():
@@ -107,24 +108,72 @@ def main():
     #         print(records.seq.reverse_complement().translate())
     #         print(str(records.seq.reverse_complement().translate()).count('*'))
 
-import glob
-from Bio import SeqIO
-infile = open('/Users/liamcheneyy/Desktop/Untitled.txt').read().splitlines()
-save_list = []
-save = []
-for filename in glob.iglob('/Users/liamcheneyy/Desktop/old_refs.fasta'):
-    for records in SeqIO.parse(filename,'fasta'):
-        locus=records.id.split(':')[0]
-        if locus in infile:
-            save.append(records)
-        if locus in infile and locus not in save_list:
-            save_list.append(locus)
+# import glob
+# from Bio import SeqIO
+# infile = open('/Users/liamcheneyy/Desktop/Untitled.txt').read().splitlines()
+# save_list = []
+# save = []
+# for filename in glob.iglob('/Users/liamcheneyy/Desktop/old_refs.fasta'):
+#     for records in SeqIO.parse(filename,'fasta'):
+#         locus=records.id.split(':')[0]
+#         if locus in infile:
+#             save.append(records)
+#         if locus in infile and locus not in save_list:
+#             save_list.append(locus)
+#
+# SeqIO.write(save, '/Users/liamcheneyy/Desktop/refs.fasta','fasta')
+# print(len(save_list))
+#
 
-SeqIO.write(save, '/Users/liamcheneyy/Desktop/refs.fasta','fasta')
-print(len(save_list))
 
+    # pinfile = '/Users/liamcheneyy/Downloads/assembly_result.xml'
+    # infile = open(pinfile).read()
+    #
+    # seps = infile.split('\n\n')
+    # for ind in seps[:-1]:
+    #     bio = ''
+    #     GCA = ''
+    #     lines = ind.splitlines()
+    #     for line in lines:
+    #         if '<AssemblyAccession>' in line:
+    #             GCA = line.split('>')[1].split('<')[0]
+    #         if '<BioSampleAccn>' in line:
+    #             bio = line.split('>')[1].split('<')[0]
+    #
+    #     print(GCA, bio)
 
-
+    # import glob
+    # save = []
+    # for filename in glob.iglob('/Users/liamcheneyy/Downloads/genome_assemblies_wgs_gbff/ncbi-genomes-2020-07-20/*gbff'):
+    #     acc= filename.split('/')[-1].split('.')[0]
+    #     infile=open(filename).read().splitlines()
+    #     country = ''
+    #     year = ''
+    #     bio = ''
+    #     for line in infile:
+    #         if 'country' in line:
+    #             country = line.split('=')[1].strip('"').upper()
+    #             if ':' in country:
+    #                 country = country.split(':')[0].strip('"').upper()
+    #
+    #         if 'BioSample:' in line:
+    #             bio = line.split(':')[1].strip().upper()
+    #             print(bio)
+    #
+    #         if 'collection_date' in line:
+    #             year = line.split('=')[1].strip('"')
+    #             if '-' in year:
+    #                 inds  = year.split('-')
+    #                 for i in inds:
+    #                     if len(i) == 4:
+    #                         year = i
+    #     save.append([bio, acc,year, country])
+    #
+    # with open('/Users/liamcheneyy/Desktop/out.txt','w') as out:
+    #     for i in save:
+    #         for q in i:
+    #             out.write(q + '\t')
+    #         out.write('\n')
 
 #     save_list = []
     #     locus = filename.split('/')[-1].strip('.fasta')
@@ -138,5 +187,17 @@ print(len(save_list))
     # s_list = list(set(s_list))
     # for n in s_list:
     #     print(n)
+
+    df = pd.read_csv('/Users/liamcheneyy/Desktop/MGT_isolate_data.txt', sep='\t')
+
+    for col in df:
+        if 'MGT' in col:
+            sub = df[col]
+            uniques = sub.unique()
+            print(uniques)
+
+
+
+
 if __name__ == '__main__':
     main()
