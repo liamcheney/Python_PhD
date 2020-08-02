@@ -23,19 +23,28 @@ def get_percentiles(percentiles,middle_avgerage_index, df):
     save_dict = {}
     for element in percentiles:
         t_length = df.shape[0]
-        percen_length = int((element / 100) * t_length)
-        one_tail_percen_length = int(percen_length / 2)
+        percen_length = float((element / 100) * t_length)
+        one_tail_percen_length = float(percen_length / 2)
 
         l_range = middle_avgerage_index - one_tail_percen_length
         u_range = middle_avgerage_index + one_tail_percen_length
-
         if (l_range < 0) or (u_range > t_length):
             print("Percentile met limits (lower, upper): ", l_range, u_range, sep='\t')
+
+            if l_range < 0:
+                print("lower limit met")
+
+            elif u_range > t_length:
+                print("upper limit met")
             l_range = 0
             u_range = t_length
 
-        want = df.iloc[l_range:u_range, :]
+        take_l_range = int(l_range)
+        take_u_range = int(u_range)
+
+        want = df.iloc[take_l_range:take_u_range, :]
         want = want['Locus'].tolist()
+        # print(len(want))
         save_dict[element] = want
 
     return save_dict
@@ -53,9 +62,9 @@ def main():
     ##will take the percentile from the mean of a dataset
     ##assumes normal distribution for data
 
-    percentiles = [10,20,30,40,50,60,70,80,90]
+    percentiles = [95,96]
 
-    df = pd.read_csv('/Users/liamcheneyy/Desktop/Book2.txt', sep='\t', dtype={'Attribute':float})
+    df = pd.read_csv('/Users/liamcheney/Desktop/Book2.txt', sep='\t', dtype={'Attribute':float})
 
     average_atr = float(pd.DataFrame.mean(df['Attribute']))
     middle_avgerage_index = get_middle_index(df, average_atr)
@@ -65,7 +74,7 @@ def main():
 
     add_to_dataframe(percentile_dicts, df)
 
-    df.to_csv('/Users/liamcheneyy/Desktop/pref_done.csv', index=False)
+    df.to_csv('/Users/liamcheney/Desktop/pref_done.csv', index=False)
 
 
 
