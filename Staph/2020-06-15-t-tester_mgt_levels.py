@@ -1,19 +1,18 @@
 ##reading in files
 import pandas as pd
-import seaborn as sns
-import matplotlib.pyplot as plt
 from scipy import stats
 import matplotlib.pyplot as plt
 from pylab import figure, text, scatter, show
+import numpy as np
 
 
-mgt2 = open('/Users/liamcheney/Desktop/loci/MGT2_gene_accessions.txt').read().splitlines()
-mgt3 = open('/Users/liamcheney/Desktop/loci/MGT3_gene_accessions.txt').read().splitlines()
-mgt4 = open('/Users/liamcheney/Desktop/loci/MGT4_gene_accessions.txt').read().splitlines()
-mgt5 = open('/Users/liamcheney/Desktop/loci/MGT5_gene_accessions.txt').read().splitlines()
-mgt6 = open('/Users/liamcheney/Desktop/loci/MGT6_gene_accessions.txt').read().splitlines()
-mgt7 = open('/Users/liamcheney/Desktop/loci/MGT7_gene_accessions.txt').read().splitlines()
-mgt8 = open('/Users/liamcheney/Desktop/loci/MGT8_gene_accessions.txt').read().splitlines()
+mgt2 = open('/Users/liamcheney/Desktop/loci/MGT3_gene_accessions.txt').read().splitlines()
+mgt3 = open('/Users/liamcheney/Desktop/loci/MGT4_gene_accessions.txt').read().splitlines()
+mgt4 = open('/Users/liamcheney/Desktop/loci/MGT5_gene_accessions.txt').read().splitlines()
+mgt5 = open('/Users/liamcheney/Desktop/loci/MGT6_gene_accessions.txt').read().splitlines()
+mgt6 = open('/Users/liamcheney/Desktop/loci/MGT7_gene_accessions.txt').read().splitlines()
+mgt7 = open('/Users/liamcheney/Desktop/loci/MGT8_gene_accessions.txt').read().splitlines()
+mgt8 = open('/Users/liamcheney/Desktop/loci/MGT9_gene_accessions.txt').read().splitlines()
 
 input_path = "/Users/liamcheney/Desktop/Preferences.xlsx"
 info = pd.read_excel(open(input_path, 'rb'), index_col=0, sheet_name='Preferences').fillna("none")
@@ -59,6 +58,9 @@ for mgt_level in loci_dict.keys():
         with open('/Users/liamcheney/Desktop/loci/' + attr + '_' + mgt_level + '.txt','w') as out:
             for i in lists:
                 out.write(str(i) + '\n')
+
+
+        CI = mean_confidence_interval(values)
 #
 save_list.append(mgt8_values)
 data = save_list
@@ -76,4 +78,11 @@ for el in pvalue_list:
     stat += 1
 
 plt.show()
+
+def mean_confidence_interval(data, confidence=0.95):
+    a = 1.0 * np.array(data)
+    n = len(a)
+    m, se = np.mean(a), stats.sem(a)
+    h = se * stats.t.ppf((1 + confidence) / 2., n-1)
+    return m, m-h, m+h
 
