@@ -8,40 +8,43 @@ import sys
 def preferences(info):
     filt = pd.DataFrame(info)
 
-    p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11 = 1,2,3,4,5,6,7,8,9,10,11
+    p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12 = 1,2,3,4,5,6,7,8,9,10,11,12
 
     ##assign preferences
-    filt["pref"] = p11
-    print(f"pref p11", filt[filt["pref"] == p11]["pref"].count())
+    filt["pref"] = p12
+    print(f"pref {p12}", filt[filt["pref"] == p12]["pref"].count())
 
-    filt.loc[(filt["alleles_96_percen"].astype(str).str.contains("T")) & (filt["pref"] <= p10+1), "pref"] = p10
-    print(f"pref {p1}", filt[filt["pref"] == p10]["pref"].count())
+    filt.loc[(filt["Recombination Events"] <= 25) & filt["Homopolymer"].astype(str).str.contains("F") & (filt["In Phage Region"].astype(str).str.contains("F")) & (filt["pref"] <= p11+1), "pref"] = p11
+    print(f"pref {p11}", filt[filt["pref"] == p11]["pref"].count())
 
-    filt.loc[(filt["dNdS_90_percentile"].astype(str).str.contains("T")) & (filt["length_90_percentile"].astype(str).str.contains("T")) & (filt["Recombination Events"] <= 30) & (filt["pref"] <= p9+1), "pref"] = p9
+    filt.loc[(filt["alleles_95_percentile"].astype(str).str.contains("T")) & (filt["pref"] <= p10+1), "pref"] = p10
+    print(f"pref {p10}", filt[filt["pref"] == p10]["pref"].count())
+
+    filt.loc[(filt["dNdS_90_percentile"].astype(str).str.contains("T")) & (filt["alleles_90_percentile"].astype(str).str.contains("T")) & (filt["pref"] <= p9+1), "pref"] = p9
     print(f"pref {p9}", filt[filt["pref"] == p9]["pref"].count())
 
-    filt.loc[(filt["Homopolymer"].astype(str).str.contains("F")) & (filt["In Phage Region"].astype(str).str.contains("F")) & (filt["Tandem Repeats"].astype(str).str.contains("F")) & (filt["pref"] <= p8+1), "pref"] = p8
+    filt.loc[(filt["alleles_70_percentile"].astype(str).str.contains("T")) & (filt["pref"] <= p8+1), "pref"] = p8
     print(f"pref {p8}", filt[filt["pref"] == p8]["pref"].count())
 
-    filt.loc[(filt["alleles_70_percen"].astype(str).str.contains("T")) & (filt["pref"] <= p7+1), "pref"] = p7
+    filt.loc[(filt["Recombination Events"] <= 20) & (filt["Zero_percen"] <= 0.5) & (filt["Negative_percen"] <= 1) & (filt["pref"] <= p7+1), "pref"] = p7
     print(f"pref {p7}", filt[filt["pref"] == p7]["pref"].count())
 
-    filt.loc[(filt["Recombination Events"] <= 20) & (filt["Zero_percen"] <= 0.5) & (filt["Negative_percen"] <= 1) & (filt["pref"] <= p6+1), "pref"] = p6
+    filt.loc[(filt["alleles_60_percentile"].astype(str).str.contains("T")) & (filt["pref"] <= p6+1), "pref"] = p6
     print(f"pref {p6}", filt[filt["pref"] == p6]["pref"].count())
 
-    filt.loc[(filt["alleles_60_percen"].astype(str).str.contains("T")) & (filt["pref"] <= p5+1), "pref"] = p5
+    filt.loc[(filt["alleles_50_percentile"].astype(str).str.contains("T")) & (filt["dNdS_50_percentile"].astype(str).str.contains("T")) & (filt["pref"] <= p5+1), "pref"] = p5
     print(f"pref {p5}", filt[filt["pref"] == p5]["pref"].count())
 
-    filt.loc[(filt["alleles_50_percen"].astype(str).str.contains("T")) & (filt["dNdS_50_percentile"].astype(str).str.contains("T")) & (filt["pref"] <= p4+1), "pref"] = p4
+    filt.loc[(filt["alleles_40_percentile"].astype(str).str.contains("T")) & (filt["Recombination Events"] <= 15) & (filt["pref"] <= p4+1), "pref"] = p4
     print(f"pref {p4}", filt[filt["pref"] == p4]["pref"].count())
 
-    filt.loc[(filt["Recombination Events"] <= 10) & (filt["Zero_percen"] <= 0.05) & (filt["Negative_percen"] <= 0.05) & (filt["pref"] <= p3+1), "pref"] = p3
+    filt.loc[(filt["alleles_30_percentile"].astype(str).str.contains("T")) & (filt["dNdS_30_percentile"].astype(str).str.contains("T")) & (filt["pref"] <= p3+1), "pref"] = p3
     print(f"pref {p3}", filt[filt["pref"] == p3]["pref"].count())
 
-    filt.loc[(filt["alleles_20_percen"].astype(str).str.contains("T")) & (filt["pref"] <= p2+1), "pref"] = p2
+    filt.loc[(filt["alleles_20_percentile"].astype(str).str.contains("T")) & (filt["pref"] <= p2+1), "pref"] = p2
     print(f"pref {p2}", filt[filt["pref"] == p2]["pref"].count())
 
-    filt.loc[(filt["alleles_10_percen"].astype(str).str.contains("T")) & (filt["pref"] <= p1+1), "pref"] = p1
+    filt.loc[(filt["alleles_10_percentile"].astype(str).str.contains("T")) & (filt["Recombination Events"] <= 10) & (filt["pref"] <= p1+1), "pref"] = p1
     print(f"pref {p1}", filt[filt["pref"] == p1]["pref"].count())
 
     #filt.to_csv('/Users/liamcheneyy/Desktop/filt_all_genes_hgt.csv', index=False)
@@ -49,17 +52,16 @@ def preferences(info):
     return filt
 
 def wanted_limits():
-    # for MGT2 and MGT3
-    random.seed(5432213243)
+    random.seed(852111)
 
     ##scheme target sizes
-    target_sizes = {'MGT2':17559,'MGT3':35118,'MGT4':70236,'MGT5':175589,'MGT6':351178,'MGT7':702356}
+    target_sizes = {'MGT3':17559,'MGT4':35118,'MGT5':70236,'MGT6':175589,'MGT7':351178,'MGT8':702356}
 
     # scheme lowest allowed loci preference numbers
-    preflimit = {'MGT2': 1, 'MGT3': 3,'MGT4': 4, 'MGT5': 5,'MGT6': 9, 'MGT7': 10}
+    preflimit = {'MGT3': 1, 'MGT4': 2,'MGT5': 4, 'MGT6': 6,'MGT7': 6, 'MGT8': 10}
 
     # scheme smallest distance allowed between loci
-    distlimit = {'MGT2': 20000, 'MGT3': 10000,'MGT4': 5000, 'MGT5': 1000,'MGT6': 0, 'MGT7': 0}
+    distlimit = {'MGT3': 20000, 'MGT4': 12500,'MGT5': 5000, 'MGT6': 3500,'MGT7': 500, 'MGT8': 0}
 
     return target_sizes, preflimit, distlimit
 
@@ -205,9 +207,9 @@ def output(toclose_genes, outputs, prefassigns):
     # output writing
     # print(len(toclose_genes))
     # print(len(donegenes))
-    outfolder = '/Users/liamcheney/Desktop/loci/'
+    outfolder = '/Users/liamcheneyy/Desktop/loci/'
     outsummary = open(outfolder + "/all_schemes_loci.txt", "w")
-    out_alleles = '/Users/liamcheney/Desktop/refonly_allelic_profiles/'
+    out_alleles = '/Users/liamcheneyy/Desktop/refonly_allelic_profiles/'
     for i in outputs:
         outf = open(outfolder + "/" + i + "_gene_accessions.txt", "w")
         print(i, len(outputs[i]))
@@ -230,7 +232,7 @@ def output(toclose_genes, outputs, prefassigns):
 
 def main():
 
-    input_path = "/Users/liamcheney/Desktop/Preferences.xlsx"
+    input_path = "/Users/liamcheneyy/Desktop/Preferences.xlsx"
 
     info = pd.read_excel(open(input_path, 'rb'), sheet_name='Preferences').fillna("none")
 

@@ -19,9 +19,14 @@ def df_setup(infile_path,meta, assoc_meta):
     sub_df = df[col_list].astype(int)
 
     # df[list(df.columns)[0:8]] = df[list(df.columns)[0:8]].astype(int)
-    want_col = [meta] + assoc_meta
+    if assoc_meta != '':
+        want_col = [meta] + assoc_meta
+    else:
+        want_col = meta
+
     for el in want_col:
         sub_df[el] = df[el]
+    print(sub_df.shape)
     return sub_df
 
 def get_meta_variations(df):
@@ -90,11 +95,12 @@ def out_ST_data(ST_df_dict, meta, assoc_meta):
 
 if __name__ == '__main__':
     #variables
-    meta = 'Country'
-    assoc_meta = ['Year']
-    infile_path = '/Users/liamcheneyy/Desktop/meta_MGT_isolate_data.txt'
-    outfile_path = '/Users/liamcheneyy/Desktop/STs_by_country.txt'
-    min_st_size = 50
+    meta = 'Phage Genotype'
+    # assoc_meta = ['']
+    assoc_meta = ''
+    infile_path = '/Users/liamcheneyy/Desktop/newgenotyping/genotyping_w_meta.txt'
+    outfile_path = '/Users/liamcheneyy/Desktop/genotypes_by_ST.txt'
+    min_st_size = 5
     max_contamination = 30
     get_ST_out = False
 

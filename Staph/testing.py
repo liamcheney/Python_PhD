@@ -186,18 +186,38 @@ def main():
     #
     # s_list = list(set(s_list))
     # for n in s_list:
-    #     print(n)
+    # #     print(n)
+    #
+    # df = pd.read_csv('/Users/liamcheneyy/Desktop/MGT_isolate_data.txt', sep='\t')
+    #
+    # for col in df:
+    #     if 'MGT' in col:
+    #         sub = df[col]
+    #         uniques = sub.unique()
+    #         print(uniques)
+    #
 
-    df = pd.read_csv('/Users/liamcheneyy/Desktop/MGT_isolate_data.txt', sep='\t')
+    import glob
+    from Bio import SeqIO
+    from Bio.SeqRecord import SeqRecord
+    from Bio.Seq import Seq
+    alter = open('/Users/liamcheneyy/Desktop/excluded.txt').read().splitlines()
 
-    for col in df:
-        if 'MGT' in col:
-            sub = df[col]
-            uniques = sub.unique()
-            print(uniques)
-
-
-
-
+    for filename in glob.iglob('/Users/liamcheneyy/Desktop/lanlab/all_allele_profiles/all_species_alleles/*'):
+        genome = filename.split('/')[-1]
+        save_list = []
+        records = SeqIO.parse(filename,'fasta')
+        change_count = 0
+        for record in records:
+            locus = record.id.split(':')[0].strip('>')
+            if locus in alter:
+                alt_locus = locus + ':0'
+                alt_revord = SeqRecord(Seq(''), alt_locus, '', '')
+                save_list.append(alt_revord)
+                change_count += 1
+            else:
+                save_list.append(record)
+        SeqIO.write(save_list,f'/Users/liamcheneyy/Desktop/fixed/{genome}','fasta')
+        print(genome, change_count)
 if __name__ == '__main__':
     main()

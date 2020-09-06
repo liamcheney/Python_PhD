@@ -20,7 +20,7 @@ def main():
     #go over allele profiles and get summary stats
     genome_zero_neg_dict = {}
     gene_zero_dict = {}
-    for filename in glob.iglob('/Users/liamcheneyy/Desktop/2_alleles/*fasta'):
+    for filename in glob.iglob('/Users/liamcheneyy/Desktop/fix/*fasta'):
         bios = SeqIO.parse(filename,'fasta')
         accession = filename.split('/')[-1].split('_')[0]
         print(accession)
