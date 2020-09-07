@@ -18,25 +18,22 @@ def main():
 
     ##create a local database of novel MLST alleles and select a strain from each
 
-    infile = open('/Users/liamcheneyy/Desktop/Book2.txt').read().splitlines()
+    infile = open('/Users/liamcheney/Desktop/novel_sts_vc.csv').read().splitlines()
 
-    combs = []
     combs_dict = {}
     count = 1
     for line in infile:
-        col = line.split('\t')
+        col = line.split(',')
         alleles = col[3:]
         comb_str = '-'.join(alleles)
 
         if comb_str not in combs_dict.keys():
             combs_dict[comb_str] = "n" + str(count)
-            print(line, combs_dict[comb_str])
+            print(line, combs_dict[comb_str], sep=',')
             count = count + 1
 
         elif comb_str in combs_dict.keys():
-            print(line, combs_dict[comb_str])
-
-
+            print(line, combs_dict[comb_str], sep=',')
 
 if __name__ == '__main__':
     main()
