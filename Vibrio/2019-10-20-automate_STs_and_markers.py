@@ -102,7 +102,6 @@ def check_hierarch_incon(column, ST, precen_inconsistent_strains, sub):
         #if inconsistencies less than allowed number, then return
         if inconsis_count <= allowed_precen_inconsistent_strains:
             return "Pass"
-
 def main():
     args = parseargs()
 
