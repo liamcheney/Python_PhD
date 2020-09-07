@@ -36,7 +36,7 @@ def main():
                 save_dict[el][x] = seqx[x]
 
     for k,v in save_dict.items():
-        with open('/Users/liamcheneyy/Desktop/saureus_1/Mgtfi_ref/ref_Staphylococcus_alleles/' + k + '.fasta' ,'w') as out:
+        with open('/Users/liamcheneyy/Desktop/alleles/' + k + '.fasta','w') as out:
             for i in v:
                 out.write('>' + i + '\n')
                 out.write(str(v[i].seq) + '\n')

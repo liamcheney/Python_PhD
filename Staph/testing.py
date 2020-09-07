@@ -3,6 +3,7 @@ from time import sleep as sl
 import multiprocessing as mp
 import pandas as pd
 
+
 def parseargs():
     parser = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter)
 
@@ -109,20 +110,70 @@ def main():
 
 # import glob
 # from Bio import SeqIO
+# infile = open('/Users/liamcheneyy/Desktop/Untitled.txt').read().splitlines()
 # save_list = []
-# for records in SeqIO.parse('/Users/liamcheney/Desktop/refs.fasta','fasta'):
-#     locus=records.id.split(':')[0]
-#     if locus not in save_list:
-#         save_list.append(locus)
+# save = []
+# for filename in glob.iglob('/Users/liamcheneyy/Desktop/old_refs.fasta'):
+#     for records in SeqIO.parse(filename,'fasta'):
+#         locus=records.id.split(':')[0]
+#         if locus in infile:
+#             save.append(records)
+#         if locus in infile and locus not in save_list:
+#             save_list.append(locus)
 #
-# for element in save_list:
-#     lists = []
-#     for record in SeqIO.parse('/Users/liamcheney/Desktop/refs.fasta', 'fasta'):
-#         in_locus=record.id.split(':')[0]
-#         if element == in_locus:
-#             lists.append(record)
-#     SeqIO.write(lists, '/Users/liamcheney/Desktop/locus/' + element + '.fasta','fasta')
-#     print(element, len(lists))
+# SeqIO.write(save, '/Users/liamcheneyy/Desktop/refs.fasta','fasta')
+# print(len(save_list))
+#
+
+
+    # pinfile = '/Users/liamcheneyy/Downloads/assembly_result.xml'
+    # infile = open(pinfile).read()
+    #
+    # seps = infile.split('\n\n')
+    # for ind in seps[:-1]:
+    #     bio = ''
+    #     GCA = ''
+    #     lines = ind.splitlines()
+    #     for line in lines:
+    #         if '<AssemblyAccession>' in line:
+    #             GCA = line.split('>')[1].split('<')[0]
+    #         if '<BioSampleAccn>' in line:
+    #             bio = line.split('>')[1].split('<')[0]
+    #
+    #     print(GCA, bio)
+
+    # import glob
+    # save = []
+    # for filename in glob.iglob('/Users/liamcheneyy/Downloads/genome_assemblies_wgs_gbff/ncbi-genomes-2020-07-20/*gbff'):
+    #     acc= filename.split('/')[-1].split('.')[0]
+    #     infile=open(filename).read().splitlines()
+    #     country = ''
+    #     year = ''
+    #     bio = ''
+    #     for line in infile:
+    #         if 'country' in line:
+    #             country = line.split('=')[1].strip('"').upper()
+    #             if ':' in country:
+    #                 country = country.split(':')[0].strip('"').upper()
+    #
+    #         if 'BioSample:' in line:
+    #             bio = line.split(':')[1].strip().upper()
+    #             print(bio)
+    #
+    #         if 'collection_date' in line:
+    #             year = line.split('=')[1].strip('"')
+    #             if '-' in year:
+    #                 inds  = year.split('-')
+    #                 for i in inds:
+    #                     if len(i) == 4:
+    #                         year = i
+    #     save.append([bio, acc,year, country])
+    #
+    # with open('/Users/liamcheneyy/Desktop/out.txt','w') as out:
+    #     for i in save:
+    #         for q in i:
+    #             out.write(q + '\t')
+    #         out.write('\n')
 
 #     save_list = []
     #     locus = filename.split('/')[-1].strip('.fasta')
@@ -135,57 +186,38 @@ def main():
     #
     # s_list = list(set(s_list))
     # for n in s_list:
-    #     print(n)
-
-
-    # infile = open('/Users/liamcheney/Desktop/meta_7-gene-alleles.txt').read().splitlines()
-    # save = {}
-    # for line in infile[1:]:
-    #     col = line.split('\t')
-    #     biopro = col[3]
-    #     if biopro not in save.keys():
-    #         save[biopro] = 0
-    # fin = {}
-    # listss = []
-    # for i in save.keys():
-    #     count  = 0
-    #     both_meta = 0
-    #     for line in infile[1:]:
-    #         col = line.split('\t')
-    #         biopro = col[3]
-    #         year = col[4]
-    #         country = col[5]
+    # #     print(n)
     #
-    #         if i == biopro:
-    #             count += 1
+    # df = pd.read_csv('/Users/liamcheneyy/Desktop/MGT_isolate_data.txt', sep='\t')
     #
-    #             if year != '' and country != '':
-    #                 both_meta += 1
+    # for col in df:
+    #     if 'MGT' in col:
+    #         sub = df[col]
+    #         uniques = sub.unique()
+    #         print(uniques)
     #
-    #
-    #
-    #     fin[i] = count
-    #     print(i, count, both_meta, int(both_meta/count * 100))
-    #
-    # with open('/Users/liamcheney/Desktop/test-gene-alleles.txt','w') as out:
-    #     for el in listss:
-    #         for i in el:
-    #             out.write(i + '\t')
-    #         out.write('\n')
-    #         out.write(el[0])
 
-    infile = open('/Users/liamcheney/Desktop/keep.txt').read().splitlines()
+    import glob
+    from Bio import SeqIO
+    from Bio.SeqRecord import SeqRecord
+    from Bio.Seq import Seq
+    alter = open('/Users/liamcheneyy/Desktop/excluded.txt').read().splitlines()
 
-    df = pd.read_csv('/Users/liamcheney/Desktop/test.txt',sep='\t')
-
-    keep = []
-    for line in infile:
-        sub = df[df['BioSample'] == line]
-        sub = sub.sort_values('Contig Number', ascending=True)
-        want = sub.iloc[1,]['ID']
-        keep.append(want)
-
-        print(want)
-
+    for filename in glob.iglob('/Users/liamcheneyy/Desktop/lanlab/all_allele_profiles/all_species_alleles/*'):
+        genome = filename.split('/')[-1]
+        save_list = []
+        records = SeqIO.parse(filename,'fasta')
+        change_count = 0
+        for record in records:
+            locus = record.id.split(':')[0].strip('>')
+            if locus in alter:
+                alt_locus = locus + ':0'
+                alt_revord = SeqRecord(Seq(''), alt_locus, '', '')
+                save_list.append(alt_revord)
+                change_count += 1
+            else:
+                save_list.append(record)
+        SeqIO.write(save_list,f'/Users/liamcheneyy/Desktop/fixed/{genome}','fasta')
+        print(genome, change_count)
 if __name__ == '__main__':
     main()
