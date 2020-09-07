@@ -30,7 +30,6 @@ def remove_small_sts(result_dict, min_st_size, percen_out):
         result_dict[k] = save_list
 
     return result_dict
-
 def convert_to_percen(result_dict):
 
     save_dict = {}
@@ -47,12 +46,12 @@ def get_sts_per_scheme(df):
     for col in df:
         value_count = df[col].value_counts()
         result_dict[col] = value_count
-        print(len(value_count))
+        print(col, len(list(set(value_count))))
 
     return result_dict
 def read_in(input):
 
-    df = pd.read_csv(input, sep=',')
+    df = pd.read_csv(input, sep='\t')
     keep_col_list = [x for x in df.columns.values if 'MGT' in x and 'DST' not in x and 'CC' not in x]
     df = df[df.columns.intersection(keep_col_list)]
     # df = df[(~df['MGT2'].str.contains('None')) & (~df['MGT3'].str.contains('None')) & (~df['MGT4'].str.contains('None')) & (~df['MGT5'].str.contains('None')) & (~df['MGT6'].str.contains('None')) & (~df['MGT7'].str.contains('None')) & (~df['MGT8'].str.contains('None'))]
@@ -60,14 +59,14 @@ def read_in(input):
 
 def main():
     #I/O
-    input = '/Users/liamcheneyy/Desktop/data.csv'
-    output = '/Users/liamcheneyy/Desktop/sts_per_scheme.txt'
+    input = '/Users/liamcheneyy/Desktop/MGT_isolate_data.txt'
+    output = '/Users/liamcheneyy/Desktop/STs_per_scheme.txt'
 
     #convert to percentages
     percen_out = False
 
     #min_st_size
-    min_st_size = 10
+    min_st_size = 5
 
     #read in
     df = read_in(input)
@@ -77,8 +76,6 @@ def main():
 
     #collapse smaller STs
     result_dict = remove_small_sts(result_dict, min_st_size, percen_out)
-
-
     for k,v in result_dict.items():
         print(k, *v, sep='\t')
         # print(sum(v))
