@@ -6,6 +6,7 @@ from pylab import figure, text, scatter, show
 import numpy as np
 import matplotlib.mlab as mlab
 from time import sleep as sl
+import math
 
 def get_mgt9_values(info, attr):
     mgt9_values = list(info[attr])
@@ -35,7 +36,7 @@ def mgt_level_iter(loci_dict, info, mgt9_values):
     CI_dict = {}
     all_values_list = []
     for mgt_level in loci_dict.keys():
-        if mgt_level != 'mgt9':
+        if mgt_level != 'mgt8':
             loci = loci_dict[mgt_level]
             sub_df = info[info[attr].index.isin(loci)]
             values_pre = list(sub_df[attr])
@@ -64,11 +65,19 @@ def plotting(pValue_dict, CI_dict, all_values_list,attr):
     #########P-values
     fig1, ax1 = plt.subplots()
     ax1.set_title(f"Comparing MGT level differences for {attr} ")
+    #used for exp log data
+    # new = []
+    # for i in all_values_list:
+    #     sub = []
+    #     for q in i:
+    #         sub.append(math.exp(q))
+    #     new.append(sub)
+    # all_values_list = new
+
     ax1.boxplot(all_values_list, showmeans=True)
 
     locs, labels = plt.xticks()
-    plt.xticks(locs, ('MGT3', 'MGT4', 'MGT5', 'MGT6', 'MGT7','MGT8','MGT9'))
-    # plt.ylim(0,40)
+    plt.xticks(locs, ('MGT2', 'MGT3', 'MGT4', 'MGT5', 'MGT6','MGT7','MGT8'))
 
     if pValue_dict:
         x_point = 0.7
@@ -83,9 +92,6 @@ def plotting(pValue_dict, CI_dict, all_values_list,attr):
     means_list = [x[0] for x in CI_dict.values()]
     error_list = [x[1] for x in CI_dict.values()]
     levels = [x for x in CI_dict.keys()]
-    print(levels)
-    print(means_list)
-    print(error_list)
     fig, ax = plt.subplots()
     ax.set_title(f'{attr} Confidence Interval')
     plt.errorbar(x=means_list, y=levels, xerr=error_list, fmt='o', color='k')
@@ -97,7 +103,7 @@ def plotting(pValue_dict, CI_dict, all_values_list,attr):
     plt.clf()
 
     ##########Hists
-    titles = ['MGT3', 'MGT4', 'MGT5', 'MGT6', 'MGT7','MGT8','MGT9']
+    titles = ['MGT2', 'MGT3', 'MGT4', 'MGT5', 'MGT6','MGT7','MGT8']
     f, a = plt.subplots(2, 3)
     a = a.ravel()
 
@@ -110,11 +116,11 @@ def plotting(pValue_dict, CI_dict, all_values_list,attr):
     plt.savefig('/Users/liamcheneyy/Desktop/dists/' + attr + '_hists.png')
 
 def outstats(all_values_list):
-    cvar = 3
+    cvar = 2
     for i in all_values_list:
         MGT = 'MGT' + str(cvar)
         print(MGT, np.mean(i))
-        with open('/Users/liamcheneyy/Desktop/loci/attr_' + str(MGT) + '.txt', 'w') as out:
+        with open('/Users/liamcheneyy/Desktop/Schemes/attr_' + str(MGT) + '.txt', 'w') as out:
             out.write(str(MGT) + '\n')
             for x in i:
                 out.write(str(x) + '\n')
@@ -124,21 +130,21 @@ def outstats(all_values_list):
 
 if __name__ == '__main__':
     ###inputs
-    mgt3 = open('/Users/liamcheneyy/Desktop/loci/MGT3_gene_accessions.txt').read().splitlines()
-    mgt4 = open('/Users/liamcheneyy/Desktop/loci/MGT4_gene_accessions.txt').read().splitlines()
-    mgt5 = open('/Users/liamcheneyy/Desktop/loci/MGT5_gene_accessions.txt').read().splitlines()
-    mgt6 = open('/Users/liamcheneyy/Desktop/loci/MGT6_gene_accessions.txt').read().splitlines()
-    mgt7 = open('/Users/liamcheneyy/Desktop/loci/MGT7_gene_accessions.txt').read().splitlines()
-    mgt8 = open('/Users/liamcheneyy/Desktop/loci/MGT8_gene_accessions.txt').read().splitlines()
-    mgt9 = open('/Users/liamcheneyy/Desktop/loci/MGT9_gene_accessions.txt').read().splitlines()
+    mgt2 = open('/Users/liamcheneyy/Desktop/Schemes/MGT2_gene_accessions.txt').read().splitlines()
+    mgt3 = open('/Users/liamcheneyy/Desktop/Schemes/MGT3_gene_accessions.txt').read().splitlines()
+    mgt4 = open('/Users/liamcheneyy/Desktop/Schemes/MGT4_gene_accessions.txt').read().splitlines()
+    mgt5 = open('/Users/liamcheneyy/Desktop/Schemes/MGT5_gene_accessions.txt').read().splitlines()
+    mgt6 = open('/Users/liamcheneyy/Desktop/Schemes/MGT6_gene_accessions.txt').read().splitlines()
+    mgt7 = open('/Users/liamcheneyy/Desktop/Schemes/MGT7_gene_accessions.txt').read().splitlines()
+    mgt8 = open('/Users/liamcheneyy/Desktop/Schemes/MGT8_gene_accessions.txt').read().splitlines()
 
     input_path = "/Users/liamcheneyy/Desktop/Preferences.xlsx"
     info = pd.read_excel(open(input_path, 'rb'), index_col=0, sheet_name='Preferences').fillna("none")
 
     ##variables
-    loci_dict = {'mgt3':mgt3,'mgt4':mgt4,'mgt5':mgt5,'mgt6':mgt6,'mgt7':mgt7,'mgt8':mgt8,'mgt9':mgt9}
-    # to_do_list = ['log_dNdS', 'Recombination Events']
-    to_do_list = ['Allele_Changes_Rate']
+    loci_dict = {'mgt2':mgt2,'mgt3':mgt3,'mgt4':mgt4,'mgt5':mgt5,'mgt6':mgt6,'mgt7':mgt7,'mgt8':mgt8}
+    to_do_list = ['log_dNdS']
+    # to_do_list = ['Allele_Changes_Rate']
 
     for i in to_do_list:
         attr = i

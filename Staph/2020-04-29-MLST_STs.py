@@ -34,6 +34,8 @@ def main():
 
         elif comb_str in combs_dict.keys():
             combs_dict[comb_str]['count'] = combs_dict[comb_str]['count'] + 1
+            print(col[0], 'nST' + str(count) ,sep='\t')
+
 
 
     for key, value in combs_dict.items():

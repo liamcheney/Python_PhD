@@ -17,7 +17,7 @@ def main():
     args = parseargs()
 
 
-    seqs = SeqIO.parse('/Users/liamcheneyy/Desktop/refs.fasta', 'fasta')
+    seqs = SeqIO.parse('/Users/liamcheneyy/Desktop/saureus_5/Mgtfi_ref/ref_Staphylococcus_alleles/refs.fasta', 'fasta')
     save_list = []
     for records in seqs:
 
@@ -26,7 +26,7 @@ def main():
         if locus not in save_list:
             save_list.append(locus)
 
-    seqx = SeqIO.to_dict(SeqIO.parse('/Users/liamcheneyy/Desktop/refs.fasta', 'fasta'))
+    seqx = SeqIO.to_dict(SeqIO.parse('/Users/liamcheneyy/Desktop/saureus_5/Mgtfi_ref/ref_Staphylococcus_alleles/refs.fasta', 'fasta'))
 
     save_dict = {}
     for el in save_list:
@@ -36,7 +36,7 @@ def main():
                 save_dict[el][x] = seqx[x]
 
     for k,v in save_dict.items():
-        with open('/Users/liamcheneyy/Desktop/alleles/' + k + '.fasta','w') as out:
+        with open('/Users/liamcheneyy/Desktop/saureus_5/Mgtfi_ref/ref_Staphylococcus_alleles/' + k + '.fasta','w') as out:
             for i in v:
                 out.write('>' + i + '\n')
                 out.write(str(v[i].seq) + '\n')
