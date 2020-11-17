@@ -26,30 +26,54 @@ def make_dict(CC_in):
 
     return CC_dict_in
 
+def find_exact_same(pairwise_dict, CC_dict):
+    print(f'Finding exact matches.')
+    exact_CC_list = []
+    exact_ODC_list = []
+
+    for CC, CC_list in CC_dict.items():
+        for ODC, ODC_list in pairwise_dict.items():
+            if set(CC_list) == set(ODC_list):
+                # print(CC, ODC, len(ODC_list), sep='\t')
+                exact_CC_list.append(CC)
+                exact_ODC_list.append(ODC)
+
+    for rm_el in exact_CC_list:
+        del CC_dict[rm_el]
+
+    for rm_ODC in exact_ODC_list:
+        del pairwise_dict[rm_ODC]
+
+    return pairwise_dict, CC_dict
+
+def find_threshold_same(pairwise_dict, CC_dict):
+    print(f'Finding threshold matches.')
+    threshold = 0.90
+    #idea, find the best percentage to select by calculating them all, and then choose best distribution
+    ##check
+
+    for CC, CC_list in CC_dict.items():
+        overlap_list = []
+        total_strains=len(CC_list)
+        if CC == '3493':
+            for ODC, ODC_list in pairwise_dict.items():
+                if len(ODC_list) <= len(CC_list):
+                    for strain in ODC_list:
+                        if strain in CC_list:
+                            overlap_list.append(strain)
+
+                overlap_percent = len(overlap_list) / total_strains * 100
+                print(CC, overlap_percent, len(CC_list), len(ODC_list), overlap_list, CC_list, ODC_list)
+
+    return pairwise_dict, CC_dict
+
 def find_same_CC_and_ODC(pairwise_dict, CC_dict):
 
-    ##find same CC and PWs
-    print(CC_dict['62'])
-    #find majority matches
-    for CC, CC_list in CC_dict.items():
-        CC_strains_num = len(CC_list)
-        save_list = []
-        # if CC not in complete_list:
-        if CC == '62':
-            for ODC, ODC_list in pairwise_dict.items():
+    ##find exact same CC and ODC clusters
+    pairwise_dict, CC_dict = find_exact_same(pairwise_dict, CC_dict)
 
-                #find strains in both
-                for element in ODC_list:
-                    if element in CC_list:
-                        print(element)
-                        print(ODC_list, CC_list)
-
-                        save_list.append(element)
-
-            # percen1 = str(len(save_list)/CC_strains_num * 100)
-            # print(CC, percen1, CC_list, ODC_list)
-
-
+    ##find similar with X% overlap
+    pairwise_dict, CC_dict = find_threshold_same(pairwise_dict, CC_dict)
 
 def main():
     args = parseargs()
