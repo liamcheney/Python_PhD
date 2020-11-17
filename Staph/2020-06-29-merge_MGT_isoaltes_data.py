@@ -16,15 +16,24 @@ def parseargs():
 def main():
     args = parseargs()
 
-    MGT_st_df = pd.read_csv('/Users/liamcheneyy/Desktop/MGT_isolate_data (3).txt', sep='\t')
-    MGT_st_df = MGT_st_df.drop(columns=['Month','Year','Date','Disease','Host','Type','Source','Postcode','State','Continent','Country'])
+    # MGT_st_df = pd.read_csv('/Users/liamcheneyy/Desktop/MGT_isolate_data (3).txt', sep='\t')
+    # MGT_st_df = MGT_st_df.drop(columns=['Month','Year','Date','Disease','Host','Type','Source','Postcode','State','Continent','Country'])
+    #
+    # metadata_df = pd.read_excel(open('/Users/liamcheneyy/Desktop/meta_7-gene-alleles.xlsx', 'rb'), sheet_name='Metadata').fillna("none")
+    # meta_sub = metadata_df[['ID','Year','Country','Continent','BioProject','7 gene ST']]
+    #
+    # merged = MGT_st_df.merge(meta_sub,how='left',left_on='Strain', right_on='ID')
+    #
+    # merged.to_csv('/Users/liamcheneyy/Desktop/meta_MGT_isolate_data (3).txt',sep='\t', index=False)
 
-    metadata_df = pd.read_excel(open('/Users/liamcheneyy/Desktop/meta_7-gene-alleles.xlsx', 'rb'), sheet_name='Metadata').fillna("none")
-    meta_sub = metadata_df[['ID','Year','Country','Continent','BioProject','7 gene ST']]
+    base_df = pd.read_csv('/Users/liamcheneyy/Downloads/query_results.csv',low_memory=False)
+    join_df = pd.read_csv('/Users/liamcheneyy/Downloads/all_SRA_meta.csv',low_memory=False)
 
-    merged = MGT_st_df.merge(meta_sub,how='left',left_on='Strain', right_on='ID')
+    merged = base_df.merge(join_df,how='left',left_on='BioSample', right_on='BioSample')
 
-    merged.to_csv('/Users/liamcheneyy/Desktop/meta_MGT_isolate_data (3).txt',sep='\t', index=False)
+    merged.to_csv('/Users/liamcheneyy/Desktop/total_SRA_metadata.csv', index=False)
+
+
 
 if __name__ == '__main__':
     main()
